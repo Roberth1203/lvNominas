@@ -59,10 +59,18 @@ namespace La_Vista_Nominas
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            for (int pos = 0; pos < datos.Length; pos ++)
-            {
-                dataGridView1.Rows.Add(datos[pos]);
-            }
+            Agregar_Empleado add = new Agregar_Empleado();
+            add.Show();
+        }
+        
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            txtBuscar.Image = listButtonImages.Images[5];
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            txtBuscar.Image = listButtonImages.Images[4];
         }
     }
 }

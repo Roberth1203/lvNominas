@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>la vista nominas.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -48,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_Empleado.Designer.cs">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="almacenDatos.cs">
       <DependentUpon>almacenDatos.xsd</DependentUpon>
     </Compile>
@@ -76,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Agregar_Empleado.resx">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Animacion_Inicial.resx">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +172,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BajaEmpOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgReportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgOpciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="la vista nominas.ico" />
+    <None Include="Resources\cuadros de texto1.png" />
+    <None Include="Resources\cuadros de texto activo1.png" />
+    <None Include="Resources\cuadros de texto.png" />
+    <None Include="Resources\cuadros de texto activo.png" />
+    <None Include="Resources\cancelarOver.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\GuardarOver.png" />
+    <None Include="Resources\GuardarNor.png" />
+    <None Include="Resources\barra titulo.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

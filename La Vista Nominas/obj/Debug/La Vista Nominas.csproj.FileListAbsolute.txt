@@ -11,3 +11,17 @@ C:\Users\Roberto\Documents\Visual Studio 2015\Projects\ServiceManager\La Vista N
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\ServiceManager\La Vista Nominas\La Vista Nominas\obj\Debug\La_Vista_Nominas.Pantalla_Principal.resources
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\ServiceManager\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\ServiceManager\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\La Vista Nominas.exe.config
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.exe
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.pdb
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\La Vista Nominas.exe
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\La Vista Nominas.pdb
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.csprojResolveAssemblyReference.cache
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La_Vista_Nominas.Animacion_Inicial.resources
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La_Vista_Nominas.IniciarSesion.resources
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La_Vista_Nominas.Pantalla_Principal.resources
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La_Vista_Nominas.Properties.Resources.resources
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.csproj.GenerateResource.Cache
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La_Vista_Nominas.Agregar_Empleado.resources

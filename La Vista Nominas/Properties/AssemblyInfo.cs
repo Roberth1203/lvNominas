@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("La Vista Nominas")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Sistemas de Cálculo de Nómina Semanal")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("La Vista Alimentos S.A. de C.V.")]
 [assembly: AssemblyProduct("La Vista Nominas")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
