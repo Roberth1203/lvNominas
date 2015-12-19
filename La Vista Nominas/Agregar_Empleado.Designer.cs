@@ -111,10 +111,12 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -123,11 +125,15 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "GuardarNor.png");
             this.imageList1.Images.SetKeyName(1, "GuardarOver.png");
+            this.imageList1.Images.SetKeyName(2, "cancelar.png");
+            this.imageList1.Images.SetKeyName(3, "cancelarOver.png");
+            this.imageList1.Images.SetKeyName(4, "cuadros de texto1.png");
+            this.imageList1.Images.SetKeyName(5, "cuadros de texto activo1.png");
             // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::La_Vista_Nominas.Properties.Resources.cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(689, 566);
+            this.btnCancelar.Location = new System.Drawing.Point(689, 557);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(48, 44);
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +145,7 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.Image = global::La_Vista_Nominas.Properties.Resources.GuardarNor;
-            this.btnGuardar.Location = new System.Drawing.Point(758, 566);
+            this.btnGuardar.Location = new System.Drawing.Point(758, 557);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(48, 44);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -247,10 +253,12 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(215, 63);
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Location = new System.Drawing.Point(278, 66);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(211, 20);
+            this.txtNombre.Size = new System.Drawing.Size(92, 13);
             this.txtNombre.TabIndex = 12;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             // 
             // label7
             // 
@@ -280,7 +288,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(97, 20);
             this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "AOGR9008014I0";
             // 
             // textBox2
             // 
@@ -813,9 +820,9 @@
             this.label35.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label35.Location = new System.Drawing.Point(401, 483);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(69, 13);
+            this.label35.Size = new System.Drawing.Size(65, 13);
             this.label35.TabIndex = 70;
-            this.label35.Text = "Parentersco:";
+            this.label35.Text = "Parentesco:";
             // 
             // label36
             // 
@@ -903,12 +910,23 @@
             this.textBox8.Size = new System.Drawing.Size(185, 20);
             this.textBox8.TabIndex = 80;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.cuadros_de_texto_activo;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(215, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(228, 30);
+            this.pictureBox3.TabIndex = 81;
+            this.pictureBox3.TabStop = false;
+            // 
             // Agregar_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(850, 627);
+            this.ClientSize = new System.Drawing.Size(850, 607);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -978,7 +996,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNoEmp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -989,6 +1006,8 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar_Empleado";
             this.Text = "Agregar_Empleado";
@@ -996,6 +1015,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1084,5 +1104,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -31,5 +31,10 @@ namespace La_Vista_Nominas
         {
             this.Close();
         }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            pictureBox3.BackgroundImage = imageList1.Images[4];   
+        }
     }
 }
