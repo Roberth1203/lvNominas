@@ -126,14 +126,13 @@
             this.groupBox1.Size = new System.Drawing.Size(302, 50);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Busqueda de Empleado";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(149, 22);
+            this.textBox1.Location = new System.Drawing.Point(147, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(133, 13);
             this.textBox1.TabIndex = 6;

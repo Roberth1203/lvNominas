@@ -14,62 +14,111 @@ namespace La_Vista_Nominas
     public partial class IniciarSesion : Form
     {
         SqlConnection con = new SqlConnection();
+        DataTable dt = new DataTable();
+        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+
         public IniciarSesion()
         {
             InitializeComponent();
-            connectToDatabase();
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Pantalla_Principal start = new Pantalla_Principal();
             start.Show();
+            cargaDatos();
             this.Close();
         }
 
-        public void connectToDatabase()
+        public static SqlConnection connectToSQL(string connectionValues)
         {
             try
             {
-                string dataConnection = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True" ;
-                con.ConnectionString = dataConnection;
-                con.Open();
-                MessageBox.Show("Conexión exitosa !!!");
-                mostrarDataTable();
+                string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+                SqlConnection remoteConnection = new SqlConnection(dataValues);
+                remoteConnection.Open();
+                MessageBox.Show("Conectado a lvserver","Visual Studio dice: ",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return remoteConnection;
             }
             catch(SqlException e)
             {
-                MessageBox.Show("Error: " + e);
-            }
-            
-        }
-
-        public void mostrarDataTable()
-        {
-            DataTable dat = cargarRegistros("Select * from users");
-
-            for( int index = 0; index < dat.Rows.Count;index ++)
-            {
-                MessageBox.Show("Elemento en la posición " + index + ": " + dat.Rows[index].ToString());
+                MessageBox.Show("Error SQL: " + e);
+                return null;
             }
         }
 
-        public DataTable cargarRegistros(string instruction)
+        public static void closeSQL(SqlConnection connection)
         {
-            DataTable dt = new DataTable();
             try
             {
+                if(connection != null)
+                {
+                    connection.Close();
+                    SqlConnection.ClearPool(connection);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error SQL:" + ex,"La Vista Alimentos S.A. de C.V.",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
+
+        public DataTable SQLdata(string instruction, SqlConnection conn,string dataConnection)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                if(conn == null)
+                {
+                    conn = connectToSQL(dataConnection);
                     SqlDataAdapter adapter = new SqlDataAdapter();
-                    adapter.SelectCommand = new SqlCommand(instruction);
+                    adapter.SelectCommand = new SqlCommand(instruction, conn);
                     adapter.Fill(dt);
-                    con.Close();
+                    if (dataConnection != null)
+                        closeSQL(conn);
+                }
             }
             catch(Exception e)
             {
-                MessageBox.Show("Error: " + e.Message);
+                MessageBox.Show("Error capturado: " + e.Message,"La Vista Alimentos S.A. de C.V",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             return dt;
-            
+        }
+
+        public void cargaDatos()
+        {
+            string[] arr = new string[2];
+            try
+            {
+                string instruccion = "select * from users where usuario ='" + txtUser.Text + "'";
+                DataTable dt = SQLdata(instruccion, null, dataValues);
+                
+                if (!dt.Rows[0].ItemArray[0].Equals(""))
+                {
+                    // Cargo datos del DataTable a textbox para presentar informacion
+                    arr[0] = dt.Rows[0].ItemArray[1].ToString();
+                    arr[1] = dt.Rows[0].ItemArray[3].ToString();
+                    
+                    if(arr[0].ToString() == txtUser.Text && arr[1].ToString() == txtPassword.Text)
+                    {
+                        MessageBox.Show("Bienvenido","La Vista Alimentos S.A. de C.V.",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Su usuario o contraseña no son correctos \nverifique por favor !!","La Vista Alimentos S.A. de C.V.",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró nada !!");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error capturado: " + ex.Message, "La Vista Alimentos S.A. de C.V", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
