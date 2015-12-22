@@ -80,8 +80,8 @@ namespace La_Vista_Nominas
 
         private void Agregar_Empleado_Load(object sender, EventArgs e)
         {
-            DataTable dt = sql.SQLdata("SELECT MAX(id) FROM PERSONAL", null, dataValues);
-            txtNoEmp.Text = dt.Rows[0].ItemArray[0].ToString();
+            int id = sql.nextId("id", "personal", null, dataValues);
+            txtNoEmp.Text = id.ToString();
         }
     }
 }

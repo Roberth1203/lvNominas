@@ -70,7 +70,7 @@ namespace La_Vista_Nominas
             return dt;
         }
 
-        public void SQLstatement(string instruction, SqlConnection conn = null, string connectionValues = null) //Firebird insert, update or delete
+        public void SQLstatement(string instruction, SqlConnection conn = null, string connectionValues = null) //SQL insert, update or delete
         {
             try
             {
@@ -86,6 +86,53 @@ namespace La_Vista_Nominas
             {
                 MessageBox.Show(error.Message);
             }
+        }
+
+        public static SqlDataReader sqlReader(string instruction,SqlConnection conn = null, string connectionValues = null)  
+        {
+            SqlDataReader reader = null;
+            try
+            {
+                if (conn == null)
+                    conn = connectToSQL(connectionValues);
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = instruction;
+                reader = cmd.ExecuteReader();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error capturado: " + e.Message);
+            }
+            return (reader);
+        }
+
+        public int nextId(string field, string table,SqlConnection conn = null,string connectionValues = null)
+        {
+            string instruction = "SELECT MAX (" + field + ") FROM " + table;
+            int id = 0;
+            try
+            {
+                if (conn == null)
+                    conn = connectToSQL(connectionValues);
+                SqlDataReader reader = sqlReader(instruction.Replace("max", "count"), null,connectionValues);
+                reader.Read();
+                if (Convert.ToInt32(reader.GetValue(0)) == 0)
+                    id = 0;
+                else
+                {
+                    reader = sqlReader(instruction, null, connectionValues);
+                    reader.Read();
+                    id = Convert.ToInt32(reader.GetValue(0));
+                }
+                if (connectionValues != null)
+                    closeSQL(conn);
+                id = id + 1;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error capturado: " + e.Message);
+            }
+            return id;
         }
     }
 }

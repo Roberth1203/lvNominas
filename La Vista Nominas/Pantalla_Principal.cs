@@ -32,7 +32,7 @@ namespace La_Vista_Nominas
             dt = sql.SQLdata("select id AS ID_EMPLEADO,nombre AS NOMBRE_COMPLETO,calle + '' + next AS DOMICILIO,colonia AS COLONIA," +
                              "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
                              "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telefono1 AS TEL_CASA,telefono2 AS MOVIL,telefono3 AS OTRO,correo AS CORREO,rolaturno AS ROLA_TURNO from personal", null, dataValues);
+                             "telefono1 AS TEL_CASA,telefono2 AS MOVIL,telefono3 AS OTRO,correo AS CORREO from personal", null, dataValues);
             dataGridView1.DataSource = dt;
         }
 
