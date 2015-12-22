@@ -12,7 +12,9 @@ namespace La_Vista_Nominas
 {
     public partial class Pantalla_Principal : Form
     {
-        string[] datos = new string[]{ "Admin", "Sysdba", "La Vista", "Masterkey", "Demon" };
+        DataTable dt;
+        Utilities sql;
+        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
         public Pantalla_Principal()
         {
             InitializeComponent();
@@ -20,12 +22,18 @@ namespace La_Vista_Nominas
 
         private void Pantalla_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+              
         }
 
         private void Pantalla_Principal_Load(object sender, EventArgs e)
         {
-
+            dt = new DataTable();
+            sql = new Utilities();
+            dt = sql.SQLdata("select id AS ID_EMPLEADO,nombre AS NOMBRE_COMPLETO,calle + '' + next AS DOMICILIO,colonia AS COLONIA," +
+                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
+                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
+                             "telefono1 AS TEL_CASA,telefono2 AS MOVIL,telefono3 AS OTRO,correo AS CORREO,rolaturno AS ROLA_TURNO from personal", null, dataValues);
+            dataGridView1.DataSource = dt;
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

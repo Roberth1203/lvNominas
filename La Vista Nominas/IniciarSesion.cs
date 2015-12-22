@@ -15,6 +15,7 @@ namespace La_Vista_Nominas
     {
         SqlConnection con = new SqlConnection();
         DataTable dt = new DataTable();
+        Pantalla_Principal start;
         string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
 
         public IniciarSesion()
@@ -25,7 +26,7 @@ namespace La_Vista_Nominas
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Pantalla_Principal start = new Pantalla_Principal();
+            start = new Pantalla_Principal();
             start.Show();
             cargaDatos();
             this.Close();
@@ -118,6 +119,27 @@ namespace La_Vista_Nominas
             catch(Exception ex)
             {
                 MessageBox.Show("Error capturado: " + ex.Message, "La Vista Alimentos S.A. de C.V", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            start = new Pantalla_Principal();
+            if((int)e.KeyChar == (int)Keys.Enter)
+            {
+                cargaDatos();
+                start.Show();
+                this.Close();
             }
         }
     }

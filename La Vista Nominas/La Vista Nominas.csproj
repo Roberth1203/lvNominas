@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Agregar_Empleado.resx">
       <DependentUpon>Agregar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\defaultImage.png" />
     <None Include="Resources\cuadros de texto1.png" />
     <None Include="Resources\cuadros de texto activo1.png" />
     <None Include="Resources\cuadros de texto.png" />

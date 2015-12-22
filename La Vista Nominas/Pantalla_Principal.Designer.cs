@@ -91,7 +91,7 @@
             this.superTabControl1.ReorderTabsEnabled = true;
             this.superTabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.superTabControl1.SelectedTabIndex = 0;
-            this.superTabControl1.Size = new System.Drawing.Size(800, 512);
+            this.superTabControl1.Size = new System.Drawing.Size(986, 512);
             this.superTabControl1.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left;
             this.superTabControl1.TabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.superTabControl1.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.tabPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPersonal.Location = new System.Drawing.Point(237, 0);
             this.tabPersonal.Name = "tabPersonal";
-            this.tabPersonal.Size = new System.Drawing.Size(563, 512);
+            this.tabPersonal.Size = new System.Drawing.Size(749, 512);
             this.tabPersonal.TabIndex = 1;
             this.tabPersonal.TabItem = this.superTabItem1;
             // 
@@ -190,10 +190,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(557, 448);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(743, 448);
             this.dataGridView1.TabIndex = 2;
             // 
             // superTabItem1
@@ -209,7 +216,7 @@
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(563, 512);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
             this.superTabControlPanel1.TabIndex = 0;
             this.superTabControlPanel1.TabItem = this.tabReportes;
             // 
@@ -225,7 +232,7 @@
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(563, 512);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.superTabItem3;
             // 
@@ -238,6 +245,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnCerrar);
@@ -245,15 +254,17 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-5, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(818, 37);
+            this.panel1.Size = new System.Drawing.Size(1003, 37);
             this.panel1.TabIndex = 1;
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimizar.Location = new System.Drawing.Point(761, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(944, 7);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(21, 22);
+            this.btnMinimizar.Size = new System.Drawing.Size(21, 23);
             this.btnMinimizar.TabIndex = 2;
             this.btnMinimizar.Text = "_";
             this.btnMinimizar.UseVisualStyleBackColor = true;
@@ -261,9 +272,11 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCerrar.Location = new System.Drawing.Point(788, 6);
+            this.btnCerrar.Location = new System.Drawing.Point(964, 7);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(21, 23);
             this.btnCerrar.TabIndex = 2;
@@ -308,7 +321,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 558);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(992, 558);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.superTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
