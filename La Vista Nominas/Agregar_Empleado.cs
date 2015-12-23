@@ -36,7 +36,7 @@ namespace La_Vista_Nominas
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
-            pictureBox3.BackgroundImage = imageList1.Images[4];   
+
         }
 
         private void imgEmpleado_Click(object sender, EventArgs e)
@@ -57,10 +57,64 @@ namespace La_Vista_Nominas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int checkTurno,checkLicencia;
             try
             {
-                string sentencia = "";
-                sql.SQLstatement(sentencia, null, dataValues);
+                if (chkTurnos.Checked == true)
+                    checkTurno = 1;
+                else
+                    checkTurno = 0;
+
+                if (chkLicencia.Checked == true)
+                    checkLicencia = 1;
+                else
+                    checkLicencia = 0;
+
+                int tipoNom = 1; //Convert.ToInt32(cmbTipoNomina.SelectedItem.ToString().Substring(0, 1));
+
+
+                string insert = "INSERT INTO PERSONAL (" +
+                "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado,codpost, sexo," +
+                "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," + 
+                "salarionoc, csnm, nss, licencia,tiplic, claselic, ife, beneficiario, parentezco," +
+                "telefono1, telefono2,telefono3, correo)" +
+
+                "VALUES ('" + txtNombre.Text + 
+                "', '" + txtrfc.Text + 
+                "', '" + txtcurp.Text + 
+                "', '" + txtCalle.Text + 
+                "', '" + txtNoExt.Text + 
+                "', '" + txtNoInt.Text + 
+                "', '" + txtColonia.Text +
+                "', '" + txtMpio.Text + 
+                "', '" + txtEdo.Text + 
+                "', " + Convert.ToInt32(txtZipCode.Text) +
+                ", '" + comboSexo.SelectedItem.ToString() + 
+                "', '" + txtNacimiento.Text + 
+                "', '" + dateNacimiento.Text + 
+                "', '" + dateIngreso.Text + 
+                "', " + tipoNom + 
+                ", '" + cmbJornada.SelectedItem.ToString() + 
+                "'," + checkTurno + 
+                ", '" + cmbPago.SelectedItem.ToString() + 
+                "', '" + txtCuenta.Text + 
+                "', " + Convert.ToDouble(txtBaseDia.Text) + 
+                ", " + Convert.ToDouble(txtBaseNoche.Text) +
+                ", " + Convert.ToInt32(txtSBC.Text) + 
+                ", '" + txtSeguro.Text + 
+                "', " + checkLicencia + 
+                ", '" + txtTipoLicencia.Text + 
+                "', " + Convert.ToInt32(txtClaseLicencia.Text) + 
+                ", '" + txtIFE.Text + 
+                "', '" + txtbeneficiario.Text +
+                "', '" + txtparentesco.Text + 
+                "', " + Convert.ToInt32(txttel1.Text) + 
+                ", " + Convert.ToInt32(txttel2.Text) + 
+                ", " + Convert.ToInt32(txttel3.Text) + 
+                ", '" + txtcorreo.Text + 
+                "');";
+                
+                sql.SQLstatement(insert, null, dataValues);
             }
             catch (Exception error)
             {

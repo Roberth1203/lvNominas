@@ -41,8 +41,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtrfc = new System.Windows.Forms.TextBox();
+            this.txtcurp = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -101,24 +101,22 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtbeneficiario = new System.Windows.Forms.TextBox();
+            this.txtparentesco = new System.Windows.Forms.TextBox();
+            this.txttel1 = new System.Windows.Forms.TextBox();
+            this.txttel2 = new System.Windows.Forms.TextBox();
+            this.txttel3 = new System.Windows.Forms.TextBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.imgEmpleado = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,10 +213,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(278, 66);
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Location = new System.Drawing.Point(215, 64);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(92, 13);
+            this.txtNombre.Size = new System.Drawing.Size(211, 20);
             this.txtNombre.TabIndex = 12;
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             // 
@@ -244,19 +242,19 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "CURP:";
             // 
-            // textBox1
+            // txtrfc
             // 
-            this.textBox1.Location = new System.Drawing.Point(486, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtrfc.Location = new System.Drawing.Point(486, 63);
+            this.txtrfc.Name = "txtrfc";
+            this.txtrfc.Size = new System.Drawing.Size(97, 20);
+            this.txtrfc.TabIndex = 15;
             // 
-            // textBox2
+            // txtcurp
             // 
-            this.textBox2.Location = new System.Drawing.Point(648, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 16;
+            this.txtcurp.Location = new System.Drawing.Point(648, 63);
+            this.txtcurp.Name = "txtcurp";
+            this.txtcurp.Size = new System.Drawing.Size(137, 20);
+            this.txtcurp.TabIndex = 16;
             // 
             // label9
             // 
@@ -438,6 +436,7 @@
             // 
             // dateNacimiento
             // 
+            this.dateNacimiento.CustomFormat = "YYYY/MM/DD";
             this.dateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateNacimiento.Location = new System.Drawing.Point(739, 208);
             this.dateNacimiento.Name = "dateNacimiento";
@@ -533,8 +532,8 @@
             this.cmbTipoNomina.FormattingEnabled = true;
             this.cmbTipoNomina.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "Semanal",
-            "Quincenal"});
+            "1 .- Semanal ",
+            "2 .- Quincenal"});
             this.cmbTipoNomina.Location = new System.Drawing.Point(93, 305);
             this.cmbTipoNomina.Name = "cmbTipoNomina";
             this.cmbTipoNomina.Size = new System.Drawing.Size(121, 21);
@@ -830,47 +829,47 @@
             this.label39.TabIndex = 74;
             this.label39.Text = "e-mail:";
             // 
-            // textBox3
+            // txtbeneficiario
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 480);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 20);
-            this.textBox3.TabIndex = 75;
+            this.txtbeneficiario.Location = new System.Drawing.Point(114, 480);
+            this.txtbeneficiario.Name = "txtbeneficiario";
+            this.txtbeneficiario.Size = new System.Drawing.Size(256, 20);
+            this.txtbeneficiario.TabIndex = 75;
             // 
-            // textBox4
+            // txtparentesco
             // 
-            this.textBox4.Location = new System.Drawing.Point(482, 480);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 20);
-            this.textBox4.TabIndex = 76;
+            this.txtparentesco.Location = new System.Drawing.Point(482, 480);
+            this.txtparentesco.Name = "txtparentesco";
+            this.txtparentesco.Size = new System.Drawing.Size(160, 20);
+            this.txtparentesco.TabIndex = 76;
             // 
-            // textBox5
+            // txttel1
             // 
-            this.textBox5.Location = new System.Drawing.Point(727, 480);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 20);
-            this.textBox5.TabIndex = 77;
+            this.txttel1.Location = new System.Drawing.Point(727, 480);
+            this.txttel1.Name = "txttel1";
+            this.txttel1.Size = new System.Drawing.Size(108, 20);
+            this.txttel1.TabIndex = 77;
             // 
-            // textBox6
+            // txttel2
             // 
-            this.textBox6.Location = new System.Drawing.Point(108, 520);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(120, 20);
-            this.textBox6.TabIndex = 78;
+            this.txttel2.Location = new System.Drawing.Point(108, 520);
+            this.txttel2.Name = "txttel2";
+            this.txttel2.Size = new System.Drawing.Size(120, 20);
+            this.txttel2.TabIndex = 78;
             // 
-            // textBox7
+            // txttel3
             // 
-            this.textBox7.Location = new System.Drawing.Point(295, 520);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(134, 20);
-            this.textBox7.TabIndex = 79;
+            this.txttel3.Location = new System.Drawing.Point(295, 520);
+            this.txttel3.Name = "txttel3";
+            this.txttel3.Size = new System.Drawing.Size(134, 20);
+            this.txttel3.TabIndex = 79;
             // 
-            // textBox8
+            // txtcorreo
             // 
-            this.textBox8.Location = new System.Drawing.Point(518, 520);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 20);
-            this.textBox8.TabIndex = 80;
+            this.txtcorreo.Location = new System.Drawing.Point(518, 520);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(185, 20);
+            this.txtcorreo.TabIndex = 80;
             // 
             // imgEmpleado
             // 
@@ -918,17 +917,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.cuadros_de_texto_activo;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(215, 59);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(228, 30);
-            this.pictureBox3.TabIndex = 81;
-            this.pictureBox3.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -951,12 +939,12 @@
             this.ClientSize = new System.Drawing.Size(850, 607);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgEmpleado);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtcorreo);
+            this.Controls.Add(this.txttel3);
+            this.Controls.Add(this.txttel2);
+            this.Controls.Add(this.txttel1);
+            this.Controls.Add(this.txtparentesco);
+            this.Controls.Add(this.txtbeneficiario);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label37);
@@ -1015,8 +1003,8 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcurp);
+            this.Controls.Add(this.txtrfc);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNombre);
@@ -1030,8 +1018,8 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Agregar_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar_Empleado";
@@ -1040,7 +1028,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1063,8 +1050,8 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtrfc;
+        private System.Windows.Forms.TextBox txtcurp;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -1123,13 +1110,12 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txtbeneficiario;
+        private System.Windows.Forms.TextBox txtparentesco;
+        private System.Windows.Forms.TextBox txttel1;
+        private System.Windows.Forms.TextBox txttel2;
+        private System.Windows.Forms.TextBox txttel3;
+        private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.PictureBox imgEmpleado;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox2;
