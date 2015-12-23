@@ -66,7 +66,11 @@ namespace La_Vista_Nominas
                     checkTurno = 0;
 
                 if (chkLicencia.Checked == true)
+                {
+                    txtTipoLicencia.Enabled = true;
+                    txtClaseLicencia.Enabled = true;
                     checkLicencia = 1;
+                }
                 else
                     checkLicencia = 0;
 
@@ -113,7 +117,7 @@ namespace La_Vista_Nominas
                 ", " + Convert.ToInt32(txttel3.Text) + 
                 ", '" + txtcorreo.Text + 
                 "');";
-                
+
                 sql.SQLstatement(insert, null, dataValues);
             }
             catch (Exception error)
@@ -122,20 +126,40 @@ namespace La_Vista_Nominas
             }
         }
 
-        public void onlyLetters(KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
         private void Agregar_Empleado_Load(object sender, EventArgs e)
         {
             int id = sql.nextId("id", "personal", null, dataValues);
             txtNoEmp.Text = id.ToString();
+        }
+
+        private void chkLicencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkLicencia.Checked == true)
+            {
+                txtTipoLicencia.Enabled = true;
+                txtClaseLicencia.Enabled = true;
+            }
+            else
+            {
+                txtTipoLicencia.Enabled = false;
+                txtClaseLicencia.Enabled = false;
+            }
+            
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyLetters(e);
+        }
+
+        private void onlyLetters(KeyPressEventArgs ex)
+        {
+            if (!(char.IsLetter(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ex.Handled = true;
+                return;
+            }
         }
     }
 }

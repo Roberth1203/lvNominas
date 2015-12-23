@@ -219,6 +219,7 @@
             this.txtNombre.Size = new System.Drawing.Size(211, 20);
             this.txtNombre.TabIndex = 12;
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label7
             // 
@@ -437,7 +438,7 @@
             // dateNacimiento
             // 
             this.dateNacimiento.CustomFormat = "YYYY/MM/DD";
-            this.dateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNacimiento.Location = new System.Drawing.Point(739, 208);
             this.dateNacimiento.Name = "dateNacimiento";
             this.dateNacimiento.Size = new System.Drawing.Size(94, 20);
@@ -456,7 +457,8 @@
             // 
             // dateIngreso
             // 
-            this.dateIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateIngreso.CustomFormat = "YYYY/MM/DD";
+            this.dateIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateIngreso.Location = new System.Drawing.Point(152, 264);
             this.dateIngreso.Name = "dateIngreso";
             this.dateIngreso.Size = new System.Drawing.Size(88, 20);
@@ -538,6 +540,7 @@
             this.cmbTipoNomina.Name = "cmbTipoNomina";
             this.cmbTipoNomina.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoNomina.TabIndex = 45;
+            this.cmbTipoNomina.Tag = "";
             // 
             // cmbJornada
             // 
@@ -651,7 +654,7 @@
             this.txtBaseDia.Name = "txtBaseDia";
             this.txtBaseDia.Size = new System.Drawing.Size(52, 20);
             this.txtBaseDia.TabIndex = 56;
-            this.txtBaseDia.Text = "0.00";
+            this.txtBaseDia.Text = "0";
             this.txtBaseDia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtBaseNoche
@@ -660,7 +663,7 @@
             this.txtBaseNoche.Name = "txtBaseNoche";
             this.txtBaseNoche.Size = new System.Drawing.Size(48, 20);
             this.txtBaseNoche.TabIndex = 57;
-            this.txtBaseNoche.Text = "0.00";
+            this.txtBaseNoche.Text = "0";
             this.txtBaseNoche.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label29
@@ -741,9 +744,11 @@
             this.chkLicencia.TabIndex = 65;
             this.chkLicencia.Text = "Licencia";
             this.chkLicencia.UseVisualStyleBackColor = true;
+            this.chkLicencia.CheckedChanged += new System.EventHandler(this.chkLicencia_CheckedChanged);
             // 
             // txtTipoLicencia
             // 
+            this.txtTipoLicencia.Enabled = false;
             this.txtTipoLicencia.Location = new System.Drawing.Point(326, 396);
             this.txtTipoLicencia.Name = "txtTipoLicencia";
             this.txtTipoLicencia.Size = new System.Drawing.Size(100, 20);
@@ -751,6 +756,7 @@
             // 
             // txtClaseLicencia
             // 
+            this.txtClaseLicencia.Enabled = false;
             this.txtClaseLicencia.Location = new System.Drawing.Point(486, 396);
             this.txtClaseLicencia.Name = "txtClaseLicencia";
             this.txtClaseLicencia.Size = new System.Drawing.Size(122, 20);
