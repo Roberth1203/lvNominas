@@ -185,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\refreshGrid.png" />
     <None Include="Resources\defaultImage.png" />
     <None Include="Resources\cuadros de texto1.png" />
     <None Include="Resources\cuadros de texto activo1.png" />

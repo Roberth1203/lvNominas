@@ -127,8 +127,11 @@
   <data name="LV Splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LV Splash.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancelarOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelarOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bienvenida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bienvenida.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defaultImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BajaEmpOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BajaEmpOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,10 +193,10 @@
   <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bienvenida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bienvenida.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancelarOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelarOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="defaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\defaultImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refreshGrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refreshGrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

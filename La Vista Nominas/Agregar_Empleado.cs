@@ -7,16 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace La_Vista_Nominas
 {
     public partial class Agregar_Empleado : Form
     {
+        Pantalla_Principal main;
         Utilities sql = new Utilities();
-        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
         public Agregar_Empleado()
         {
             InitializeComponent();
+            try
+            {
+                string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+                SqlConnection remoteConnection = new SqlConnection(dataValues);
+                remoteConnection.Open();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Error SQL: " + e);
+            }
         }
 
         private void btnGuardar_MouseHover(object sender, EventArgs e)
@@ -78,47 +90,27 @@ namespace La_Vista_Nominas
 
 
                 string insert = "INSERT INTO PERSONAL (" +
-                "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado,codpost, sexo," +
-                "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," + 
-                "salarionoc, csnm, nss, licencia,tiplic, claselic, ife, beneficiario, parentezco," +
-                "telefono1, telefono2,telefono3, correo)" +
+                "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
+                "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," +
+                "salarionoc, csnm, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
+                "telCasa, telMovil, telOtro, correo)" +
 
-                "VALUES ('" + txtNombre.Text + 
-                "', '" + txtrfc.Text + 
-                "', '" + txtcurp.Text + 
-                "', '" + txtCalle.Text + 
-                "', '" + txtNoExt.Text + 
-                "', '" + txtNoInt.Text + 
-                "', '" + txtColonia.Text +
-                "', '" + txtMpio.Text + 
-                "', '" + txtEdo.Text + 
-                "', " + Convert.ToInt32(txtZipCode.Text) +
-                ", '" + comboSexo.SelectedItem.ToString() + 
-                "', '" + txtNacimiento.Text + 
-                "', '" + dateNacimiento.Text + 
-                "', '" + dateIngreso.Text + 
-                "', " + tipoNom + 
-                ", '" + cmbJornada.SelectedItem.ToString() + 
-                "'," + checkTurno + 
-                ", '" + cmbPago.SelectedItem.ToString() + 
-                "', '" + txtCuenta.Text + 
-                "', " + Convert.ToDouble(txtBaseDia.Text) + 
-                ", " + Convert.ToDouble(txtBaseNoche.Text) +
-                ", " + Convert.ToInt32(txtSBC.Text) + 
-                ", '" + txtSeguro.Text + 
-                "', " + checkLicencia + 
-                ", '" + txtTipoLicencia.Text + 
-                "', " + Convert.ToInt32(txtClaseLicencia.Text) + 
-                ", '" + txtIFE.Text + 
-                "', '" + txtbeneficiario.Text +
-                "', '" + txtparentesco.Text + 
-                "', " + Convert.ToInt32(txttel1.Text) + 
-                ", " + Convert.ToInt32(txttel2.Text) + 
-                ", " + Convert.ToInt32(txttel3.Text) + 
-                ", '" + txtcorreo.Text + 
-                "');";
+                "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text + 
+                "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', " + txtZipCode.Text +
+                ", '" + comboSexo.SelectedItem.ToString().Substring(0,1) + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
+                "', '" + dateIngreso.Text + "', " + tipoNom + ", '" + cmbJornada.SelectedItem.ToString() + "', " + checkTurno + 
+                ", '" + cmbPago.SelectedItem.ToString() + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) + 
+                ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
+                "', " + checkLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
+                "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
+                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "');";
+
 
                 sql.SQLstatement(insert, null, dataValues);
+
+                //main = new Pantalla_Principal();
+                //main.cargarRegistros();
+                this.Close();
             }
             catch (Exception error)
             {

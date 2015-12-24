@@ -29,11 +29,7 @@ namespace La_Vista_Nominas
         {
             dt = new DataTable();
             sql = new Utilities();
-            dt = sql.SQLdata("select id AS ID_EMPLEADO,nombre AS NOMBRE_COMPLETO,calle + '' + next AS DOMICILIO,colonia AS COLONIA," +
-                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
-                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telefono1 AS TEL_CASA,telefono2 AS MOVIL,telefono3 AS OTRO,correo AS CORREO from personal", null, dataValues);
-            dataGridView1.DataSource = dt;
+            cargarRegistros();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -85,10 +81,39 @@ namespace La_Vista_Nominas
         {
             dt = new DataTable();
             dt = sql.SQLdata("select id AS ID_EMPLEADO,nombre AS NOMBRE_COMPLETO,calle + '' + next AS DOMICILIO,colonia AS COLONIA," +
-                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
-                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telefono1 AS TEL_CASA,telefono2 AS MOVIL,telefono3 AS OTRO,correo AS CORREO from personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
+                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
+                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
+                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO from personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
             dataGridView1.DataSource = dt;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Image = listButtonImages.Images[7];
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Image = listButtonImages.Images[6];
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            cargarRegistros();
+        }
+
+        public void cargarRegistros()
+        {
+            DataTable dt = sql.SQLdata("select id AS ID_EMPLEADO, nombre AS NOMBRE_COMPLETO, calle + '' + next AS DOMICILIO, colonia AS COLONIA, " +
+                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
+                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
+                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO from personal", null, dataValues);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void Pantalla_Principal_Activated(object sender, EventArgs e)
+        {
+            
         }
     }
 }

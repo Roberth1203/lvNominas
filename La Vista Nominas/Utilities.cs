@@ -14,13 +14,14 @@ namespace La_Vista_Nominas
 {
     class Utilities
     {
-        public static SqlConnection connectToSQL(string connectionValues)
+        public static SqlConnection connectToSQL()
         {
             try
             {
                 string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
+                MessageBox.Show("Conectado !");
                 return remoteConnection;
             }
             catch (SqlException e)
@@ -54,7 +55,7 @@ namespace La_Vista_Nominas
             {
                 if (conn == null)
                 {
-                    conn = connectToSQL(dataConnection);
+                    conn = connectToSQL();
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     adapter.SelectCommand = new SqlCommand(instruction, conn);
                     adapter.Fill(dt);
@@ -75,7 +76,7 @@ namespace La_Vista_Nominas
             {
                 if (conn == null)
 
-                    conn = connectToSQL(connectionValues);
+                    conn = connectToSQL();
                 SqlCommand cmd = new SqlCommand(instruction, conn);
                 cmd.ExecuteNonQuery();
                 if (connectionValues != null)
@@ -93,7 +94,7 @@ namespace La_Vista_Nominas
             try
             {
                 if (conn == null)
-                    conn = connectToSQL(connectionValues);
+                    conn = connectToSQL();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = instruction;
                 reader = cmd.ExecuteReader();
@@ -112,7 +113,7 @@ namespace La_Vista_Nominas
             try
             {
                 if (conn == null)
-                    conn = connectToSQL(connectionValues);
+                    conn = connectToSQL();
                 SqlDataReader reader = sqlReader(instruction.Replace("max", "count"), null,connectionValues);
                 reader.Read();
                 if (Convert.ToInt32(reader.GetValue(0)) == 0)

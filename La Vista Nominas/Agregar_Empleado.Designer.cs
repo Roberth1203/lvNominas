@@ -438,7 +438,7 @@
             // dateNacimiento
             // 
             this.dateNacimiento.CustomFormat = "YYYY/MM/DD";
-            this.dateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateNacimiento.Location = new System.Drawing.Point(739, 208);
             this.dateNacimiento.Name = "dateNacimiento";
             this.dateNacimiento.Size = new System.Drawing.Size(94, 20);
@@ -458,7 +458,7 @@
             // dateIngreso
             // 
             this.dateIngreso.CustomFormat = "YYYY/MM/DD";
-            this.dateIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateIngreso.Location = new System.Drawing.Point(152, 264);
             this.dateIngreso.Name = "dateIngreso";
             this.dateIngreso.Size = new System.Drawing.Size(88, 20);
