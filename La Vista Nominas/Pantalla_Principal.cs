@@ -14,6 +14,7 @@ namespace La_Vista_Nominas
     {
         DataTable dt;
         Utilities sql;
+        string tipoFiltro;
         string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
         public Pantalla_Principal()
         {
@@ -85,6 +86,7 @@ namespace La_Vista_Nominas
                              "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
                              "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO from personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
             dataGridView1.DataSource = dt;
+            
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
@@ -107,7 +109,7 @@ namespace La_Vista_Nominas
             DataTable dt = sql.SQLdata("select id AS ID_EMPLEADO, nombre AS NOMBRE_COMPLETO, calle + '' + next AS DOMICILIO, colonia AS COLONIA, " +
                              "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
                              "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO from personal", null, dataValues);
+                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, imagen as IMAGEN from personal", null, dataValues);
             dataGridView1.DataSource = dt;
         }
 
@@ -115,5 +117,12 @@ namespace La_Vista_Nominas
         {
             
         }
+
+        private void btnDrop_Click(object sender, EventArgs e)
+        {
+            Seleccion_Empleado obj = new Seleccion_Empleado();
+            obj.Show();
+        }
+
     }
 }
