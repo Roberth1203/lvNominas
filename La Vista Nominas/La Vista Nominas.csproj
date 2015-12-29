@@ -80,6 +80,12 @@
     <Compile Include="IniciarSesion.Designer.cs">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarEmpleados.Designer.cs">
+      <DependentUpon>ModificarEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +94,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seleccion_Empleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seleccion_Empleado.Designer.cs">
-      <DependentUpon>Seleccion_Empleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Agregar_Empleado.resx">
       <DependentUpon>Agregar_Empleado.cs</DependentUpon>
@@ -103,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarEmpleados.resx">
+      <DependentUpon>ModificarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Principal.resx">
       <DependentUpon>Pantalla_Principal.cs</DependentUpon>
@@ -117,9 +120,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Seleccion_Empleado.resx">
-      <DependentUpon>Seleccion_Empleado.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="almacenDatos.xsc">
       <DependentUpon>almacenDatos.xsd</DependentUpon>
     </None>
@@ -194,6 +194,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\EditarEmpOver.png" />
+    <None Include="Resources\EditarEmp1.png" />
+    <None Include="Resources\EditarEmp.png" />
+    <None Include="Resources\exportarOver.png" />
+    <None Include="Resources\exportar.png" />
     <None Include="Resources\refreshGrid.png" />
     <None Include="Resources\defaultImage.png" />
     <None Include="Resources\cuadros de texto1.png" />
@@ -205,6 +210,17 @@
     <None Include="Resources\GuardarOver.png" />
     <None Include="Resources\GuardarNor.png" />
     <None Include="Resources\barra titulo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

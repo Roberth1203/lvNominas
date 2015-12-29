@@ -94,7 +94,7 @@ namespace La_Vista_Nominas
                 "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
                 "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," +
                 "salarionoc, csnm, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
-                "telCasa, telMovil, telOtro, correo)" +
+                "telCasa, telMovil, telOtro, correo, status)" +
 
                 "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text + 
                 "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', " + txtZipCode.Text +
@@ -104,7 +104,7 @@ namespace La_Vista_Nominas
                 ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
                 "', " + checkLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
                 "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
-                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "');";
+                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','S');";
 
 
                 sql.SQLstatement(insert, null, dataValues);
@@ -123,7 +123,6 @@ namespace La_Vista_Nominas
         {
             int id = sql.nextId("id", "personal", null, dataValues);
             txtNoEmp.Text = id.ToString();
-            consultarImagen();
             
         }
 
@@ -197,13 +196,8 @@ namespace La_Vista_Nominas
             guardarImagen();
         }
 
-        /// El método Image2Bytes recibe como parámetro un objeto de tipo Image,
-        /// crea un fichero temporal y lo guarda como PNG,
-        /// lee el contenido de ese fichero y lo asigna a un array de tipo Byte,
-        /// para finalmente devolver dicho array.
-        /// </summary>
-        /// <param name="img"></param>
-        /// <returns></returns>
+        /*
+        // crea un arreglo de bytes a partir de la imagen que se va a almacenar.
         private byte[] Image2Bytes(Image img)
         {
             string sTemp = Path.GetTempFileName();
@@ -217,14 +211,9 @@ namespace La_Vista_Nominas
             fs.Close();
             return bytes;
         }
+        */
 
-        /// <summary>
-        /// el método Byte2Image recibe un array de bytes como parámetro,
-        /// lo asigna a un objeto del tipo MemoryStream y ese "stream" lo utiliza para crear un objeto del tipo Bitmap,
-        /// finalmente devuelve ese objeto que en el fondo es un objeto de tipo Image.
-        /// </summary>
-        /// <param name="bytes"></param>
-        /// <returns></returns>
+        // Recupera la imagen a partir del conjunto de bits guardados en la DB
         private Image Bytes2Image(byte[] bytes)
         {
             if (bytes == null) return null;
@@ -247,7 +236,8 @@ namespace La_Vista_Nominas
         
         public void consultarImagen()
         {
-            string cad ="select imagen from personal where id = 24";
+            int idEmp = Convert.ToInt32(txtNoEmp.Text);
+            string cad ="select imagen from personal where id = " + idEmp;
             SqlConnection conexion = new SqlConnection(dataValues);
             SqlCommand comando = new SqlCommand(cad, conexion);
             try
@@ -269,43 +259,6 @@ namespace La_Vista_Nominas
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
-
-/*
-        #region Consultar imagen
-
-
-
-        string seql = "select top 1 foto from tbl_imagenes";
-            string cadena = @"Data Source=DESARROLLO\SQLEXPRESS;Initial Catalog=bdimagenes;Integrated Security=True";
-SqlConnection conexion = new SqlConnection(cadena);
-SqlCommand comando = new SqlCommand(seql, conexion);
-            
-
-            try
-            {
-                SqlDataReader dr;
-conexion.Open();
-                dr =  comando.ExecuteReader();
-
-                dr.Read();
-                
-                byte[] img = (byte[])dr[0];
-
-                this.pbcarga.Image = Bytes2Image(img);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                conexion.Close();
-            }
-
-            #endregion
-            */
     }
 }
