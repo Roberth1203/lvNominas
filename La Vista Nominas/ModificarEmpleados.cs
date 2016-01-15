@@ -113,38 +113,38 @@ namespace La_Vista_Nominas
             dateIngreso.Text = dt.Rows[0].ItemArray[13].ToString();
             cmbTipoNomina.Text = dt.Rows[0].ItemArray[14].ToString();
             cmbJornada.Text = dt.Rows[0].ItemArray[15].ToString();
-
+            /*
             if (dt.Rows[0].ItemArray[16].ToString().Equals("1"))
                 chkTurnos.Checked = true;
             else
                 chkTurnos.Checked = false;
+            */
+            cmbPago.Text = dt.Rows[0].ItemArray[16].ToString();
+            txtCuenta.Text = dt.Rows[0].ItemArray[17].ToString();
+            txtBaseDia.Text = dt.Rows[0].ItemArray[18].ToString();
+            txtBaseNoche.Text = dt.Rows[0].ItemArray[19].ToString();
+            txtSBC.Text = dt.Rows[0].ItemArray[20].ToString();
+            txtSeguro.Text = dt.Rows[0].ItemArray[21].ToString();
 
-            cmbPago.Text = dt.Rows[0].ItemArray[17].ToString();
-            txtCuenta.Text = dt.Rows[0].ItemArray[18].ToString();
-            txtBaseDia.Text = dt.Rows[0].ItemArray[19].ToString();
-            txtBaseNoche.Text = dt.Rows[0].ItemArray[20].ToString();
-            txtSBC.Text = dt.Rows[0].ItemArray[21].ToString();
-            txtSeguro.Text = dt.Rows[0].ItemArray[22].ToString();
-
-            if (dt.Rows[0].ItemArray[23].ToString().Equals("1"))
+            if (dt.Rows[0].ItemArray[22].ToString().Equals("1"))
                 chkLicencia.Checked = true;
             else
                 chkLicencia.Checked = false;
 
-            txtTipoLicencia.Text = dt.Rows[0].ItemArray[24].ToString();
-            txtClaseLicencia.Text = dt.Rows[0].ItemArray[25].ToString();
-            txtIFE.Text = dt.Rows[0].ItemArray[26].ToString();
-            txtbeneficiario.Text = dt.Rows[0].ItemArray[27].ToString();
-            txtparentesco.Text = dt.Rows[0].ItemArray[28].ToString();
-            txttel1.Text = dt.Rows[0].ItemArray[29].ToString();
-            txttel2.Text = dt.Rows[0].ItemArray[30].ToString();
+            txtTipoLicencia.Text = dt.Rows[0].ItemArray[23].ToString();
+            txtClaseLicencia.Text = dt.Rows[0].ItemArray[24].ToString();
+            //txtIFE.Text = dt.Rows[0].ItemArray[25].ToString();
+            txtbeneficiario.Text = dt.Rows[0].ItemArray[25].ToString();
+            txtparentesco.Text = dt.Rows[0].ItemArray[26].ToString();
+            txttel1.Text = dt.Rows[0].ItemArray[27].ToString();
+            txttel2.Text = dt.Rows[0].ItemArray[28].ToString();
 
 
-            DataTable dt2 = util.SQLdata("select telOtro,correo,status from personal where id = " + Convert.ToInt32(txtNoEmp.Text.ToString()) + ";", null, dataValues);
+            DataTable dt2 = util.SQLdata("select telOtro,correo,status,ife from personal where id = " + Convert.ToInt32(txtNoEmp.Text.ToString()) + ";", null, dataValues);
             txttel3.Text = dt2.Rows[0].ItemArray[0].ToString();
             txtcorreo.Text = dt2.Rows[0].ItemArray[1].ToString();
             cmbStatus.Text = dt2.Rows[0].ItemArray[2].ToString();
-
+            txtIFE.Text = dt2.Rows[0].ItemArray[3].ToString();
             consultarImagen();
         }
 

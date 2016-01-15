@@ -39,7 +39,7 @@ namespace La_Vista_Nominas
                 string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
-                MessageBox.Show("Conectado a lvserver","Visual Studio dice: ",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //MessageBox.Show("Conectado a lvserver","Visual Studio dice: ",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return remoteConnection;
             }
             catch(SqlException e)
@@ -90,35 +90,45 @@ namespace La_Vista_Nominas
 
         public void cargaDatos()
         {
-            string[] arr = new string[2];
             try
             {
-                string instruccion = "select * from users where usuario ='" + txtUser.Text + "'";
-                DataTable dt = SQLdata(instruccion, null, dataValues);
-                
-                if (!dt.Rows[0].ItemArray[0].Equals(""))
+                if(txtUser.Text == "" || txtPassword.Text == "")
                 {
-                    // Cargo datos del DataTable a textbox para presentar informacion
-                    arr[0] = dt.Rows[0].ItemArray[1].ToString();
-                    arr[1] = dt.Rows[0].ItemArray[3].ToString();
-                    
-                    if(arr[0].ToString() == txtUser.Text && arr[1].ToString() == txtPassword.Text)
-                    {
-                        MessageBox.Show("Bienvenido","La Vista Alimentos S.A. de C.V.",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Su usuario o contraseña no son correctos \nverifique por favor !!","La Vista Alimentos S.A. de C.V.",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                    }
+                    MessageBox.Show("El nombre de usuario o la contraseña no pueden estar vacíos \nVerfique por favor !!","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    txtUser.Focus();
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró nada !!");
+                    try
+                    {
+                        string instruccion = "select usuario,password from users where usuario ='" + txtUser.Text + "'";
+                        DataTable dt = SQLdata(instruccion, null, dataValues);
+                        MessageBox.Show(dt.Rows[0].ItemArray[0].ToString());
+
+                        if(dt.Rows[0].ItemArray[1].Equals(txtPassword.Text))
+                        {
+                            MessageBox.Show("Bienvenido: " + txtUser.Text, "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            start.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseñe incorrecta !", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txtPassword.SelectAll();
+                        }
+                        
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Usuario no registrado", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUser.SelectAll();
+                    }
+                    
                 }
             }
-            catch(Exception ex)
+            catch(Exception e)
             {
-                MessageBox.Show("Error capturado: " + ex.Message, "La Vista Alimentos S.A. de C.V", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -138,8 +148,6 @@ namespace La_Vista_Nominas
             if((int)e.KeyChar == (int)Keys.Enter)
             {
                 cargaDatos();
-                start.Show();
-                this.Close();
             }
         }
     }

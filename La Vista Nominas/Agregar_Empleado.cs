@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace La_Vista_Nominas
 {
@@ -123,7 +124,20 @@ namespace La_Vista_Nominas
         {
             int id = sql.nextId("id", "personal", null, dataValues);
             txtNoEmp.Text = id.ToString();
-            
+
+            DataTable dt = sql.SQLdata("SELECT descripcion from cat_departamentos",null,dataValues);
+
+            string currentrow = "";
+            List<String> lstPedidos = new List<string>();
+            int i = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                lstPedidos.Add(dt.Rows[i].ItemArray[0].ToString());
+                i++;
+            }
+
+            cmbDepto.DataSource = lstPedidos;
+
         }
 
         private void chkLicencia_CheckedChanged(object sender, EventArgs e)

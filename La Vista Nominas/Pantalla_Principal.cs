@@ -123,7 +123,7 @@ namespace La_Vista_Nominas
 
         private void btnDrop_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Id: " + idCapturado);
+            //MessageBox.Show("Id: " + idCapturado);
             ModificarEmpleados update = new ModificarEmpleados();
             update.tipo = "baja";
             update.txtNoEmp.Text = idCapturado.ToString();
@@ -147,7 +147,7 @@ namespace La_Vista_Nominas
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int IDValor = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID_EMPLEADO"].Value.ToString());
-            MessageBox.Show("Valor: " + IDValor);
+            //MessageBox.Show("Valor: " + IDValor);
 
             //DataGridViewRow row = dataGridView1.CurrentRow;
             //int id = Convert.ToInt32(row.Cells("selectnombrecallenextcoloniamunicipioestadopaissexonacimientoingresosalariodiurnosalarionoclicenciatiplicclaselicbeneficiarioparentezcotelCasatelMoviltelOtrocorreoimagen").Value);
@@ -172,12 +172,12 @@ namespace La_Vista_Nominas
         {
             String v = dataGridView1.Rows[e.RowIndex].Cells["ID_EMPLEADO"].Value.ToString();
             idCapturado = v;
-            MessageBox.Show("" + idCapturado);
+            //MessageBox.Show("" + idCapturado);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Id: " + idCapturado);
+            //MessageBox.Show("Id: " + idCapturado);
             ModificarEmpleados update = new ModificarEmpleados();
             update.tipo = "cambio";
             update.txtNoEmp.Text = idCapturado.ToString();
