@@ -112,7 +112,7 @@ namespace La_Vista_Nominas
             DataTable dt = sql.SQLdata("select id AS ID_EMPLEADO, nombre AS NOMBRE_COMPLETO, calle + '' + next AS DOMICILIO, colonia AS COLONIA, " +
                              "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
                              "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, imagen as IMAGEN from personal", null, dataValues);
+                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, imagen as IMAGEN, status AS STATUS from personal", null, dataValues);
             dataGridView1.DataSource = dt;
         }
 
@@ -147,11 +147,11 @@ namespace La_Vista_Nominas
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int IDValor = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID_EMPLEADO"].Value.ToString());
-            //MessageBox.Show("Valor: " + IDValor);
-
-            //DataGridViewRow row = dataGridView1.CurrentRow;
-            //int id = Convert.ToInt32(row.Cells("selectnombrecallenextcoloniamunicipioestadopaissexonacimientoingresosalariodiurnosalarionoclicenciatiplicclaselicbeneficiarioparentezcotelCasatelMoviltelOtrocorreoimagen").Value);
+            //si se pulsa e el header el RowIndex sera menos a menos
+            if (!(e.RowIndex > -1))
+            {
+                return;
+            }
         }
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
