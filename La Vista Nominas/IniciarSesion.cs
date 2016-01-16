@@ -21,15 +21,11 @@ namespace La_Vista_Nominas
         public IniciarSesion()
         {
             InitializeComponent();
-            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            start = new Pantalla_Principal();
-            start.Show();
             cargaDatos();
-            this.Close();
         }
 
         public static SqlConnection connectToSQL(string connectionValues)
