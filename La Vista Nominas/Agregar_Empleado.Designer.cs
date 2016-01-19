@@ -113,7 +113,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
@@ -131,6 +130,8 @@
             this.imageList1.Images.SetKeyName(3, "cancelarOver.png");
             this.imageList1.Images.SetKeyName(4, "cuadros de texto1.png");
             this.imageList1.Images.SetKeyName(5, "cuadros de texto activo1.png");
+            this.imageList1.Images.SetKeyName(6, "add image.png");
+            this.imageList1.Images.SetKeyName(7, "defaultImage.png");
             // 
             // label1
             // 
@@ -305,6 +306,7 @@
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(163, 124);
+            this.txtCalle.MaxLength = 50;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(211, 20);
             this.txtCalle.TabIndex = 21;
@@ -312,6 +314,7 @@
             // txtNoExt
             // 
             this.txtNoExt.Location = new System.Drawing.Point(448, 124);
+            this.txtNoExt.MaxLength = 25;
             this.txtNoExt.Name = "txtNoExt";
             this.txtNoExt.Size = new System.Drawing.Size(30, 20);
             this.txtNoExt.TabIndex = 22;
@@ -319,6 +322,7 @@
             // txtNoInt
             // 
             this.txtNoInt.Location = new System.Drawing.Point(543, 124);
+            this.txtNoInt.MaxLength = 25;
             this.txtNoInt.Name = "txtNoInt";
             this.txtNoInt.Size = new System.Drawing.Size(30, 20);
             this.txtNoInt.TabIndex = 23;
@@ -326,6 +330,7 @@
             // txtColonia
             // 
             this.txtColonia.Location = new System.Drawing.Point(647, 124);
+            this.txtColonia.MaxLength = 50;
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Size = new System.Drawing.Size(162, 20);
             this.txtColonia.TabIndex = 24;
@@ -388,6 +393,7 @@
             // txtMpio
             // 
             this.txtMpio.Location = new System.Drawing.Point(181, 166);
+            this.txtMpio.MaxLength = 50;
             this.txtMpio.Name = "txtMpio";
             this.txtMpio.Size = new System.Drawing.Size(164, 20);
             this.txtMpio.TabIndex = 30;
@@ -395,6 +401,7 @@
             // txtEdo
             // 
             this.txtEdo.Location = new System.Drawing.Point(423, 166);
+            this.txtEdo.MaxLength = 50;
             this.txtEdo.Name = "txtEdo";
             this.txtEdo.Size = new System.Drawing.Size(183, 20);
             this.txtEdo.TabIndex = 31;
@@ -402,6 +409,7 @@
             // txtZipCode
             // 
             this.txtZipCode.Location = new System.Drawing.Point(710, 166);
+            this.txtZipCode.MaxLength = 30;
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(37, 20);
             this.txtZipCode.TabIndex = 32;
@@ -889,6 +897,8 @@
             this.imgEmpleado.TabIndex = 82;
             this.imgEmpleado.TabStop = false;
             this.imgEmpleado.Click += new System.EventHandler(this.imgEmpleado_Click);
+            this.imgEmpleado.MouseLeave += new System.EventHandler(this.imgEmpleado_MouseLeave);
+            this.imgEmpleado.MouseHover += new System.EventHandler(this.imgEmpleado_MouseHover);
             // 
             // btnCancelar
             // 
@@ -900,6 +910,8 @@
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
+            this.btnCancelar.MouseHover += new System.EventHandler(this.btnCancelar_MouseHover);
             // 
             // btnGuardar
             // 
@@ -938,23 +950,14 @@
             this.pictureBox2.TabIndex = 83;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(598, 557);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Agregar_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.base1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 607);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.imgEmpleado);
             this.Controls.Add(this.txtcorreo);
@@ -1036,6 +1039,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Agregar_Empleado";
@@ -1137,6 +1141,5 @@
         private System.Windows.Forms.PictureBox imgEmpleado;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
     }
 }

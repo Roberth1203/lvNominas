@@ -15,7 +15,7 @@ namespace La_Vista_Nominas
     public partial class ModificarEmpleados : Form
     {
         Pantalla_Principal main = new Pantalla_Principal();
-        Utilities util = new Utilities();
+        Utilities util;
         public string tipo;
         string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
         public ModificarEmpleados()
@@ -44,10 +44,12 @@ namespace La_Vista_Nominas
         {
             if (tipo.Equals("baja"))
             {
-                guardarImagen();
+                bajaEmpleados();
             }
             else
-                guardarImagen();
+            {
+                actualizarEmpleado();
+            }
         }
 
         private void bloqCampos()
@@ -89,8 +91,65 @@ namespace La_Vista_Nominas
             txtcorreo.Enabled = false;
         }
 
+        private void actualizarEmpleado()
+        {
+            util = new Utilities();
+            int checkLicencia, checkTurno, tipoNom = 0;
+            if (chkLicencia.Checked == true)
+                checkLicencia = 1;
+            else
+                checkLicencia = 0;
+
+            if (chkTurnos.Checked == true)
+                checkTurno = 1;
+            else
+                checkTurno = 0;
+
+            try
+            {
+                /*String update = "UPDATE PERSONAL SET nombre='" + txtNombre.Text + "',rfc='" + txtrfc.Text + "',curp ='" + txtcurp.Text + 
+                                "' WHERE id = " + Convert.ToInt32(txtNoEmp.Text) + ";";*/
+                String update ="UPDATE PERSONAL SET nombre='" + txtNombre.Text + "',rfc='" + txtrfc.Text + "',curp ='" + txtcurp.Text + "',calle ='" + txtCalle.Text + "',next='" + txtNoExt.Text +
+                               "',nint='" + txtNoInt.Text + "',colonia='" + txtColonia.Text + "',municipio='" + txtMpio.Text + "',estado='" + txtEdo.Text + "',codpost='" + txtZipCode.Text +
+                               "',sexo='" + comboSexo.SelectedItem.ToString().Substring(0, 1) + "',lugnac='" + txtNacimiento.Text + "',nacimiento='" + dateNacimiento.Text +
+                               "',ingreso='" + dateIngreso.Text + "',jornada='" + cmbJornada.SelectedItem.ToString() + "',rolaturno=" + checkTurno +
+                               ",forma_pago='" + cmbPago.SelectedItem.ToString() + "',cuenta='" + txtCuenta.Text + "',salariodiurno=" + Convert.ToDouble(txtBaseDia.Text) +
+                               ",salarionoc=" + Convert.ToDouble(txtBaseNoche.Text) + ",csnm=" + Convert.ToInt32(txtSBC.Text) + ",nss='" + txtSeguro.Text +
+                               "',licencia=" + checkLicencia + ",tiplic='" + txtTipoLicencia.Text + "',claselic='" + txtClaseLicencia.Text + "',ife='" + txtIFE.Text +
+                               "',beneficiario='" + txtbeneficiario.Text + "',parentezco='" + txtparentesco.Text + "',telCasa='" + txttel1.Text + "',telMovil='" + txttel2.Text +
+                               "',telOtro='" + txttel3.Text + "',correo='" + txtcorreo.Text + "',status='" + cmbStatus.SelectedItem.ToString() + "' WHERE id = " + Convert.ToInt32(txtNoEmp.Text) + ";";
+
+                util.SQLstatement(update, null, dataValues);
+                MessageBox.Show("Modificacion completa !!");
+                guardarImagen();
+
+                this.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error SQL -> " + e.Message);
+            }
+        }
+
+        private void bajaEmpleados()
+        {
+            try
+            {
+                util = new Utilities();
+                String baja = "UPDATE PERSONAL SET status = '" + cmbStatus.SelectedItem.ToString() + "' WHERE ID = " + Convert.ToInt32(txtNoEmp.Text) + ";";
+                util.SQLstatement(baja, null, dataValues);
+                MessageBox.Show("Baja correcta !!");
+                this.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error SQL -> " + e.Message);
+            }
+        }
+
         private void cargarDatos()
         {
+            util = new Utilities();
             MessageBox.Show("id: " + txtNoEmp.Text);
             DataTable dt = util.SQLdata("select nombre,rfc,curp,calle,next,nint,colonia," +
                              "municipio,estado,codpost,sexo,lugnac,nacimiento,ingreso," +
@@ -233,7 +292,17 @@ namespace La_Vista_Nominas
             }
         }
 
-        private void imgEmpleado_DoubleClick(object sender, EventArgs e)
+        private void imgEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            imgEmpleado.Image = listaImagenes.Images[5];
+        }
+
+        private void imgEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            imgEmpleado.Image = listaImagenes.Images[4];
+        }
+
+        private void imgEmpleado_Click(object sender, EventArgs e)
         {
             try
             {
@@ -247,6 +316,26 @@ namespace La_Vista_Nominas
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            btnCancelar.Size = new System.Drawing.Size(55, 55);
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.Size = new System.Drawing.Size(48, 48);
+        }
+
+        private void btnGuardar_MouseHover(object sender, EventArgs e)
+        {
+            btnGuardar.Size = new System.Drawing.Size(55, 55);
+        }
+
+        private void btnGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            btnGuardar.Size = new System.Drawing.Size(48, 48);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace La_Vista_Nominas
                 string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
-                //zMessageBox.Show("Conectado !");
+                MessageBox.Show("Conectado !");
                 return remoteConnection;
             }
             catch (SqlException e)
@@ -75,12 +75,14 @@ namespace La_Vista_Nominas
             try
             {
                 if (conn == null)
-
+                { 
                     conn = connectToSQL();
-                SqlCommand cmd = new SqlCommand(instruction, conn);
-                cmd.ExecuteNonQuery();
-                if (connectionValues != null)
-                    closeSQL(conn);
+                    SqlCommand cmd = new SqlCommand(instruction, conn);
+                    cmd.ExecuteNonQuery();
+                    if (connectionValues != null)
+                        closeSQL(conn);
+                }
+                    
             }
             catch (Exception error)
             {

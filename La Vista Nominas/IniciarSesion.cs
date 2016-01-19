@@ -146,5 +146,15 @@ namespace La_Vista_Nominas
                 cargaDatos();
             }
         }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Image = imageList1.Images[1];
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Image = imageList1.Images[0];
+        }
     }
 }

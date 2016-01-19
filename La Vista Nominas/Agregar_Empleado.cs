@@ -105,13 +105,12 @@ namespace La_Vista_Nominas
                 ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
                 "', " + checkLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
                 "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
-                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','S');";
+                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','Alta');";
 
 
                 sql.SQLstatement(insert, null, dataValues);
+                MessageBox.Show("Empleado Almacenado");
                 guardarImagen();
-                //main = new Pantalla_Principal();
-                //main.cargarRegistros();
                 this.Close();
             }
             catch (Exception error)
@@ -273,6 +272,28 @@ namespace La_Vista_Nominas
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void imgEmpleado_MouseHover(object sender, EventArgs e)
+        {
+            imgEmpleado.Image = imageList1.Images[6];
+            imgEmpleado.Cursor = Cursors.Hand;
+        }
+
+        private void imgEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            imgEmpleado.Image = imageList1.Images[7];
+            imgEmpleado.Cursor = Cursors.Default;
+        }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            btnCancelar.Image = imageList1.Images[3];
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+           btnCancelar.Image = imageList1.Images[2];
         }
     }
 }

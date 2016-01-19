@@ -230,6 +230,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\login1.png" />
+    <None Include="Resources\base1.png" />
+    <None Include="Resources\LV Splash1.gif" />
     <None Include="Resources\EditarEmpOver.png" />
     <None Include="Resources\EditarEmp1.png" />
     <None Include="Resources\EditarEmp.png" />

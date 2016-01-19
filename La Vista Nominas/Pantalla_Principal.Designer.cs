@@ -58,6 +58,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listButtonImages = new System.Windows.Forms.ImageList(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.itemselectedBar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.tabPersonal.SuspendLayout();
@@ -74,6 +75,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -118,6 +120,7 @@
             // 
             // tabPersonal
             // 
+            this.tabPersonal.Controls.Add(this.itemselectedBar);
             this.tabPersonal.Controls.Add(this.pictureBox3);
             this.tabPersonal.Controls.Add(this.btnExportar);
             this.tabPersonal.Controls.Add(this.pictureBox2);
@@ -424,6 +427,16 @@
             this.listButtonImages.Images.SetKeyName(10, "EditarEmp.png");
             this.listButtonImages.Images.SetKeyName(11, "EditarEmpOver.png");
             // 
+            // itemselectedBar
+            // 
+            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
+            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
+            this.itemselectedBar.Name = "itemselectedBar";
+            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
+            this.itemselectedBar.TabIndex = 11;
+            this.itemselectedBar.TabStop = false;
+            this.itemselectedBar.Visible = false;
+            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +471,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +506,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemEditar;
         private System.Windows.Forms.ToolStripMenuItem MenuItemBaja;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox itemselectedBar;
     }
 }

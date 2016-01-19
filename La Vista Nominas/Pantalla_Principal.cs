@@ -48,21 +48,31 @@ namespace La_Vista_Nominas
 
         private void btnAdd_MouseHover(object sender, EventArgs e)
         {
-            btnAdd.Image = listButtonImages.Images[1];
+            //btnAdd.Image = listButtonImages.Images[1];
+            btnAdd.Location = new Point(52, 0);
+            itemselectedBar.Location = new Point(52,52);
+            itemselectedBar.Visible = true;
         }
 
         private void btnAdd_MouseLeave(object sender, EventArgs e)
         {
+            btnAdd.Location = new Point(52, 5);
             btnAdd.Image = listButtonImages.Images[0];
+            itemselectedBar.Visible = false;
         }
         private void btnDrop_MouseHover(object sender, EventArgs e)
         {
-            btnDrop.Image = listButtonImages.Images[3];
+            btnDrop.Location = new Point(166, 0);
+            itemselectedBar.Location = new Point(166,52);
+            itemselectedBar.Visible = true;
+            //btnDrop.Image = listButtonImages.Images[3];
         }
 
         private void btnDrop_MouseLeave(object sender, EventArgs e)
         {
-            btnDrop.Image = listButtonImages.Images[2];
+            btnDrop.Location = new Point(166, 5);
+            itemselectedBar.Visible = false;
+            //btnDrop.Image = listButtonImages.Images[2];
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -85,7 +95,7 @@ namespace La_Vista_Nominas
         {
             dt = new DataTable();
             dt = sql.SQLdata("select id AS ID_EMPLEADO,nombre AS NOMBRE_COMPLETO,calle + '' + next AS DOMICILIO,colonia AS COLONIA," +
-                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
+                             "municipio AS MUNICIPIO,estado AS ESTADO,rfc AS RFC,curp AS CURP, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
                              "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
                              "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, status AS STATUS from personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
             dataGridView1.DataSource = dt;
@@ -94,12 +104,17 @@ namespace La_Vista_Nominas
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            pictureBox2.Image = listButtonImages.Images[7];
+            pictureBox2.Location = new Point(223,0);
+            itemselectedBar.Location = new Point(223,52);
+            itemselectedBar.Visible = true;
+            //pictureBox2.Image = listButtonImages.Images[7];
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox2.Image = listButtonImages.Images[6];
+            pictureBox2.Location = new Point(223,5);
+            itemselectedBar.Visible = false;
+            //pictureBox2.Image = listButtonImages.Images[6];
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -110,7 +125,7 @@ namespace La_Vista_Nominas
         public void cargarRegistros()
         {
             DataTable dt = sql.SQLdata("select id AS ID_EMPLEADO, nombre AS NOMBRE_COMPLETO, calle + '' + next AS DOMICILIO, colonia AS COLONIA, " +
-                             "municipio AS MUNICIPIO,estado AS ESTADO,pais AS PAIS, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
+                             "municipio AS MUNICIPIO,estado AS ESTADO,rfc AS RFC,curp AS CURP, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
                              "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
                              "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, imagen as IMAGEN, status AS STATUS from personal", null, dataValues);
             dataGridView1.DataSource = dt;
@@ -132,17 +147,22 @@ namespace La_Vista_Nominas
 
         private void btnExportar_MouseHover(object sender, EventArgs e)
         {
-            btnExportar.Image = listButtonImages.Images[9];
+            //btnExportar.Image = listButtonImages.Images[9];
+            btnExportar.Location = new Point(280,0);
+            itemselectedBar.Location = new Point(280,52);
+            itemselectedBar.Visible = true;
         }
 
         private void btnExportar_MouseLeave(object sender, EventArgs e)
         {
-            btnExportar.Image = listButtonImages.Images[8];
+            //btnExportar.Image = listButtonImages.Images[8];
+            btnExportar.Location = new Point(280, 5);
+            itemselectedBar.Visible = false;
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Modulo en desarrollo !!!");
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -156,12 +176,17 @@ namespace La_Vista_Nominas
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            pictureBox3.Image = listButtonImages.Images[11];
+            pictureBox3.Location = new Point(109,0);
+            itemselectedBar.Location = new Point(109,52);
+            itemselectedBar.Visible = true;
+            //pictureBox3.Image = listButtonImages.Images[11];
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox3.Image = listButtonImages.Images[10];
+            pictureBox3.Location = new Point(109, 5);
+            itemselectedBar.Visible = false;
+            //&pictureBox3.Image = listButtonImages.Images[10];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

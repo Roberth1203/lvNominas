@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarEmpleados));
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.txttel3 = new System.Windows.Forms.TextBox();
             this.txttel2 = new System.Windows.Forms.TextBox();
@@ -104,14 +106,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.listaImagenes = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgEmpleado = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
@@ -862,60 +865,6 @@
             this.label6.TabIndex = 94;
             this.label6.Text = "Nombre:";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::La_Vista_Nominas.Properties.Resources.barra_titulo;
-            this.pictureBox2.Location = new System.Drawing.Point(671, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(192, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 165;
-            this.pictureBox2.TabStop = false;
-            // 
-            // imgEmpleado
-            // 
-            this.imgEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgEmpleado.Image = global::La_Vista_Nominas.Properties.Resources.defaultImage;
-            this.imgEmpleado.Location = new System.Drawing.Point(12, 113);
-            this.imgEmpleado.Name = "imgEmpleado";
-            this.imgEmpleado.Size = new System.Drawing.Size(100, 115);
-            this.imgEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgEmpleado.TabIndex = 164;
-            this.imgEmpleado.TabStop = false;
-            this.imgEmpleado.DoubleClick += new System.EventHandler(this.imgEmpleado_DoubleClick);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::La_Vista_Nominas.Properties.Resources.cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(689, 556);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(44, 44);
-            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCancelar.TabIndex = 87;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Image = global::La_Vista_Nominas.Properties.Resources.GuardarNor;
-            this.btnGuardar.Location = new System.Drawing.Point(758, 556);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(43, 44);
-            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnGuardar.TabIndex = 86;
-            this.btnGuardar.TabStop = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::La_Vista_Nominas.Properties.Resources.barra_titulo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(810, 37);
-            this.pictureBox1.TabIndex = 85;
-            this.pictureBox1.TabStop = false;
-            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -941,6 +890,77 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // listaImagenes
+            // 
+            this.listaImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listaImagenes.ImageStream")));
+            this.listaImagenes.TransparentColor = System.Drawing.Color.Transparent;
+            this.listaImagenes.Images.SetKeyName(0, "cancelar.png");
+            this.listaImagenes.Images.SetKeyName(1, "cancelarOver.png");
+            this.listaImagenes.Images.SetKeyName(2, "GuardarNor.png");
+            this.listaImagenes.Images.SetKeyName(3, "GuardarOver.png");
+            this.listaImagenes.Images.SetKeyName(4, "defaultImage.png");
+            this.listaImagenes.Images.SetKeyName(5, "add image.png");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::La_Vista_Nominas.Properties.Resources.barra_titulo;
+            this.pictureBox2.Location = new System.Drawing.Point(671, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(192, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 165;
+            this.pictureBox2.TabStop = false;
+            // 
+            // imgEmpleado
+            // 
+            this.imgEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgEmpleado.Image = global::La_Vista_Nominas.Properties.Resources.defaultImage;
+            this.imgEmpleado.Location = new System.Drawing.Point(12, 113);
+            this.imgEmpleado.Name = "imgEmpleado";
+            this.imgEmpleado.Size = new System.Drawing.Size(100, 115);
+            this.imgEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgEmpleado.TabIndex = 164;
+            this.imgEmpleado.TabStop = false;
+            this.imgEmpleado.Click += new System.EventHandler(this.imgEmpleado_Click);
+            this.imgEmpleado.MouseLeave += new System.EventHandler(this.imgEmpleado_MouseLeave);
+            this.imgEmpleado.MouseHover += new System.EventHandler(this.imgEmpleado_MouseHover);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::La_Vista_Nominas.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(689, 556);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(44, 44);
+            this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCancelar.TabIndex = 87;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
+            this.btnCancelar.MouseHover += new System.EventHandler(this.btnCancelar_MouseHover);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Image = global::La_Vista_Nominas.Properties.Resources.GuardarNor;
+            this.btnGuardar.Location = new System.Drawing.Point(758, 556);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(43, 44);
+            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGuardar.TabIndex = 86;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
+            this.btnGuardar.MouseHover += new System.EventHandler(this.btnGuardar_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::La_Vista_Nominas.Properties.Resources.barra_titulo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(810, 37);
+            this.pictureBox1.TabIndex = 85;
+            this.pictureBox1.TabStop = false;
             // 
             // ModificarEmpleados
             // 
@@ -1032,6 +1052,7 @@
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModificarEmpleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarEmpleados";
             this.Load += new System.EventHandler(this.ModificarEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1129,5 +1150,6 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         public System.Windows.Forms.TextBox txtNoEmp;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ImageList listaImagenes;
     }
 }
