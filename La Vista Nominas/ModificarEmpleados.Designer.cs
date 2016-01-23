@@ -460,14 +460,14 @@
             // 
             this.cmbTipoNomina.FormattingEnabled = true;
             this.cmbTipoNomina.Items.AddRange(new object[] {
-            "Seleccionar ...",
-            "1 .- Semanal ",
-            "2 .- Quincenal"});
+            "Fija",
+            "Variable"});
             this.cmbTipoNomina.Location = new System.Drawing.Point(93, 304);
             this.cmbTipoNomina.Name = "cmbTipoNomina";
             this.cmbTipoNomina.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoNomina.TabIndex = 128;
             this.cmbTipoNomina.Tag = "";
+            this.cmbTipoNomina.Text = "Seleccionar ...";
             // 
             // label23
             // 
@@ -923,7 +923,6 @@
             this.imgEmpleado.TabIndex = 164;
             this.imgEmpleado.TabStop = false;
             this.imgEmpleado.Click += new System.EventHandler(this.imgEmpleado_Click);
-            this.imgEmpleado.MouseLeave += new System.EventHandler(this.imgEmpleado_MouseLeave);
             this.imgEmpleado.MouseHover += new System.EventHandler(this.imgEmpleado_MouseHover);
             // 
             // btnCancelar

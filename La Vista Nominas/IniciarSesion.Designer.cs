@@ -125,15 +125,17 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(157, 20);
             this.txtUser.TabIndex = 4;
+            this.txtUser.Text = "SYSDBA";
             this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(111, 220);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '@';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(157, 20);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.Text = "valkirion";
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // imageList1

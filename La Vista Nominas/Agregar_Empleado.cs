@@ -35,12 +35,12 @@ namespace La_Vista_Nominas
 
         private void btnGuardar_MouseHover(object sender, EventArgs e)
         {
-            btnGuardar.Image = imageList1.Images[1];
+            btnGuardar.Size = new System.Drawing.Size(55, 55);
         }
 
         private void btnGuardar_MouseLeave(object sender, EventArgs e)
         {
-            btnGuardar.Image = imageList1.Images[0];
+            btnGuardar.Size = new System.Drawing.Size(48, 48);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -88,19 +88,16 @@ namespace La_Vista_Nominas
                 else
                     checkLicencia = 0;
 
-                int tipoNom = 1; //Convert.ToInt32(cmbTipoNomina.SelectedItem.ToString().Substring(0, 1));
-
-
                 string insert = "INSERT INTO PERSONAL (" +
                 "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
                 "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," +
-                "salarionoc, csnm, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
+                "salarionoc, salariobase, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
                 "telCasa, telMovil, telOtro, correo, status)" +
 
                 "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text + 
                 "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', " + txtZipCode.Text +
-                ", '" + comboSexo.SelectedItem.ToString().Substring(0,1) + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
-                "', '" + dateIngreso.Text + "', " + tipoNom + ", '" + cmbJornada.SelectedItem.ToString() + "', " + checkTurno + 
+                ", '" + comboSexo.SelectedItem.ToString() + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
+                "', '" + dateIngreso.Text + "', " + cmbTipoNomina.SelectedItem.ToString() + ", '" + cmbJornada.SelectedItem.ToString() + "', " + checkTurno + 
                 ", '" + cmbPago.SelectedItem.ToString() + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) + 
                 ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
                 "', " + checkLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
@@ -288,12 +285,12 @@ namespace La_Vista_Nominas
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
-            btnCancelar.Image = imageList1.Images[3];
+            btnCancelar.Size = new System.Drawing.Size(55, 55);
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-           btnCancelar.Image = imageList1.Images[2];
+            btnCancelar.Size = new System.Drawing.Size(48, 48);
         }
     }
 }

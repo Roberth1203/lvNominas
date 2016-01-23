@@ -16,6 +16,7 @@ namespace La_Vista_Nominas
     {
         Pantalla_Principal main = new Pantalla_Principal();
         Utilities util;
+        public int numeroEmpleado, idEmpleado;
         public string tipo;
         string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
         public ModificarEmpleados()
@@ -30,6 +31,7 @@ namespace La_Vista_Nominas
 
         private void ModificarEmpleados_Load(object sender, EventArgs e)
         {
+            idEmpleado = Convert.ToInt32(txtNoEmp.Text);
             if(tipo.Equals("baja"))
             {
                 bloqCampos();
@@ -68,10 +70,13 @@ namespace La_Vista_Nominas
             txtNacimiento.Enabled = false;
             dateNacimiento.Enabled = false;
             dateIngreso.Enabled = false;
+            cmbDepto.Enabled = false;
+            txtPuesto.Enabled = false;
             cmbTipoNomina.Enabled = false;
             cmbJornada.Enabled = false;
             chkTurnos.Enabled = false;
 
+            cmbCalculo.Enabled = false;
             cmbPago.Enabled = false;
             txtCuenta.Enabled = false;
             txtBaseDia.Enabled = false;
@@ -89,37 +94,35 @@ namespace La_Vista_Nominas
             txttel2.Enabled = false;
             txttel3.Enabled = false;
             txtcorreo.Enabled = false;
+
+            imgEmpleado.Enabled = false;
         }
 
         private void actualizarEmpleado()
         {
             util = new Utilities();
             int checkLicencia, checkTurno, tipoNom = 0;
-            if (chkLicencia.Checked == true)
-                checkLicencia = 1;
-            else
-                checkLicencia = 0;
+            String opcTurno = "";
 
             if (chkTurnos.Checked == true)
-                checkTurno = 1;
+                opcTurno = "Si";
             else
-                checkTurno = 0;
+                opcTurno = "No";
 
             try
             {
-                /*String update = "UPDATE PERSONAL SET nombre='" + txtNombre.Text + "',rfc='" + txtrfc.Text + "',curp ='" + txtcurp.Text + 
-                                "' WHERE id = " + Convert.ToInt32(txtNoEmp.Text) + ";";*/
-                String update ="UPDATE PERSONAL SET nombre='" + txtNombre.Text + "',rfc='" + txtrfc.Text + "',curp ='" + txtcurp.Text + "',calle ='" + txtCalle.Text + "',next='" + txtNoExt.Text +
-                               "',nint='" + txtNoInt.Text + "',colonia='" + txtColonia.Text + "',municipio='" + txtMpio.Text + "',estado='" + txtEdo.Text + "',codpost='" + txtZipCode.Text +
-                               "',sexo='" + comboSexo.SelectedItem.ToString().Substring(0, 1) + "',lugnac='" + txtNacimiento.Text + "',nacimiento='" + dateNacimiento.Text +
-                               "',ingreso='" + dateIngreso.Text + "',jornada='" + cmbJornada.SelectedItem.ToString() + "',rolaturno=" + checkTurno +
-                               ",forma_pago='" + cmbPago.SelectedItem.ToString() + "',cuenta='" + txtCuenta.Text + "',salariodiurno=" + Convert.ToDouble(txtBaseDia.Text) +
-                               ",salarionoc=" + Convert.ToDouble(txtBaseNoche.Text) + ",csnm=" + Convert.ToInt32(txtSBC.Text) + ",nss='" + txtSeguro.Text +
-                               "',licencia=" + checkLicencia + ",tiplic='" + txtTipoLicencia.Text + "',claselic='" + txtClaseLicencia.Text + "',ife='" + txtIFE.Text +
-                               "',beneficiario='" + txtbeneficiario.Text + "',parentezco='" + txtparentesco.Text + "',telCasa='" + txttel1.Text + "',telMovil='" + txttel2.Text +
-                               "',telOtro='" + txttel3.Text + "',correo='" + txtcorreo.Text + "',status='" + cmbStatus.SelectedItem.ToString() + "' WHERE id = " + Convert.ToInt32(txtNoEmp.Text) + ";";
+                String update ="UPDATE PERSONAL SET nombre='" + txtNombre.Text + "',rfc='" + txtrfc.Text + "',curp ='" + txtcurp.Text + "',calle ='" + txtCalle.Text + 
+                               "',next='" + txtNoExt.Text + "',nint='" + txtNoInt.Text + "',colonia='" + txtColonia.Text + "',municipio='" + txtMpio.Text + 
+                               "',estado='" + txtEdo.Text + "',codpost='" + txtZipCode.Text + "',sexo='" + comboSexo.SelectedItem.ToString() + "',lugnac='" + txtNacimiento.Text + 
+                               "',nacimiento='" + dateNacimiento.Text + "',ingreso='" + dateIngreso.Text + "', tiponomina='" + cmbTipoNomina.SelectedItem.ToString() + "' WHERE id = " + idEmpleado + ";";
+
+                //String update2 = "UPDATE PERSONAL SET ingreso='" + dateIngreso.Text + "', tiponomina='" + cmbTipoNomina.SelectedItem.ToString() +
+                  //               "' WHERE id = " + idEmpleado + ";";
+
 
                 util.SQLstatement(update, null, dataValues);
+                //util.SQLstatement(update2, null, dataValues);
+
                 MessageBox.Show("Modificacion completa !!");
                 guardarImagen();
 
@@ -136,7 +139,7 @@ namespace La_Vista_Nominas
             try
             {
                 util = new Utilities();
-                String baja = "UPDATE PERSONAL SET status = '" + cmbStatus.SelectedItem.ToString() + "' WHERE ID = " + Convert.ToInt32(txtNoEmp.Text) + ";";
+                String baja = "UPDATE PERSONAL SET status = '" + cmbStatus.SelectedItem.ToString() + "' WHERE ID = " + idEmpleado + ";";
                 util.SQLstatement(baja, null, dataValues);
                 MessageBox.Show("Baja correcta !!");
                 this.Close();
@@ -153,8 +156,8 @@ namespace La_Vista_Nominas
             MessageBox.Show("id: " + txtNoEmp.Text);
             DataTable dt = util.SQLdata("select nombre,rfc,curp,calle,next,nint,colonia," +
                              "municipio,estado,codpost,sexo,lugnac,nacimiento,ingreso," +
-                             "tiponomina,jornada,forma_pago,cuenta,salariodiurno,salarionoc,csnm,nss,licencia,tiplic,claselic,beneficiario,parentezco," +
-                             "telCasa,telMovil,telOtro,correo,status from personal where id = " + Convert.ToInt32(txtNoEmp.Text.ToString()) + ";",null,dataValues);
+                             "tiponomina,jornada,forma_pago,cuenta,salariodiurno,salarionoc,salariobase,nss,licencia,tiplic,claselic,beneficiario,parentezco," +
+                             "telCasa,telMovil,telOtro,correo,status from personal where id = " + idEmpleado + ";",null,dataValues);
 
             txtNombre.Text = dt.Rows[0].ItemArray[0].ToString(); 
             txtrfc.Text = dt.Rows[0].ItemArray[1].ToString();
@@ -186,9 +189,18 @@ namespace La_Vista_Nominas
             txtSeguro.Text = dt.Rows[0].ItemArray[21].ToString();
 
             if (dt.Rows[0].ItemArray[22].ToString().Equals("1"))
+            {
                 chkLicencia.Checked = true;
+                txtTipoLicencia.Enabled = true;
+                txtClaseLicencia.Enabled = true;
+            }
             else
+            {
                 chkLicencia.Checked = false;
+                txtTipoLicencia.Enabled = false;
+                txtClaseLicencia.Enabled = false;
+            }
+                
 
             txtTipoLicencia.Text = dt.Rows[0].ItemArray[23].ToString();
             txtClaseLicencia.Text = dt.Rows[0].ItemArray[24].ToString();
@@ -199,7 +211,7 @@ namespace La_Vista_Nominas
             txttel2.Text = dt.Rows[0].ItemArray[28].ToString();
 
 
-            DataTable dt2 = util.SQLdata("select telOtro,correo,status,ife from personal where id = " + Convert.ToInt32(txtNoEmp.Text.ToString()) + ";", null, dataValues);
+            DataTable dt2 = util.SQLdata("select telOtro,correo,status,ife from personal where id = " + idEmpleado + ";", null, dataValues);
             txttel3.Text = dt2.Rows[0].ItemArray[0].ToString();
             txtcorreo.Text = dt2.Rows[0].ItemArray[1].ToString();
             cmbStatus.Text = dt2.Rows[0].ItemArray[2].ToString();
@@ -294,12 +306,7 @@ namespace La_Vista_Nominas
 
         private void imgEmpleado_MouseHover(object sender, EventArgs e)
         {
-            imgEmpleado.Image = listaImagenes.Images[5];
-        }
-
-        private void imgEmpleado_MouseLeave(object sender, EventArgs e)
-        {
-            imgEmpleado.Image = listaImagenes.Images[4];
+            imgEmpleado.Cursor = Cursors.Hand;
         }
 
         private void imgEmpleado_Click(object sender, EventArgs e)

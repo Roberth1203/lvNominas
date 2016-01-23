@@ -14,7 +14,8 @@ namespace La_Vista_Nominas
 {
     public partial class Pantalla_Principal : Form
     {
-        public string idCapturado;
+        ModificarEmpleados update;
+        public String idCapturado;
         DataTable dt;
         Utilities sql;
         string tipoFiltro;
@@ -94,10 +95,13 @@ namespace La_Vista_Nominas
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             dt = new DataTable();
-            dt = sql.SQLdata("select id AS ID_EMPLEADO,nombre AS NOMBRE_COMPLETO,calle + '' + next AS DOMICILIO,colonia AS COLONIA," +
-                             "municipio AS MUNICIPIO,estado AS ESTADO,rfc AS RFC,curp AS CURP, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
-                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, status AS STATUS from personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
+            dt = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
+                                       "codpost AS CODIGO_POSTAL,colonia AS COLONIA,municipio AS MUNICIPIO,estado AS ESTADO,nacimiento AS FECHA_NACIMIENTO," +
+                                       "sexo AS SEXO,lugnac AS LUGAR_NACIMIENTO,curp AS CURP,rfc AS RFC,ife AS IFE,tiponomina AS NOMINA,jornada AS JORNADA," +
+                                       "rolaturno AS ROLA_TURNO,forma_pago AS TIPO_PAGO,cuenta AS NUM_CUENTA,salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE," +
+                                       "salariobase AS SALARIO_BASE,nss AS NSS,licencia AS LICENCIA,ISNULL(tiplic, 'S/N') AS TIPO,ISNULL(claselic, 'S/N') AS CLASE," +
+                                       "beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO,telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS TEL_OTRO," +
+                                       "correo AS E_MAIL,status AS STATUS,imagen AS IMAGEN FROM personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
             dataGridView1.DataSource = dt;
 
         }
@@ -124,10 +128,13 @@ namespace La_Vista_Nominas
 
         public void cargarRegistros()
         {
-            DataTable dt = sql.SQLdata("select id AS ID_EMPLEADO, nombre AS NOMBRE_COMPLETO, calle + '' + next AS DOMICILIO, colonia AS COLONIA, " +
-                             "municipio AS MUNICIPIO,estado AS ESTADO,rfc AS RFC,curp AS CURP, sexo AS SEXO,nacimiento AS FECHA_NACIMIENTO,ingreso AS FECHA_INGRESO," +
-                             "salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE, licencia AS LICENCIA,tiplic AS TIPO,claselic AS CLASE_LICENCIA,beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO," +
-                             "telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS OTRO,correo AS CORREO, imagen as IMAGEN, status AS STATUS from personal", null, dataValues);
+            DataTable dt = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
+                                       "codpost AS CODIGO_POSTAL,colonia AS COLONIA,municipio AS MUNICIPIO,estado AS ESTADO,nacimiento AS FECHA_NACIMIENTO," +
+                                       "sexo AS SEXO,lugnac AS LUGAR_NACIMIENTO,curp AS CURP,rfc AS RFC,ife AS IFE,tiponomina AS NOMINA,jornada AS JORNADA," +
+                                       "rolaturno AS ROLA_TURNO,forma_pago AS TIPO_PAGO,cuenta AS NUM_CUENTA,salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE," +
+                                       "salariobase AS SALARIO_BASE,nss AS NSS,licencia AS LICENCIA,ISNULL(tiplic, 'S/N') AS TIPO,ISNULL(claselic, 'S/N') AS CLASE," +
+                                       "beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO,telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS TEL_OTRO," +
+                                       "correo AS E_MAIL,status AS STATUS,imagen AS IMAGEN FROM personal;", null, dataValues);
             dataGridView1.DataSource = dt;
         }
 
@@ -167,11 +174,10 @@ namespace La_Vista_Nominas
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //si se pulsa e el header el RowIndex sera menos a menos
-            if (!(e.RowIndex > -1))
-            {
-                return;
-            }
+            ModificarEmpleados obj = new ModificarEmpleados();
+            obj.tipo = "baja";
+            obj.txtNoEmp.Text = idCapturado.ToString();
+            obj.Show();
         }
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
@@ -196,7 +202,9 @@ namespace La_Vista_Nominas
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            String v = dataGridView1.Rows[e.RowIndex].Cells["ID_EMPLEADO"].Value.ToString();
+            update = new ModificarEmpleados();
+            String v = dataGridView1.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+            update.txtNoEmp.Text = v;
             idCapturado = v;
             //MessageBox.Show("" + idCapturado);
         }
@@ -204,9 +212,12 @@ namespace La_Vista_Nominas
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Id: " + idCapturado);
-            ModificarEmpleados update = new ModificarEmpleados();
+            
+            //ModificarEmpleados update = new ModificarEmpleados();
             update.tipo = "cambio";
-            update.txtNoEmp.Text = idCapturado.ToString();
+            //update.numeroEmpleado = idCapturado;
+            
+            //update.txtNoEmp.Text = idCapturado.ToString();
             update.Show();
         }
     }

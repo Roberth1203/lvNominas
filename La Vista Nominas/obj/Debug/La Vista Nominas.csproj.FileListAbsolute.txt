@@ -31,12 +31,10 @@ C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\La Vista Nominas.application
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.exe.manifest
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.application
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.Web.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -48,6 +46,9 @@ C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\stdole.dll
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\ES\CrystalDecisions.Windows.Forms.resources.dll
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\La Vista Nominas.csproj.La Vista Nominas.exe.config
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\FlashControlV71.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\ADODB.dll

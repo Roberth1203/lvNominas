@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="La Vista Nominas.exe.manifest" size="19533">
+    <dependentAssembly dependencyType="install" codebase="La Vista Nominas.exe.manifest" size="21488">
       <assemblyIdentity name="La Vista Nominas.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ocnsroHWzuVMlNDmdCAv/DAmSZmSIjFYV1cURMhZRSc=</dsig:DigestValue>
+        <dsig:DigestValue>iJE/4MQFBZz3I9g65A0QZ7FHsp3nq08ThJWQQGtuWqw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

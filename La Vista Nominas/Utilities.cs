@@ -21,7 +21,7 @@ namespace La_Vista_Nominas
                 string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
-                MessageBox.Show("Conectado !");
+                //MessageBox.Show("Conectado !");
                 return remoteConnection;
             }
             catch (SqlException e)
@@ -70,7 +70,7 @@ namespace La_Vista_Nominas
             return dt;
         }
 
-        public void SQLstatement(string instruction, SqlConnection conn = null, string connectionValues = null) //SQL insert, update or delete
+        public void SQLstatement(String instruction, SqlConnection conn = null, string connectionValues = null) //SQL insert, update or delete
         {
             try
             {
@@ -79,10 +79,10 @@ namespace La_Vista_Nominas
                     conn = connectToSQL();
                     SqlCommand cmd = new SqlCommand(instruction, conn);
                     cmd.ExecuteNonQuery();
-                    if (connectionValues != null)
-                        closeSQL(conn);
                 }
-                    
+                if (connectionValues != null)
+                    closeSQL(conn);
+
             }
             catch (Exception error)
             {
