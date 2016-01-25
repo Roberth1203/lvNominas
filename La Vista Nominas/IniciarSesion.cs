@@ -25,7 +25,10 @@ namespace La_Vista_Nominas
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            cargaDatos();
+            //cargaDatos();
+            start = new Pantalla_Principal();
+            start.Show();
+            this.Close();
         }
 
         public static SqlConnection connectToSQL(string connectionValues)

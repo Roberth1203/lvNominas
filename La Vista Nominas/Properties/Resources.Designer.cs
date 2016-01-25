@@ -63,6 +63,16 @@ namespace La_Vista_Nominas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _48_move {
+            get {
+                object obj = ResourceManager.GetObject("48_move", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _base {
             get {
                 object obj = ResourceManager.GetObject("base", resourceCulture);
@@ -296,6 +306,36 @@ namespace La_Vista_Nominas.Properties {
         internal static System.Drawing.Bitmap GuardarOver {
             get {
                 object obj = ResourceManager.GetObject("GuardarOver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_action_full_screen {
+            get {
+                object obj = ResourceManager.GetObject("ic_action_full_screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgNomDestajo {
+            get {
+                object obj = ResourceManager.GetObject("imgNomDestajo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgNominas {
+            get {
+                object obj = ResourceManager.GetObject("imgNominas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

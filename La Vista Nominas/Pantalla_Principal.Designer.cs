@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.itemselectedBar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -42,32 +40,34 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.PictureBox();
-            this.btnDrop = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
-            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
+            this.btnDrop = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panelDatosDestajo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
+            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listButtonImages = new System.Windows.Forms.ImageList(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
-            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
             this.dockSite2 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite8 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite5 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite6 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite7 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.tabPersonal.SuspendLayout();
@@ -77,10 +77,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            this.superTabControlPanel3.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,8 +109,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -121,27 +124,12 @@
             this.superTabControl1.TabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.superTabControl1.TabIndex = 0;
             this.superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabItem1,
+            this.tabPrincipal,
             this.tabReportes,
-            this.superTabItem3});
+            this.tabNominas,
+            this.tabOpciones});
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "tabSecciones";
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel1.TabIndex = 0;
-            this.superTabControlPanel1.TabItem = this.tabReportes;
-            // 
-            // tabReportes
-            // 
-            this.tabReportes.AttachedControl = this.superTabControlPanel1;
-            this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = global::La_Vista_Nominas.Properties.Resources.imgReportes;
-            this.tabReportes.Name = "tabReportes";
             // 
             // tabPersonal
             // 
@@ -150,15 +138,15 @@
             this.tabPersonal.Controls.Add(this.btnExportar);
             this.tabPersonal.Controls.Add(this.pictureBox2);
             this.tabPersonal.Controls.Add(this.groupBox1);
+            this.tabPersonal.Controls.Add(this.dataGridView1);
             this.tabPersonal.Controls.Add(this.btnDrop);
             this.tabPersonal.Controls.Add(this.btnAdd);
-            this.tabPersonal.Controls.Add(this.dataGridView1);
             this.tabPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPersonal.Location = new System.Drawing.Point(237, 0);
             this.tabPersonal.Name = "tabPersonal";
             this.tabPersonal.Size = new System.Drawing.Size(749, 512);
             this.tabPersonal.TabIndex = 1;
-            this.tabPersonal.TabItem = this.superTabItem1;
+            this.tabPersonal.TabItem = this.tabPrincipal;
             // 
             // itemselectedBar
             // 
@@ -260,35 +248,6 @@
             this.txtBuscar.TabIndex = 6;
             this.txtBuscar.TabStop = false;
             // 
-            // btnDrop
-            // 
-            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDrop.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
-            this.btnDrop.Location = new System.Drawing.Point(166, 5);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.Size = new System.Drawing.Size(51, 50);
-            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDrop.TabIndex = 4;
-            this.btnDrop.TabStop = false;
-            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
-            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
-            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = global::La_Vista_Nominas.Properties.Resources.AgregarEmp1;
-            this.btnAdd.Location = new System.Drawing.Point(52, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 50);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
-            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -332,13 +291,104 @@
             this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
             this.MenuItemBaja.Text = "Dar de Baja";
             // 
-            // superTabItem1
+            // btnDrop
             // 
-            this.superTabItem1.AttachedControl = this.tabPersonal;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Image = global::La_Vista_Nominas.Properties.Resources.personalNor;
-            this.superTabItem1.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
-            this.superTabItem1.Name = "superTabItem1";
+            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDrop.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
+            this.btnDrop.Location = new System.Drawing.Point(166, 5);
+            this.btnDrop.Name = "btnDrop";
+            this.btnDrop.Size = new System.Drawing.Size(51, 50);
+            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDrop.TabIndex = 4;
+            this.btnDrop.TabStop = false;
+            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
+            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
+            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = global::La_Vista_Nominas.Properties.Resources.AgregarEmp1;
+            this.btnAdd.Location = new System.Drawing.Point(52, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(51, 50);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            // 
+            // tabPrincipal
+            // 
+            this.tabPrincipal.AttachedControl = this.tabPersonal;
+            this.tabPrincipal.GlobalItem = false;
+            this.tabPrincipal.Image = global::La_Vista_Nominas.Properties.Resources.personalNor;
+            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
+            this.tabPrincipal.Name = "tabPrincipal";
+            // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
+            this.superTabControlPanel3.Controls.Add(this.button1);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.tabNominas;
+            // 
+            // panelDatosDestajo
+            // 
+            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 86);
+            this.panelDatosDestajo.Name = "panelDatosDestajo";
+            this.panelDatosDestajo.Size = new System.Drawing.Size(743, 423);
+            this.panelDatosDestajo.TabIndex = 1;
+            this.panelDatosDestajo.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::La_Vista_Nominas.Properties.Resources.imgNomDestajo;
+            this.button1.Location = new System.Drawing.Point(13, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 52);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tabNominas
+            // 
+            this.tabNominas.AttachedControl = this.superTabControlPanel3;
+            this.tabNominas.GlobalItem = false;
+            this.tabNominas.Image = global::La_Vista_Nominas.Properties.Resources.imgNominas;
+            this.tabNominas.Name = "tabNominas";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.reportViewer1);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel1.TabIndex = 0;
+            this.superTabControlPanel1.TabItem = this.tabReportes;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(749, 512);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // tabReportes
+            // 
+            this.tabReportes.AttachedControl = this.superTabControlPanel1;
+            this.tabReportes.GlobalItem = false;
+            this.tabReportes.Image = global::La_Vista_Nominas.Properties.Resources.imgReportes;
+            this.tabReportes.Name = "tabReportes";
             // 
             // superTabControlPanel2
             // 
@@ -349,7 +399,7 @@
             this.superTabControlPanel2.Name = "superTabControlPanel2";
             this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
             this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.superTabItem3;
+            this.superTabControlPanel2.TabItem = this.tabOpciones;
             // 
             // panel2
             // 
@@ -359,12 +409,12 @@
             this.panel2.Size = new System.Drawing.Size(749, 512);
             this.panel2.TabIndex = 0;
             // 
-            // superTabItem3
+            // tabOpciones
             // 
-            this.superTabItem3.AttachedControl = this.superTabControlPanel2;
-            this.superTabItem3.GlobalItem = false;
-            this.superTabItem3.Image = global::La_Vista_Nominas.Properties.Resources.imgOpciones;
-            this.superTabItem3.Name = "superTabItem3";
+            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
+            this.tabOpciones.GlobalItem = false;
+            this.tabOpciones.Image = global::La_Vista_Nominas.Properties.Resources.imgOpciones;
+            this.tabOpciones.Name = "tabOpciones";
             // 
             // panel1
             // 
@@ -446,39 +496,16 @@
             this.listButtonImages.Images.SetKeyName(10, "EditarEmp.png");
             this.listButtonImages.Images.SetKeyName(11, "EditarEmpOver.png");
             // 
-            // dotNetBarManager1
+            // dockSite2
             // 
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlC);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlA);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlV);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlX);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlZ);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlY);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
-            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
-            this.dotNetBarManager1.BottomDockSite = this.dockSite4;
-            this.dotNetBarManager1.EnableFullSizeDock = false;
-            this.dotNetBarManager1.LeftDockSite = this.dockSite1;
-            this.dotNetBarManager1.ParentForm = this;
-            this.dotNetBarManager1.RightDockSite = this.dockSite2;
-            this.dotNetBarManager1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.dotNetBarManager1.ToolbarBottomDockSite = this.dockSite8;
-            this.dotNetBarManager1.ToolbarLeftDockSite = this.dockSite5;
-            this.dotNetBarManager1.ToolbarRightDockSite = this.dockSite6;
-            this.dotNetBarManager1.ToolbarTopDockSite = this.dockSite7;
-            this.dotNetBarManager1.TopDockSite = this.dockSite3;
-            // 
-            // dockSite4
-            // 
-            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(0, 558);
-            this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(992, 0);
-            this.dockSite4.TabIndex = 5;
-            this.dockSite4.TabStop = false;
+            this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite2.Location = new System.Drawing.Point(992, 0);
+            this.dockSite2.Name = "dockSite2";
+            this.dockSite2.Size = new System.Drawing.Size(0, 558);
+            this.dockSite2.TabIndex = 3;
+            this.dockSite2.TabStop = false;
             // 
             // dockSite1
             // 
@@ -491,56 +518,16 @@
             this.dockSite1.TabIndex = 2;
             this.dockSite1.TabStop = false;
             // 
-            // dockSite2
+            // dockSite4
             // 
-            this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(992, 0);
-            this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 558);
-            this.dockSite2.TabIndex = 3;
-            this.dockSite2.TabStop = false;
-            // 
-            // dockSite8
-            // 
-            this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(0, 558);
-            this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(992, 0);
-            this.dockSite8.TabIndex = 9;
-            this.dockSite8.TabStop = false;
-            // 
-            // dockSite5
-            // 
-            this.dockSite5.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dockSite5.Location = new System.Drawing.Point(0, 0);
-            this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 558);
-            this.dockSite5.TabIndex = 6;
-            this.dockSite5.TabStop = false;
-            // 
-            // dockSite6
-            // 
-            this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(992, 0);
-            this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 558);
-            this.dockSite6.TabIndex = 7;
-            this.dockSite6.TabStop = false;
-            // 
-            // dockSite7
-            // 
-            this.dockSite7.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dockSite7.Location = new System.Drawing.Point(0, 0);
-            this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(992, 0);
-            this.dockSite7.TabIndex = 8;
-            this.dockSite7.TabStop = false;
+            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite4.Location = new System.Drawing.Point(0, 558);
+            this.dockSite4.Name = "dockSite4";
+            this.dockSite4.Size = new System.Drawing.Size(992, 0);
+            this.dockSite4.TabIndex = 5;
+            this.dockSite4.TabStop = false;
             // 
             // dockSite3
             // 
@@ -565,10 +552,6 @@
             this.Controls.Add(this.superTabControl1);
             this.Controls.Add(this.dockSite3);
             this.Controls.Add(this.dockSite4);
-            this.Controls.Add(this.dockSite5);
-            this.Controls.Add(this.dockSite6);
-            this.Controls.Add(this.dockSite7);
-            this.Controls.Add(this.dockSite8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pantalla_Principal";
@@ -587,10 +570,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
+            this.superTabControlPanel3.ResumeLayout(false);
+            this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -604,9 +589,9 @@
 
         private DevComponents.DotNetBar.SuperTabControl superTabControl1;
         private DevComponents.DotNetBar.SuperTabControlPanel tabPersonal;
-        private DevComponents.DotNetBar.SuperTabItem superTabItem1;
+        private DevComponents.DotNetBar.SuperTabItem tabPrincipal;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel2;
-        private DevComponents.DotNetBar.SuperTabItem superTabItem3;
+        private DevComponents.DotNetBar.SuperTabItem tabOpciones;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel1;
         private DevComponents.DotNetBar.SuperTabItem tabReportes;
         private System.Windows.Forms.Panel panel1;
@@ -631,14 +616,14 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemBaja;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox itemselectedBar;
-        private DevComponents.DotNetBar.DotNetBarManager dotNetBarManager1;
-        private DevComponents.DotNetBar.DockSite dockSite4;
-        private DevComponents.DotNetBar.DockSite dockSite1;
         private DevComponents.DotNetBar.DockSite dockSite2;
+        private DevComponents.DotNetBar.DockSite dockSite1;
+        private DevComponents.DotNetBar.DockSite dockSite4;
         private DevComponents.DotNetBar.DockSite dockSite3;
-        private DevComponents.DotNetBar.DockSite dockSite5;
-        private DevComponents.DotNetBar.DockSite dockSite6;
-        private DevComponents.DotNetBar.DockSite dockSite7;
-        private DevComponents.DotNetBar.DockSite dockSite8;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
+        private DevComponents.DotNetBar.SuperTabItem tabNominas;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelDatosDestajo;
     }
 }

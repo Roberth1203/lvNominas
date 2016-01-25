@@ -35,6 +35,7 @@ namespace La_Vista_Nominas
             dt = new DataTable();
             sql = new Utilities();
             cargarRegistros();
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -219,6 +220,14 @@ namespace La_Vista_Nominas
             
             //update.txtNoEmp.Text = idCapturado.ToString();
             update.Show();
+        }
+
+
+        // ======================== Eventos en tabNominas ======================== 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelDatosDestajo.Visible = true;
         }
     }
 }

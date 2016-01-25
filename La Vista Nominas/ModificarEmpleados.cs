@@ -101,23 +101,29 @@ namespace La_Vista_Nominas
         private void actualizarEmpleado()
         {
             util = new Utilities();
-            int checkLicencia, checkTurno, tipoNom = 0;
-            String opcTurno = "";
+            String opcTurno = "", opcLicencia = "";
 
             if (chkTurnos.Checked == true)
                 opcTurno = "Si";
             else
                 opcTurno = "No";
 
+            if (chkLicencia.Checked == true)
+                opcLicencia = "Si";
+            else
+                opcLicencia = "No";
+
             try
             {
                 String update ="UPDATE PERSONAL SET nombre='" + txtNombre.Text + "',rfc='" + txtrfc.Text + "',curp ='" + txtcurp.Text + "',calle ='" + txtCalle.Text + 
                                "',next='" + txtNoExt.Text + "',nint='" + txtNoInt.Text + "',colonia='" + txtColonia.Text + "',municipio='" + txtMpio.Text + 
-                               "',estado='" + txtEdo.Text + "',codpost='" + txtZipCode.Text + "',sexo='" + comboSexo.SelectedItem.ToString() + "',lugnac='" + txtNacimiento.Text + 
-                               "',nacimiento='" + dateNacimiento.Text + "',ingreso='" + dateIngreso.Text + "', tiponomina='" + cmbTipoNomina.SelectedItem.ToString() + "' WHERE id = " + idEmpleado + ";";
-
-                //String update2 = "UPDATE PERSONAL SET ingreso='" + dateIngreso.Text + "', tiponomina='" + cmbTipoNomina.SelectedItem.ToString() +
-                  //               "' WHERE id = " + idEmpleado + ";";
+                               "',estado='" + txtEdo.Text + "',codpost='" + txtZipCode.Text + "',sexo='" + comboSexo.Text + "',lugnac='" + txtNacimiento.Text + 
+                               "',nacimiento='" + dateNacimiento.Text + "',ingreso='" + dateIngreso.Text + "', tiponomina='" + cmbTipoNomina.Text + "',jornada='" + cmbJornada.Text +
+                               "', rolaturno='" + opcTurno + "',forma_pago='" + cmbPago.Text + "', cuenta='" + txtCuenta.Text + "',salariodiurno=" + Convert.ToDouble(txtBaseDia.Text) +
+                               ",salarionoc=" + Convert.ToDouble(txtBaseNoche.Text) + ",salariobase=" + Convert.ToDouble(txtSBC.Text) + ",nss='" + txtSeguro.Text + "',licencia='" + opcLicencia+ 
+                               "',tiplic='" + txtTipoLicencia.Text + "',claselic='" + txtClaseLicencia.Text + "',ife='" + txtIFE.Text + "',beneficiario='" + txtbeneficiario.Text +
+                               "',parentezco='" + txtparentesco.Text + "',telCasa='" + txttel1.Text + "',telMovil='" + txttel2.Text + "',telOtro='" + txttel3.Text + 
+                               "',correo='" + txtcorreo.Text + "', status='" + cmbStatus.Text + "' WHERE id = " + idEmpleado + ";";
 
 
                 util.SQLstatement(update, null, dataValues);

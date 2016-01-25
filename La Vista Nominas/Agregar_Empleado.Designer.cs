@@ -543,8 +543,8 @@
             this.cmbTipoNomina.FormattingEnabled = true;
             this.cmbTipoNomina.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "1 .- Semanal ",
-            "2 .- Quincenal"});
+            "FIJA",
+            "VARIABLE"});
             this.cmbTipoNomina.Location = new System.Drawing.Point(93, 305);
             this.cmbTipoNomina.Name = "cmbTipoNomina";
             this.cmbTipoNomina.Size = new System.Drawing.Size(121, 21);
@@ -556,8 +556,8 @@
             this.cmbJornada.FormattingEnabled = true;
             this.cmbJornada.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "Diurna",
-            "Nocturna"});
+            "DIURNO",
+            "NOCTURNO"});
             this.cmbJornada.Location = new System.Drawing.Point(292, 306);
             this.cmbJornada.Name = "cmbJornada";
             this.cmbJornada.Size = new System.Drawing.Size(121, 21);
@@ -578,8 +578,8 @@
             this.cmbPago.FormattingEnabled = true;
             this.cmbPago.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "Efectivo",
-            "Tarjeta"});
+            "SEMANA",
+            "QUINCENA"});
             this.cmbPago.Location = new System.Drawing.Point(605, 305);
             this.cmbPago.Name = "cmbPago";
             this.cmbPago.Size = new System.Drawing.Size(121, 21);
@@ -692,6 +692,8 @@
             this.txtSBC.Name = "txtSBC";
             this.txtSBC.Size = new System.Drawing.Size(48, 20);
             this.txtSBC.TabIndex = 59;
+            this.txtSBC.Text = "0";
+            this.txtSBC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label30
             // 

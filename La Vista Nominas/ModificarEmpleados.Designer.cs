@@ -320,6 +320,8 @@
             this.txtSBC.Name = "txtSBC";
             this.txtSBC.Size = new System.Drawing.Size(48, 20);
             this.txtSBC.TabIndex = 142;
+            this.txtSBC.Text = "0";
+            this.txtSBC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label29
             // 

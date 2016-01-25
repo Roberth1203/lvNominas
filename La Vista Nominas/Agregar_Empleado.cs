@@ -72,21 +72,24 @@ namespace La_Vista_Nominas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             int checkTurno,checkLicencia;
+
+            String opcTurno = "", opcLicencia = "";
+
+            if (chkTurnos.Checked == true)
+                opcTurno = "Si";
+            else
+                opcTurno = "No";
+
+            if (chkLicencia.Checked == true)
+            {
+                opcLicencia = "Si";
+                txtTipoLicencia.Enabled = true;
+                txtClaseLicencia.Enabled = true;
+            }
+            else
+                opcLicencia = "No";
             try
             {
-                if (chkTurnos.Checked == true)
-                    checkTurno = 1;
-                else
-                    checkTurno = 0;
-
-                if (chkLicencia.Checked == true)
-                {
-                    txtTipoLicencia.Enabled = true;
-                    txtClaseLicencia.Enabled = true;
-                    checkLicencia = 1;
-                }
-                else
-                    checkLicencia = 0;
 
                 string insert = "INSERT INTO PERSONAL (" +
                 "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
@@ -97,12 +100,12 @@ namespace La_Vista_Nominas
                 "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text + 
                 "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', " + txtZipCode.Text +
                 ", '" + comboSexo.SelectedItem.ToString() + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
-                "', '" + dateIngreso.Text + "', " + cmbTipoNomina.SelectedItem.ToString() + ", '" + cmbJornada.SelectedItem.ToString() + "', " + checkTurno + 
+                "', '" + dateIngreso.Text + "', " + cmbTipoNomina.SelectedItem.ToString() + ", '" + cmbJornada.SelectedItem.ToString() + "', " + opcTurno + 
                 ", '" + cmbPago.SelectedItem.ToString() + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) + 
                 ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
-                "', " + checkLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
+                "', " + opcLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
                 "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
-                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','Alta');";
+                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','ALTA');";
 
 
                 sql.SQLstatement(insert, null, dataValues);
