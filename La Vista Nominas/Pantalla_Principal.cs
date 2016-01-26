@@ -229,5 +229,11 @@ namespace La_Vista_Nominas
         {
             panelDatosDestajo.Visible = true;
         }
+
+        private void obtenerEmpleados()
+        {
+            DataTable empleados = sql.SQLdata("SELECT nombre FROM personal WHERE status like 'A%'",null,dataValues);
+            
+        }
     }
 }

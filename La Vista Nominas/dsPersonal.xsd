@@ -1,16 +1,552 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="dsPersonal" 
-                  targetNamespace="http://tempuri.org/dsPersonal.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/dsPersonal.xsd"
-                  xmlns:mstns="http://tempuri.org/dsPersonal.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="dsPersonal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPersonal" targetNamespace="http://tempuri.org/dsPersonal.xsd" xmlns:mstns="http://tempuri.org/dsPersonal.xsd" xmlns="http://tempuri.org/dsPersonal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="nominaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="nominaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.La_Vista_Nominas.Properties.Settings.GlobalReference.Default.nominaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personalTableAdapter" GeneratorDataComponentClassName="personalTableAdapter" Name="personal" UserDataComponentName="personalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="nominaConnectionString (Settings)" DbObjectName="nomina.dbo.personal" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[personal] WHERE (([id] = @Original_id) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_calle = 1 AND [calle] IS NULL) OR ([calle] = @Original_calle)) AND ((@IsNull_next = 1 AND [next] IS NULL) OR ([next] = @Original_next)) AND ((@IsNull_nint = 1 AND [nint] IS NULL) OR ([nint] = @Original_nint)) AND ((@IsNull_colonia = 1 AND [colonia] IS NULL) OR ([colonia] = @Original_colonia)) AND ((@IsNull_municipio = 1 AND [municipio] IS NULL) OR ([municipio] = @Original_municipio)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_pais = 1 AND [pais] IS NULL) OR ([pais] = @Original_pais)) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_ingreso = 1 AND [ingreso] IS NULL) OR ([ingreso] = @Original_ingreso)) AND ((@IsNull_salariodiurno = 1 AND [salariodiurno] IS NULL) OR ([salariodiurno] = @Original_salariodiurno)) AND ((@IsNull_salarionoc = 1 AND [salarionoc] IS NULL) OR ([salarionoc] = @Original_salarionoc)) AND ((@IsNull_beneficiario = 1 AND [beneficiario] IS NULL) OR ([beneficiario] = @Original_beneficiario)) AND ((@IsNull_parentezco = 1 AND [parentezco] IS NULL) OR ([parentezco] = @Original_parentezco)) AND ((@IsNull_correo = 1 AND [correo] IS NULL) OR ([correo] = @Original_correo)) AND ((@IsNull_cuenta = 1 AND [cuenta] IS NULL) OR ([cuenta] = @Original_cuenta)) AND ((@IsNull_curp = 1 AND [curp] IS NULL) OR ([curp] = @Original_curp)) AND ((@IsNull_rfc = 1 AND [rfc] IS NULL) OR ([rfc] = @Original_rfc)) AND ((@IsNull_codpost = 1 AND [codpost] IS NULL) OR ([codpost] = @Original_codpost)) AND ((@IsNull_nss = 1 AND [nss] IS NULL) OR ([nss] = @Original_nss)) AND ((@IsNull_lugnac = 1 AND [lugnac] IS NULL) OR ([lugnac] = @Original_lugnac)) AND ((@IsNull_licencia = 1 AND [licencia] IS NULL) OR ([licencia] = @Original_licencia)) AND ((@IsNull_tiplic = 1 AND [tiplic] IS NULL) OR ([tiplic] = @Original_tiplic)) AND ((@IsNull_claselic = 1 AND [claselic] IS NULL) OR ([claselic] = @Original_claselic)) AND ((@IsNull_salariobase = 1 AND [salariobase] IS NULL) OR ([salariobase] = @Original_salariobase)) AND ((@IsNull_numcsnm = 1 AND [numcsnm] IS NULL) OR ([numcsnm] = @Original_numcsnm)) AND ((@IsNull_ife = 1 AND [ife] IS NULL) OR ([ife] = @Original_ife)) AND ((@IsNull_sexo = 1 AND [sexo] IS NULL) OR ([sexo] = @Original_sexo)) AND ((@IsNull_jornada = 1 AND [jornada] IS NULL) OR ([jornada] = @Original_jornada)) AND ((@IsNull_tiponomina = 1 AND [tiponomina] IS NULL) OR ([tiponomina] = @Original_tiponomina)) AND ((@IsNull_forma_pago = 1 AND [forma_pago] IS NULL) OR ([forma_pago] = @Original_forma_pago)) AND ((@IsNull_rolaturno = 1 AND [rolaturno] IS NULL) OR ([rolaturno] = @Original_rolaturno)) AND ((@IsNull_telCasa = 1 AND [telCasa] IS NULL) OR ([telCasa] = @Original_telCasa)) AND ((@IsNull_telMovil = 1 AND [telMovil] IS NULL) OR ([telMovil] = @Original_telMovil)) AND ((@IsNull_telOtro = 1 AND [telOtro] IS NULL) OR ([telOtro] = @Original_telOtro)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_calle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="calle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_calle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_next" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="next" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_next" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="next" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nint" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nint" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nint" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_colonia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="colonia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_colonia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="colonia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_municipio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="municipio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="municipio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_estado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pais" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pais" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pais" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nacimiento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nacimiento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_nacimiento" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="nacimiento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ingreso" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ingreso" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_ingreso" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="ingreso" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_salariodiurno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="salariodiurno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_salariodiurno" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariodiurno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_salarionoc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="salarionoc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_salarionoc" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salarionoc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_beneficiario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="beneficiario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_beneficiario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="beneficiario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_parentezco" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="parentezco" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_parentezco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="parentezco" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_correo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="correo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="correo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_cuenta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cuenta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_cuenta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="cuenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_curp" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="curp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_curp" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="curp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rfc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rfc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_rfc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rfc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_codpost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="codpost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_codpost" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codpost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nss" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nss" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nss" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nss" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_lugnac" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="lugnac" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_lugnac" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="lugnac" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_licencia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="licencia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_licencia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="licencia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tiplic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tiplic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_tiplic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tiplic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_claselic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="claselic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_claselic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claselic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_salariobase" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="salariobase" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_salariobase" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariobase" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_numcsnm" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="numcsnm" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_numcsnm" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numcsnm" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ife" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ife" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_ife" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ife" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_sexo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sexo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_sexo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sexo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jornada" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jornada" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_jornada" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="jornada" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tiponomina" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tiponomina" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_tiponomina" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="tiponomina" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_forma_pago" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="forma_pago" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_forma_pago" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="forma_pago" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rolaturno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rolaturno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_rolaturno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rolaturno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telCasa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telCasa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_telCasa" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telCasa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telMovil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telMovil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_telMovil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telMovil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telOtro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telOtro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_telOtro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telOtro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[personal] ([nombre], [calle], [next], [nint], [colonia], [municipio], [estado], [pais], [nacimiento], [ingreso], [salariodiurno], [salarionoc], [beneficiario], [parentezco], [correo], [cuenta], [curp], [rfc], [codpost], [nss], [lugnac], [licencia], [tiplic], [claselic], [salariobase], [numcsnm], [ife], [sexo], [jornada], [tiponomina], [forma_pago], [rolaturno], [telCasa], [telMovil], [telOtro], [imagen], [status]) VALUES (@nombre, @calle, @next, @nint, @colonia, @municipio, @estado, @pais, @nacimiento, @ingreso, @salariodiurno, @salarionoc, @beneficiario, @parentezco, @correo, @cuenta, @curp, @rfc, @codpost, @nss, @lugnac, @licencia, @tiplic, @claselic, @salariobase, @numcsnm, @ife, @sexo, @jornada, @tiponomina, @forma_pago, @rolaturno, @telCasa, @telMovil, @telOtro, @imagen, @status);
+SELECT id, nombre, calle, next, nint, colonia, municipio, estado, pais, nacimiento, ingreso, salariodiurno, salarionoc, beneficiario, parentezco, correo, cuenta, curp, rfc, codpost, nss, lugnac, licencia, tiplic, claselic, salariobase, numcsnm, ife, sexo, jornada, tiponomina, forma_pago, rolaturno, telCasa, telMovil, telOtro, imagen, status FROM personal WHERE (id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@calle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@next" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="next" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nint" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@colonia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="colonia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="municipio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pais" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@nacimiento" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="nacimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@ingreso" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="ingreso" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@salariodiurno" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariodiurno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@salarionoc" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salarionoc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@beneficiario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="beneficiario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@parentezco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="parentezco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="correo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@cuenta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="cuenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@curp" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="curp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@rfc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rfc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@codpost" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codpost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nss" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nss" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@lugnac" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="lugnac" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@licencia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="licencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@tiplic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tiplic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@claselic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claselic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@salariobase" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariobase" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@numcsnm" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numcsnm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@ife" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ife" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sexo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sexo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@jornada" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="jornada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@tiponomina" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="tiponomina" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@forma_pago" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="forma_pago" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@rolaturno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rolaturno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@telCasa" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telCasa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@telMovil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telMovil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@telOtro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telOtro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@imagen" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="imagen" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, nombre, calle, next, nint, colonia, municipio, estado, pais, nacimiento, ingreso, salariodiurno, salarionoc, beneficiario, parentezco, correo, cuenta, curp, rfc, codpost, nss, lugnac, licencia, tiplic, claselic, salariobase, numcsnm, ife, sexo, jornada, tiponomina, forma_pago, rolaturno, telCasa, telMovil, telOtro, imagen, status FROM dbo.personal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[personal] SET [nombre] = @nombre, [calle] = @calle, [next] = @next, [nint] = @nint, [colonia] = @colonia, [municipio] = @municipio, [estado] = @estado, [pais] = @pais, [nacimiento] = @nacimiento, [ingreso] = @ingreso, [salariodiurno] = @salariodiurno, [salarionoc] = @salarionoc, [beneficiario] = @beneficiario, [parentezco] = @parentezco, [correo] = @correo, [cuenta] = @cuenta, [curp] = @curp, [rfc] = @rfc, [codpost] = @codpost, [nss] = @nss, [lugnac] = @lugnac, [licencia] = @licencia, [tiplic] = @tiplic, [claselic] = @claselic, [salariobase] = @salariobase, [numcsnm] = @numcsnm, [ife] = @ife, [sexo] = @sexo, [jornada] = @jornada, [tiponomina] = @tiponomina, [forma_pago] = @forma_pago, [rolaturno] = @rolaturno, [telCasa] = @telCasa, [telMovil] = @telMovil, [telOtro] = @telOtro, [imagen] = @imagen, [status] = @status WHERE (([id] = @Original_id) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_calle = 1 AND [calle] IS NULL) OR ([calle] = @Original_calle)) AND ((@IsNull_next = 1 AND [next] IS NULL) OR ([next] = @Original_next)) AND ((@IsNull_nint = 1 AND [nint] IS NULL) OR ([nint] = @Original_nint)) AND ((@IsNull_colonia = 1 AND [colonia] IS NULL) OR ([colonia] = @Original_colonia)) AND ((@IsNull_municipio = 1 AND [municipio] IS NULL) OR ([municipio] = @Original_municipio)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_pais = 1 AND [pais] IS NULL) OR ([pais] = @Original_pais)) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_ingreso = 1 AND [ingreso] IS NULL) OR ([ingreso] = @Original_ingreso)) AND ((@IsNull_salariodiurno = 1 AND [salariodiurno] IS NULL) OR ([salariodiurno] = @Original_salariodiurno)) AND ((@IsNull_salarionoc = 1 AND [salarionoc] IS NULL) OR ([salarionoc] = @Original_salarionoc)) AND ((@IsNull_beneficiario = 1 AND [beneficiario] IS NULL) OR ([beneficiario] = @Original_beneficiario)) AND ((@IsNull_parentezco = 1 AND [parentezco] IS NULL) OR ([parentezco] = @Original_parentezco)) AND ((@IsNull_correo = 1 AND [correo] IS NULL) OR ([correo] = @Original_correo)) AND ((@IsNull_cuenta = 1 AND [cuenta] IS NULL) OR ([cuenta] = @Original_cuenta)) AND ((@IsNull_curp = 1 AND [curp] IS NULL) OR ([curp] = @Original_curp)) AND ((@IsNull_rfc = 1 AND [rfc] IS NULL) OR ([rfc] = @Original_rfc)) AND ((@IsNull_codpost = 1 AND [codpost] IS NULL) OR ([codpost] = @Original_codpost)) AND ((@IsNull_nss = 1 AND [nss] IS NULL) OR ([nss] = @Original_nss)) AND ((@IsNull_lugnac = 1 AND [lugnac] IS NULL) OR ([lugnac] = @Original_lugnac)) AND ((@IsNull_licencia = 1 AND [licencia] IS NULL) OR ([licencia] = @Original_licencia)) AND ((@IsNull_tiplic = 1 AND [tiplic] IS NULL) OR ([tiplic] = @Original_tiplic)) AND ((@IsNull_claselic = 1 AND [claselic] IS NULL) OR ([claselic] = @Original_claselic)) AND ((@IsNull_salariobase = 1 AND [salariobase] IS NULL) OR ([salariobase] = @Original_salariobase)) AND ((@IsNull_numcsnm = 1 AND [numcsnm] IS NULL) OR ([numcsnm] = @Original_numcsnm)) AND ((@IsNull_ife = 1 AND [ife] IS NULL) OR ([ife] = @Original_ife)) AND ((@IsNull_sexo = 1 AND [sexo] IS NULL) OR ([sexo] = @Original_sexo)) AND ((@IsNull_jornada = 1 AND [jornada] IS NULL) OR ([jornada] = @Original_jornada)) AND ((@IsNull_tiponomina = 1 AND [tiponomina] IS NULL) OR ([tiponomina] = @Original_tiponomina)) AND ((@IsNull_forma_pago = 1 AND [forma_pago] IS NULL) OR ([forma_pago] = @Original_forma_pago)) AND ((@IsNull_rolaturno = 1 AND [rolaturno] IS NULL) OR ([rolaturno] = @Original_rolaturno)) AND ((@IsNull_telCasa = 1 AND [telCasa] IS NULL) OR ([telCasa] = @Original_telCasa)) AND ((@IsNull_telMovil = 1 AND [telMovil] IS NULL) OR ([telMovil] = @Original_telMovil)) AND ((@IsNull_telOtro = 1 AND [telOtro] IS NULL) OR ([telOtro] = @Original_telOtro)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)));
+SELECT id, nombre, calle, next, nint, colonia, municipio, estado, pais, nacimiento, ingreso, salariodiurno, salarionoc, beneficiario, parentezco, correo, cuenta, curp, rfc, codpost, nss, lugnac, licencia, tiplic, claselic, salariobase, numcsnm, ife, sexo, jornada, tiponomina, forma_pago, rolaturno, telCasa, telMovil, telOtro, imagen, status FROM personal WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@calle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@next" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="next" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nint" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@colonia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="colonia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="municipio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pais" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@nacimiento" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="nacimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@ingreso" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="ingreso" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@salariodiurno" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariodiurno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@salarionoc" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salarionoc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@beneficiario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="beneficiario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@parentezco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="parentezco" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="correo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@cuenta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="cuenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@curp" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="curp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@rfc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rfc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@codpost" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codpost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@nss" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nss" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@lugnac" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="lugnac" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@licencia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="licencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@tiplic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tiplic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@claselic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claselic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@salariobase" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariobase" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@numcsnm" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numcsnm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@ife" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ife" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@sexo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sexo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@jornada" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="jornada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@tiponomina" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="tiponomina" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@forma_pago" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="forma_pago" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@rolaturno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rolaturno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@telCasa" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telCasa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@telMovil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telMovil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@telOtro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telOtro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@imagen" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="imagen" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_calle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="calle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_calle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_next" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="next" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_next" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="next" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nint" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nint" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nint" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_colonia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="colonia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_colonia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="colonia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_municipio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="municipio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="municipio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_estado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pais" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pais" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pais" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nacimiento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nacimiento" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_nacimiento" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="nacimiento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ingreso" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ingreso" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_ingreso" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="ingreso" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_salariodiurno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="salariodiurno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_salariodiurno" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariodiurno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_salarionoc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="salarionoc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_salarionoc" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salarionoc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_beneficiario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="beneficiario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_beneficiario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="beneficiario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_parentezco" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="parentezco" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_parentezco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="parentezco" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_correo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="correo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="correo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_cuenta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cuenta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_cuenta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="cuenta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_curp" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="curp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_curp" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="curp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rfc" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rfc" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_rfc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rfc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_codpost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="codpost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_codpost" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="codpost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_nss" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nss" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_nss" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nss" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_lugnac" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="lugnac" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_lugnac" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="lugnac" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_licencia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="licencia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_licencia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="licencia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tiplic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tiplic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_tiplic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tiplic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_claselic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="claselic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_claselic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claselic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_salariobase" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="salariobase" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_salariobase" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="salariobase" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_numcsnm" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="numcsnm" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_numcsnm" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numcsnm" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ife" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ife" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_ife" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ife" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_sexo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sexo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_sexo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="sexo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jornada" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jornada" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_jornada" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="jornada" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tiponomina" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tiponomina" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_tiponomina" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="tiponomina" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_forma_pago" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="forma_pago" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_forma_pago" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="forma_pago" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rolaturno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rolaturno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_rolaturno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="rolaturno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telCasa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telCasa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_telCasa" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telCasa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telMovil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telMovil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_telMovil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telMovil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_telOtro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="telOtro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_telOtro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="telOtro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="calle" DataSetColumn="calle" />
+              <Mapping SourceColumn="next" DataSetColumn="next" />
+              <Mapping SourceColumn="nint" DataSetColumn="nint" />
+              <Mapping SourceColumn="colonia" DataSetColumn="colonia" />
+              <Mapping SourceColumn="municipio" DataSetColumn="municipio" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="pais" DataSetColumn="pais" />
+              <Mapping SourceColumn="nacimiento" DataSetColumn="nacimiento" />
+              <Mapping SourceColumn="ingreso" DataSetColumn="ingreso" />
+              <Mapping SourceColumn="salariodiurno" DataSetColumn="salariodiurno" />
+              <Mapping SourceColumn="salarionoc" DataSetColumn="salarionoc" />
+              <Mapping SourceColumn="beneficiario" DataSetColumn="beneficiario" />
+              <Mapping SourceColumn="parentezco" DataSetColumn="parentezco" />
+              <Mapping SourceColumn="correo" DataSetColumn="correo" />
+              <Mapping SourceColumn="cuenta" DataSetColumn="cuenta" />
+              <Mapping SourceColumn="curp" DataSetColumn="curp" />
+              <Mapping SourceColumn="rfc" DataSetColumn="rfc" />
+              <Mapping SourceColumn="codpost" DataSetColumn="codpost" />
+              <Mapping SourceColumn="nss" DataSetColumn="nss" />
+              <Mapping SourceColumn="lugnac" DataSetColumn="lugnac" />
+              <Mapping SourceColumn="licencia" DataSetColumn="licencia" />
+              <Mapping SourceColumn="tiplic" DataSetColumn="tiplic" />
+              <Mapping SourceColumn="claselic" DataSetColumn="claselic" />
+              <Mapping SourceColumn="salariobase" DataSetColumn="salariobase" />
+              <Mapping SourceColumn="numcsnm" DataSetColumn="numcsnm" />
+              <Mapping SourceColumn="ife" DataSetColumn="ife" />
+              <Mapping SourceColumn="sexo" DataSetColumn="sexo" />
+              <Mapping SourceColumn="jornada" DataSetColumn="jornada" />
+              <Mapping SourceColumn="tiponomina" DataSetColumn="tiponomina" />
+              <Mapping SourceColumn="forma_pago" DataSetColumn="forma_pago" />
+              <Mapping SourceColumn="rolaturno" DataSetColumn="rolaturno" />
+              <Mapping SourceColumn="telCasa" DataSetColumn="telCasa" />
+              <Mapping SourceColumn="telMovil" DataSetColumn="telMovil" />
+              <Mapping SourceColumn="telOtro" DataSetColumn="telOtro" />
+              <Mapping SourceColumn="imagen" DataSetColumn="imagen" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPersonal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPersonal" msprop:Generator_UserDSName="dsPersonal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="personal" msprop:Generator_TableClassName="personalDataTable" msprop:Generator_TableVarName="tablepersonal" msprop:Generator_TablePropName="personal" msprop:Generator_RowDeletingName="personalRowDeleting" msprop:Generator_RowChangingName="personalRowChanging" msprop:Generator_RowEvHandlerName="personalRowChangeEventHandler" msprop:Generator_RowDeletedName="personalRowDeleted" msprop:Generator_UserTableName="personal" msprop:Generator_RowChangedName="personalRowChanged" msprop:Generator_RowEvArgName="personalRowChangeEvent" msprop:Generator_RowClassName="personalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calle" msprop:Generator_ColumnVarNameInTable="columncalle" msprop:Generator_ColumnPropNameInRow="calle" msprop:Generator_ColumnPropNameInTable="calleColumn" msprop:Generator_UserColumnName="calle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="next" msprop:Generator_ColumnVarNameInTable="columnnext" msprop:Generator_ColumnPropNameInRow="next" msprop:Generator_ColumnPropNameInTable="nextColumn" msprop:Generator_UserColumnName="next" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nint" msprop:Generator_ColumnVarNameInTable="columnnint" msprop:Generator_ColumnPropNameInRow="nint" msprop:Generator_ColumnPropNameInTable="nintColumn" msprop:Generator_UserColumnName="nint" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="colonia" msprop:Generator_ColumnVarNameInTable="columncolonia" msprop:Generator_ColumnPropNameInRow="colonia" msprop:Generator_ColumnPropNameInTable="coloniaColumn" msprop:Generator_UserColumnName="colonia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="municipio" msprop:Generator_ColumnVarNameInTable="columnmunicipio" msprop:Generator_ColumnPropNameInRow="municipio" msprop:Generator_ColumnPropNameInTable="municipioColumn" msprop:Generator_UserColumnName="municipio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pais" msprop:Generator_ColumnVarNameInTable="columnpais" msprop:Generator_ColumnPropNameInRow="pais" msprop:Generator_ColumnPropNameInTable="paisColumn" msprop:Generator_UserColumnName="pais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nacimiento" msprop:Generator_ColumnVarNameInTable="columnnacimiento" msprop:Generator_ColumnPropNameInRow="nacimiento" msprop:Generator_ColumnPropNameInTable="nacimientoColumn" msprop:Generator_UserColumnName="nacimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ingreso" msprop:Generator_ColumnVarNameInTable="columningreso" msprop:Generator_ColumnPropNameInRow="ingreso" msprop:Generator_ColumnPropNameInTable="ingresoColumn" msprop:Generator_UserColumnName="ingreso" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="salariodiurno" msprop:Generator_ColumnVarNameInTable="columnsalariodiurno" msprop:Generator_ColumnPropNameInRow="salariodiurno" msprop:Generator_ColumnPropNameInTable="salariodiurnoColumn" msprop:Generator_UserColumnName="salariodiurno" type="xs:double" minOccurs="0" />
+              <xs:element name="salarionoc" msprop:Generator_ColumnVarNameInTable="columnsalarionoc" msprop:Generator_ColumnPropNameInRow="salarionoc" msprop:Generator_ColumnPropNameInTable="salarionocColumn" msprop:Generator_UserColumnName="salarionoc" type="xs:double" minOccurs="0" />
+              <xs:element name="beneficiario" msprop:Generator_ColumnVarNameInTable="columnbeneficiario" msprop:Generator_ColumnPropNameInRow="beneficiario" msprop:Generator_ColumnPropNameInTable="beneficiarioColumn" msprop:Generator_UserColumnName="beneficiario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="parentezco" msprop:Generator_ColumnVarNameInTable="columnparentezco" msprop:Generator_ColumnPropNameInRow="parentezco" msprop:Generator_ColumnPropNameInTable="parentezcoColumn" msprop:Generator_UserColumnName="parentezco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo" msprop:Generator_ColumnVarNameInTable="columncorreo" msprop:Generator_ColumnPropNameInRow="correo" msprop:Generator_ColumnPropNameInTable="correoColumn" msprop:Generator_UserColumnName="correo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cuenta" msprop:Generator_ColumnVarNameInTable="columncuenta" msprop:Generator_ColumnPropNameInRow="cuenta" msprop:Generator_ColumnPropNameInTable="cuentaColumn" msprop:Generator_UserColumnName="cuenta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="curp" msprop:Generator_ColumnVarNameInTable="columncurp" msprop:Generator_ColumnPropNameInRow="curp" msprop:Generator_ColumnPropNameInTable="curpColumn" msprop:Generator_UserColumnName="curp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rfc" msprop:Generator_ColumnVarNameInTable="columnrfc" msprop:Generator_ColumnPropNameInRow="rfc" msprop:Generator_ColumnPropNameInTable="rfcColumn" msprop:Generator_UserColumnName="rfc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codpost" msprop:Generator_ColumnVarNameInTable="columncodpost" msprop:Generator_ColumnPropNameInRow="codpost" msprop:Generator_ColumnPropNameInTable="codpostColumn" msprop:Generator_UserColumnName="codpost" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nss" msprop:Generator_ColumnVarNameInTable="columnnss" msprop:Generator_ColumnPropNameInRow="nss" msprop:Generator_ColumnPropNameInTable="nssColumn" msprop:Generator_UserColumnName="nss" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lugnac" msprop:Generator_ColumnVarNameInTable="columnlugnac" msprop:Generator_ColumnPropNameInRow="lugnac" msprop:Generator_ColumnPropNameInTable="lugnacColumn" msprop:Generator_UserColumnName="lugnac" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="licencia" msprop:Generator_ColumnVarNameInTable="columnlicencia" msprop:Generator_ColumnPropNameInRow="licencia" msprop:Generator_ColumnPropNameInTable="licenciaColumn" msprop:Generator_UserColumnName="licencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiplic" msprop:Generator_ColumnVarNameInTable="columntiplic" msprop:Generator_ColumnPropNameInRow="tiplic" msprop:Generator_ColumnPropNameInTable="tiplicColumn" msprop:Generator_UserColumnName="tiplic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="claselic" msprop:Generator_ColumnVarNameInTable="columnclaselic" msprop:Generator_ColumnPropNameInRow="claselic" msprop:Generator_ColumnPropNameInTable="claselicColumn" msprop:Generator_UserColumnName="claselic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="salariobase" msprop:Generator_ColumnVarNameInTable="columnsalariobase" msprop:Generator_ColumnPropNameInRow="salariobase" msprop:Generator_ColumnPropNameInTable="salariobaseColumn" msprop:Generator_UserColumnName="salariobase" type="xs:double" minOccurs="0" />
+              <xs:element name="numcsnm" msprop:Generator_ColumnVarNameInTable="columnnumcsnm" msprop:Generator_ColumnPropNameInRow="numcsnm" msprop:Generator_ColumnPropNameInTable="numcsnmColumn" msprop:Generator_UserColumnName="numcsnm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ife" msprop:Generator_ColumnVarNameInTable="columnife" msprop:Generator_ColumnPropNameInRow="ife" msprop:Generator_ColumnPropNameInTable="ifeColumn" msprop:Generator_UserColumnName="ife" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_UserColumnName="sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jornada" msprop:Generator_ColumnVarNameInTable="columnjornada" msprop:Generator_ColumnPropNameInRow="jornada" msprop:Generator_ColumnPropNameInTable="jornadaColumn" msprop:Generator_UserColumnName="jornada" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiponomina" msprop:Generator_ColumnVarNameInTable="columntiponomina" msprop:Generator_ColumnPropNameInRow="tiponomina" msprop:Generator_ColumnPropNameInTable="tiponominaColumn" msprop:Generator_UserColumnName="tiponomina" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="forma_pago" msprop:Generator_ColumnVarNameInTable="columnforma_pago" msprop:Generator_ColumnPropNameInRow="forma_pago" msprop:Generator_ColumnPropNameInTable="forma_pagoColumn" msprop:Generator_UserColumnName="forma_pago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rolaturno" msprop:Generator_ColumnVarNameInTable="columnrolaturno" msprop:Generator_ColumnPropNameInRow="rolaturno" msprop:Generator_ColumnPropNameInTable="rolaturnoColumn" msprop:Generator_UserColumnName="rolaturno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telCasa" msprop:Generator_ColumnVarNameInTable="columntelCasa" msprop:Generator_ColumnPropNameInRow="telCasa" msprop:Generator_ColumnPropNameInTable="telCasaColumn" msprop:Generator_UserColumnName="telCasa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telMovil" msprop:Generator_ColumnVarNameInTable="columntelMovil" msprop:Generator_ColumnPropNameInRow="telMovil" msprop:Generator_ColumnPropNameInTable="telMovilColumn" msprop:Generator_UserColumnName="telMovil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telOtro" msprop:Generator_ColumnVarNameInTable="columntelOtro" msprop:Generator_ColumnPropNameInRow="telOtro" msprop:Generator_ColumnPropNameInTable="telOtroColumn" msprop:Generator_UserColumnName="telOtro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="imagen" msprop:Generator_ColumnVarNameInTable="columnimagen" msprop:Generator_ColumnPropNameInRow="imagen" msprop:Generator_ColumnPropNameInTable="imagenColumn" msprop:Generator_UserColumnName="imagen" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:personal" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
 </xs:schema>

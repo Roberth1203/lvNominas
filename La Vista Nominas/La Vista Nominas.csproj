@@ -251,6 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\48_move.png" />
     <None Include="Resources\ic_action_full_screen.png" />
     <None Include="Resources\imgNomDestajo.png" />
     <None Include="Resources\imgNominas.png" />

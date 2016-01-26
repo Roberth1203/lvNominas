@@ -87,14 +87,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="904192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1012224">
       <assemblyIdentity name="La Vista Nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SNq+6W2Szehqm9B78HcjQxIY2n2NKcRv+A1l/9vVCoc=</dsig:DigestValue>
+        <dsig:DigestValue>2p6OuT2jyil2eXpYTsp6Ue4D0gBMSRiQm/vFvwrSExs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -134,13 +134,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="La Vista Nominas.exe.config" size="184">
+  <file name="La Vista Nominas.exe.config" size="532">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jWVCngsqgsEdPtxOoE7SAK7f6h1++LmE6IqOl8/1R3A=</dsig:DigestValue>
+      <dsig:DigestValue>1TCelKQt6BK5N4w60lqDpLgJR5kvmOPGma3xpfwGeSA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="la vista nominas.ico" size="1150">
