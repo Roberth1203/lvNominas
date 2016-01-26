@@ -31,71 +31,71 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listButtonImages = new System.Windows.Forms.ImageList(this.components);
-            this.dockSite2 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMover = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
-            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
+            this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.itemselectedBar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnExportar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDrop = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMover = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listButtonImages = new System.Windows.Forms.ImageList(this.components);
+            this.dockSite2 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.tabPersonal.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.panelDatosDestajo.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExportar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -118,9 +118,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -140,6 +140,83 @@
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "tabSecciones";
             // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
+            this.superTabControlPanel3.Controls.Add(this.button1);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.tabNominas;
+            // 
+            // panelDatosDestajo
+            // 
+            this.panelDatosDestajo.Controls.Add(this.tabControl1);
+            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 61);
+            this.panelDatosDestajo.Name = "panelDatosDestajo";
+            this.panelDatosDestajo.Size = new System.Drawing.Size(743, 448);
+            this.panelDatosDestajo.TabIndex = 1;
+            this.panelDatosDestajo.Visible = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(3, 28);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(707, 355);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(699, 329);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(700, 326);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(699, 329);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::La_Vista_Nominas.Properties.Resources.imgNomDestajo;
+            this.button1.Location = new System.Drawing.Point(13, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 52);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tabNominas
+            // 
+            this.tabNominas.AttachedControl = this.superTabControlPanel3;
+            this.tabNominas.GlobalItem = false;
+            this.tabNominas.Image = global::La_Vista_Nominas.Properties.Resources.imgNominas;
+            this.tabNominas.Name = "tabNominas";
+            // 
             // tabPersonal
             // 
             this.tabPersonal.Controls.Add(this.itemselectedBar);
@@ -156,6 +233,60 @@
             this.tabPersonal.Size = new System.Drawing.Size(749, 512);
             this.tabPersonal.TabIndex = 1;
             this.tabPersonal.TabItem = this.tabPrincipal;
+            // 
+            // itemselectedBar
+            // 
+            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
+            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
+            this.itemselectedBar.Name = "itemselectedBar";
+            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
+            this.itemselectedBar.TabIndex = 11;
+            this.itemselectedBar.TabStop = false;
+            this.itemselectedBar.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::La_Vista_Nominas.Properties.Resources.EditarEmp;
+            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportar.Image = global::La_Vista_Nominas.Properties.Resources.exportar;
+            this.btnExportar.Location = new System.Drawing.Point(280, 5);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(51, 50);
+            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExportar.TabIndex = 9;
+            this.btnExportar.TabStop = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
+            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::La_Vista_Nominas.Properties.Resources.refreshGrid;
+            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // groupBox1
             // 
@@ -193,6 +324,16 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Buscar empleado:";
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Image = global::La_Vista_Nominas.Properties.Resources.cuadros_de_texto1;
+            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
+            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.TabStop = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -222,25 +363,56 @@
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
             // 
-            // superTabControlPanel3
+            // MenuItemEditar
             // 
-            this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
-            this.superTabControlPanel3.Controls.Add(this.button1);
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel3.TabIndex = 0;
-            this.superTabControlPanel3.TabItem = this.tabNominas;
+            this.MenuItemEditar.Image = global::La_Vista_Nominas.Properties.Resources.EditarEmp;
+            this.MenuItemEditar.Name = "MenuItemEditar";
+            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemEditar.Text = "Modificar";
             // 
-            // panelDatosDestajo
+            // MenuItemBaja
             // 
-            this.panelDatosDestajo.Controls.Add(this.tabControl1);
-            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 61);
-            this.panelDatosDestajo.Name = "panelDatosDestajo";
-            this.panelDatosDestajo.Size = new System.Drawing.Size(743, 448);
-            this.panelDatosDestajo.TabIndex = 1;
-            this.panelDatosDestajo.Visible = false;
+            this.MenuItemBaja.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
+            this.MenuItemBaja.Name = "MenuItemBaja";
+            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemBaja.Text = "Dar de Baja";
+            // 
+            // btnDrop
+            // 
+            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDrop.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
+            this.btnDrop.Location = new System.Drawing.Point(166, 5);
+            this.btnDrop.Name = "btnDrop";
+            this.btnDrop.Size = new System.Drawing.Size(51, 50);
+            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDrop.TabIndex = 4;
+            this.btnDrop.TabStop = false;
+            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
+            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
+            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = global::La_Vista_Nominas.Properties.Resources.AgregarEmp1;
+            this.btnAdd.Location = new System.Drawing.Point(52, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(51, 50);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            // 
+            // tabPrincipal
+            // 
+            this.tabPrincipal.AttachedControl = this.tabPersonal;
+            this.tabPrincipal.GlobalItem = false;
+            this.tabPrincipal.Image = global::La_Vista_Nominas.Properties.Resources.personalNor;
+            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
+            this.tabPrincipal.Name = "tabPrincipal";
             // 
             // superTabControlPanel1
             // 
@@ -255,19 +427,28 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "La_Vista_Nominas.reportNominaDestajo.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(1);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(749, 512);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // tabReportes
+            // 
+            this.tabReportes.AttachedControl = this.superTabControlPanel1;
+            this.tabReportes.GlobalItem = false;
+            this.tabReportes.Image = global::La_Vista_Nominas.Properties.Resources.imgReportes;
+            this.tabReportes.Name = "tabReportes";
             // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
             this.superTabControlPanel2.Controls.Add(this.panel2);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(986, 512);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.tabOpciones;
             // 
@@ -278,6 +459,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(749, 512);
             this.panel2.TabIndex = 0;
+            // 
+            // tabOpciones
+            // 
+            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
+            this.tabOpciones.GlobalItem = false;
+            this.tabOpciones.Image = global::La_Vista_Nominas.Properties.Resources.imgOpciones;
+            this.tabOpciones.Name = "tabOpciones";
             // 
             // panel1
             // 
@@ -293,6 +481,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1003, 37);
             this.panel1.TabIndex = 1;
+            // 
+            // btnMover
+            // 
+            this.btnMover.BackgroundImage = global::La_Vista_Nominas.Properties.Resources._48_move;
+            this.btnMover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMover.Location = new System.Drawing.Point(923, 7);
+            this.btnMover.Name = "btnMover";
+            this.btnMover.Size = new System.Drawing.Size(21, 24);
+            this.btnMover.TabIndex = 2;
+            this.btnMover.UseVisualStyleBackColor = true;
             // 
             // btnMinimizar
             // 
@@ -331,6 +529,17 @@
             this.label1.Size = new System.Drawing.Size(236, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "La Vista Alimentos S.A. de C.V.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::La_Vista_Nominas.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // listButtonImages
             // 
@@ -393,213 +602,6 @@
             this.dockSite3.TabIndex = 4;
             this.dockSite3.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::La_Vista_Nominas.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnMover
-            // 
-            this.btnMover.BackgroundImage = global::La_Vista_Nominas.Properties.Resources._48_move;
-            this.btnMover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMover.Location = new System.Drawing.Point(923, 7);
-            this.btnMover.Name = "btnMover";
-            this.btnMover.Size = new System.Drawing.Size(21, 24);
-            this.btnMover.TabIndex = 2;
-            this.btnMover.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::La_Vista_Nominas.Properties.Resources.imgNomDestajo;
-            this.button1.Location = new System.Drawing.Point(13, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 52);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tabNominas
-            // 
-            this.tabNominas.AttachedControl = this.superTabControlPanel3;
-            this.tabNominas.GlobalItem = false;
-            this.tabNominas.Image = global::La_Vista_Nominas.Properties.Resources.imgNominas;
-            this.tabNominas.Name = "tabNominas";
-            // 
-            // tabReportes
-            // 
-            this.tabReportes.AttachedControl = this.superTabControlPanel1;
-            this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = global::La_Vista_Nominas.Properties.Resources.imgReportes;
-            this.tabReportes.Name = "tabReportes";
-            // 
-            // itemselectedBar
-            // 
-            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
-            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
-            this.itemselectedBar.Name = "itemselectedBar";
-            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
-            this.itemselectedBar.TabIndex = 11;
-            this.itemselectedBar.TabStop = false;
-            this.itemselectedBar.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::La_Vista_Nominas.Properties.Resources.EditarEmp;
-            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExportar.Image = global::La_Vista_Nominas.Properties.Resources.exportar;
-            this.btnExportar.Location = new System.Drawing.Point(280, 5);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(51, 50);
-            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExportar.TabIndex = 9;
-            this.btnExportar.TabStop = false;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
-            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::La_Vista_Nominas.Properties.Resources.refreshGrid;
-            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Image = global::La_Vista_Nominas.Properties.Resources.cuadros_de_texto1;
-            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
-            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.txtBuscar.TabIndex = 6;
-            this.txtBuscar.TabStop = false;
-            // 
-            // MenuItemEditar
-            // 
-            this.MenuItemEditar.Image = global::La_Vista_Nominas.Properties.Resources.EditarEmp;
-            this.MenuItemEditar.Name = "MenuItemEditar";
-            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemEditar.Text = "Modificar";
-            // 
-            // MenuItemBaja
-            // 
-            this.MenuItemBaja.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
-            this.MenuItemBaja.Name = "MenuItemBaja";
-            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemBaja.Text = "Dar de Baja";
-            // 
-            // btnDrop
-            // 
-            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDrop.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
-            this.btnDrop.Location = new System.Drawing.Point(166, 5);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.Size = new System.Drawing.Size(51, 50);
-            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDrop.TabIndex = 4;
-            this.btnDrop.TabStop = false;
-            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
-            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
-            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = global::La_Vista_Nominas.Properties.Resources.AgregarEmp1;
-            this.btnAdd.Location = new System.Drawing.Point(52, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 50);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
-            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
-            // 
-            // tabPrincipal
-            // 
-            this.tabPrincipal.AttachedControl = this.tabPersonal;
-            this.tabPrincipal.GlobalItem = false;
-            this.tabPrincipal.Image = global::La_Vista_Nominas.Properties.Resources.personalNor;
-            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
-            this.tabPrincipal.Name = "tabPrincipal";
-            // 
-            // tabOpciones
-            // 
-            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
-            this.tabOpciones.GlobalItem = false;
-            this.tabOpciones.Image = global::La_Vista_Nominas.Properties.Resources.imgOpciones;
-            this.tabOpciones.Name = "tabOpciones";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 28);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(707, 355);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(699, 329);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(699, 329);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(700, 326);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,29 +624,29 @@
             this.Load += new System.EventHandler(this.Pantalla_Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.tabPersonal.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             this.panelDatosDestajo.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPersonal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExportar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
