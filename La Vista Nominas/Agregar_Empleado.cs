@@ -95,17 +95,17 @@ namespace La_Vista_Nominas
                 "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
                 "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," +
                 "salarionoc, salariobase, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
-                "telCasa, telMovil, telOtro, correo, status)" +
+                "telCasa, telMovil, telOtro, correo, status, area_laboral)" +
 
                 "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text + 
                 "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', " + txtZipCode.Text +
                 ", '" + comboSexo.SelectedItem.ToString() + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
-                "', '" + dateIngreso.Text + "', " + cmbTipoNomina.SelectedItem.ToString() + ", '" + cmbJornada.SelectedItem.ToString() + "', " + opcTurno + 
+                "', '" + dateIngreso.Text + "', '" + cmbTipoNomina.SelectedItem.ToString() + "', '" + cmbJornada.SelectedItem.ToString() + "', " + opcTurno + 
                 ", '" + cmbPago.SelectedItem.ToString() + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) + 
                 ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
                 "', " + opcLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
                 "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
-                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','ALTA');";
+                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','ALTA'" + cmbDepto.Text + ");";
 
 
                 sql.SQLstatement(insert, null, dataValues);

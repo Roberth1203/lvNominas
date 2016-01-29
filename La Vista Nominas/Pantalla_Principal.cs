@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Core;
+using System.Configuration;
 
 namespace La_Vista_Nominas
 {
@@ -19,7 +20,8 @@ namespace La_Vista_Nominas
         DataTable dt;
         Utilities sql;
         string tipoFiltro;
-        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public Pantalla_Principal()
         {
             InitializeComponent();
@@ -98,6 +100,7 @@ namespace La_Vista_Nominas
             dt = new DataTable();
             dt = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
                                        "codpost AS CODIGO_POSTAL,colonia AS COLONIA,municipio AS MUNICIPIO,estado AS ESTADO,nacimiento AS FECHA_NACIMIENTO," +
+                                       "ingreso AS FECHA_INGRESO,area_laboral AS DEPARTAMENTO, puesto AS PUESTO," +
                                        "sexo AS SEXO,lugnac AS LUGAR_NACIMIENTO,curp AS CURP,rfc AS RFC,ife AS IFE,tiponomina AS NOMINA,jornada AS JORNADA," +
                                        "rolaturno AS ROLA_TURNO,forma_pago AS TIPO_PAGO,cuenta AS NUM_CUENTA,salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE," +
                                        "salariobase AS SALARIO_BASE,nss AS NSS,licencia AS LICENCIA,ISNULL(tiplic, 'S/N') AS TIPO,ISNULL(claselic, 'S/N') AS CLASE," +
@@ -129,14 +132,21 @@ namespace La_Vista_Nominas
 
         public void cargarRegistros()
         {
+            //get data
             DataTable dt = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
                                        "codpost AS CODIGO_POSTAL,colonia AS COLONIA,municipio AS MUNICIPIO,estado AS ESTADO,nacimiento AS FECHA_NACIMIENTO," +
+                                       "ingreso AS FECHA_INGRESO,area_laboral AS DEPARTAMENTO, puesto AS PUESTO," +
                                        "sexo AS SEXO,lugnac AS LUGAR_NACIMIENTO,curp AS CURP,rfc AS RFC,ife AS IFE,tiponomina AS NOMINA,jornada AS JORNADA," +
                                        "rolaturno AS ROLA_TURNO,forma_pago AS TIPO_PAGO,cuenta AS NUM_CUENTA,salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE," +
                                        "salariobase AS SALARIO_BASE,nss AS NSS,licencia AS LICENCIA,ISNULL(tiplic, 'S/N') AS TIPO,ISNULL(claselic, 'S/N') AS CLASE," +
                                        "beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO,telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS TEL_OTRO," +
                                        "correo AS E_MAIL,status AS STATUS,imagen AS IMAGEN FROM personal;", null, dataValues);
             dataGridView1.DataSource = dt;
+
+            //define width for each column
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[1].Width = 300;
+
         }
 
         private void Pantalla_Principal_Activated(object sender, EventArgs e)
@@ -228,12 +238,25 @@ namespace La_Vista_Nominas
         private void button1_Click(object sender, EventArgs e)
         {
             panelDatosDestajo.Visible = true;
+            obtenerEmpleados();
         }
 
         private void obtenerEmpleados()
         {
-            DataTable empleados = sql.SQLdata("SELECT nombre FROM personal WHERE status like 'A%'",null,dataValues);
-            
+            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE status = 'ALTA' and area_laboral = 'DESTAJO'",null,dataValues);
+            String[] array = new String[100];
+
+            for (int index = 0; index < datos1.Rows.Count; index ++)
+            {
+                array[index] = datos1.Rows[index].ItemArray[0].ToString();
+            }
+
+            listaEmpleadosDestajo1.DataSource = array;
+        }
+
+        private void listaEmpleadosDestajo1_MouseClick(object sender, MouseEventArgs e)
+        {
+            String
         }
     }
 }

@@ -33,9 +33,7 @@
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabDestajoA_F = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
@@ -73,13 +71,33 @@
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
+            this.dsPersonal = new La_Vista_Nominas.dsPersonal();
+            this.dsPersonalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtLunes = new System.Windows.Forms.TextBox();
+            this.txtMartes = new System.Windows.Forms.TextBox();
+            this.txtMiercoles = new System.Windows.Forms.TextBox();
+            this.txtJueves = new System.Windows.Forms.TextBox();
+            this.txtViernes = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.panelDatosDestajo.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabDestajoA_F.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -96,6 +114,10 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPersonalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -118,9 +140,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -153,56 +175,45 @@
             // 
             // panelDatosDestajo
             // 
-            this.panelDatosDestajo.Controls.Add(this.tabControl1);
+            this.panelDatosDestajo.Controls.Add(this.tabDestajoA_F);
             this.panelDatosDestajo.Location = new System.Drawing.Point(3, 61);
             this.panelDatosDestajo.Name = "panelDatosDestajo";
             this.panelDatosDestajo.Size = new System.Drawing.Size(743, 448);
             this.panelDatosDestajo.TabIndex = 1;
             this.panelDatosDestajo.Visible = false;
             // 
-            // tabControl1
+            // tabDestajoA_F
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 28);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(707, 355);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(699, 329);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(700, 326);
-            this.dataGridView2.TabIndex = 0;
+            this.tabDestajoA_F.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabDestajoA_F.Controls.Add(this.tabPage2);
+            this.tabDestajoA_F.Controls.Add(this.tabPage1);
+            this.tabDestajoA_F.Controls.Add(this.tabPage3);
+            this.tabDestajoA_F.Location = new System.Drawing.Point(0, 0);
+            this.tabDestajoA_F.Name = "tabDestajoA_F";
+            this.tabDestajoA_F.SelectedIndex = 0;
+            this.tabDestajoA_F.Size = new System.Drawing.Size(740, 444);
+            this.tabDestajoA_F.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.pictureBox4);
+            this.tabPage2.Controls.Add(this.listaEmpleadosDestajo1);
+            this.tabPage2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(699, 329);
+            this.tabPage2.Size = new System.Drawing.Size(732, 418);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "A - F";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::La_Vista_Nominas.Properties.Resources.imgNomDestajo;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(13, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 52);
@@ -214,7 +225,7 @@
             // 
             this.tabNominas.AttachedControl = this.superTabControlPanel3;
             this.tabNominas.GlobalItem = false;
-            this.tabNominas.Image = global::La_Vista_Nominas.Properties.Resources.imgNominas;
+            this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
             this.tabNominas.Name = "tabNominas";
             // 
             // tabPersonal
@@ -247,7 +258,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::La_Vista_Nominas.Properties.Resources.EditarEmp;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(109, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(51, 50);
@@ -262,7 +273,7 @@
             // 
             this.btnExportar.BackColor = System.Drawing.Color.Transparent;
             this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExportar.Image = global::La_Vista_Nominas.Properties.Resources.exportar;
+            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
             this.btnExportar.Location = new System.Drawing.Point(280, 5);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(51, 50);
@@ -277,7 +288,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::La_Vista_Nominas.Properties.Resources.refreshGrid;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(223, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 50);
@@ -290,6 +301,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtBuscar);
@@ -302,9 +314,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(147, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(133, 13);
@@ -326,7 +338,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Image = global::La_Vista_Nominas.Properties.Resources.cuadros_de_texto1;
+            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
             this.txtBuscar.Location = new System.Drawing.Point(132, 16);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(169, 25);
@@ -365,14 +377,14 @@
             // 
             // MenuItemEditar
             // 
-            this.MenuItemEditar.Image = global::La_Vista_Nominas.Properties.Resources.EditarEmp;
+            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
             this.MenuItemEditar.Name = "MenuItemEditar";
             this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
             this.MenuItemEditar.Text = "Modificar";
             // 
             // MenuItemBaja
             // 
-            this.MenuItemBaja.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
+            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
             this.MenuItemBaja.Name = "MenuItemBaja";
             this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
             this.MenuItemBaja.Text = "Dar de Baja";
@@ -381,7 +393,7 @@
             // 
             this.btnDrop.BackColor = System.Drawing.Color.Transparent;
             this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDrop.Image = global::La_Vista_Nominas.Properties.Resources.BajaEmp;
+            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
             this.btnDrop.Location = new System.Drawing.Point(166, 5);
             this.btnDrop.Name = "btnDrop";
             this.btnDrop.Size = new System.Drawing.Size(51, 50);
@@ -396,7 +408,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = global::La_Vista_Nominas.Properties.Resources.AgregarEmp1;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.Location = new System.Drawing.Point(52, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(51, 50);
@@ -410,7 +422,7 @@
             // 
             this.tabPrincipal.AttachedControl = this.tabPersonal;
             this.tabPrincipal.GlobalItem = false;
-            this.tabPrincipal.Image = global::La_Vista_Nominas.Properties.Resources.personalNor;
+            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
             this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
             this.tabPrincipal.Name = "tabPrincipal";
             // 
@@ -438,7 +450,7 @@
             // 
             this.tabReportes.AttachedControl = this.superTabControlPanel1;
             this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = global::La_Vista_Nominas.Properties.Resources.imgReportes;
+            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
             this.tabReportes.Name = "tabReportes";
             // 
             // superTabControlPanel2
@@ -464,14 +476,14 @@
             // 
             this.tabOpciones.AttachedControl = this.superTabControlPanel2;
             this.tabOpciones.GlobalItem = false;
-            this.tabOpciones.Image = global::La_Vista_Nominas.Properties.Resources.imgOpciones;
+            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
             this.tabOpciones.Name = "tabOpciones";
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.btnMover);
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnCerrar);
@@ -484,13 +496,15 @@
             // 
             // btnMover
             // 
-            this.btnMover.BackgroundImage = global::La_Vista_Nominas.Properties.Resources._48_move;
+            this.btnMover.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMover.BackgroundImage")));
             this.btnMover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMover.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnMover.Location = new System.Drawing.Point(923, 7);
             this.btnMover.Name = "btnMover";
             this.btnMover.Size = new System.Drawing.Size(21, 24);
             this.btnMover.TabIndex = 2;
-            this.btnMover.UseVisualStyleBackColor = true;
+            this.btnMover.UseVisualStyleBackColor = false;
             // 
             // btnMinimizar
             // 
@@ -533,7 +547,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::La_Vista_Nominas.Properties.Resources.Logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(17, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 21);
@@ -602,6 +616,201 @@
             this.dockSite3.TabIndex = 4;
             this.dockSite3.TabStop = false;
             // 
+            // listaEmpleadosDestajo1
+            // 
+            this.listaEmpleadosDestajo1.FormattingEnabled = true;
+            this.listaEmpleadosDestajo1.Location = new System.Drawing.Point(6, 33);
+            this.listaEmpleadosDestajo1.Name = "listaEmpleadosDestajo1";
+            this.listaEmpleadosDestajo1.Size = new System.Drawing.Size(195, 355);
+            this.listaEmpleadosDestajo1.TabIndex = 0;
+            this.listaEmpleadosDestajo1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listaEmpleadosDestajo1_MouseClick);
+            // 
+            // dsPersonal
+            // 
+            this.dsPersonal.DataSetName = "dsPersonal";
+            this.dsPersonal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsPersonalBindingSource
+            // 
+            this.dsPersonalBindingSource.DataSource = this.dsPersonal;
+            this.dsPersonalBindingSource.Position = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pictureBox4.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(733, 21);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtJueves);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.txtMiercoles);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtMartes);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtViernes);
+            this.groupBox2.Controls.Add(this.txtLunes);
+            this.groupBox2.Location = new System.Drawing.Point(207, 33);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(519, 145);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Conteo de Cajas";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(207, 225);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(519, 146);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Deducciones";
+            // 
+            // txtLunes
+            // 
+            this.txtLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLunes.Location = new System.Drawing.Point(50, 25);
+            this.txtLunes.Name = "txtLunes";
+            this.txtLunes.Size = new System.Drawing.Size(37, 22);
+            this.txtLunes.TabIndex = 0;
+            // 
+            // txtMartes
+            // 
+            this.txtMartes.Location = new System.Drawing.Point(153, 27);
+            this.txtMartes.Name = "txtMartes";
+            this.txtMartes.Size = new System.Drawing.Size(38, 20);
+            this.txtMartes.TabIndex = 1;
+            // 
+            // txtMiercoles
+            // 
+            this.txtMiercoles.Location = new System.Drawing.Point(275, 27);
+            this.txtMiercoles.Name = "txtMiercoles";
+            this.txtMiercoles.Size = new System.Drawing.Size(37, 20);
+            this.txtMiercoles.TabIndex = 2;
+            // 
+            // txtJueves
+            // 
+            this.txtJueves.Location = new System.Drawing.Point(376, 28);
+            this.txtJueves.Name = "txtJueves";
+            this.txtJueves.Size = new System.Drawing.Size(37, 20);
+            this.txtJueves.TabIndex = 3;
+            // 
+            // txtViernes
+            // 
+            this.txtViernes.Location = new System.Drawing.Point(480, 29);
+            this.txtViernes.Name = "txtViernes";
+            this.txtViernes.Size = new System.Drawing.Size(37, 20);
+            this.txtViernes.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(242, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "CAPTURA DE DATOS POR EMPLEADO";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(732, 418);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(732, 418);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(183, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 25);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 25);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Cajas Totales:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Lunes";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(98, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 19);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Martes";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(201, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 19);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Miercoles";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(322, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 19);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Jueves";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(419, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 19);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Viernes";
+            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -626,9 +835,9 @@
             this.superTabControl1.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             this.panelDatosDestajo.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabDestajoA_F.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -647,6 +856,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPersonalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -692,9 +906,28 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelDatosDestajo;
         private System.Windows.Forms.Button btnMover;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabDestajoA_F;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ListBox listaEmpleadosDestajo1;
+        private System.Windows.Forms.BindingSource dsPersonalBindingSource;
+        private dsPersonal dsPersonal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtJueves;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtMiercoles;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtMartes;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtViernes;
+        private System.Windows.Forms.TextBox txtLunes;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

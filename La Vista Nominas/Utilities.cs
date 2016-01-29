@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace La_Vista_Nominas
 {
@@ -18,7 +19,8 @@ namespace La_Vista_Nominas
         {
             try
             {
-                string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+                //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+                String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
                 //MessageBox.Show("Conectado !");

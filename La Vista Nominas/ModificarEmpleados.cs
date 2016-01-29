@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace La_Vista_Nominas
 {
@@ -18,7 +19,8 @@ namespace La_Vista_Nominas
         Utilities util;
         public int numeroEmpleado, idEmpleado;
         public string tipo;
-        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public ModificarEmpleados()
         {
             InitializeComponent();
@@ -123,7 +125,7 @@ namespace La_Vista_Nominas
                                ",salarionoc=" + Convert.ToDouble(txtBaseNoche.Text) + ",salariobase=" + Convert.ToDouble(txtSBC.Text) + ",nss='" + txtSeguro.Text + "',licencia='" + opcLicencia+ 
                                "',tiplic='" + txtTipoLicencia.Text + "',claselic='" + txtClaseLicencia.Text + "',ife='" + txtIFE.Text + "',beneficiario='" + txtbeneficiario.Text +
                                "',parentezco='" + txtparentesco.Text + "',telCasa='" + txttel1.Text + "',telMovil='" + txttel2.Text + "',telOtro='" + txttel3.Text + 
-                               "',correo='" + txtcorreo.Text + "', status='" + cmbStatus.Text + "' WHERE id = " + idEmpleado + ";";
+                               "',correo='" + txtcorreo.Text + "', status='" + cmbStatus.Text + "',area_laboral='" + cmbDepto.Text + "' WHERE id = " + idEmpleado + ";";
 
 
                 util.SQLstatement(update, null, dataValues);

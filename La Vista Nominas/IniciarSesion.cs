@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace La_Vista_Nominas
 {
@@ -16,8 +17,8 @@ namespace La_Vista_Nominas
         SqlConnection con = new SqlConnection();
         DataTable dt = new DataTable();
         Pantalla_Principal start;
-        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
-
+        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public IniciarSesion()
         {
             InitializeComponent();
@@ -35,7 +36,8 @@ namespace La_Vista_Nominas
         {
             try
             {
-                string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+                //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+                String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
                 //MessageBox.Show("Conectado a lvserver","Visual Studio dice: ",MessageBoxButtons.OK,MessageBoxIcon.Information);

@@ -516,10 +516,21 @@
             this.cmbDepto.FormattingEnabled = true;
             this.cmbDepto.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "Calidad",
-            "Congelación",
-            "Destajo",
-            "Producción"});
+            "CONGELACION",
+            "BANDAS",
+            "DESTAJO",
+            "EMPAKE",
+            "EXTERNO",
+            "HORAS",
+            "MANTENIMIENTO",
+            "OBRA",
+            "RECEPCION",
+            "PURE-PACK",
+            "VIGILANCIA",
+            "TELEMARKETING",
+            "CALIDAD",
+            "VEHICULOS",
+            "EMBARQUES"});
             this.cmbDepto.Location = new System.Drawing.Point(379, 263);
             this.cmbDepto.Name = "cmbDepto";
             this.cmbDepto.Size = new System.Drawing.Size(140, 21);
