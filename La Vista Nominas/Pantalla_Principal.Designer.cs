@@ -35,6 +35,25 @@
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
             this.tabDestajoA_F = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtJueves = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtMiercoles = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMartes = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelTotalCajas = new System.Windows.Forms.Label();
+            this.txtViernes = new System.Windows.Forms.TextBox();
+            this.txtLunes = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -71,33 +90,33 @@
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
             this.dsPersonal = new La_Vista_Nominas.dsPersonal();
             this.dsPersonalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtLunes = new System.Windows.Forms.TextBox();
-            this.txtMartes = new System.Windows.Forms.TextBox();
-            this.txtMiercoles = new System.Windows.Forms.TextBox();
-            this.txtJueves = new System.Windows.Forms.TextBox();
-            this.txtViernes = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtCuchillo = new System.Windows.Forms.TextBox();
+            this.txtMandil = new System.Windows.Forms.TextBox();
+            this.txtBotas = new System.Windows.Forms.TextBox();
+            this.txtCofia = new System.Windows.Forms.TextBox();
+            this.txtBata = new System.Windows.Forms.TextBox();
+            this.txtCubreB = new System.Windows.Forms.TextBox();
+            this.txtEscaf = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.labelTotaldesc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.panelDatosDestajo.SuspendLayout();
             this.tabDestajoA_F.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -116,8 +135,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -209,6 +226,208 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "A - F";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(242, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "CAPTURA DE DATOS POR EMPLEADO";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.labelTotaldesc);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.txtEscaf);
+            this.groupBox3.Controls.Add(this.txtCubreB);
+            this.groupBox3.Controls.Add(this.txtBata);
+            this.groupBox3.Controls.Add(this.txtCofia);
+            this.groupBox3.Controls.Add(this.txtBotas);
+            this.groupBox3.Controls.Add(this.txtMandil);
+            this.groupBox3.Controls.Add(this.txtCuchillo);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.groupBox3.Location = new System.Drawing.Point(207, 198);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(519, 190);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Deducciones";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtJueves);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.txtMiercoles);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtMartes);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.labelTotalCajas);
+            this.groupBox2.Controls.Add(this.txtViernes);
+            this.groupBox2.Controls.Add(this.txtLunes);
+            this.groupBox2.Location = new System.Drawing.Point(207, 33);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(519, 145);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Conteo de Cajas";
+            // 
+            // txtJueves
+            // 
+            this.txtJueves.Location = new System.Drawing.Point(376, 28);
+            this.txtJueves.Name = "txtJueves";
+            this.txtJueves.Size = new System.Drawing.Size(37, 20);
+            this.txtJueves.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(322, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 19);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Jueves";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(98, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 19);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Martes";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(201, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 19);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Miercoles";
+            // 
+            // txtMiercoles
+            // 
+            this.txtMiercoles.Location = new System.Drawing.Point(275, 27);
+            this.txtMiercoles.Name = "txtMiercoles";
+            this.txtMiercoles.Size = new System.Drawing.Size(37, 20);
+            this.txtMiercoles.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(419, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 19);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Viernes";
+            // 
+            // txtMartes
+            // 
+            this.txtMartes.Location = new System.Drawing.Point(153, 27);
+            this.txtMartes.Name = "txtMartes";
+            this.txtMartes.Size = new System.Drawing.Size(38, 20);
+            this.txtMartes.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Lunes";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 25);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Cajas Totales:";
+            // 
+            // labelTotalCajas
+            // 
+            this.labelTotalCajas.AutoSize = true;
+            this.labelTotalCajas.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalCajas.Location = new System.Drawing.Point(183, 75);
+            this.labelTotalCajas.Name = "labelTotalCajas";
+            this.labelTotalCajas.Size = new System.Drawing.Size(25, 25);
+            this.labelTotalCajas.TabIndex = 5;
+            this.labelTotalCajas.Text = "0";
+            // 
+            // txtViernes
+            // 
+            this.txtViernes.Location = new System.Drawing.Point(480, 29);
+            this.txtViernes.Name = "txtViernes";
+            this.txtViernes.Size = new System.Drawing.Size(37, 20);
+            this.txtViernes.TabIndex = 4;
+            // 
+            // txtLunes
+            // 
+            this.txtLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLunes.Location = new System.Drawing.Point(50, 25);
+            this.txtLunes.Name = "txtLunes";
+            this.txtLunes.Size = new System.Drawing.Size(37, 22);
+            this.txtLunes.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pictureBox4.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(733, 21);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // listaEmpleadosDestajo1
+            // 
+            this.listaEmpleadosDestajo1.FormattingEnabled = true;
+            this.listaEmpleadosDestajo1.Location = new System.Drawing.Point(6, 33);
+            this.listaEmpleadosDestajo1.Name = "listaEmpleadosDestajo1";
+            this.listaEmpleadosDestajo1.Size = new System.Drawing.Size(195, 355);
+            this.listaEmpleadosDestajo1.TabIndex = 0;
+            this.listaEmpleadosDestajo1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listaEmpleadosDestajo1_MouseClick);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(732, 418);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(732, 418);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -616,15 +835,6 @@
             this.dockSite3.TabIndex = 4;
             this.dockSite3.TabStop = false;
             // 
-            // listaEmpleadosDestajo1
-            // 
-            this.listaEmpleadosDestajo1.FormattingEnabled = true;
-            this.listaEmpleadosDestajo1.Location = new System.Drawing.Point(6, 33);
-            this.listaEmpleadosDestajo1.Name = "listaEmpleadosDestajo1";
-            this.listaEmpleadosDestajo1.Size = new System.Drawing.Size(195, 355);
-            this.listaEmpleadosDestajo1.TabIndex = 0;
-            this.listaEmpleadosDestajo1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listaEmpleadosDestajo1_MouseClick);
-            // 
             // dsPersonal
             // 
             this.dsPersonal.DataSetName = "dsPersonal";
@@ -635,181 +845,145 @@
             this.dsPersonalBindingSource.DataSource = this.dsPersonal;
             this.dsPersonalBindingSource.Position = 0;
             // 
-            // pictureBox4
+            // label11
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.pictureBox4.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(733, 21);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(7, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 19);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Cuchillo:";
             // 
-            // groupBox2
+            // label12
             // 
-            this.groupBox2.Controls.Add(this.txtJueves);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtMiercoles);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtMartes);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtViernes);
-            this.groupBox2.Controls.Add(this.txtLunes);
-            this.groupBox2.Location = new System.Drawing.Point(207, 33);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(519, 145);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Conteo de Cajas";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(127, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 19);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Escafandra:";
             // 
-            // groupBox3
+            // label13
             // 
-            this.groupBox3.Location = new System.Drawing.Point(207, 225);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(519, 146);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Deducciones";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(325, 76);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 19);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Botas:";
             // 
-            // txtLunes
+            // label14
             // 
-            this.txtLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLunes.Location = new System.Drawing.Point(50, 25);
-            this.txtLunes.Name = "txtLunes";
-            this.txtLunes.Size = new System.Drawing.Size(37, 22);
-            this.txtLunes.TabIndex = 0;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(7, 79);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(45, 19);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Bata:";
             // 
-            // txtMartes
+            // label15
             // 
-            this.txtMartes.Location = new System.Drawing.Point(153, 27);
-            this.txtMartes.Name = "txtMartes";
-            this.txtMartes.Size = new System.Drawing.Size(38, 20);
-            this.txtMartes.TabIndex = 1;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(271, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 19);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Cubrebocas:";
             // 
-            // txtMiercoles
+            // label16
             // 
-            this.txtMiercoles.Location = new System.Drawing.Point(275, 27);
-            this.txtMiercoles.Name = "txtMiercoles";
-            this.txtMiercoles.Size = new System.Drawing.Size(37, 20);
-            this.txtMiercoles.TabIndex = 2;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(207, 79);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 19);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Mandil:";
             // 
-            // txtJueves
+            // label17
             // 
-            this.txtJueves.Location = new System.Drawing.Point(376, 28);
-            this.txtJueves.Name = "txtJueves";
-            this.txtJueves.Size = new System.Drawing.Size(37, 20);
-            this.txtJueves.TabIndex = 3;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(102, 79);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 19);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Cofia:";
             // 
-            // txtViernes
+            // txtCuchillo
             // 
-            this.txtViernes.Location = new System.Drawing.Point(480, 29);
-            this.txtViernes.Name = "txtViernes";
-            this.txtViernes.Size = new System.Drawing.Size(37, 20);
-            this.txtViernes.TabIndex = 4;
+            this.txtCuchillo.Location = new System.Drawing.Point(73, 29);
+            this.txtCuchillo.Name = "txtCuchillo";
+            this.txtCuchillo.Size = new System.Drawing.Size(37, 20);
+            this.txtCuchillo.TabIndex = 12;
+            this.txtCuchillo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label3
+            // txtMandil
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(242, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "CAPTURA DE DATOS POR EMPLEADO";
+            this.txtMandil.Location = new System.Drawing.Point(264, 78);
+            this.txtMandil.Name = "txtMandil";
+            this.txtMandil.Size = new System.Drawing.Size(37, 20);
+            this.txtMandil.TabIndex = 19;
             // 
-            // tabPage1
+            // txtBotas
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(732, 418);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.txtBotas.Location = new System.Drawing.Point(376, 78);
+            this.txtBotas.Name = "txtBotas";
+            this.txtBotas.Size = new System.Drawing.Size(37, 20);
+            this.txtBotas.TabIndex = 20;
             // 
-            // tabPage3
+            // txtCofia
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(732, 418);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.txtCofia.Location = new System.Drawing.Point(149, 78);
+            this.txtCofia.Name = "txtCofia";
+            this.txtCofia.Size = new System.Drawing.Size(37, 20);
+            this.txtCofia.TabIndex = 21;
             // 
-            // label4
+            // txtBata
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(183, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "0";
+            this.txtBata.Location = new System.Drawing.Point(50, 78);
+            this.txtBata.Name = "txtBata";
+            this.txtBata.Size = new System.Drawing.Size(37, 20);
+            this.txtBata.TabIndex = 22;
             // 
-            // label5
+            // txtCubreB
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 25);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Cajas Totales:";
+            this.txtCubreB.Location = new System.Drawing.Point(364, 29);
+            this.txtCubreB.Name = "txtCubreB";
+            this.txtCubreB.Size = new System.Drawing.Size(37, 20);
+            this.txtCubreB.TabIndex = 23;
             // 
-            // label6
+            // txtEscaf
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Lunes";
+            this.txtEscaf.Location = new System.Drawing.Point(215, 29);
+            this.txtEscaf.Name = "txtEscaf";
+            this.txtEscaf.Size = new System.Drawing.Size(37, 20);
+            this.txtEscaf.TabIndex = 24;
             // 
-            // label7
+            // label18
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(98, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 19);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Martes";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(6, 125);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(224, 25);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Descuentos Totales:";
             // 
-            // label8
+            // labelTotaldesc
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(201, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 19);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Miercoles";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(322, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 19);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Jueves";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(419, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 19);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Viernes";
+            this.labelTotaldesc.AutoSize = true;
+            this.labelTotaldesc.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotaldesc.Location = new System.Drawing.Point(243, 125);
+            this.labelTotaldesc.Name = "labelTotaldesc";
+            this.labelTotaldesc.Size = new System.Drawing.Size(25, 25);
+            this.labelTotaldesc.TabIndex = 12;
+            this.labelTotaldesc.Text = "0";
             // 
             // Pantalla_Principal
             // 
@@ -838,6 +1012,11 @@
             this.tabDestajoA_F.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -858,9 +1037,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -923,11 +1099,27 @@
         private System.Windows.Forms.TextBox txtMartes;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelTotalCajas;
         private System.Windows.Forms.TextBox txtViernes;
         private System.Windows.Forms.TextBox txtLunes;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox txtCuchillo;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelTotaldesc;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtEscaf;
+        private System.Windows.Forms.TextBox txtCubreB;
+        private System.Windows.Forms.TextBox txtBata;
+        private System.Windows.Forms.TextBox txtCofia;
+        private System.Windows.Forms.TextBox txtBotas;
+        private System.Windows.Forms.TextBox txtMandil;
     }
 }
