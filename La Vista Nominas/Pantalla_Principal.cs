@@ -259,6 +259,7 @@ namespace La_Vista_Nominas
             string cad = listaEmpleadosDestajo1.SelectedItem.ToString();
 
             String query = "SELECT * from datosDestajo where nomEmpleado = '" + cad + "';";
+            MessageBox.Show("sss");
             DataTable tmp = sql.SQLdata(query, null, dataValues);
 
             //Llenado de Campos (Percepciones y Deducciones)
@@ -267,17 +268,18 @@ namespace La_Vista_Nominas
             txtMiercoles.Text = tmp.Rows[0].ItemArray[3].ToString();
             txtJueves.Text = tmp.Rows[0].ItemArray[4].ToString();
             txtViernes.Text = tmp.Rows[0].ItemArray[5].ToString();
+            txtSabado.Text = tmp.Rows[0].ItemArray[6].ToString();
             
-            txtCuchillo.Text = tmp.Rows[0].ItemArray[6].ToString();
-            txtEscaf.Text = tmp.Rows[0].ItemArray[7].ToString();
-            txtCubreB.Text = tmp.Rows[0].ItemArray[8].ToString();
-            txtBata.Text = tmp.Rows[0].ItemArray[9].ToString();
-            txtCofia.Text = tmp.Rows[0].ItemArray[10].ToString();
-            txtMandil.Text = tmp.Rows[0].ItemArray[11].ToString();
-            txtBotas.Text = tmp.Rows[0].ItemArray[12].ToString();
+            txtCuchillo.Text = tmp.Rows[0].ItemArray[7].ToString();
+            txtEscaf.Text = tmp.Rows[0].ItemArray[8].ToString();
+            txtCubreB.Text = tmp.Rows[0].ItemArray[9].ToString();
+            txtBata.Text = tmp.Rows[0].ItemArray[10].ToString();
+            txtCofia.Text = tmp.Rows[0].ItemArray[11].ToString();
+            txtMandil.Text = tmp.Rows[0].ItemArray[12].ToString();
+            txtBotas.Text = tmp.Rows[0].ItemArray[13].ToString();
 
             //Generar totales
-            int totales1 = ( Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text));
+            int totales1 = ( Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
             labelTotalCajas.Text = Convert.ToString(totales1);
 
             Double totales2 = (Convert.ToDouble(txtCuchillo.Text) + Convert.ToDouble(txtEscaf.Text) + Convert.ToDouble(txtCubreB.Text) + Convert.ToDouble(txtBata.Text) + Convert.ToDouble(txtCofia.Text) + Convert.ToDouble(txtMandil.Text) + Convert.ToDouble(txtBotas.Text));
@@ -290,5 +292,6 @@ namespace La_Vista_Nominas
         {
 
         }
+
     }
 }

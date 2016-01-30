@@ -63,6 +63,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevComponents.DotNetBar.SuperGrid.dll" size="1159168">
+      <assemblyIdentity name="DevComponents.DotNetBar.SuperGrid" version="11.2.0.1" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dzQKk7uIC8HFmtRwjXIjme56l+E0ru0UdO80DVGDmNY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevComponents.DotNetBar2.dll" size="4947968">
       <assemblyIdentity name="DevComponents.DotNetBar2" version="11.2.0.1" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -71,6 +83,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>vgkDSLZti0pHjbLJWK+SoEpL6mMeNGMj4KWzVc2AwOc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevComponents.Instrumentation.dll" size="327680">
+      <assemblyIdentity name="DevComponents.Instrumentation" version="11.2.0.1" publicKeyToken="BC4A9D761EA44EF0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>aVkqUyTcHp4J9a0ARpZEX7ppkrUS5k4VlkBI83Ruvy0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,14 +111,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1308672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1331200">
       <assemblyIdentity name="La Vista Nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8JtoiDLmLLRadcUoqgw6O/+T4yHoLT/JtKgeB26UIBM=</dsig:DigestValue>
+        <dsig:DigestValue>mJlYGSZp0bDm3yy6YgMU5wpmkENhdZs2jc1vPh40blY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

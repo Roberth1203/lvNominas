@@ -33,29 +33,14 @@
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
-            this.tabDestajoA_F = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtJueves = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtMiercoles = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtMartes = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelTotalCajas = new System.Windows.Forms.Label();
-            this.txtViernes = new System.Windows.Forms.TextBox();
-            this.txtLunes = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.itemselectedBar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -72,12 +57,6 @@
             this.btnDrop = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMover = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
@@ -89,34 +68,65 @@
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dsPersonal = new La_Vista_Nominas.dsPersonal();
             this.dsPersonalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtCuchillo = new System.Windows.Forms.TextBox();
-            this.txtMandil = new System.Windows.Forms.TextBox();
-            this.txtBotas = new System.Windows.Forms.TextBox();
-            this.txtCofia = new System.Windows.Forms.TextBox();
-            this.txtBata = new System.Windows.Forms.TextBox();
-            this.txtCubreB = new System.Windows.Forms.TextBox();
-            this.txtEscaf = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtInfonavit = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.labelTotaldesc = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtEscaf = new System.Windows.Forms.TextBox();
+            this.txtCubreB = new System.Windows.Forms.TextBox();
+            this.txtBata = new System.Windows.Forms.TextBox();
+            this.txtCofia = new System.Windows.Forms.TextBox();
+            this.txtBotas = new System.Windows.Forms.TextBox();
+            this.txtMandil = new System.Windows.Forms.TextBox();
+            this.txtCuchillo = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSabado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtJueves = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtMiercoles = new System.Windows.Forms.TextBox();
+            this.txtMartes = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelTotalCajas = new System.Windows.Forms.Label();
+            this.txtViernes = new System.Windows.Forms.TextBox();
+            this.txtLunes = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
+            this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
+            this.sideBar1 = new DevComponents.DotNetBar.SideBar();
+            this.sideBarGenerales = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBarPanelItem2 = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBarPanelItem3 = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBarPanelItem4 = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.panelDatosDestajo.SuspendLayout();
-            this.tabDestajoA_F.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -128,13 +138,14 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            this.superTabControlPanel1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -158,9 +169,9 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl1.Controls.Add(this.tabPersonal);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
             this.superTabControl1.Name = "superTabControl1";
@@ -181,8 +192,8 @@
             // 
             // superTabControlPanel3
             // 
-            this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
             this.superTabControlPanel3.Controls.Add(this.button1);
+            this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel3.Location = new System.Drawing.Point(237, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
@@ -192,248 +203,22 @@
             // 
             // panelDatosDestajo
             // 
-            this.panelDatosDestajo.Controls.Add(this.tabDestajoA_F);
-            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 61);
+            this.panelDatosDestajo.Controls.Add(this.label3);
+            this.panelDatosDestajo.Controls.Add(this.groupBox3);
+            this.panelDatosDestajo.Controls.Add(this.groupBox2);
+            this.panelDatosDestajo.Controls.Add(this.pictureBox4);
+            this.panelDatosDestajo.Controls.Add(this.listaEmpleadosDestajo1);
+            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 97);
             this.panelDatosDestajo.Name = "panelDatosDestajo";
-            this.panelDatosDestajo.Size = new System.Drawing.Size(743, 448);
+            this.panelDatosDestajo.Size = new System.Drawing.Size(743, 412);
             this.panelDatosDestajo.TabIndex = 1;
             this.panelDatosDestajo.Visible = false;
-            // 
-            // tabDestajoA_F
-            // 
-            this.tabDestajoA_F.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tabDestajoA_F.Controls.Add(this.tabPage2);
-            this.tabDestajoA_F.Controls.Add(this.tabPage1);
-            this.tabDestajoA_F.Controls.Add(this.tabPage3);
-            this.tabDestajoA_F.Location = new System.Drawing.Point(0, 0);
-            this.tabDestajoA_F.Name = "tabDestajoA_F";
-            this.tabDestajoA_F.SelectedIndex = 0;
-            this.tabDestajoA_F.Size = new System.Drawing.Size(740, 444);
-            this.tabDestajoA_F.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.pictureBox4);
-            this.tabPage2.Controls.Add(this.listaEmpleadosDestajo1);
-            this.tabPage2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(732, 418);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "A - F";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(242, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "CAPTURA DE DATOS POR EMPLEADO";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.labelTotaldesc);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.txtEscaf);
-            this.groupBox3.Controls.Add(this.txtCubreB);
-            this.groupBox3.Controls.Add(this.txtBata);
-            this.groupBox3.Controls.Add(this.txtCofia);
-            this.groupBox3.Controls.Add(this.txtBotas);
-            this.groupBox3.Controls.Add(this.txtMandil);
-            this.groupBox3.Controls.Add(this.txtCuchillo);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.groupBox3.Location = new System.Drawing.Point(207, 198);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(519, 190);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Deducciones";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtJueves);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtMiercoles);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtMartes);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.labelTotalCajas);
-            this.groupBox2.Controls.Add(this.txtViernes);
-            this.groupBox2.Controls.Add(this.txtLunes);
-            this.groupBox2.Location = new System.Drawing.Point(207, 33);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(519, 145);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Conteo de Cajas";
-            // 
-            // txtJueves
-            // 
-            this.txtJueves.Location = new System.Drawing.Point(376, 28);
-            this.txtJueves.Name = "txtJueves";
-            this.txtJueves.Size = new System.Drawing.Size(37, 20);
-            this.txtJueves.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(322, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 19);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Jueves";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(98, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 19);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Martes";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(201, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 19);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Miercoles";
-            // 
-            // txtMiercoles
-            // 
-            this.txtMiercoles.Location = new System.Drawing.Point(275, 27);
-            this.txtMiercoles.Name = "txtMiercoles";
-            this.txtMiercoles.Size = new System.Drawing.Size(37, 20);
-            this.txtMiercoles.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(419, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 19);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Viernes";
-            // 
-            // txtMartes
-            // 
-            this.txtMartes.Location = new System.Drawing.Point(153, 27);
-            this.txtMartes.Name = "txtMartes";
-            this.txtMartes.Size = new System.Drawing.Size(38, 20);
-            this.txtMartes.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Lunes";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 25);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Cajas Totales:";
-            // 
-            // labelTotalCajas
-            // 
-            this.labelTotalCajas.AutoSize = true;
-            this.labelTotalCajas.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalCajas.Location = new System.Drawing.Point(183, 75);
-            this.labelTotalCajas.Name = "labelTotalCajas";
-            this.labelTotalCajas.Size = new System.Drawing.Size(25, 25);
-            this.labelTotalCajas.TabIndex = 5;
-            this.labelTotalCajas.Text = "0";
-            // 
-            // txtViernes
-            // 
-            this.txtViernes.Location = new System.Drawing.Point(480, 29);
-            this.txtViernes.Name = "txtViernes";
-            this.txtViernes.Size = new System.Drawing.Size(37, 20);
-            this.txtViernes.TabIndex = 4;
-            // 
-            // txtLunes
-            // 
-            this.txtLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLunes.Location = new System.Drawing.Point(50, 25);
-            this.txtLunes.Name = "txtLunes";
-            this.txtLunes.Size = new System.Drawing.Size(37, 22);
-            this.txtLunes.TabIndex = 0;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.pictureBox4.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(733, 21);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // listaEmpleadosDestajo1
-            // 
-            this.listaEmpleadosDestajo1.FormattingEnabled = true;
-            this.listaEmpleadosDestajo1.Location = new System.Drawing.Point(6, 33);
-            this.listaEmpleadosDestajo1.Name = "listaEmpleadosDestajo1";
-            this.listaEmpleadosDestajo1.Size = new System.Drawing.Size(195, 355);
-            this.listaEmpleadosDestajo1.TabIndex = 0;
-            this.listaEmpleadosDestajo1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listaEmpleadosDestajo1_MouseClick);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(732, 418);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(732, 418);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(13, 3);
+            this.button1.Location = new System.Drawing.Point(6, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 52);
             this.button1.TabIndex = 0;
@@ -446,6 +231,60 @@
             this.tabNominas.GlobalItem = false;
             this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
             this.tabNominas.Name = "tabNominas";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.reportViewer1);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel1.TabIndex = 0;
+            this.superTabControlPanel1.TabItem = this.tabReportes;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "La_Vista_Nominas.reportNominaDestajo.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 11);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(1);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(728, 485);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // tabReportes
+            // 
+            this.tabReportes.AttachedControl = this.superTabControlPanel1;
+            this.tabReportes.GlobalItem = false;
+            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
+            this.tabReportes.Name = "tabReportes";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
+            this.superTabControlPanel2.Controls.Add(this.panel2);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.tabOpciones;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.sideBar1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(749, 512);
+            this.panel2.TabIndex = 0;
+            // 
+            // tabOpciones
+            // 
+            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
+            this.tabOpciones.GlobalItem = false;
+            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
+            this.tabOpciones.Name = "tabOpciones";
             // 
             // tabPersonal
             // 
@@ -645,59 +484,6 @@
             this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
             this.tabPrincipal.Name = "tabPrincipal";
             // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.reportViewer1);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel1.TabIndex = 0;
-            this.superTabControlPanel1.TabItem = this.tabReportes;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "La_Vista_Nominas.reportNominaDestajo.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(1);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(749, 512);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // tabReportes
-            // 
-            this.tabReportes.AttachedControl = this.superTabControlPanel1;
-            this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
-            this.tabReportes.Name = "tabReportes";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
-            this.superTabControlPanel2.Controls.Add(this.panel2);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.tabOpciones;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(749, 512);
-            this.panel2.TabIndex = 0;
-            // 
-            // tabOpciones
-            // 
-            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
-            this.tabOpciones.GlobalItem = false;
-            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
-            this.tabOpciones.Name = "tabOpciones";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -845,145 +631,588 @@
             this.dsPersonalBindingSource.DataSource = this.dsPersonal;
             this.dsPersonalBindingSource.Position = 0;
             // 
-            // label11
+            // label3
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(7, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 19);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Cuchillo:";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.SeaGreen;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(246, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "CAPTURA DE DATOS POR EMPLEADO";
             // 
-            // label12
+            // groupBox3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(127, 27);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 19);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Escafandra:";
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.txtInfonavit);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.labelTotaldesc);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.txtEscaf);
+            this.groupBox3.Controls.Add(this.txtCubreB);
+            this.groupBox3.Controls.Add(this.txtBata);
+            this.groupBox3.Controls.Add(this.txtCofia);
+            this.groupBox3.Controls.Add(this.txtBotas);
+            this.groupBox3.Controls.Add(this.txtMandil);
+            this.groupBox3.Controls.Add(this.txtCuchillo);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox3.Location = new System.Drawing.Point(211, 176);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(523, 215);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Deducciones";
             // 
-            // label13
+            // textBox3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(325, 76);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 19);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Botas:";
+            this.textBox3.Location = new System.Drawing.Point(451, 187);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(45, 20);
+            this.textBox3.TabIndex = 31;
             // 
-            // label14
+            // textBox2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(7, 79);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 19);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Bata:";
+            this.textBox2.Location = new System.Drawing.Point(269, 187);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(45, 20);
+            this.textBox2.TabIndex = 30;
             // 
-            // label15
+            // label22
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(271, 27);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 19);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Cubrebocas:";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(333, 185);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(118, 19);
+            this.label22.TabIndex = 29;
+            this.label22.Text = "Desc. Prestamo";
             // 
-            // label16
+            // label21
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(207, 79);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 19);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Mandil:";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(155, 185);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(117, 19);
+            this.label21.TabIndex = 28;
+            this.label21.Text = "Desc. Comedor";
             // 
-            // label17
+            // txtInfonavit
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(102, 79);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 19);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Cofia:";
+            this.txtInfonavit.Location = new System.Drawing.Point(95, 187);
+            this.txtInfonavit.Name = "txtInfonavit";
+            this.txtInfonavit.Size = new System.Drawing.Size(45, 20);
+            this.txtInfonavit.TabIndex = 27;
             // 
-            // txtCuchillo
+            // label20
             // 
-            this.txtCuchillo.Location = new System.Drawing.Point(73, 29);
-            this.txtCuchillo.Name = "txtCuchillo";
-            this.txtCuchillo.Size = new System.Drawing.Size(37, 20);
-            this.txtCuchillo.TabIndex = 12;
-            this.txtCuchillo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(21, 185);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(72, 19);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "Infonavit";
             // 
-            // txtMandil
+            // label19
             // 
-            this.txtMandil.Location = new System.Drawing.Point(264, 78);
-            this.txtMandil.Name = "txtMandil";
-            this.txtMandil.Size = new System.Drawing.Size(37, 20);
-            this.txtMandil.TabIndex = 19;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(2, 154);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(495, 14);
+            this.label19.TabIndex = 25;
+            this.label19.Text = "Descuentos Adicionales ___________________________________________________";
             // 
-            // txtBotas
+            // labelTotaldesc
             // 
-            this.txtBotas.Location = new System.Drawing.Point(376, 78);
-            this.txtBotas.Name = "txtBotas";
-            this.txtBotas.Size = new System.Drawing.Size(37, 20);
-            this.txtBotas.TabIndex = 20;
-            // 
-            // txtCofia
-            // 
-            this.txtCofia.Location = new System.Drawing.Point(149, 78);
-            this.txtCofia.Name = "txtCofia";
-            this.txtCofia.Size = new System.Drawing.Size(37, 20);
-            this.txtCofia.TabIndex = 21;
-            // 
-            // txtBata
-            // 
-            this.txtBata.Location = new System.Drawing.Point(50, 78);
-            this.txtBata.Name = "txtBata";
-            this.txtBata.Size = new System.Drawing.Size(37, 20);
-            this.txtBata.TabIndex = 22;
-            // 
-            // txtCubreB
-            // 
-            this.txtCubreB.Location = new System.Drawing.Point(364, 29);
-            this.txtCubreB.Name = "txtCubreB";
-            this.txtCubreB.Size = new System.Drawing.Size(37, 20);
-            this.txtCubreB.TabIndex = 23;
-            // 
-            // txtEscaf
-            // 
-            this.txtEscaf.Location = new System.Drawing.Point(215, 29);
-            this.txtEscaf.Name = "txtEscaf";
-            this.txtEscaf.Size = new System.Drawing.Size(37, 20);
-            this.txtEscaf.TabIndex = 24;
+            this.labelTotaldesc.AutoSize = true;
+            this.labelTotaldesc.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotaldesc.Location = new System.Drawing.Point(387, 88);
+            this.labelTotaldesc.Name = "labelTotaldesc";
+            this.labelTotaldesc.Size = new System.Drawing.Size(43, 29);
+            this.labelTotaldesc.TabIndex = 12;
+            this.labelTotaldesc.Text = "$0";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 125);
+            this.label18.Location = new System.Drawing.Point(289, 49);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(224, 25);
             this.label18.TabIndex = 12;
             this.label18.Text = "Descuentos Totales:";
             // 
-            // labelTotaldesc
+            // txtEscaf
             // 
-            this.labelTotaldesc.AutoSize = true;
-            this.labelTotaldesc.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotaldesc.Location = new System.Drawing.Point(243, 125);
-            this.labelTotaldesc.Name = "labelTotaldesc";
-            this.labelTotaldesc.Size = new System.Drawing.Size(25, 25);
-            this.labelTotaldesc.TabIndex = 12;
-            this.labelTotaldesc.Text = "0";
+            this.txtEscaf.Location = new System.Drawing.Point(95, 57);
+            this.txtEscaf.Name = "txtEscaf";
+            this.txtEscaf.Size = new System.Drawing.Size(45, 20);
+            this.txtEscaf.TabIndex = 24;
+            // 
+            // txtCubreB
+            // 
+            this.txtCubreB.Location = new System.Drawing.Point(95, 88);
+            this.txtCubreB.Name = "txtCubreB";
+            this.txtCubreB.Size = new System.Drawing.Size(45, 20);
+            this.txtCubreB.TabIndex = 23;
+            // 
+            // txtBata
+            // 
+            this.txtBata.Location = new System.Drawing.Point(95, 118);
+            this.txtBata.Name = "txtBata";
+            this.txtBata.Size = new System.Drawing.Size(45, 20);
+            this.txtBata.TabIndex = 22;
+            // 
+            // txtCofia
+            // 
+            this.txtCofia.Location = new System.Drawing.Point(212, 27);
+            this.txtCofia.Name = "txtCofia";
+            this.txtCofia.Size = new System.Drawing.Size(46, 20);
+            this.txtCofia.TabIndex = 21;
+            // 
+            // txtBotas
+            // 
+            this.txtBotas.Location = new System.Drawing.Point(212, 87);
+            this.txtBotas.Name = "txtBotas";
+            this.txtBotas.Size = new System.Drawing.Size(46, 20);
+            this.txtBotas.TabIndex = 20;
+            // 
+            // txtMandil
+            // 
+            this.txtMandil.Location = new System.Drawing.Point(212, 57);
+            this.txtMandil.Name = "txtMandil";
+            this.txtMandil.Size = new System.Drawing.Size(46, 20);
+            this.txtMandil.TabIndex = 19;
+            // 
+            // txtCuchillo
+            // 
+            this.txtCuchillo.Location = new System.Drawing.Point(95, 27);
+            this.txtCuchillo.Name = "txtCuchillo";
+            this.txtCuchillo.Size = new System.Drawing.Size(45, 20);
+            this.txtCuchillo.TabIndex = 12;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(165, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(45, 19);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Cofia";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(155, 58);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 19);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Mandil";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(2, 86);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 19);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Cubrebocas";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(52, 118);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 19);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Bata";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(163, 88);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 19);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Botas";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(8, 55);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 19);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Escafandra";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(28, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 19);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Cuchillo";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtSabado);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtJueves);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.txtMiercoles);
+            this.groupBox2.Controls.Add(this.txtMartes);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.labelTotalCajas);
+            this.groupBox2.Controls.Add(this.txtViernes);
+            this.groupBox2.Controls.Add(this.txtLunes);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox2.Location = new System.Drawing.Point(211, 36);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(523, 120);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Conteo de Cajas";
+            // 
+            // txtSabado
+            // 
+            this.txtSabado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSabado.Location = new System.Drawing.Point(213, 84);
+            this.txtSabado.Name = "txtSabado";
+            this.txtSabado.Size = new System.Drawing.Size(46, 22);
+            this.txtSabado.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(150, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Sábado";
+            // 
+            // txtJueves
+            // 
+            this.txtJueves.Location = new System.Drawing.Point(212, 26);
+            this.txtJueves.Name = "txtJueves";
+            this.txtJueves.Size = new System.Drawing.Size(46, 20);
+            this.txtJueves.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(155, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 19);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Jueves";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(38, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 19);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Martes";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(19, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 19);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Miercoles";
+            // 
+            // txtMiercoles
+            // 
+            this.txtMiercoles.Location = new System.Drawing.Point(95, 85);
+            this.txtMiercoles.Name = "txtMiercoles";
+            this.txtMiercoles.Size = new System.Drawing.Size(45, 20);
+            this.txtMiercoles.TabIndex = 2;
+            // 
+            // txtMartes
+            // 
+            this.txtMartes.Location = new System.Drawing.Point(95, 57);
+            this.txtMartes.Name = "txtMartes";
+            this.txtMartes.Size = new System.Drawing.Size(45, 20);
+            this.txtMartes.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(43, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Lunes";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(323, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 25);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Cajas Totales:";
+            // 
+            // labelTotalCajas
+            // 
+            this.labelTotalCajas.AutoSize = true;
+            this.labelTotalCajas.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalCajas.Location = new System.Drawing.Point(387, 57);
+            this.labelTotalCajas.Name = "labelTotalCajas";
+            this.labelTotalCajas.Size = new System.Drawing.Size(43, 29);
+            this.labelTotalCajas.TabIndex = 5;
+            this.labelTotalCajas.Text = "$0";
+            // 
+            // txtViernes
+            // 
+            this.txtViernes.Location = new System.Drawing.Point(213, 57);
+            this.txtViernes.Name = "txtViernes";
+            this.txtViernes.Size = new System.Drawing.Size(46, 20);
+            this.txtViernes.TabIndex = 4;
+            // 
+            // txtLunes
+            // 
+            this.txtLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLunes.Location = new System.Drawing.Point(95, 26);
+            this.txtLunes.Name = "txtLunes";
+            this.txtLunes.Size = new System.Drawing.Size(45, 22);
+            this.txtLunes.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(150, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 19);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Viernes";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(737, 21);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // listaEmpleadosDestajo1
+            // 
+            this.listaEmpleadosDestajo1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.listaEmpleadosDestajo1.FormattingEnabled = true;
+            this.listaEmpleadosDestajo1.Location = new System.Drawing.Point(10, 36);
+            this.listaEmpleadosDestajo1.Name = "listaEmpleadosDestajo1";
+            this.listaEmpleadosDestajo1.Size = new System.Drawing.Size(199, 355);
+            this.listaEmpleadosDestajo1.TabIndex = 5;
+            this.listaEmpleadosDestajo1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listaEmpleadosDestajo1_MouseClick);
+            // 
+            // highlighter1
+            // 
+            this.highlighter1.ContainerControl = this;
+            // 
+            // sideBar1
+            // 
+            this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
+            this.sideBar1.Appearance = DevComponents.DotNetBar.eSideBarAppearance.Flat;
+            this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
+            this.sideBar1.ColorScheme.ItemCheckedBackground = System.Drawing.Color.Empty;
+            this.sideBar1.ColorScheme.ItemCheckedBackground2 = System.Drawing.Color.Empty;
+            this.sideBar1.ColorScheme.ItemCheckedBorder = System.Drawing.Color.Black;
+            this.sideBar1.ColorScheme.ItemCheckedText = System.Drawing.Color.White;
+            this.sideBar1.ColorScheme.ItemExpandedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.sideBar1.ColorScheme.ItemExpandedBackground2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.sideBar1.ColorScheme.ItemExpandedText = System.Drawing.Color.White;
+            this.sideBar1.ColorScheme.ItemHotBackground = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.sideBar1.ColorScheme.ItemHotBackground2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.sideBar1.ColorScheme.ItemHotBorder = System.Drawing.Color.Black;
+            this.sideBar1.ColorScheme.ItemHotText = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(127)))));
+            this.sideBar1.ColorScheme.ItemPressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.sideBar1.ColorScheme.ItemPressedBackground2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.sideBar1.ColorScheme.ItemPressedBorder = System.Drawing.Color.Black;
+            this.sideBar1.ColorScheme.ItemPressedText = System.Drawing.Color.White;
+            this.sideBar1.ColorScheme.ItemText = System.Drawing.Color.White;
+            this.sideBar1.ColorScheme.MenuBackground = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.sideBar1.ColorScheme.MenuBackground2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.sideBar1.ColorScheme.MenuBorder = System.Drawing.Color.Black;
+            this.sideBar1.ColorScheme.MenuSide = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(131)))), ((int)(((byte)(177)))));
+            this.sideBar1.ColorScheme.MenuSide2 = System.Drawing.Color.Empty;
+            this.sideBar1.ExpandedPanel = this.sideBarPanelItem2;
+            this.sideBar1.Location = new System.Drawing.Point(3, 3);
+            this.sideBar1.Name = "sideBar1";
+            this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sideBarGenerales,
+            this.sideBarPanelItem2,
+            this.sideBarPanelItem3,
+            this.sideBarPanelItem4});
+            this.sideBar1.Size = new System.Drawing.Size(743, 493);
+            this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.sideBar1.TabIndex = 0;
+            this.sideBar1.Text = "sideBar1";
+            // 
+            // sideBarGenerales
+            // 
+            this.sideBarGenerales.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.sideBarGenerales.BackgroundStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.sideBarGenerales.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarGenerales.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarGenerales.BackgroundStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarGenerales.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(85)))), ((int)(((byte)(128)))));
+            this.sideBarGenerales.HeaderHotStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(127)))));
+            this.sideBarGenerales.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarGenerales.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(187)))), ((int)(((byte)(224)))));
+            this.sideBarGenerales.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(131)))), ((int)(((byte)(177)))));
+            this.sideBarGenerales.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarGenerales.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarGenerales.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarGenerales.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarGenerales.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
+            this.sideBarGenerales.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarGenerales.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarGenerales.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarGenerales.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarGenerales.HeaderStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarGenerales.HeaderStyle.GradientAngle = 90;
+            this.sideBarGenerales.Name = "sideBarGenerales";
+            this.sideBarGenerales.Text = "Opciones generales";
+            // 
+            // sideBarPanelItem2
+            // 
+            this.sideBarPanelItem2.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.sideBarPanelItem2.BackgroundStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.sideBarPanelItem2.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem2.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem2.BackgroundStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem2.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(85)))), ((int)(((byte)(128)))));
+            this.sideBarPanelItem2.HeaderHotStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(127)))));
+            this.sideBarPanelItem2.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(187)))), ((int)(((byte)(224)))));
+            this.sideBarPanelItem2.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(131)))), ((int)(((byte)(177)))));
+            this.sideBarPanelItem2.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem2.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem2.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem2.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
+            this.sideBarPanelItem2.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem2.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem2.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem2.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarPanelItem2.HeaderStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem2.HeaderStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.Name = "sideBarPanelItem2";
+            this.sideBarPanelItem2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemContainer1});
+            this.sideBarPanelItem2.Text = "Opciones Nomina destajo";
+            // 
+            // sideBarPanelItem3
+            // 
+            this.sideBarPanelItem3.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.sideBarPanelItem3.BackgroundStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.sideBarPanelItem3.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem3.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem3.BackgroundStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem3.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(85)))), ((int)(((byte)(128)))));
+            this.sideBarPanelItem3.HeaderHotStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(127)))));
+            this.sideBarPanelItem3.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(187)))), ((int)(((byte)(224)))));
+            this.sideBarPanelItem3.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(131)))), ((int)(((byte)(177)))));
+            this.sideBarPanelItem3.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem3.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem3.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem3.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
+            this.sideBarPanelItem3.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem3.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem3.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem3.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarPanelItem3.HeaderStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem3.HeaderStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.Name = "sideBarPanelItem3";
+            this.sideBarPanelItem3.Text = "Opciones Nomina Día/Noche";
+            // 
+            // sideBarPanelItem4
+            // 
+            this.sideBarPanelItem4.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.sideBarPanelItem4.BackgroundStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.sideBarPanelItem4.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem4.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem4.BackgroundStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem4.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(85)))), ((int)(((byte)(128)))));
+            this.sideBarPanelItem4.HeaderHotStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(127)))));
+            this.sideBarPanelItem4.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(187)))), ((int)(((byte)(224)))));
+            this.sideBarPanelItem4.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(131)))), ((int)(((byte)(177)))));
+            this.sideBarPanelItem4.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem4.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem4.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem4.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
+            this.sideBarPanelItem4.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem4.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(72)))), ((int)(((byte)(112)))));
+            this.sideBarPanelItem4.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem4.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarPanelItem4.HeaderStyle.ForeColor.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem4.HeaderStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.Name = "sideBarPanelItem4";
+            this.sideBarPanelItem4.Text = "Opciones de Reportes";
+            // 
+            // itemContainer1
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemContainer1.Name = "itemContainer1";
+            // 
+            // 
+            // 
+            this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // Pantalla_Principal
             // 
@@ -1009,14 +1238,10 @@
             this.superTabControl1.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             this.panelDatosDestajo.ResumeLayout(false);
-            this.tabDestajoA_F.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelDatosDestajo.PerformLayout();
+            this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1029,14 +1254,17 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            this.superTabControlPanel1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPersonalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1082,37 +1310,17 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelDatosDestajo;
         private System.Windows.Forms.Button btnMover;
-        private System.Windows.Forms.TabControl tabDestajoA_F;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox listaEmpleadosDestajo1;
         private System.Windows.Forms.BindingSource dsPersonalBindingSource;
         private dsPersonal dsPersonal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtJueves;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtMiercoles;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtMartes;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelTotalCajas;
-        private System.Windows.Forms.TextBox txtViernes;
-        private System.Windows.Forms.TextBox txtLunes;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox txtCuchillo;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtInfonavit;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label labelTotaldesc;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtEscaf;
@@ -1121,5 +1329,37 @@
         private System.Windows.Forms.TextBox txtCofia;
         private System.Windows.Forms.TextBox txtBotas;
         private System.Windows.Forms.TextBox txtMandil;
+        private System.Windows.Forms.TextBox txtCuchillo;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtSabado;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtJueves;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtMiercoles;
+        private System.Windows.Forms.TextBox txtMartes;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelTotalCajas;
+        private System.Windows.Forms.TextBox txtViernes;
+        private System.Windows.Forms.TextBox txtLunes;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ListBox listaEmpleadosDestajo1;
+        private DevComponents.DotNetBar.Validator.Highlighter highlighter1;
+        private DevComponents.DotNetBar.SideBar sideBar1;
+        private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem4;
+        private DevComponents.DotNetBar.SideBarPanelItem sideBarGenerales;
+        private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem2;
+        private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem3;
+        private DevComponents.DotNetBar.ItemContainer itemContainer1;
     }
 }

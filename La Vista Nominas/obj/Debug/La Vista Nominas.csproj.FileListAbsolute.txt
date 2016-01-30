@@ -36,3 +36,7 @@ C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\RdlCompile.cache
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Debug\RdlCompile.compiled
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Debug\DevComponents.Instrumentation.xml
