@@ -323,6 +323,16 @@ namespace La_Vista_Nominas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_action_accept {
+            get {
+                object obj = ResourceManager.GetObject("ic_action_accept", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_action_full_screen {
             get {
                 object obj = ResourceManager.GetObject("ic_action_full_screen", resourceCulture);
@@ -436,6 +446,16 @@ namespace La_Vista_Nominas.Properties {
         internal static System.Drawing.Bitmap refreshGrid {
             get {
                 object obj = ResourceManager.GetObject("refreshGrid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save2 {
+            get {
+                object obj = ResourceManager.GetObject("save2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -308,7 +308,7 @@ namespace La_Vista_Nominas
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Este empleado aún no tiene una imagen asignada !!" + ex.ToString());
             }
         }
 

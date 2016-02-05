@@ -429,8 +429,8 @@
             this.cmbPago.FormattingEnabled = true;
             this.cmbPago.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "Efectivo",
-            "Tarjeta"});
+            "SEMANA",
+            "QUINCENA"});
             this.cmbPago.Location = new System.Drawing.Point(605, 304);
             this.cmbPago.Name = "cmbPago";
             this.cmbPago.Size = new System.Drawing.Size(121, 21);
@@ -451,8 +451,8 @@
             this.cmbJornada.FormattingEnabled = true;
             this.cmbJornada.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "Diurna",
-            "Nocturna"});
+            "DIURNA",
+            "NOCTURNA"});
             this.cmbJornada.Location = new System.Drawing.Point(292, 305);
             this.cmbJornada.Name = "cmbJornada";
             this.cmbJornada.Size = new System.Drawing.Size(121, 21);
@@ -462,8 +462,8 @@
             // 
             this.cmbTipoNomina.FormattingEnabled = true;
             this.cmbTipoNomina.Items.AddRange(new object[] {
-            "Fija",
-            "Variable"});
+            "FIJA",
+            "VARIABLE"});
             this.cmbTipoNomina.Location = new System.Drawing.Point(93, 304);
             this.cmbTipoNomina.Name = "cmbTipoNomina";
             this.cmbTipoNomina.Size = new System.Drawing.Size(121, 21);
@@ -893,8 +893,8 @@
             // 
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
-            "Alta",
-            "Baja"});
+            "ALTA",
+            "BAJA"});
             this.cmbStatus.Location = new System.Drawing.Point(772, 63);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(67, 21);

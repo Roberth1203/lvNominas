@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Core;
 using System.Configuration;
+using Microsoft.Reporting.WinForms;
 
 namespace La_Vista_Nominas
 {
@@ -34,9 +35,12 @@ namespace La_Vista_Nominas
 
         private void Pantalla_Principal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsPersonal.personal' table. You can move, or remove it, as needed.
+            this.personalTableAdapter.Fill(this.dsPersonal.personal);
             dt = new DataTable();
             sql = new Utilities();
             cargarRegistros();
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 
@@ -278,14 +282,7 @@ namespace La_Vista_Nominas
             txtMandil.Text = tmp.Rows[0].ItemArray[12].ToString();
             txtBotas.Text = tmp.Rows[0].ItemArray[13].ToString();
 
-            //Generar totales
-            int totales1 = ( Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
-            labelTotalCajas.Text = Convert.ToString(totales1);
-
-            Double totales2 = (Convert.ToDouble(txtCuchillo.Text) + Convert.ToDouble(txtEscaf.Text) + Convert.ToDouble(txtCubreB.Text) + Convert.ToDouble(txtBata.Text) + Convert.ToDouble(txtCofia.Text) + Convert.ToDouble(txtMandil.Text) + Convert.ToDouble(txtBotas.Text));
-            labelTotaldesc.Text = Convert.ToString(totales2);
-
-
+            calculoTotales();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -293,5 +290,55 @@ namespace La_Vista_Nominas
 
         }
 
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            DataTable rows = sql.SQLdata("Select * from vw_datosDestajo_por_empleado", null, dataValues);
+            rows.TableName = "DataTable1";
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
+            ReportDataSource source = new ReportDataSource("DataTable1", rows);
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(source);
+            //reportViewer1.DataBind();
+            reportViewer1.LocalReport.Refresh();
+
+            superTabControl1.SelectedTab = tabReportes;
+        }
+        
+        private void actualizarDatosDestajo()
+        {
+            try
+            {
+                String updateQuery = "UPDATE datosDestajo SET dia1 = " + txtLunes.Text + ",dia2 = " + txtMartes.Text + ",dia3 = " + txtMiercoles.Text +
+                             ",dia4 = " + txtJueves.Text + ",dia5 = " + txtViernes.Text + ",dia6 = " + txtSabado.Text +
+                             ",cuchillo = " + Convert.ToDouble(txtCuchillo.Text) + ",escafandra =" + Convert.ToDouble(txtEscaf.Text) +
+                             ",cubrebocas = " + Convert.ToDouble(txtCubreB.Text) + ",bata = " + Convert.ToDouble(txtBata.Text) +
+                             ",cofia = " + Convert.ToDouble(txtCofia.Text) + ",mandil = " + Convert.ToDouble(txtMandil.Text) +
+                             ",botas = " + Convert.ToDouble(txtBotas.Text) + " WHERE nomEmpleado = '" + listaEmpleadosDestajo1.SelectedItem.ToString() + "';";
+
+                sql.SQLstatement(updateQuery, null, dataValues);
+
+                calculoTotales();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            
+        }
+
+        private void calculoTotales()
+        {
+            //Generar totales
+            int totales1 = (Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
+            labelTotalCajas.Text = Convert.ToString(totales1);
+
+            Double totales2 = (Convert.ToDouble(txtCuchillo.Text) + Convert.ToDouble(txtEscaf.Text) + Convert.ToDouble(txtCubreB.Text) + Convert.ToDouble(txtBata.Text) + Convert.ToDouble(txtCofia.Text) + Convert.ToDouble(txtMandil.Text) + Convert.ToDouble(txtBotas.Text));
+            labelTotaldesc.Text = Convert.ToString(totales2);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizarDatosDestajo();
+        }
     }
 }

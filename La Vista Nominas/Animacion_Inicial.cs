@@ -27,11 +27,32 @@ namespace La_Vista_Nominas
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            temporizarProgress();
+         /*   
             if (progressBar1.Value < 100)
             {
                 progressBar1.Value = progressBar1.Value + 2;
                 label1.Text = "Cargando componentes... " + progressBar1.Value + "%";
+            }
+            else
+            {
+                timer1.Enabled = false;
+                System.Threading.Thread.Sleep(2000);
+
+                IniciarSesion log = new IniciarSesion();
+                log.Show();
+                this.Hide();
+            }
+            */
+        }
+
+        private void temporizarProgress()
+        {
+            if (circularProgress1.Value < 100)
+            {
+                circularProgress1.Value = circularProgress1.Value + 2;
+                //label1.Text = "Cargando componentes... " + circularProgress1.Value + "%";
+                //label1.Text = circularProgress1.Value + "%";
             }
             else
             {

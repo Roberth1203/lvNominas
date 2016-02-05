@@ -64,6 +64,10 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=11.2.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
@@ -116,6 +120,11 @@
     <Compile Include="Animacion_Inicial.Designer.cs">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\dsDatosDestajo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDatosDestajo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsPersonal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,7 +176,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\reportNominaDestajo.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Reports\rptEmpleados.rdlc" />
     <EmbeddedResource Include="Reports\rptGaffette.rdlc" />
     <None Include="almacenDatos.xsc">
@@ -180,6 +189,17 @@
     </None>
     <None Include="almacenDatos.xss">
       <DependentUpon>almacenDatos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dsDatosDestajo.xsc">
+      <DependentUpon>dsDatosDestajo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dsDatosDestajo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDatosDestajo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\dsDatosDestajo.xss">
+      <DependentUpon>dsDatosDestajo.xsd</DependentUpon>
     </None>
     <None Include="dsPersonal.xsc">
       <DependentUpon>dsPersonal.xsd</DependentUpon>
@@ -256,6 +276,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\save2.png" />
+    <None Include="Resources\ic_action_accept.png" />
     <None Include="Resources\base2.png" />
     <None Include="Resources\48_move.png" />
     <None Include="Resources\ic_action_full_screen.png" />

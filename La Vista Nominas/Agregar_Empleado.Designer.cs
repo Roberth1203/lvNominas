@@ -575,8 +575,8 @@
             this.cmbJornada.FormattingEnabled = true;
             this.cmbJornada.Items.AddRange(new object[] {
             "Seleccionar ...",
-            "DIURNO",
-            "NOCTURNO"});
+            "DIURNA",
+            "NOCTURNA"});
             this.cmbJornada.Location = new System.Drawing.Point(292, 306);
             this.cmbJornada.Name = "cmbJornada";
             this.cmbJornada.Size = new System.Drawing.Size(121, 21);
