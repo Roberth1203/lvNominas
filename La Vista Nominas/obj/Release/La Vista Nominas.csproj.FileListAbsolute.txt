@@ -1,6 +1,22 @@
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.exe.config
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.exe.manifest
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.application
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.exe
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.pdb
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.DotNetBar2.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.Instrumentation.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\FlashControlV71.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\System.Net.Http.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\ADODB.dll
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.DotNetBar2.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.Instrumentation.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\System.Net.Http.xml
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.csproj.ResolveComReference.cache
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.csprojResolveAssemblyReference.cache
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La_Vista_Nominas.Agregar_Empleado.resources
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La_Vista_Nominas.Animacion_Inicial.resources
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La_Vista_Nominas.IniciarSesion.resources
@@ -8,13 +24,10 @@ C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La_Vista_Nominas.Pantalla_Principal.resources
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La_Vista_Nominas.Properties.Resources.resources
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.csproj.GenerateResource.Cache
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.exe
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.pdb
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.exe.manifest
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.application
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.exe
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\La Vista Nominas.pdb
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.DotNetBar2.dll
-C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\bin\Release\DevComponents.DotNetBar2.xml
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\RdlCompile.cache
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\RdlCompile.compiled
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.exe.manifest
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.application
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.exe
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.pdb
+C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.csprojResolveAssemblyReference.cache

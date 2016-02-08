@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Core;
 using System.Configuration;
-using Microsoft.Reporting.WinForms;
 
 namespace La_Vista_Nominas
 {
@@ -35,12 +34,9 @@ namespace La_Vista_Nominas
 
         private void Pantalla_Principal_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dsPersonal.personal' table. You can move, or remove it, as needed.
-            this.personalTableAdapter.Fill(this.dsPersonal.personal);
             dt = new DataTable();
             sql = new Utilities();
             cargarRegistros();
-            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 
@@ -292,16 +288,7 @@ namespace La_Vista_Nominas
 
         private void btnreporte_Click(object sender, EventArgs e)
         {
-            DataTable rows = sql.SQLdata("Select * from vw_datosDestajo_por_empleado", null, dataValues);
-            rows.TableName = "DataTable1";
-            reportViewer1.ProcessingMode = ProcessingMode.Local;
-            ReportDataSource source = new ReportDataSource("DataTable1", rows);
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(source);
-            //reportViewer1.DataBind();
-            reportViewer1.LocalReport.Refresh();
-
-            superTabControl1.SelectedTab = tabReportes;
+            
         }
         
         private void actualizarDatosDestajo()
