@@ -10,11 +10,20 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Core;
 using System.Configuration;
+using System.Globalization;
 
 namespace La_Vista_Nominas
 {
     public partial class Pantalla_Principal : Form
     {
+
+        //Datos a insertar en reporte
+        public string nombre { get; set; }
+        public string NSS { get; set; }
+        public string curp { get; set; }
+        public string depto { get; set; }
+
+        
         ModificarEmpleados update;
         public String idCapturado;
         DataTable dt;
@@ -326,6 +335,31 @@ namespace La_Vista_Nominas
         private void button2_Click(object sender, EventArgs e)
         {
             actualizarDatosDestajo();
+            loadEmployeeData();
+        }
+
+        private void loadEmployeeData()
+        {
+            DataTable headerData = new DataTable();
+            headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+
+            reportViewer1.LocalReport.DataSources.Clear();
+            // utilizo el nombre del dataset asignado al reporte y el nombre de la instancia de clase intermediaria 
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("datosEmpleado",headerData));
+            reportViewer1.RefreshReport();
+
+
+
+            Classes.Datos_Empleados origin = new Classes.Datos_Empleados();
+            origin.nombre = headerData.Rows[0].ItemArray[0].ToString();
+            origin.nss = headerData.Rows[0].ItemArray[1].ToString();
+            origin.rfc = headerData.Rows[0].ItemArray[2].ToString();
+            origin.curp = headerData.Rows[0].ItemArray[3].ToString();
+            origin.depto = headerData.Rows[0].ItemArray[4].ToString();
+            //origin.puesto = headerData.Rows[0].ItemArray[5].ToString();
+            //origin.weekStart = CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern;
+
+            tabReportes.Focus();
         }
     }
 }

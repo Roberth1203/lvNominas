@@ -31,3 +31,31 @@ C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.exe
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.pdb
 C:\Users\Roberto\Documents\Visual Studio 2015\Projects\La Vista Nominas\La Vista Nominas\obj\Release\La Vista Nominas.csprojResolveAssemblyReference.cache
+D:\lvNominas-master\La Vista Nominas\bin\Release\La Vista Nominas.exe.config
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.csproj.ResolveComReference.cache
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.exe
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.pdb
+D:\lvNominas-master\La Vista Nominas\bin\Release\La Vista Nominas.exe.manifest
+D:\lvNominas-master\La Vista Nominas\bin\Release\La Vista Nominas.application
+D:\lvNominas-master\La Vista Nominas\bin\Release\La Vista Nominas.exe
+D:\lvNominas-master\La Vista Nominas\bin\Release\La Vista Nominas.pdb
+D:\lvNominas-master\La Vista Nominas\bin\Release\DevComponents.DotNetBar.SuperGrid.dll
+D:\lvNominas-master\La Vista Nominas\bin\Release\DevComponents.DotNetBar2.dll
+D:\lvNominas-master\La Vista Nominas\bin\Release\DevComponents.Instrumentation.dll
+D:\lvNominas-master\La Vista Nominas\bin\Release\ShockwaveFlashObjects.dll
+D:\lvNominas-master\La Vista Nominas\bin\Release\DevComponents.DotNetBar.SuperGrid.xml
+D:\lvNominas-master\La Vista Nominas\bin\Release\DevComponents.DotNetBar2.xml
+D:\lvNominas-master\La Vista Nominas\bin\Release\DevComponents.Instrumentation.xml
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.csprojResolveAssemblyReference.cache
+D:\lvNominas-master\La Vista Nominas\obj\Release\La_Vista_Nominas.Agregar_Empleado.resources
+D:\lvNominas-master\La Vista Nominas\obj\Release\La_Vista_Nominas.Animacion_Inicial.resources
+D:\lvNominas-master\La Vista Nominas\obj\Release\La_Vista_Nominas.IniciarSesion.resources
+D:\lvNominas-master\La Vista Nominas\obj\Release\La_Vista_Nominas.ModificarEmpleados.resources
+D:\lvNominas-master\La Vista Nominas\obj\Release\La_Vista_Nominas.Pantalla_Principal.resources
+D:\lvNominas-master\La Vista Nominas\obj\Release\La_Vista_Nominas.Properties.Resources.resources
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.csproj.GenerateResource.Cache
+D:\lvNominas-master\La Vista Nominas\obj\Release\RdlCompile.cache
+D:\lvNominas-master\La Vista Nominas\obj\Release\RdlCompile.compiled
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.exe.manifest
+D:\lvNominas-master\La Vista Nominas\obj\Release\La Vista Nominas.application
+D:\lvNominas-master\La Vista Nominas\bin\Release\Microsoft.ReportViewer.WinForms.dll

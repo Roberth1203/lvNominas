@@ -161,5 +161,10 @@ namespace La_Vista_Nominas
         {
             pictureBox4.Image = imageList1.Images[0];
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
