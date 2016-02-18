@@ -119,6 +119,8 @@
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Datos_Empleados.cs" />
+    <Compile Include="Classes\Datos_Periodo.cs" />
+    <Compile Include="Classes\Movimientos_Destajo.cs" />
     <Compile Include="IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +169,7 @@
     </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Reports\rptPruebas.rdlc" />
+    <EmbeddedResource Include="rptTotalesDestajo.rdlc" />
     <None Include="almacenDatos.xsc">
       <DependentUpon>almacenDatos.xsd</DependentUpon>
     </None>
@@ -181,6 +184,8 @@
     <None Include="La Vista Nominas_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\Agregar_Empleado.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Empleados.datasource" />
+    <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Periodo.datasource" />
+    <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Movimientos_Destajo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

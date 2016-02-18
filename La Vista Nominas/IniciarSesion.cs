@@ -154,12 +154,12 @@ namespace La_Vista_Nominas
 
         private void pictureBox4_MouseHover(object sender, EventArgs e)
         {
-            pictureBox4.Image = imageList1.Images[1];
+            pictureBox4.Size = new System.Drawing.Size(55, 55);
         }
 
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox4.Image = imageList1.Images[0];
+            pictureBox4.Size = new System.Drawing.Size(50, 50);
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

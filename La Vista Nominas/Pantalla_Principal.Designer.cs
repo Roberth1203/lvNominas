@@ -31,25 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
-            this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.itemselectedBar = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExportar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDrop = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
@@ -97,20 +78,27 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
+            this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.itemselectedBar = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnExportar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDrop = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.sideBar1 = new DevComponents.DotNetBar.SideBar();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.sideBarGenerales = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBarPanelItem2 = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.sideBarPanelItem3 = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBarPanelItem4 = new DevComponents.DotNetBar.SideBarPanelItem();
             this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMover = new System.Windows.Forms.Button();
@@ -123,12 +111,38 @@
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
             this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sideBarGenerales = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBarPanelItem2 = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBarPanelItem3 = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBarPanelItem4 = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDestajo = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
+            this.txtCostoCaja = new System.Windows.Forms.TextBox();
+            this.txtVacacionalD = new System.Windows.Forms.TextBox();
+            this.txtDominicalD = new System.Windows.Forms.TextBox();
+            this.txtVacacionesD = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel3.SuspendLayout();
+            this.panelDatosDestajo.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -140,18 +154,17 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            this.superTabControlPanel3.SuspendLayout();
-            this.panelDatosDestajo.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.superTabControlPanel1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.sideBar1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabDestajo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -175,9 +188,9 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
             this.superTabControl1.Name = "superTabControl1";
@@ -196,234 +209,13 @@
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "tabSecciones";
             // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.reportViewer1);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel1.TabIndex = 0;
-            this.superTabControlPanel1.TabItem = this.tabReportes;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "La_Vista_Nominas.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(749, 512);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // tabReportes
-            // 
-            this.tabReportes.AttachedControl = this.superTabControlPanel1;
-            this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
-            this.tabReportes.Name = "tabReportes";
-            // 
-            // tabPersonal
-            // 
-            this.tabPersonal.Controls.Add(this.itemselectedBar);
-            this.tabPersonal.Controls.Add(this.pictureBox3);
-            this.tabPersonal.Controls.Add(this.btnExportar);
-            this.tabPersonal.Controls.Add(this.pictureBox2);
-            this.tabPersonal.Controls.Add(this.groupBox1);
-            this.tabPersonal.Controls.Add(this.dataGridView1);
-            this.tabPersonal.Controls.Add(this.btnDrop);
-            this.tabPersonal.Controls.Add(this.btnAdd);
-            this.tabPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPersonal.Location = new System.Drawing.Point(237, 0);
-            this.tabPersonal.Name = "tabPersonal";
-            this.tabPersonal.Size = new System.Drawing.Size(749, 512);
-            this.tabPersonal.TabIndex = 1;
-            this.tabPersonal.TabItem = this.tabPrincipal;
-            // 
-            // itemselectedBar
-            // 
-            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
-            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
-            this.itemselectedBar.Name = "itemselectedBar";
-            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
-            this.itemselectedBar.TabIndex = 11;
-            this.itemselectedBar.TabStop = false;
-            this.itemselectedBar.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
-            this.btnExportar.Location = new System.Drawing.Point(280, 5);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(51, 50);
-            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExportar.TabIndex = 9;
-            this.btnExportar.TabStop = false;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
-            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtBuscar);
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox1.Location = new System.Drawing.Point(418, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 50);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.textBox1.Location = new System.Drawing.Point(147, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 13);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Buscar empleado:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
-            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
-            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.txtBuscar.TabIndex = 6;
-            this.txtBuscar.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 448);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemEditar,
-            this.MenuItemBaja});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
-            // 
-            // MenuItemEditar
-            // 
-            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
-            this.MenuItemEditar.Name = "MenuItemEditar";
-            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemEditar.Text = "Modificar";
-            // 
-            // MenuItemBaja
-            // 
-            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
-            this.MenuItemBaja.Name = "MenuItemBaja";
-            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemBaja.Text = "Dar de Baja";
-            // 
-            // btnDrop
-            // 
-            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
-            this.btnDrop.Location = new System.Drawing.Point(166, 5);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.Size = new System.Drawing.Size(51, 50);
-            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDrop.TabIndex = 4;
-            this.btnDrop.TabStop = false;
-            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
-            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
-            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(52, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 50);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
-            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
-            // 
-            // tabPrincipal
-            // 
-            this.tabPrincipal.AttachedControl = this.tabPersonal;
-            this.tabPrincipal.GlobalItem = false;
-            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
-            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
-            this.tabPrincipal.Name = "tabPrincipal";
-            // 
             // superTabControlPanel3
             // 
+            this.superTabControlPanel3.Controls.Add(this.button3);
             this.superTabControlPanel3.Controls.Add(this.button1);
             this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
+            this.superTabControlPanel3.Controls.Add(this.pictureBox5);
+            this.superTabControlPanel3.Controls.Add(this.pictureBox6);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel3.Location = new System.Drawing.Point(237, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
@@ -435,7 +227,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(6, 12);
+            this.button1.Location = new System.Drawing.Point(8, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 52);
             this.button1.TabIndex = 0;
@@ -449,9 +241,9 @@
             this.panelDatosDestajo.Controls.Add(this.groupBox2);
             this.panelDatosDestajo.Controls.Add(this.pictureBox4);
             this.panelDatosDestajo.Controls.Add(this.listaEmpleadosDestajo1);
-            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 97);
+            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 82);
             this.panelDatosDestajo.Name = "panelDatosDestajo";
-            this.panelDatosDestajo.Size = new System.Drawing.Size(743, 412);
+            this.panelDatosDestajo.Size = new System.Drawing.Size(737, 423);
             this.panelDatosDestajo.TabIndex = 1;
             this.panelDatosDestajo.Visible = false;
             // 
@@ -887,6 +679,230 @@
             this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
             this.tabNominas.Name = "tabNominas";
             // 
+            // tabPersonal
+            // 
+            this.tabPersonal.Controls.Add(this.itemselectedBar);
+            this.tabPersonal.Controls.Add(this.pictureBox3);
+            this.tabPersonal.Controls.Add(this.btnExportar);
+            this.tabPersonal.Controls.Add(this.pictureBox2);
+            this.tabPersonal.Controls.Add(this.groupBox1);
+            this.tabPersonal.Controls.Add(this.dataGridView1);
+            this.tabPersonal.Controls.Add(this.btnDrop);
+            this.tabPersonal.Controls.Add(this.btnAdd);
+            this.tabPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPersonal.Location = new System.Drawing.Point(237, 0);
+            this.tabPersonal.Name = "tabPersonal";
+            this.tabPersonal.Size = new System.Drawing.Size(749, 512);
+            this.tabPersonal.TabIndex = 1;
+            this.tabPersonal.TabItem = this.tabPrincipal;
+            // 
+            // itemselectedBar
+            // 
+            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
+            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
+            this.itemselectedBar.Name = "itemselectedBar";
+            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
+            this.itemselectedBar.TabIndex = 11;
+            this.itemselectedBar.TabStop = false;
+            this.itemselectedBar.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
+            this.btnExportar.Location = new System.Drawing.Point(280, 5);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(51, 50);
+            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExportar.TabIndex = 9;
+            this.btnExportar.TabStop = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
+            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.groupBox1.Location = new System.Drawing.Point(418, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(302, 50);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.textBox1.Location = new System.Drawing.Point(147, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 13);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Buscar empleado:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
+            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
+            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 61);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(743, 448);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemEditar,
+            this.MenuItemBaja});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
+            // 
+            // MenuItemEditar
+            // 
+            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
+            this.MenuItemEditar.Name = "MenuItemEditar";
+            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemEditar.Text = "Modificar";
+            // 
+            // MenuItemBaja
+            // 
+            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
+            this.MenuItemBaja.Name = "MenuItemBaja";
+            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemBaja.Text = "Dar de Baja";
+            // 
+            // btnDrop
+            // 
+            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
+            this.btnDrop.Location = new System.Drawing.Point(166, 5);
+            this.btnDrop.Name = "btnDrop";
+            this.btnDrop.Size = new System.Drawing.Size(51, 50);
+            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDrop.TabIndex = 4;
+            this.btnDrop.TabStop = false;
+            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
+            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
+            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(52, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(51, 50);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            // 
+            // tabPrincipal
+            // 
+            this.tabPrincipal.AttachedControl = this.tabPersonal;
+            this.tabPrincipal.GlobalItem = false;
+            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
+            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
+            this.tabPrincipal.Name = "tabPrincipal";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.reportViewer1);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel1.TabIndex = 0;
+            this.superTabControlPanel1.TabItem = this.tabReportes;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "La_Vista_Nominas.Report2.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(749, 512);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // tabReportes
+            // 
+            this.tabReportes.AttachedControl = this.superTabControlPanel1;
+            this.tabReportes.GlobalItem = false;
+            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
+            this.tabReportes.Name = "tabReportes";
+            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
@@ -901,239 +917,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.sideBar1);
+            this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(749, 512);
             this.panel2.TabIndex = 0;
-            // 
-            // sideBar1
-            // 
-            this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
-            this.sideBar1.Appearance = DevComponents.DotNetBar.eSideBarAppearance.Flat;
-            this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
-            this.sideBar1.Controls.Add(this.label27);
-            this.sideBar1.Controls.Add(this.label26);
-            this.sideBar1.Controls.Add(this.label25);
-            this.sideBar1.Controls.Add(this.maskedTextBox1);
-            this.sideBar1.Controls.Add(this.label24);
-            this.sideBar1.Controls.Add(this.label23);
-            this.sideBar1.ExpandedPanel = this.sideBarGenerales;
-            this.sideBar1.Location = new System.Drawing.Point(3, 3);
-            this.sideBar1.Name = "sideBar1";
-            this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBarGenerales,
-            this.sideBarPanelItem2,
-            this.sideBarPanelItem3,
-            this.sideBarPanelItem4});
-            this.sideBar1.Size = new System.Drawing.Size(743, 493);
-            this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.sideBar1.TabIndex = 0;
-            this.sideBar1.Text = "sideBar1";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label27.Location = new System.Drawing.Point(163, 184);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(92, 13);
-            this.label27.TabIndex = 5;
-            this.label27.Text = "Prima Vacacional:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label26.Location = new System.Drawing.Point(300, 184);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(66, 13);
-            this.label26.TabIndex = 4;
-            this.label26.Text = "Vacaciones:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label25.Location = new System.Drawing.Point(220, 97);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(67, 13);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "Septimo día:";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(130, 90);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(36, 20);
-            this.maskedTextBox1.TabIndex = 2;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label24.Location = new System.Drawing.Point(44, 93);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(80, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Costo Por Caja:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label23.Location = new System.Drawing.Point(44, 65);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(678, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Percepciones Generales __________________________________________________________" +
-    "__________________________________";
-            // 
-            // sideBarGenerales
-            // 
-            this.sideBarGenerales.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.sideBarGenerales.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.sideBarGenerales.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarGenerales.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarGenerales.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarGenerales.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarGenerales.HeaderHotStyle.GradientAngle = 90;
-            this.sideBarGenerales.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarGenerales.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarGenerales.HeaderSideHotStyle.GradientAngle = 90;
-            this.sideBarGenerales.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.sideBarGenerales.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
-            this.sideBarGenerales.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarGenerales.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarGenerales.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarGenerales.HeaderSideStyle.GradientAngle = 90;
-            this.sideBarGenerales.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarGenerales.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarGenerales.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarGenerales.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarGenerales.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarGenerales.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.sideBarGenerales.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
-            this.sideBarGenerales.HeaderStyle.GradientAngle = 90;
-            this.sideBarGenerales.Icon = ((System.Drawing.Icon)(resources.GetObject("sideBarGenerales.Icon")));
-            this.sideBarGenerales.Name = "sideBarGenerales";
-            this.sideBarGenerales.Text = "Opciones generales";
-            // 
-            // sideBarPanelItem2
-            // 
-            this.sideBarPanelItem2.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.sideBarPanelItem2.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.sideBarPanelItem2.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem2.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem2.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem2.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem2.HeaderHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem2.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem2.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem2.HeaderSideHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem2.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.sideBarPanelItem2.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
-            this.sideBarPanelItem2.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem2.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem2.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem2.HeaderSideStyle.GradientAngle = 90;
-            this.sideBarPanelItem2.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem2.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem2.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem2.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem2.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem2.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.sideBarPanelItem2.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
-            this.sideBarPanelItem2.HeaderStyle.GradientAngle = 90;
-            this.sideBarPanelItem2.Name = "sideBarPanelItem2";
-            this.sideBarPanelItem2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.itemContainer1});
-            this.sideBarPanelItem2.Text = "Opciones Nomina destajo";
-            // 
-            // itemContainer1
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemContainer1.Name = "itemContainer1";
-            // 
-            // 
-            // 
-            this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // sideBarPanelItem3
-            // 
-            this.sideBarPanelItem3.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.sideBarPanelItem3.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.sideBarPanelItem3.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem3.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem3.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem3.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem3.HeaderHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem3.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem3.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem3.HeaderSideHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem3.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.sideBarPanelItem3.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
-            this.sideBarPanelItem3.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem3.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem3.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem3.HeaderSideStyle.GradientAngle = 90;
-            this.sideBarPanelItem3.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem3.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem3.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem3.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem3.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem3.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.sideBarPanelItem3.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
-            this.sideBarPanelItem3.HeaderStyle.GradientAngle = 90;
-            this.sideBarPanelItem3.Name = "sideBarPanelItem3";
-            this.sideBarPanelItem3.Text = "Opciones Nomina Día/Noche";
-            // 
-            // sideBarPanelItem4
-            // 
-            this.sideBarPanelItem4.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.sideBarPanelItem4.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.sideBarPanelItem4.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem4.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem4.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem4.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem4.HeaderHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem4.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem4.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem4.HeaderSideHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem4.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
-            this.sideBarPanelItem4.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
-            this.sideBarPanelItem4.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem4.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem4.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem4.HeaderSideStyle.GradientAngle = 90;
-            this.sideBarPanelItem4.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.sideBarPanelItem4.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
-            this.sideBarPanelItem4.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem4.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
-            this.sideBarPanelItem4.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem4.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.sideBarPanelItem4.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
-            this.sideBarPanelItem4.HeaderStyle.GradientAngle = 90;
-            this.sideBarPanelItem4.Name = "sideBarPanelItem4";
-            this.sideBarPanelItem4.Text = "Opciones de Reportes";
             // 
             // tabOpciones
             // 
@@ -1279,9 +1068,308 @@
             this.dockSite3.TabIndex = 4;
             this.dockSite3.TabStop = false;
             // 
-            // highlighter1
+            // sideBarGenerales
             // 
-            this.highlighter1.ContainerControl = this;
+            this.sideBarGenerales.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.sideBarGenerales.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
+            this.sideBarGenerales.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarGenerales.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarGenerales.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarGenerales.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarGenerales.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarGenerales.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarGenerales.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarGenerales.HeaderSideHotStyle.GradientAngle = 90;
+            this.sideBarGenerales.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.sideBarGenerales.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
+            this.sideBarGenerales.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarGenerales.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarGenerales.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarGenerales.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarGenerales.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarGenerales.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarGenerales.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarGenerales.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarGenerales.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarGenerales.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarGenerales.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
+            this.sideBarGenerales.HeaderStyle.GradientAngle = 90;
+            this.sideBarGenerales.Icon = ((System.Drawing.Icon)(resources.GetObject("sideBarGenerales.Icon")));
+            this.sideBarGenerales.Name = "sideBarGenerales";
+            this.sideBarGenerales.Text = "Opciones generales";
+            // 
+            // sideBarPanelItem2
+            // 
+            this.sideBarPanelItem2.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.sideBarPanelItem2.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem2.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem2.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem2.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem2.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem2.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem2.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem2.HeaderSideHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.sideBarPanelItem2.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
+            this.sideBarPanelItem2.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem2.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem2.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem2.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem2.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem2.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem2.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem2.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem2.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarPanelItem2.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
+            this.sideBarPanelItem2.HeaderStyle.GradientAngle = 90;
+            this.sideBarPanelItem2.Name = "sideBarPanelItem2";
+            this.sideBarPanelItem2.Text = "Opciones Nomina destajo";
+            // 
+            // sideBarPanelItem3
+            // 
+            this.sideBarPanelItem3.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.sideBarPanelItem3.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem3.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem3.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem3.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem3.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem3.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem3.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem3.HeaderSideHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.sideBarPanelItem3.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
+            this.sideBarPanelItem3.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem3.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem3.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem3.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem3.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem3.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem3.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem3.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem3.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarPanelItem3.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
+            this.sideBarPanelItem3.HeaderStyle.GradientAngle = 90;
+            this.sideBarPanelItem3.Name = "sideBarPanelItem3";
+            this.sideBarPanelItem3.Text = "Opciones Nomina Día/Noche";
+            // 
+            // sideBarPanelItem4
+            // 
+            this.sideBarPanelItem4.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.sideBarPanelItem4.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
+            this.sideBarPanelItem4.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem4.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem4.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem4.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem4.HeaderHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem4.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem4.HeaderSideHotStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(235)))), ((int)(((byte)(253)))));
+            this.sideBarPanelItem4.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(190)))), ((int)(((byte)(218)))));
+            this.sideBarPanelItem4.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem4.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem4.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem4.HeaderSideStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.sideBarPanelItem4.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(252)))));
+            this.sideBarPanelItem4.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.sideBarPanelItem4.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(100)))), ((int)(((byte)(136)))));
+            this.sideBarPanelItem4.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.sideBarPanelItem4.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.sideBarPanelItem4.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(84)))), ((int)(((byte)(115)))));
+            this.sideBarPanelItem4.HeaderStyle.GradientAngle = 90;
+            this.sideBarPanelItem4.Name = "sideBarPanelItem4";
+            this.sideBarPanelItem4.Text = "Opciones de Reportes";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // labelItem1
+            // 
+            this.labelItem1.Name = "labelItem1";
+            this.labelItem1.Text = "labelItem1";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabDestajo);
+            this.tabControl1.Location = new System.Drawing.Point(6, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(740, 506);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(732, 480);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Opciones Generales";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabDestajo
+            // 
+            this.tabDestajo.Controls.Add(this.txtVacacionesD);
+            this.tabDestajo.Controls.Add(this.txtDominicalD);
+            this.tabDestajo.Controls.Add(this.txtVacacionalD);
+            this.tabDestajo.Controls.Add(this.txtCostoCaja);
+            this.tabDestajo.Controls.Add(this.txtAguinaldoD);
+            this.tabDestajo.Controls.Add(this.label30);
+            this.tabDestajo.Controls.Add(this.label29);
+            this.tabDestajo.Controls.Add(this.label28);
+            this.tabDestajo.Controls.Add(this.label27);
+            this.tabDestajo.Controls.Add(this.label24);
+            this.tabDestajo.Controls.Add(this.label23);
+            this.tabDestajo.Location = new System.Drawing.Point(4, 22);
+            this.tabDestajo.Name = "tabDestajo";
+            this.tabDestajo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDestajo.Size = new System.Drawing.Size(732, 480);
+            this.tabDestajo.TabIndex = 1;
+            this.tabDestajo.Text = "Opciones Destajo";
+            this.tabDestajo.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(20, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(669, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Percepciones ____________________________________________________________________" +
+    "_______________________________";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(60, 42);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Aguinaldo";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(38, 146);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Costo por Caja";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(25, 120);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(89, 13);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Prima Vacacional";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(48, 94);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(66, 13);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Séptimo Día";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(51, 68);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 13);
+            this.label30.TabIndex = 7;
+            this.label30.Text = "Vacaciones";
+            // 
+            // txtAguinaldoD
+            // 
+            this.txtAguinaldoD.Location = new System.Drawing.Point(120, 39);
+            this.txtAguinaldoD.Name = "txtAguinaldoD";
+            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
+            this.txtAguinaldoD.TabIndex = 8;
+            this.txtAguinaldoD.Text = "0.194";
+            // 
+            // txtCostoCaja
+            // 
+            this.txtCostoCaja.Location = new System.Drawing.Point(120, 143);
+            this.txtCostoCaja.Name = "txtCostoCaja";
+            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
+            this.txtCostoCaja.TabIndex = 10;
+            this.txtCostoCaja.Text = "5.30";
+            // 
+            // txtVacacionalD
+            // 
+            this.txtVacacionalD.Location = new System.Drawing.Point(120, 117);
+            this.txtVacacionalD.Name = "txtVacacionalD";
+            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionalD.TabIndex = 11;
+            this.txtVacacionalD.Text = "0.019";
+            // 
+            // txtDominicalD
+            // 
+            this.txtDominicalD.Location = new System.Drawing.Point(120, 91);
+            this.txtDominicalD.Name = "txtDominicalD";
+            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
+            this.txtDominicalD.TabIndex = 12;
+            this.txtDominicalD.Text = "0.71";
+            // 
+            // txtVacacionesD
+            // 
+            this.txtVacacionesD.Location = new System.Drawing.Point(120, 65);
+            this.txtVacacionesD.Name = "txtVacacionesD";
+            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionesD.TabIndex = 13;
+            this.txtVacacionesD.Text = "0.077";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(103, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(83, 52);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(94, 73);
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(3, 74);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(743, 435);
+            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // Pantalla_Principal
             // 
@@ -1305,7 +1393,14 @@
             this.Load += new System.EventHandler(this.Pantalla_Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel3.ResumeLayout(false);
+            this.panelDatosDestajo.ResumeLayout(false);
+            this.panelDatosDestajo.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1318,23 +1413,19 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            this.superTabControlPanel3.ResumeLayout(false);
-            this.panelDatosDestajo.ResumeLayout(false);
-            this.panelDatosDestajo.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.sideBar1.ResumeLayout(false);
-            this.sideBar1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabDestajo.ResumeLayout(false);
+            this.tabDestajo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1421,21 +1512,31 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ListBox listaEmpleadosDestajo1;
-        private DevComponents.DotNetBar.Validator.Highlighter highlighter1;
-        private DevComponents.DotNetBar.SideBar sideBar1;
-        private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem4;
+        private System.Windows.Forms.BindingSource personalBindingSource;
+        private System.Windows.Forms.Button button2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.SideBarPanelItem sideBarGenerales;
         private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem2;
         private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem3;
-        private DevComponents.DotNetBar.ItemContainer itemContainer1;
-        private System.Windows.Forms.BindingSource personalBindingSource;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem4;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabDestajo;
+        private System.Windows.Forms.TextBox txtVacacionesD;
+        private System.Windows.Forms.TextBox txtDominicalD;
+        private System.Windows.Forms.TextBox txtVacacionalD;
+        private System.Windows.Forms.TextBox txtCostoCaja;
+        private System.Windows.Forms.TextBox txtAguinaldoD;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

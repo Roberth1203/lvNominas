@@ -47,6 +47,13 @@ namespace La_Vista_Nominas
             sql = new Utilities();
             cargarRegistros();
             this.reportViewer1.RefreshReport();
+
+            Classes.Movimientos_Destajo movimientos = new Classes.Movimientos_Destajo();
+            movimientos.cajas = 6;
+            movimientos.aguinaldo = Convert.ToDouble(txtAguinaldoD.Text);
+            movimientos.vacaciones = Convert.ToDouble(txtVacacionesD.Text);
+            movimientos.prDominical = Convert.ToDouble(txtDominicalD.Text);
+            movimientos.prVacacional = Convert.ToDouble(txtVacacionalD.Text);
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -247,6 +254,8 @@ namespace La_Vista_Nominas
         private void button1_Click(object sender, EventArgs e)
         {
             panelDatosDestajo.Visible = true;
+            pictureBox5.Visible = true;
+            pictureBox6.Visible = true;
             obtenerEmpleados();
         }
 
@@ -268,7 +277,6 @@ namespace La_Vista_Nominas
             string cad = listaEmpleadosDestajo1.SelectedItem.ToString();
 
             String query = "SELECT * from datosDestajo where nomEmpleado = '" + cad + "';";
-            MessageBox.Show("sss");
             DataTable tmp = sql.SQLdata(query, null, dataValues);
 
             //Llenado de Campos (Percepciones y Deducciones)
@@ -330,6 +338,7 @@ namespace La_Vista_Nominas
 
             Double totales2 = (Convert.ToDouble(txtCuchillo.Text) + Convert.ToDouble(txtEscaf.Text) + Convert.ToDouble(txtCubreB.Text) + Convert.ToDouble(txtBata.Text) + Convert.ToDouble(txtCofia.Text) + Convert.ToDouble(txtMandil.Text) + Convert.ToDouble(txtBotas.Text));
             labelTotaldesc.Text = Convert.ToString(totales2);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -338,26 +347,36 @@ namespace La_Vista_Nominas
             loadEmployeeData();
         }
 
+        // Carga los campos solicitados del empleado para la cabecera del reporte de nomina
         private void loadEmployeeData()
         {
             DataTable headerData = new DataTable();
-            headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            DataTable periodData = new DataTable();
+            DataTable datos = new DataTable();
+            
+            List<Classes.Movimientos_Destajo> movs = new List<Classes.Movimientos_Destajo>();
+            
+            headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,id from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            periodData = sql.SQLdata("Select area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
 
             reportViewer1.LocalReport.DataSources.Clear();
             // utilizo el nombre del dataset asignado al reporte y el nombre de la instancia de clase intermediaria 
             reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("datosEmpleado",headerData));
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("infoPeriodo", periodData));
+        
             reportViewer1.RefreshReport();
 
 
-
+            //Instancia de ambos DataSet para reporte de nomina.
             Classes.Datos_Empleados origin = new Classes.Datos_Empleados();
+            Classes.Datos_Periodo origin2 = new Classes.Datos_Periodo();
+
             origin.nombre = headerData.Rows[0].ItemArray[0].ToString();
             origin.nss = headerData.Rows[0].ItemArray[1].ToString();
             origin.rfc = headerData.Rows[0].ItemArray[2].ToString();
             origin.curp = headerData.Rows[0].ItemArray[3].ToString();
-            origin.depto = headerData.Rows[0].ItemArray[4].ToString();
-            //origin.puesto = headerData.Rows[0].ItemArray[5].ToString();
-            //origin.weekStart = CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern;
+            origin2.depto = headerData.Rows[0].ItemArray[4].ToString();
+            origin.nCajas = Convert.ToInt32(headerData.Rows[0].ItemArray[5].ToString());
 
             tabReportes.Focus();
         }
