@@ -46,6 +46,7 @@ namespace La_Vista_Nominas
             dt = new DataTable();
             sql = new Utilities();
             cargarRegistros();
+            obtenerEmpleados();
             this.reportViewer1.RefreshReport();
 
             Classes.Movimientos_Destajo movimientos = new Classes.Movimientos_Destajo();
@@ -250,13 +251,9 @@ namespace La_Vista_Nominas
 
 
         // ======================== Eventos en tabNominas ======================== 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void superTabControlPanel3_Click(object sender, EventArgs e)
         {
-            panelDatosDestajo.Visible = true;
-            pictureBox5.Visible = true;
-            pictureBox6.Visible = true;
-            obtenerEmpleados();
+            
         }
 
         private void obtenerEmpleados()
@@ -308,7 +305,7 @@ namespace La_Vista_Nominas
             
         }
         
-        private void actualizarDatosDestajo()
+        private void cargarListadoDestajo()
         {
             try
             {
@@ -343,7 +340,7 @@ namespace La_Vista_Nominas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            actualizarDatosDestajo();
+            cargarListadoDestajo();
             loadEmployeeData();
         }
 

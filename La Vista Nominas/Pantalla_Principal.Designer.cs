@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -78,6 +77,23 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDestajo = new System.Windows.Forms.TabPage();
+            this.txtVacacionesD = new System.Windows.Forms.TextBox();
+            this.txtDominicalD = new System.Windows.Forms.TextBox();
+            this.txtVacacionalD = new System.Windows.Forms.TextBox();
+            this.txtCostoCaja = new System.Windows.Forms.TextBox();
+            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.itemselectedBar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -97,9 +113,6 @@
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMover = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
@@ -119,22 +132,13 @@
             this.sideBarPanelItem4 = new DevComponents.DotNetBar.SideBarPanelItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabDestajo = new System.Windows.Forms.TabPage();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
-            this.txtCostoCaja = new System.Windows.Forms.TextBox();
-            this.txtVacacionalD = new System.Windows.Forms.TextBox();
-            this.txtDominicalD = new System.Windows.Forms.TextBox();
-            this.txtVacacionesD = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabEmpleadosDestajo = new System.Windows.Forms.TabPage();
+            this.tabJornadaDia = new System.Windows.Forms.TabPage();
+            this.tabJornadaNoche = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -143,6 +147,10 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.superTabControlPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabDestajo.SuspendLayout();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -155,14 +163,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabDestajo.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabEmpleadosDestajo.SuspendLayout();
+            this.tabJornadaDia.SuspendLayout();
+            this.tabJornadaNoche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
@@ -188,9 +196,9 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
             this.superTabControl1.Name = "superTabControl1";
@@ -211,28 +219,14 @@
             // 
             // superTabControlPanel3
             // 
-            this.superTabControlPanel3.Controls.Add(this.button3);
-            this.superTabControlPanel3.Controls.Add(this.button1);
-            this.superTabControlPanel3.Controls.Add(this.panelDatosDestajo);
-            this.superTabControlPanel3.Controls.Add(this.pictureBox5);
-            this.superTabControlPanel3.Controls.Add(this.pictureBox6);
+            this.superTabControlPanel3.Controls.Add(this.tabControl2);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel3.Location = new System.Drawing.Point(237, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
             this.superTabControlPanel3.Size = new System.Drawing.Size(749, 512);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.tabNominas;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(8, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 52);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.superTabControlPanel3.Click += new System.EventHandler(this.superTabControlPanel3_Click);
             // 
             // panelDatosDestajo
             // 
@@ -241,11 +235,10 @@
             this.panelDatosDestajo.Controls.Add(this.groupBox2);
             this.panelDatosDestajo.Controls.Add(this.pictureBox4);
             this.panelDatosDestajo.Controls.Add(this.listaEmpleadosDestajo1);
-            this.panelDatosDestajo.Location = new System.Drawing.Point(3, 82);
+            this.panelDatosDestajo.Location = new System.Drawing.Point(1, 0);
             this.panelDatosDestajo.Name = "panelDatosDestajo";
-            this.panelDatosDestajo.Size = new System.Drawing.Size(737, 423);
+            this.panelDatosDestajo.Size = new System.Drawing.Size(731, 404);
             this.panelDatosDestajo.TabIndex = 1;
-            this.panelDatosDestajo.Visible = false;
             // 
             // label3
             // 
@@ -253,7 +246,7 @@
             this.label3.BackColor = System.Drawing.Color.SeaGreen;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(246, 8);
+            this.label3.Location = new System.Drawing.Point(246, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(233, 13);
             this.label3.TabIndex = 4;
@@ -288,7 +281,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox3.Location = new System.Drawing.Point(211, 176);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(523, 215);
+            this.groupBox3.Size = new System.Drawing.Size(513, 215);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Deducciones";
@@ -297,7 +290,7 @@
             // 
             this.button2.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.save2;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(469, 118);
+            this.button2.Location = new System.Drawing.Point(458, 118);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(44, 40);
             this.button2.TabIndex = 32;
@@ -524,7 +517,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.SeaGreen;
             this.groupBox2.Location = new System.Drawing.Point(211, 36);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(523, 120);
+            this.groupBox2.Size = new System.Drawing.Size(513, 120);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Conteo de Cajas";
@@ -656,9 +649,9 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SeaGreen;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(0, -1);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(737, 21);
+            this.pictureBox4.Size = new System.Drawing.Size(730, 21);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
@@ -678,6 +671,175 @@
             this.tabNominas.GlobalItem = false;
             this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
             this.tabNominas.Name = "tabNominas";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
+            this.superTabControlPanel2.Controls.Add(this.panel2);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.tabOpciones;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(749, 512);
+            this.panel2.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabDestajo);
+            this.tabControl1.Location = new System.Drawing.Point(6, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(740, 506);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(732, 480);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Opciones Generales";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabDestajo
+            // 
+            this.tabDestajo.Controls.Add(this.txtVacacionesD);
+            this.tabDestajo.Controls.Add(this.txtDominicalD);
+            this.tabDestajo.Controls.Add(this.txtVacacionalD);
+            this.tabDestajo.Controls.Add(this.txtCostoCaja);
+            this.tabDestajo.Controls.Add(this.txtAguinaldoD);
+            this.tabDestajo.Controls.Add(this.label30);
+            this.tabDestajo.Controls.Add(this.label29);
+            this.tabDestajo.Controls.Add(this.label28);
+            this.tabDestajo.Controls.Add(this.label27);
+            this.tabDestajo.Controls.Add(this.label24);
+            this.tabDestajo.Controls.Add(this.label23);
+            this.tabDestajo.Location = new System.Drawing.Point(4, 22);
+            this.tabDestajo.Name = "tabDestajo";
+            this.tabDestajo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDestajo.Size = new System.Drawing.Size(732, 480);
+            this.tabDestajo.TabIndex = 1;
+            this.tabDestajo.Text = "Opciones Destajo";
+            this.tabDestajo.UseVisualStyleBackColor = true;
+            // 
+            // txtVacacionesD
+            // 
+            this.txtVacacionesD.Location = new System.Drawing.Point(120, 65);
+            this.txtVacacionesD.Name = "txtVacacionesD";
+            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionesD.TabIndex = 13;
+            this.txtVacacionesD.Text = "0.077";
+            // 
+            // txtDominicalD
+            // 
+            this.txtDominicalD.Location = new System.Drawing.Point(120, 91);
+            this.txtDominicalD.Name = "txtDominicalD";
+            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
+            this.txtDominicalD.TabIndex = 12;
+            this.txtDominicalD.Text = "0.71";
+            // 
+            // txtVacacionalD
+            // 
+            this.txtVacacionalD.Location = new System.Drawing.Point(120, 117);
+            this.txtVacacionalD.Name = "txtVacacionalD";
+            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionalD.TabIndex = 11;
+            this.txtVacacionalD.Text = "0.019";
+            // 
+            // txtCostoCaja
+            // 
+            this.txtCostoCaja.Location = new System.Drawing.Point(120, 143);
+            this.txtCostoCaja.Name = "txtCostoCaja";
+            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
+            this.txtCostoCaja.TabIndex = 10;
+            this.txtCostoCaja.Text = "5.30";
+            // 
+            // txtAguinaldoD
+            // 
+            this.txtAguinaldoD.Location = new System.Drawing.Point(120, 39);
+            this.txtAguinaldoD.Name = "txtAguinaldoD";
+            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
+            this.txtAguinaldoD.TabIndex = 8;
+            this.txtAguinaldoD.Text = "0.194";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(51, 68);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 13);
+            this.label30.TabIndex = 7;
+            this.label30.Text = "Vacaciones";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(48, 94);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(66, 13);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Séptimo Día";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(25, 120);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(89, 13);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Prima Vacacional";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(38, 146);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Costo por Caja";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(60, 42);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Aguinaldo";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(20, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(669, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Percepciones ____________________________________________________________________" +
+    "_______________________________";
+            // 
+            // tabOpciones
+            // 
+            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
+            this.tabOpciones.GlobalItem = false;
+            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
+            this.tabOpciones.Name = "tabOpciones";
             // 
             // tabPersonal
             // 
@@ -902,34 +1064,6 @@
             this.tabReportes.GlobalItem = false;
             this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
             this.tabReportes.Name = "tabReportes";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
-            this.superTabControlPanel2.Controls.Add(this.panel2);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.tabOpciones;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(749, 512);
-            this.panel2.TabIndex = 0;
-            // 
-            // tabOpciones
-            // 
-            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
-            this.tabOpciones.GlobalItem = false;
-            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
-            this.tabOpciones.Name = "tabOpciones";
             // 
             // panel1
             // 
@@ -1203,173 +1337,98 @@
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.Text = "labelItem1";
             // 
-            // tabControl1
+            // tabControl2
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabDestajo);
-            this.tabControl1.Location = new System.Drawing.Point(6, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(740, 506);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl2.Controls.Add(this.tabEmpleadosDestajo);
+            this.tabControl2.Controls.Add(this.tabJornadaDia);
+            this.tabControl2.Controls.Add(this.tabJornadaNoche);
+            this.tabControl2.Location = new System.Drawing.Point(3, 61);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(743, 448);
+            this.tabControl2.TabIndex = 3;
             // 
-            // tabPage1
+            // tabEmpleadosDestajo
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(732, 480);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Opciones Generales";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabEmpleadosDestajo.BackColor = System.Drawing.Color.White;
+            this.tabEmpleadosDestajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabEmpleadosDestajo.Controls.Add(this.panelDatosDestajo);
+            this.tabEmpleadosDestajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEmpleadosDestajo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabEmpleadosDestajo.Location = new System.Drawing.Point(4, 22);
+            this.tabEmpleadosDestajo.Name = "tabEmpleadosDestajo";
+            this.tabEmpleadosDestajo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEmpleadosDestajo.Size = new System.Drawing.Size(735, 422);
+            this.tabEmpleadosDestajo.TabIndex = 0;
+            this.tabEmpleadosDestajo.Text = "Empleados Destajo";
             // 
-            // tabDestajo
+            // tabJornadaDia
             // 
-            this.tabDestajo.Controls.Add(this.txtVacacionesD);
-            this.tabDestajo.Controls.Add(this.txtDominicalD);
-            this.tabDestajo.Controls.Add(this.txtVacacionalD);
-            this.tabDestajo.Controls.Add(this.txtCostoCaja);
-            this.tabDestajo.Controls.Add(this.txtAguinaldoD);
-            this.tabDestajo.Controls.Add(this.label30);
-            this.tabDestajo.Controls.Add(this.label29);
-            this.tabDestajo.Controls.Add(this.label28);
-            this.tabDestajo.Controls.Add(this.label27);
-            this.tabDestajo.Controls.Add(this.label24);
-            this.tabDestajo.Controls.Add(this.label23);
-            this.tabDestajo.Location = new System.Drawing.Point(4, 22);
-            this.tabDestajo.Name = "tabDestajo";
-            this.tabDestajo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDestajo.Size = new System.Drawing.Size(732, 480);
-            this.tabDestajo.TabIndex = 1;
-            this.tabDestajo.Text = "Opciones Destajo";
-            this.tabDestajo.UseVisualStyleBackColor = true;
+            this.tabJornadaDia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabJornadaDia.Controls.Add(this.label25);
+            this.tabJornadaDia.Controls.Add(this.pictureBox5);
+            this.tabJornadaDia.Location = new System.Drawing.Point(4, 22);
+            this.tabJornadaDia.Name = "tabJornadaDia";
+            this.tabJornadaDia.Padding = new System.Windows.Forms.Padding(3);
+            this.tabJornadaDia.Size = new System.Drawing.Size(735, 422);
+            this.tabJornadaDia.TabIndex = 1;
+            this.tabJornadaDia.Text = "Jornada Diurna";
+            this.tabJornadaDia.UseVisualStyleBackColor = true;
             // 
-            // label23
+            // tabJornadaNoche
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(20, 17);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(669, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Percepciones ____________________________________________________________________" +
-    "_______________________________";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(60, 42);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(54, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Aguinaldo";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(38, 146);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(76, 13);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Costo por Caja";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(25, 120);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(89, 13);
-            this.label28.TabIndex = 5;
-            this.label28.Text = "Prima Vacacional";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(48, 94);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(66, 13);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Séptimo Día";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(51, 68);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 13);
-            this.label30.TabIndex = 7;
-            this.label30.Text = "Vacaciones";
-            // 
-            // txtAguinaldoD
-            // 
-            this.txtAguinaldoD.Location = new System.Drawing.Point(120, 39);
-            this.txtAguinaldoD.Name = "txtAguinaldoD";
-            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
-            this.txtAguinaldoD.TabIndex = 8;
-            this.txtAguinaldoD.Text = "0.194";
-            // 
-            // txtCostoCaja
-            // 
-            this.txtCostoCaja.Location = new System.Drawing.Point(120, 143);
-            this.txtCostoCaja.Name = "txtCostoCaja";
-            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
-            this.txtCostoCaja.TabIndex = 10;
-            this.txtCostoCaja.Text = "5.30";
-            // 
-            // txtVacacionalD
-            // 
-            this.txtVacacionalD.Location = new System.Drawing.Point(120, 117);
-            this.txtVacacionalD.Name = "txtVacacionalD";
-            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
-            this.txtVacacionalD.TabIndex = 11;
-            this.txtVacacionalD.Text = "0.019";
-            // 
-            // txtDominicalD
-            // 
-            this.txtDominicalD.Location = new System.Drawing.Point(120, 91);
-            this.txtDominicalD.Name = "txtDominicalD";
-            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
-            this.txtDominicalD.TabIndex = 12;
-            this.txtDominicalD.Text = "0.71";
-            // 
-            // txtVacacionesD
-            // 
-            this.txtVacacionesD.Location = new System.Drawing.Point(120, 65);
-            this.txtVacacionesD.Name = "txtVacacionesD";
-            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
-            this.txtVacacionesD.TabIndex = 13;
-            this.txtVacacionesD.Text = "0.077";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(103, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.tabJornadaNoche.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabJornadaNoche.Controls.Add(this.label26);
+            this.tabJornadaNoche.Controls.Add(this.pictureBox6);
+            this.tabJornadaNoche.Location = new System.Drawing.Point(4, 22);
+            this.tabJornadaNoche.Name = "tabJornadaNoche";
+            this.tabJornadaNoche.Padding = new System.Windows.Forms.Padding(3);
+            this.tabJornadaNoche.Size = new System.Drawing.Size(735, 422);
+            this.tabJornadaNoche.TabIndex = 2;
+            this.tabJornadaNoche.Text = "Jornada Nocturna";
+            this.tabJornadaNoche.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox5.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(94, 73);
-            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.Size = new System.Drawing.Size(735, 21);
+            this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.SeaGreen;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(229, 3);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(233, 13);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "CAPTURA DE DATOS POR EMPLEADO";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.SeaGreen;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(228, 3);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(233, 13);
+            this.label26.TabIndex = 10;
+            this.label26.Text = "CAPTURA DE DATOS POR EMPLEADO";
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(3, 74);
+            this.pictureBox6.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox6.Location = new System.Drawing.Point(-2, -1);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(743, 435);
-            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.Size = new System.Drawing.Size(735, 21);
+            this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
             // 
             // Pantalla_Principal
             // 
@@ -1401,6 +1460,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabDestajo.ResumeLayout(false);
+            this.tabDestajo.PerformLayout();
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1414,16 +1478,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabDestajo.ResumeLayout(false);
-            this.tabDestajo.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabEmpleadosDestajo.ResumeLayout(false);
+            this.tabJornadaDia.ResumeLayout(false);
+            this.tabJornadaDia.PerformLayout();
+            this.tabJornadaNoche.ResumeLayout(false);
+            this.tabJornadaNoche.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
@@ -1467,7 +1532,6 @@
         private DevComponents.DotNetBar.DockSite dockSite3;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
         private DevComponents.DotNetBar.SuperTabItem tabNominas;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelDatosDestajo;
         private System.Windows.Forms.Button btnMover;
         private System.Windows.Forms.Label label3;
@@ -1535,8 +1599,13 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabEmpleadosDestajo;
+        private System.Windows.Forms.TabPage tabJornadaDia;
+        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TabPage tabJornadaNoche;
+        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
