@@ -443,6 +443,16 @@ namespace La_Vista_Nominas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap print42 {
+            get {
+                object obj = ResourceManager.GetObject("print42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refreshGrid {
             get {
                 object obj = ResourceManager.GetObject("refreshGrid", resourceCulture);

@@ -133,6 +133,12 @@
     <Compile Include="ModificarEmpleados.Designer.cs">
       <DependentUpon>ModificarEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nomina_Individual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomina_Individual.Designer.cs">
+      <DependentUpon>Nomina_Individual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarEmpleados.resx">
       <DependentUpon>ModificarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nomina_Individual.resx">
+      <DependentUpon>Nomina_Individual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Principal.resx">
       <DependentUpon>Pantalla_Principal.cs</DependentUpon>
@@ -251,6 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\print42.png" />
     <None Include="Resources\save2.png" />
     <None Include="Resources\ic_action_accept.png" />
     <None Include="Resources\base2.png" />

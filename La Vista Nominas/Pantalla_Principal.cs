@@ -48,13 +48,6 @@ namespace La_Vista_Nominas
             cargarRegistros();
             obtenerEmpleados();
             this.reportViewer1.RefreshReport();
-
-            Classes.Movimientos_Destajo movimientos = new Classes.Movimientos_Destajo();
-            movimientos.cajas = 6;
-            movimientos.aguinaldo = Convert.ToDouble(txtAguinaldoD.Text);
-            movimientos.vacaciones = Convert.ToDouble(txtVacacionesD.Text);
-            movimientos.prDominical = Convert.ToDouble(txtDominicalD.Text);
-            movimientos.prVacacional = Convert.ToDouble(txtVacacionalD.Text);
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -259,14 +252,26 @@ namespace La_Vista_Nominas
         private void obtenerEmpleados()
         {
             DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE status = 'ALTA' and area_laboral = 'DESTAJO'",null,dataValues);
-            String[] array = new String[100];
-
-            for (int index = 0; index < datos1.Rows.Count; index ++)
+            DataTable empDia = sql.SQLdata("select nombre from personal where status = 'ALTA'",null,dataValues);
+            
+            List<string> DestajoList = new List<string>();
+            List<string> EmployeeList = new List<string>();
+            int i = 0,j = 0;
+            
+            foreach (DataRow row in empDia.Rows)
             {
-                array[index] = datos1.Rows[index].ItemArray[0].ToString();
+                EmployeeList.Add(empDia.Rows[i].ItemArray[0].ToString());  //(string.Format("{0}?{1}", row["campo1"], row["campo2"]));
+                i++;
             }
 
-            listaEmpleadosDestajo1.DataSource = array;
+            foreach (DataRow row in datos1.Rows)
+            {
+                DestajoList.Add(datos1.Rows[j].ItemArray[0].ToString());
+                j++;
+            }
+            
+            listaEmpleadosDestajo1.DataSource = DestajoList;
+            listaEmpleadosDia.DataSource = EmployeeList;
         }
 
         private void listaEmpleadosDestajo1_MouseClick(object sender, MouseEventArgs e)
@@ -305,7 +310,7 @@ namespace La_Vista_Nominas
             
         }
         
-        private void cargarListadoDestajo()
+        private void saveChanges()
         {
             try
             {
@@ -334,17 +339,40 @@ namespace La_Vista_Nominas
             labelTotalCajas.Text = Convert.ToString(totales1);
 
             Double totales2 = (Convert.ToDouble(txtCuchillo.Text) + Convert.ToDouble(txtEscaf.Text) + Convert.ToDouble(txtCubreB.Text) + Convert.ToDouble(txtBata.Text) + Convert.ToDouble(txtCofia.Text) + Convert.ToDouble(txtMandil.Text) + Convert.ToDouble(txtBotas.Text));
-            labelTotaldesc.Text = Convert.ToString(totales2);
+            labelTotaldesc.Text = "$ " + Convert.ToString(totales2);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cargarListadoDestajo();
-            loadEmployeeData();
+            Nomina_Individual showReport = new Nomina_Individual();
+            saveChanges();
         }
 
-        // Carga los campos solicitados del empleado para la cabecera del reporte de nomina
+        private void dataOnNominareport()
+        {
+            DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,id,area_laboral from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            Classes.Datos_Empleados employeeData = new Classes.Datos_Empleados();
+            employeeData.nombre = dt.Rows[0].ItemArray[0].ToString();
+            employeeData.nss = dt.Rows[0].ItemArray[1].ToString();
+            employeeData.rfc = dt.Rows[0].ItemArray[2].ToString();
+            employeeData.curp = dt.Rows[0].ItemArray[3].ToString();
+            //employeeData.nCajas = Convert.ToInt32(dt.Rows[0].ItemArray[4].ToString());
+            employeeData.nCajas = (Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
+            employeeData.depto = dt.Rows[0].ItemArray[5].ToString();
+
+            //Instancia de formulario y Presentacion del reporte
+            Nomina_Individual frm = new Nomina_Individual();
+
+            frm.obj.Add(employeeData);
+            //
+            //Enviamos el detalle de la Factura, como Detail es una lista e invoide.Details tambien
+            //es un lista del tipo EArticulo bastara con igualarla
+            //
+            frm.Show();
+        }
+
+    // Carga los campos solicitados del empleado para la cabecera del reporte de nomina
         private void loadEmployeeData()
         {
             DataTable headerData = new DataTable();
@@ -354,13 +382,13 @@ namespace La_Vista_Nominas
             List<Classes.Movimientos_Destajo> movs = new List<Classes.Movimientos_Destajo>();
             
             headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,id from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
-            periodData = sql.SQLdata("Select area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            //periodData = sql.SQLdata("Select area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
 
             reportViewer1.LocalReport.DataSources.Clear();
             // utilizo el nombre del dataset asignado al reporte y el nombre de la instancia de clase intermediaria 
-            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("datosEmpleado",headerData));
-            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("infoPeriodo", periodData));
-        
+            //reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("datosEmpleado",headerData));
+            //reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("infoPeriodo", periodData));
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", headerData));
             reportViewer1.RefreshReport();
 
 
@@ -376,6 +404,11 @@ namespace La_Vista_Nominas
             origin.nCajas = Convert.ToInt32(headerData.Rows[0].ItemArray[5].ToString());
 
             tabReportes.Focus();
+        }
+
+        private void btnMostrarRecibo_Click(object sender, EventArgs e)
+        {
+            dataOnNominareport();
         }
     }
 }
