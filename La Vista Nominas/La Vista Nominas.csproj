@@ -157,6 +157,7 @@
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeRaya.rdlc" />
     <EmbeddedResource Include="ModificarEmpleados.resx">
       <DependentUpon>ModificarEmpleados.cs</DependentUpon>
     </EmbeddedResource>

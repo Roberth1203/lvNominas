@@ -14,5 +14,9 @@ namespace La_Vista_Nominas.Classes
         public string curp { get; set; }
         public int nCajas { get; set; }
         public string depto { get; set; }
+        public string puesto { get; set; }
+        public DateTime iniPeriodo { get; set; }
+        public DateTime finPeriodo { get; set; }
+        public int diasLab { get; set; }
     }
 }

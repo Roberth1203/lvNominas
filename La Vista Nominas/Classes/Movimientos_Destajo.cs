@@ -5,7 +5,7 @@ using System.Text;
 
 namespace La_Vista_Nominas.Classes
 {
-    class Movimientos_Destajo
+    public class Movimientos_Destajo
     {
         public int cajas { get; set; }
         public double sueldo { get; set; }
@@ -13,5 +13,10 @@ namespace La_Vista_Nominas.Classes
         public double vacaciones { get; set; }
         public double prDominical { get; set; }
         public double prVacacional { get; set; }
+
+        public double montoPercep { get; set; }
+        public double montoDeducc { get; set; }
+
+        public double netoPago { get; set; }
     }
 }

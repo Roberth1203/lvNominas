@@ -625,7 +625,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nombre.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -653,7 +653,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nss.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -681,7 +681,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!rfc.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -709,7 +709,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!curp.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -737,7 +737,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!depto.Value, "infoPeriodo")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1395,7 +1395,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nombre.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1423,7 +1423,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nss.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1451,7 +1451,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!rfc.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1479,7 +1479,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!curp.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1507,7 +1507,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!depto.Value, "infoPeriodo")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1995,7 +1995,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nCajas.Value, "datosEmpleado")</Value>
+                <Value />
                 <Style>
                   <Format>0.00;(0.00)</Format>
                 </Style>

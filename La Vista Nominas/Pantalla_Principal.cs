@@ -353,22 +353,29 @@ namespace La_Vista_Nominas
         {
             DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,id,area_laboral from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
             Classes.Datos_Empleados employeeData = new Classes.Datos_Empleados();
+            Classes.Movimientos_Destajo employeeMovs = new Classes.Movimientos_Destajo();
+
+            //Carga de datos a cada miembro de las clases
             employeeData.nombre = dt.Rows[0].ItemArray[0].ToString();
             employeeData.nss = dt.Rows[0].ItemArray[1].ToString();
             employeeData.rfc = dt.Rows[0].ItemArray[2].ToString();
             employeeData.curp = dt.Rows[0].ItemArray[3].ToString();
-            //employeeData.nCajas = Convert.ToInt32(dt.Rows[0].ItemArray[4].ToString());
             employeeData.nCajas = (Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
             employeeData.depto = dt.Rows[0].ItemArray[5].ToString();
+            employeeData.diasLab = 6;
 
-            //Instancia de formulario y Presentacion del reporte
+            employeeMovs.sueldo = (Convert.ToDouble(labelTotalCajas.Text) * Convert.ToDouble(txtCostoCaja.Text));
+            employeeMovs.aguinaldo = Convert.ToDouble(txtAguinaldoD.Text);
+            employeeMovs.vacaciones = Convert.ToDouble(txtVacacionesD.Text);
+            employeeMovs.prDominical = Convert.ToDouble(txtDominicalD.Text);
+            employeeMovs.prVacacional = Convert.ToDouble(txtVacacionalD.Text);
+            employeeMovs.montoPercep = (employeeMovs.sueldo + employeeMovs.aguinaldo + employeeMovs.vacaciones + employeeMovs.prDominical + employeeMovs.prVacacional);
+
+            //Hago una instancia del formulario Nomina_Individual y agrego los miembros de las clases a las list del nuevo form.
             Nomina_Individual frm = new Nomina_Individual();
-
             frm.obj.Add(employeeData);
-            //
-            //Enviamos el detalle de la Factura, como Detail es una lista e invoide.Details tambien
-            //es un lista del tipo EArticulo bastara con igualarla
-            //
+            frm.objMovimientos.Add(employeeMovs);
+
             frm.Show();
         }
 
@@ -381,7 +388,7 @@ namespace La_Vista_Nominas
             
             List<Classes.Movimientos_Destajo> movs = new List<Classes.Movimientos_Destajo>();
             
-            headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,id from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto,id from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
             //periodData = sql.SQLdata("Select area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
 
             reportViewer1.LocalReport.DataSources.Clear();
@@ -394,20 +401,30 @@ namespace La_Vista_Nominas
 
             //Instancia de ambos DataSet para reporte de nomina.
             Classes.Datos_Empleados origin = new Classes.Datos_Empleados();
-            Classes.Datos_Periodo origin2 = new Classes.Datos_Periodo();
+            Classes.Movimientos_Destajo originMov = new Classes.Movimientos_Destajo();
 
             origin.nombre = headerData.Rows[0].ItemArray[0].ToString();
             origin.nss = headerData.Rows[0].ItemArray[1].ToString();
             origin.rfc = headerData.Rows[0].ItemArray[2].ToString();
             origin.curp = headerData.Rows[0].ItemArray[3].ToString();
-            origin2.depto = headerData.Rows[0].ItemArray[4].ToString();
-            origin.nCajas = Convert.ToInt32(headerData.Rows[0].ItemArray[5].ToString());
+            origin.depto = headerData.Rows[0].ItemArray[4].ToString();
+            origin.puesto = headerData.Rows[0].ItemArray[5].ToString();
+            origin.nCajas = Convert.ToInt32(headerData.Rows[0].ItemArray[6].ToString());
+            origin.iniPeriodo = DateTime.Parse(DateTime.Today.ToShortDateString());
+
+            originMov.sueldo = (Convert.ToDouble(labelTotalCajas.Text) * 6.20 );
+            originMov.aguinaldo = Convert.ToDouble(txtAguinaldoD.Text);
+            originMov.vacaciones = Convert.ToDouble(txtVacacionesD.Text);
+            originMov.prDominical = Convert.ToDouble(txtDominicalD.Text);
+            originMov.prVacacional = Convert.ToDouble(txtDominicalD.Text);
 
             tabReportes.Focus();
         }
 
         private void btnMostrarRecibo_Click(object sender, EventArgs e)
         {
+            String cad = DateTime.Today.ToShortDateString();
+            MessageBox.Show("Fecha del sistema: " + cad);
             dataOnNominareport();
         }
     }
