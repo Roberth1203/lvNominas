@@ -16,16 +16,16 @@ namespace La_Vista_Nominas.Classes
         public double prDominical { get; set; }
         public double prVacacional { get; set; }
 
-        public double dedCubreB { get; set; }
-        public double dedEscaf { get; set; }
-        public double dedGuantes { get; set; }
-        public double dedBata { get; set; }
-        public double dedBotas { get; set; }
-        public double dedMandil { get; set; }
-        public double dedCuchillo { get; set; }
-        public double dedCofia { get; set; }
-        public double dedComedor { get; set; }
-        public double dedPrestamo { get; set; }
+        public double desc1 { get; set; }
+        public double desc2 { get; set; }
+        public double desc3 { get; set; }
+        public double desc4 { get; set; }
+        public double desc5 { get; set; }
+        public double desc6 { get; set; }
+        public double desc7 { get; set; }
+        public double desc8 { get; set; }
+        public double desc9 { get; set; }
+        public double desc10 { get; set; }
         
         public double montoPercep { get; set; }
         public double montoDeducc { get; set; }

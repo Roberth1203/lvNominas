@@ -377,14 +377,7 @@ namespace La_Vista_Nominas
             employeeMovs.prDominical = Convert.ToDouble(txtDominicalD.Text);
             employeeMovs.prVacacional = Convert.ToDouble(txtVacacionalD.Text);
             employeeMovs.montoPercep = (employeeMovs.sueldo + employeeMovs.aguinaldo + employeeMovs.vacaciones + employeeMovs.prDominical + employeeMovs.prVacacional);
-
-            // Asignación de deducciones al reporte
-            if (txtCubreB.Text.Equals("0"))
-                MessageBox.Show("No hubo descuento por cubre bocas !!!");
-            else
-                employeeMovs.dedCubreB = Convert.ToDouble(txtCubreB.Text);
-
-
+            
             //Hago una instancia del formulario Nomina_Individual y agrego los miembros de las clases a las list del nuevo form.
             Nomina_Individual frm = new Nomina_Individual();
             frm.obj.Add(employeeData);
