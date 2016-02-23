@@ -118,9 +118,16 @@
     <Compile Include="Animacion_Inicial.Designer.cs">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\datosListaRaya.cs" />
     <Compile Include="Classes\Datos_Empleados.cs" />
     <Compile Include="Classes\Datos_Periodo.cs" />
     <Compile Include="Classes\Movimientos_Destajo.cs" />
+    <Compile Include="Form_Lista_Raya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Lista_Raya.Designer.cs">
+      <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
+    </Compile>
     <Compile Include="IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Animacion_Inicial.resx">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Lista_Raya.resx">
+      <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
@@ -193,6 +203,7 @@
     </None>
     <None Include="La Vista Nominas_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\Agregar_Empleado.datasource" />
+    <None Include="Properties\DataSources\La_Vista_Nominas.Classes.datosListaRaya1.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Empleados.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Periodo.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Movimientos_Destajo.datasource" />
@@ -261,6 +272,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\settingsOver1.png" />
+    <None Include="Resources\round60.png" />
+    <None Include="Resources\round62.png" />
     <None Include="Resources\print42.png" />
     <None Include="Resources\save2.png" />
     <None Include="Resources\ic_action_accept.png" />

@@ -11,6 +11,7 @@ using System.IO;
 using Microsoft.Office.Core;
 using System.Configuration;
 using System.Globalization;
+using Microsoft.Reporting.WinForms;
 
 namespace La_Vista_Nominas
 {
@@ -47,7 +48,7 @@ namespace La_Vista_Nominas
             sql = new Utilities();
             cargarRegistros();
             obtenerEmpleados();
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -349,9 +350,12 @@ namespace La_Vista_Nominas
             saveChanges();
         }
 
+
+        /* ======================================= Métodos Para Obtener datos para Reportes ======================================= */
+
         private void dataOnNominareport()
         {
-            DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,id,area_laboral from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
             Classes.Datos_Empleados employeeData = new Classes.Datos_Empleados();
             Classes.Movimientos_Destajo employeeMovs = new Classes.Movimientos_Destajo();
 
@@ -361,7 +365,10 @@ namespace La_Vista_Nominas
             employeeData.rfc = dt.Rows[0].ItemArray[2].ToString();
             employeeData.curp = dt.Rows[0].ItemArray[3].ToString();
             employeeData.nCajas = (Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
-            employeeData.depto = dt.Rows[0].ItemArray[5].ToString();
+            employeeData.depto = dt.Rows[0].ItemArray[4].ToString();
+            employeeData.puesto = dt.Rows[0].ItemArray[5].ToString();
+            employeeData.iniPeriodo = DateTime.Now.AddDays(-6.0); 
+            employeeData.finPeriodo = DateTime.Now;
             employeeData.diasLab = 6;
 
             employeeMovs.sueldo = (Convert.ToDouble(labelTotalCajas.Text) * Convert.ToDouble(txtCostoCaja.Text));
@@ -371,6 +378,13 @@ namespace La_Vista_Nominas
             employeeMovs.prVacacional = Convert.ToDouble(txtVacacionalD.Text);
             employeeMovs.montoPercep = (employeeMovs.sueldo + employeeMovs.aguinaldo + employeeMovs.vacaciones + employeeMovs.prDominical + employeeMovs.prVacacional);
 
+            // Asignación de deducciones al reporte
+            if (txtCubreB.Text.Equals("0"))
+                MessageBox.Show("No hubo descuento por cubre bocas !!!");
+            else
+                employeeMovs.dedCubreB = Convert.ToDouble(txtCubreB.Text);
+
+
             //Hago una instancia del formulario Nomina_Individual y agrego los miembros de las clases a las list del nuevo form.
             Nomina_Individual frm = new Nomina_Individual();
             frm.obj.Add(employeeData);
@@ -379,8 +393,33 @@ namespace La_Vista_Nominas
             frm.Show();
         }
 
+        private void getDataForListaRaya()
+        {
+            String text = "select id_empleado,nomEmpleado,sum(dia1 + dia2 + dia3 + dia4 + dia5 + dia6) as CAJAS_TOTALES from datosDestajo where nomEmpleado not in ('null') group by id_empleado,nomEmpleado;";
+            DataTable dt = sql.SQLdata(text, null, dataValues);
+
+            Classes.datosListaRaya obj = new Classes.datosListaRaya();
+            obj.idEmp = Convert.ToInt32(dt.Rows[0].ItemArray[0].ToString());
+            obj.nomEmp = dt.Rows[0].ItemArray[1].ToString();
+            obj.cajas = Convert.ToInt32(dt.Rows[0].ItemArray[2].ToString());
+            
+
+            if (this.pnlReportForms.Controls.Count > 0)
+                this.pnlReportForms.Controls.RemoveAt(0);
+
+            Form_Lista_Raya form = new Form_Lista_Raya();
+            form.listado.Add(obj);
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            this.pnlReportForms.Controls.Add(form);
+            this.pnlReportForms.Tag = form;
+            form.Show();
+        }
+
+
     // Carga los campos solicitados del empleado para la cabecera del reporte de nomina
-        private void loadEmployeeData()
+       /* private void loadEmployeeData()
         {
             DataTable headerData = new DataTable();
             DataTable periodData = new DataTable();
@@ -420,6 +459,7 @@ namespace La_Vista_Nominas
 
             tabReportes.Focus();
         }
+        */
 
         private void btnMostrarRecibo_Click(object sender, EventArgs e)
         {
@@ -427,5 +467,42 @@ namespace La_Vista_Nominas
             MessageBox.Show("Fecha del sistema: " + cad);
             dataOnNominareport();
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+            MessageBox.Show("Fuck the Police");
+        }
+
+        private void btnExpand_Click(object sender, EventArgs e)
+        {
+            grBoxDestajo.Size = new System.Drawing.Size(656, 147);
+            btnExpand.Visible = false;
+            btnContract.Visible = true;
+        }
+
+        private void btnContract_Click(object sender, EventArgs e)
+        {
+            grBoxDestajo.Size = new System.Drawing.Size(656, 0);
+            btnContract.Visible = false;
+            btnExpand.Visible = true;
+        }
+
+        private void btnListaRaya_Click(object sender, EventArgs e)
+        {
+            getDataForListaRaya();
+            /*
+            if (this.pnlReportForms.Controls.Count > 0)
+                this.pnlReportForms.Controls.RemoveAt(0);
+
+            Form_Lista_Raya form = new Form_Lista_Raya();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            this.pnlReportForms.Controls.Add(form);
+            this.pnlReportForms.Tag = form;
+            form.Show();
+            */
+        }
+        
     }
 }

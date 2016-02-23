@@ -133,6 +133,12 @@
   <data name="cuadros de texto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cuadros de texto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="print42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barra titulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra titulo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exportar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exportar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,8 +157,8 @@
   <data name="base2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\base2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settingsOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingsOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EditarEmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EditarEmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,9 +168,6 @@
   </data>
   <data name="BajaEmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BajaEmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cuadros de texto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cuadros de texto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditarEmp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EditarEmp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +181,8 @@
   <data name="defaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defaultImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barra titulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barra titulo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingsOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingsOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LV Splash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LV Splash1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,17 +190,20 @@
   <data name="exportarOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exportarOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GuardarNor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuardarNor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LV Splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LV Splash.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BajaEmpOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BajaEmpOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cuadros de texto activo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cuadros de texto activo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GuardarOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GuardarOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\round62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgNomDestajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgNomDestajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +211,8 @@
   <data name="imgOpciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgOpciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EditarEmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EditarEmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cuadros de texto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cuadros de texto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancelarOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancelarOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +220,14 @@
   <data name="48_move" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\48_move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cuadros de texto activo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cuadros de texto activo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GuardarNor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuardarNor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AgregarEmp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AgregarEmp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="round60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\round60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgNominas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgNominas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +253,7 @@
   <data name="ic_action_accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_action_accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="print42" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\print42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingsOver1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingsOver1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

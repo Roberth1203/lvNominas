@@ -463,6 +463,26 @@ namespace La_Vista_Nominas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap round60 {
+            get {
+                object obj = ResourceManager.GetObject("round60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round62 {
+            get {
+                object obj = ResourceManager.GetObject("round62", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save2 {
             get {
                 object obj = ResourceManager.GetObject("save2", resourceCulture);
@@ -476,6 +496,16 @@ namespace La_Vista_Nominas.Properties {
         internal static System.Drawing.Bitmap settingsOver {
             get {
                 object obj = ResourceManager.GetObject("settingsOver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settingsOver1 {
+            get {
+                object obj = ResourceManager.GetObject("settingsOver1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

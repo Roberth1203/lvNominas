@@ -267,10 +267,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>2.9286cm</Top>
-        <Left>15.0835cm</Left>
-        <Height>0.57354cm</Height>
-        <Width>0.76729cm</Width>
+        <Top>2.9727cm</Top>
+        <Left>14.47586cm</Left>
+        <Height>0.52944cm</Height>
+        <Width>0.58118cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -501,7 +501,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value EvaluationMode="Constant" />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -640,7 +640,7 @@
         <Top>2.30214cm</Top>
         <Left>2.48778cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.73782cm</Width>
+        <Width>4.64211cm</Width>
         <ZIndex>25</ZIndex>
         <Style>
           <Border>
@@ -696,7 +696,7 @@
         <Top>3.50214cm</Top>
         <Left>2.74238cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.44678cm</Width>
+        <Width>4.38751cm</Width>
         <ZIndex>27</ZIndex>
         <Style>
           <Border>
@@ -1179,7 +1179,7 @@
         <Top>2.9286cm</Top>
         <Left>12.49376cm</Left>
         <Height>0.53826cm</Height>
-        <Width>2.41335cm</Width>
+        <Width>1.9821cm</Width>
         <ZIndex>43</ZIndex>
         <Style>
           <Border>
@@ -1208,9 +1208,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox48</rd:DefaultName>
         <Top>2.9286cm</Top>
-        <Left>15.88924cm</Left>
+        <Left>15.05704cm</Left>
         <Height>0.53826cm</Height>
-        <Width>2.41335cm</Width>
+        <Width>2.21956cm</Width>
         <ZIndex>44</ZIndex>
         <Style>
           <Border>
@@ -1251,81 +1251,58 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Tablix Name="Tablix4">
-        <TablixCorner>
-          <TablixCornerRows>
-            <TablixCornerRow>
-              <TablixCornerCell>
-                <CellContents>
-                  <Textbox Name="Textbox40">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>pr Dominical</Value>
-                            <Style />
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox40</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixCornerCell>
-            </TablixCornerRow>
-          </TablixCornerRows>
-        </TablixCorner>
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.58611cm</Width>
+              <Width>9.31333cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.67013cm</Height>
+              <Height>4.63794cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="montoPercep">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!montoPercep.Value)</Value>
+                    <Rectangle Name="Rectangle1">
+                      <ReportItems>
+                        <Textbox Name="dedCubreB">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!dedCubreB.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
                               <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>montoPercep</rd:DefaultName>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>dedCubreB</rd:DefaultName>
+                          <Top>0.10584cm</Top>
+                          <Left>0.07056cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>2.5cm</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                    </Textbox>
+                    </Rectangle>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1334,99 +1311,21 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember>
-              <Group Name="ColumnGroup">
-                <GroupExpressions>
-                  <GroupExpression />
-                </GroupExpressions>
-              </Group>
-              <TablixHeader>
-                <Size>1.67013cm</Size>
-                <CellContents>
-                  <Textbox Name="Textbox38">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>monto Percep</Value>
-                            <Style />
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox38</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
-            </TablixMember>
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="prDominical">
-                <GroupExpressions>
-                  <GroupExpression>=Fields!prDominical.Value</GroupExpression>
-                </GroupExpressions>
-              </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!prDominical.Value</Value>
-                </SortExpression>
-              </SortExpressions>
-              <TablixHeader>
-                <Size>4.58611cm</Size>
-                <CellContents>
-                  <Textbox Name="prDominical">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>=Fields!prDominical.Value</Value>
-                            <Style />
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>prDominical</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                  <rd:Selected>true</rd:Selected>
-                </CellContents>
-              </TablixHeader>
+              <Group Name="Details" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>4.40599cm</Top>
-        <Left>10.1887cm</Left>
-        <Height>3.34026cm</Height>
-        <Width>9.17222cm</Width>
+        <Top>4.13741cm</Top>
+        <Left>10.04759cm</Left>
+        <Height>4.63794cm</Height>
+        <Width>9.31333cm</Width>
         <ZIndex>46</ZIndex>
         <Style>
           <Border>
@@ -1435,7 +1334,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>4.88553in</Height>
+    <Height>5.22004in</Height>
     <Style />
   </Body>
   <Width>8.80567in</Width>
@@ -1547,6 +1446,46 @@
         <Field Name="cajas">
           <DataField>cajas</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="dedBata">
+          <DataField>dedBata</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedBotas">
+          <DataField>dedBotas</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedCofia">
+          <DataField>dedCofia</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedComedor">
+          <DataField>dedComedor</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedCubreB">
+          <DataField>dedCubreB</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedCuchillo">
+          <DataField>dedCuchillo</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedEscaf">
+          <DataField>dedEscaf</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedGuantes">
+          <DataField>dedGuantes</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedMandil">
+          <DataField>dedMandil</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="dedPrestamo">
+          <DataField>dedPrestamo</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="montoDeducc">
           <DataField>montoDeducc</DataField>
