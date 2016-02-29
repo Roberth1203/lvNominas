@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.pnlReportForms = new System.Windows.Forms.Panel();
             this.btnListaRaya = new System.Windows.Forms.Button();
             this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -144,7 +145,10 @@
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pnlReportForms = new System.Windows.Forms.Panel();
+            this.btnBuscarArchivo = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtArchivo = new System.Windows.Forms.TextBox();
+            this.txtHoja = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
@@ -179,6 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -201,9 +206,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -233,6 +238,13 @@
             this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
             this.superTabControlPanel1.TabIndex = 0;
             this.superTabControlPanel1.TabItem = this.tabReportes;
+            // 
+            // pnlReportForms
+            // 
+            this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
+            this.pnlReportForms.Name = "pnlReportForms";
+            this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
+            this.pnlReportForms.TabIndex = 2;
             // 
             // btnListaRaya
             // 
@@ -942,6 +954,10 @@
             // tabJornadaDia
             // 
             this.tabJornadaDia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabJornadaDia.Controls.Add(this.txtHoja);
+            this.tabJornadaDia.Controls.Add(this.txtArchivo);
+            this.tabJornadaDia.Controls.Add(this.dataGridView2);
+            this.tabJornadaDia.Controls.Add(this.btnBuscarArchivo);
             this.tabJornadaDia.Controls.Add(this.listaEmpleadosDia);
             this.tabJornadaDia.Controls.Add(this.label31);
             this.tabJornadaDia.Controls.Add(this.label25);
@@ -954,6 +970,7 @@
             this.tabJornadaDia.TabIndex = 1;
             this.tabJornadaDia.Text = "Jornada Diurna";
             this.tabJornadaDia.UseVisualStyleBackColor = true;
+            this.tabJornadaDia.Click += new System.EventHandler(this.tabJornadaDia_Click);
             // 
             // listaEmpleadosDia
             // 
@@ -961,7 +978,7 @@
             this.listaEmpleadosDia.FormattingEnabled = true;
             this.listaEmpleadosDia.Location = new System.Drawing.Point(6, 46);
             this.listaEmpleadosDia.Name = "listaEmpleadosDia";
-            this.listaEmpleadosDia.Size = new System.Drawing.Size(208, 368);
+            this.listaEmpleadosDia.Size = new System.Drawing.Size(208, 381);
             this.listaEmpleadosDia.TabIndex = 11;
             // 
             // label31
@@ -1497,12 +1514,38 @@
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.Text = "labelItem1";
             // 
-            // pnlReportForms
+            // btnBuscarArchivo
             // 
-            this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
-            this.pnlReportForms.Name = "pnlReportForms";
-            this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
-            this.pnlReportForms.TabIndex = 2;
+            this.btnBuscarArchivo.BackColor = System.Drawing.Color.White;
+            this.btnBuscarArchivo.Location = new System.Drawing.Point(652, 21);
+            this.btnBuscarArchivo.Name = "btnBuscarArchivo";
+            this.btnBuscarArchivo.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarArchivo.TabIndex = 12;
+            this.btnBuscarArchivo.Text = "Buscar";
+            this.btnBuscarArchivo.UseVisualStyleBackColor = false;
+            this.btnBuscarArchivo.Click += new System.EventHandler(this.btnBuscarArchivo_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(220, 46);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(507, 381);
+            this.dataGridView2.TabIndex = 13;
+            // 
+            // txtArchivo
+            // 
+            this.txtArchivo.Location = new System.Drawing.Point(220, 23);
+            this.txtArchivo.Name = "txtArchivo";
+            this.txtArchivo.Size = new System.Drawing.Size(320, 20);
+            this.txtArchivo.TabIndex = 14;
+            // 
+            // txtHoja
+            // 
+            this.txtHoja.Location = new System.Drawing.Point(546, 23);
+            this.txtHoja.Name = "txtHoja";
+            this.txtHoja.Size = new System.Drawing.Size(100, 20);
+            this.txtHoja.TabIndex = 15;
             // 
             // Pantalla_Principal
             // 
@@ -1567,6 +1610,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1688,5 +1732,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnListaRaya;
         private System.Windows.Forms.Panel pnlReportForms;
+        private System.Windows.Forms.TextBox txtHoja;
+        private System.Windows.Forms.TextBox txtArchivo;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnBuscarArchivo;
     }
 }

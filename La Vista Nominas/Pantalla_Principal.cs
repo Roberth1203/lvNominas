@@ -12,6 +12,7 @@ using Microsoft.Office.Core;
 using System.Configuration;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
+using System.Data.OleDb;
 
 namespace La_Vista_Nominas
 {
@@ -24,7 +25,7 @@ namespace La_Vista_Nominas
         public string curp { get; set; }
         public string depto { get; set; }
 
-        
+
         ModificarEmpleados update;
         public String idCapturado;
         DataTable dt;
@@ -65,7 +66,7 @@ namespace La_Vista_Nominas
         {
             //btnAdd.Image = listButtonImages.Images[1];
             btnAdd.Location = new Point(52, 0);
-            itemselectedBar.Location = new Point(52,52);
+            itemselectedBar.Location = new Point(52, 52);
             itemselectedBar.Visible = true;
         }
 
@@ -78,7 +79,7 @@ namespace La_Vista_Nominas
         private void btnDrop_MouseHover(object sender, EventArgs e)
         {
             btnDrop.Location = new Point(166, 0);
-            itemselectedBar.Location = new Point(166,52);
+            itemselectedBar.Location = new Point(166, 52);
             itemselectedBar.Visible = true;
             //btnDrop.Image = listButtonImages.Images[3];
         }
@@ -123,15 +124,15 @@ namespace La_Vista_Nominas
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            pictureBox2.Location = new Point(223,0);
-            itemselectedBar.Location = new Point(223,52);
+            pictureBox2.Location = new Point(223, 0);
+            itemselectedBar.Location = new Point(223, 52);
             itemselectedBar.Visible = true;
             //pictureBox2.Image = listButtonImages.Images[7];
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox2.Location = new Point(223,5);
+            pictureBox2.Location = new Point(223, 5);
             itemselectedBar.Visible = false;
             //pictureBox2.Image = listButtonImages.Images[6];
         }
@@ -177,8 +178,8 @@ namespace La_Vista_Nominas
         private void btnExportar_MouseHover(object sender, EventArgs e)
         {
             //btnExportar.Image = listButtonImages.Images[9];
-            btnExportar.Location = new Point(280,0);
-            itemselectedBar.Location = new Point(280,52);
+            btnExportar.Location = new Point(280, 0);
+            itemselectedBar.Location = new Point(280, 52);
             itemselectedBar.Visible = true;
         }
 
@@ -204,8 +205,8 @@ namespace La_Vista_Nominas
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            pictureBox3.Location = new Point(109,0);
-            itemselectedBar.Location = new Point(109,52);
+            pictureBox3.Location = new Point(109, 0);
+            itemselectedBar.Location = new Point(109, 52);
             itemselectedBar.Visible = true;
             //pictureBox3.Image = listButtonImages.Images[11];
         }
@@ -234,11 +235,11 @@ namespace La_Vista_Nominas
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Id: " + idCapturado);
-            
+
             //ModificarEmpleados update = new ModificarEmpleados();
             update.tipo = "cambio";
             //update.numeroEmpleado = idCapturado;
-            
+
             //update.txtNoEmp.Text = idCapturado.ToString();
             update.Show();
         }
@@ -247,18 +248,18 @@ namespace La_Vista_Nominas
         // ======================== Eventos en tabNominas ======================== 
         private void superTabControlPanel3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void obtenerEmpleados()
         {
-            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE status = 'ALTA' and area_laboral = 'DESTAJO'",null,dataValues);
-            DataTable empDia = sql.SQLdata("select nombre from personal where status = 'ALTA'",null,dataValues);
-            
+            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE status = 'ALTA' and area_laboral = 'DESTAJO'", null, dataValues);
+            DataTable empDia = sql.SQLdata("select nombre from personal where status = 'ALTA'", null, dataValues);
+
             List<string> DestajoList = new List<string>();
             List<string> EmployeeList = new List<string>();
-            int i = 0,j = 0;
-            
+            int i = 0, j = 0;
+
             foreach (DataRow row in empDia.Rows)
             {
                 EmployeeList.Add(empDia.Rows[i].ItemArray[0].ToString());  //(string.Format("{0}?{1}", row["campo1"], row["campo2"]));
@@ -270,7 +271,7 @@ namespace La_Vista_Nominas
                 DestajoList.Add(datos1.Rows[j].ItemArray[0].ToString());
                 j++;
             }
-            
+
             listaEmpleadosDestajo1.DataSource = DestajoList;
             listaEmpleadosDia.DataSource = EmployeeList;
         }
@@ -289,7 +290,7 @@ namespace La_Vista_Nominas
             txtJueves.Text = tmp.Rows[0].ItemArray[4].ToString();
             txtViernes.Text = tmp.Rows[0].ItemArray[5].ToString();
             txtSabado.Text = tmp.Rows[0].ItemArray[6].ToString();
-            
+
             txtCuchillo.Text = tmp.Rows[0].ItemArray[7].ToString();
             txtEscaf.Text = tmp.Rows[0].ItemArray[8].ToString();
             txtCubreB.Text = tmp.Rows[0].ItemArray[9].ToString();
@@ -308,9 +309,9 @@ namespace La_Vista_Nominas
 
         private void btnreporte_Click(object sender, EventArgs e)
         {
-            
+
         }
-        
+
         private void saveChanges()
         {
             try
@@ -326,11 +327,11 @@ namespace La_Vista_Nominas
 
                 calculoTotales();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-            
+
         }
 
         private void calculoTotales()
@@ -355,7 +356,10 @@ namespace La_Vista_Nominas
 
         private void dataOnNominareport()
         {
+            string[] array = { "Cubrebocas", "Escafandra", "Guantes", "Bata", "Botas", "Mandil", "Cuchillo", "Descuento Comedor", "Prestamo Empresa" };
+            List<String> discountsList = new List<string>();
             DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            DataTable ded = sql.SQLdata("select cubrebocas,escafandra,guantes,bata,botas,cofia,mandil,cuchillo,comedor,prestamo from datosDestajo where nomEmpleado like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
             Classes.Datos_Empleados employeeData = new Classes.Datos_Empleados();
             Classes.Movimientos_Destajo employeeMovs = new Classes.Movimientos_Destajo();
 
@@ -367,7 +371,7 @@ namespace La_Vista_Nominas
             employeeData.nCajas = (Convert.ToInt32(txtLunes.Text) + Convert.ToInt32(txtMartes.Text) + Convert.ToInt32(txtMiercoles.Text) + Convert.ToInt32(txtJueves.Text) + Convert.ToInt32(txtViernes.Text) + Convert.ToInt32(txtSabado.Text));
             employeeData.depto = dt.Rows[0].ItemArray[4].ToString();
             employeeData.puesto = dt.Rows[0].ItemArray[5].ToString();
-            employeeData.iniPeriodo = DateTime.Now.AddDays(-6.0); 
+            employeeData.iniPeriodo = DateTime.Now.AddDays(-6.0);
             employeeData.finPeriodo = DateTime.Now;
             employeeData.diasLab = 6;
 
@@ -377,13 +381,66 @@ namespace La_Vista_Nominas
             employeeMovs.prDominical = Convert.ToDouble(txtDominicalD.Text);
             employeeMovs.prVacacional = Convert.ToDouble(txtVacacionalD.Text);
             employeeMovs.montoPercep = (employeeMovs.sueldo + employeeMovs.aguinaldo + employeeMovs.vacaciones + employeeMovs.prDominical + employeeMovs.prVacacional);
-            
+
+            int w = 0;
+
+
+            foreach (DataColumn col in ded.Columns)
+            {
+                if (Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString()) > 0)
+                {
+                    if (employeeMovs.desc1 <= 0)
+                    {
+                        MessageBox.Show("desc1 está vacío ...");
+                        employeeMovs.nom1 = array[w];
+                        employeeMovs.desc1 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                    }
+                    else
+                    {
+                        if(employeeMovs.desc2 <= 0)
+                        {
+                            MessageBox.Show("desc1 está vacío ...");
+                            employeeMovs.nom2 = array[w];
+                            employeeMovs.desc2 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                        }
+                        else
+                        {
+                            if(employeeMovs.desc3 <= 0)
+                            {
+                                MessageBox.Show("desc1 está vacío ...");
+                                employeeMovs.nom3 = array[w];
+                                employeeMovs.desc3 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                MessageBox.Show("desc1 está ocupado ...");
+                        }
+                    }
+                }
+                w++;
+            }
+
+            employeeMovs.montoDeducc = (employeeMovs.desc1 + employeeMovs.desc2 + employeeMovs.desc3 + employeeMovs.desc4 + employeeMovs.desc5 + employeeMovs.desc6 + employeeMovs.desc7 + employeeMovs.desc8 + employeeMovs.desc9);
+
+            MessageBox.Show("Numero de elementos en lista: " + discountsList.Count());
+            //employeeMovs.nom1 = discountsList[0];
+
             //Hago una instancia del formulario Nomina_Individual y agrego los miembros de las clases a las list del nuevo form.
             Nomina_Individual frm = new Nomina_Individual();
             frm.obj.Add(employeeData);
             frm.objMovimientos.Add(employeeMovs);
 
             frm.Show();
+        }
+
+        private void loadValueOnReport(Double var)
+        {
+            Classes.Movimientos_Destajo fieldContainer = new Classes.Movimientos_Destajo();
+
+            if ( fieldContainer.desc1 > 0.0 )
+                MessageBox.Show("Campo con dato cargado ...");
+            else
+                MessageBox.Show("Campo Desocupado ...");
+
         }
 
         private void getDataForListaRaya()
@@ -496,6 +553,75 @@ namespace La_Vista_Nominas
             form.Show();
             */
         }
-        
+
+
+        // ======================================================== Métodos en seccion jornada diurna
+        private void tabJornadaDia_Click(object sender, EventArgs e)
+        {
+        }
+            private void LLenarGrid(string archivo, string hoja)
+        {
+            //declaramos las variables         
+            OleDbConnection conexion = null;
+            DataSet dataSet = null;
+            OleDbDataAdapter dataAdapter = null;
+            string consultaHojaExcel = "Select * from [" + hoja + "$]";
+
+            //esta cadena es para archivos excel 2007 y 2010
+            string cadenaConexionArchivoExcel = "provider=Microsoft.ACE.OLEDB.12.0;Data Source='" + archivo + "';Extended Properties=Excel 12.0;";
+
+            //para archivos de 97-2003 usar la siguiente cadena
+            //string cadenaConexionArchivoExcel = "provider=Microsoft.Jet.OLEDB.4.0;Data Source='" + archivo + "';Extended Properties=Excel 8.0;";
+
+            //Validamos que el usuario ingrese el nombre de la hoja del archivo de excel a leer
+            if (string.IsNullOrEmpty(hoja))
+            {
+                MessageBox.Show("No hay una hoja para leer");
+            }
+            else
+            {
+                try
+                {
+                    //Si el usuario escribio el nombre de la hoja se procedera con la busqueda
+                    conexion = new OleDbConnection(cadenaConexionArchivoExcel);//creamos la conexion con la hoja de excel
+                    conexion.Open(); //abrimos la conexion
+                    dataAdapter = new OleDbDataAdapter(consultaHojaExcel, conexion); //traemos los datos de la hoja y las guardamos en un dataSdapter
+                    dataSet = new DataSet(); // creamos la instancia del objeto DataSet
+                    dataAdapter.Fill(dataSet, hoja);//llenamos el dataset
+                    dataGridView1.DataSource = dataSet.Tables[0]; //le asignamos al DataGridView el contenido del dataSet
+                    conexion.Close();//cerramos la conexion
+                    dataGridView1.AllowUserToAddRows = false;       //eliminamos la ultima fila del datagridview que se autoagrega
+                }
+                catch (Exception ex)
+                {
+                    //en caso de haber una excepcion que nos mande un mensaje de error
+                    MessageBox.Show("Error, Verificar el archivo o el nombre de la hoja", ex.Message);
+                }
+            }
+        }
+
+        private void btnBuscarArchivo_Click(object sender, EventArgs e)
+        {
+            //creamos un objeto OpenDialog que es un cuadro de dialogo para buscar archivos
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx"; //le indicamos el tipo de filtro en este caso que busque
+                                                                             //solo los archivos excel
+
+            dialog.Title = "Seleccione el archivo de Excel";//le damos un titulo a la ventana
+
+            dialog.FileName = string.Empty;//inicializamos con vacio el nombre del archivo
+
+            //si al seleccionar el archivo damos Ok
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //el nombre del archivo sera asignado al textbox
+                txtArchivo.Text = dialog.FileName;
+                String hoja = txtHoja.Text; //la variable hoja tendra el valor del textbox donde colocamos el nombre de la hoja
+                LLenarGrid(txtArchivo.Text, hoja); //se manda a llamar al metodo
+
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; //se ajustan las
+                                                                                          //columnas al ancho del DataGridview para que no quede espacio en blanco (opcional)
+            }
+        }
     }
 }

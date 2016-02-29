@@ -16,6 +16,17 @@ namespace La_Vista_Nominas.Classes
         public double prDominical { get; set; }
         public double prVacacional { get; set; }
 
+        public string nom1 { get; set; }
+        public string nom2 { get; set; }
+        public string nom3 { get; set; }
+        public string nom4 { get; set; }
+        public string nom5 { get; set; }
+        public string nom6 { get; set; }
+        public string nom7 { get; set; }
+        public string nom8 { get; set; }
+        public string nom9 { get; set; }
+        public string nom10 { get; set; }
+
         public double desc1 { get; set; }
         public double desc2 { get; set; }
         public double desc3 { get; set; }
