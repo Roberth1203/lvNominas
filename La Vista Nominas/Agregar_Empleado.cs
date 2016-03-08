@@ -102,7 +102,7 @@ namespace La_Vista_Nominas
                 ", '" + comboSexo.SelectedItem.ToString() + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
                 "', '" + dateIngreso.Text + "', '" + cmbTipoNomina.SelectedItem.ToString() + "', '" + cmbJornada.SelectedItem.ToString() + "', " + opcTurno + 
                 ", '" + cmbPago.SelectedItem.ToString() + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) + 
-                ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToInt32(txtSBC.Text) + ", '" + txtSeguro.Text + 
+                ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToDouble(txtSBC.Text) + ", '" + txtSeguro.Text + 
                 "', " + opcLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
                 "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
                 "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','ALTA'" + cmbDepto.Text + ");";

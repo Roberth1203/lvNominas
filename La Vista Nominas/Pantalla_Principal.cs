@@ -163,7 +163,7 @@ namespace La_Vista_Nominas
 
         private void Pantalla_Principal_Activated(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnDrop_Click(object sender, EventArgs e)
@@ -280,24 +280,27 @@ namespace La_Vista_Nominas
         {
             string cad = listaEmpleadosDestajo1.SelectedItem.ToString();
 
-            String query = "SELECT * from datosDestajo where nomEmpleado = '" + cad + "';";
+            String query = "select dia1,dia2,dia3,dia4,dia5,dia6,cuchillo,escafandra,cubrebocas,bata,cofia,mandil,botas,guantes,comedor,prestamo from datosDestajo where nomEmpleado = '" + cad + "';";
             DataTable tmp = sql.SQLdata(query, null, dataValues);
 
             //Llenado de Campos (Percepciones y Deducciones)
-            txtLunes.Text = tmp.Rows[0].ItemArray[1].ToString();
-            txtMartes.Text = tmp.Rows[0].ItemArray[2].ToString();
-            txtMiercoles.Text = tmp.Rows[0].ItemArray[3].ToString();
-            txtJueves.Text = tmp.Rows[0].ItemArray[4].ToString();
-            txtViernes.Text = tmp.Rows[0].ItemArray[5].ToString();
-            txtSabado.Text = tmp.Rows[0].ItemArray[6].ToString();
+            txtLunes.Text = tmp.Rows[0].ItemArray[0].ToString();
+            txtMartes.Text = tmp.Rows[0].ItemArray[1].ToString();
+            txtMiercoles.Text = tmp.Rows[0].ItemArray[2].ToString();
+            txtJueves.Text = tmp.Rows[0].ItemArray[3].ToString();
+            txtViernes.Text = tmp.Rows[0].ItemArray[4].ToString();
+            txtSabado.Text = tmp.Rows[0].ItemArray[5].ToString();
 
-            txtCuchillo.Text = tmp.Rows[0].ItemArray[7].ToString();
-            txtEscaf.Text = tmp.Rows[0].ItemArray[8].ToString();
-            txtCubreB.Text = tmp.Rows[0].ItemArray[9].ToString();
-            txtBata.Text = tmp.Rows[0].ItemArray[10].ToString();
-            txtCofia.Text = tmp.Rows[0].ItemArray[11].ToString();
-            txtMandil.Text = tmp.Rows[0].ItemArray[12].ToString();
-            txtBotas.Text = tmp.Rows[0].ItemArray[13].ToString();
+            txtCuchillo.Text = tmp.Rows[0].ItemArray[6].ToString();
+            txtEscaf.Text = tmp.Rows[0].ItemArray[7].ToString();
+            txtCubreB.Text = tmp.Rows[0].ItemArray[8].ToString();
+            txtBata.Text = tmp.Rows[0].ItemArray[9].ToString();
+            txtCofia.Text = tmp.Rows[0].ItemArray[10].ToString();
+            txtMandil.Text = tmp.Rows[0].ItemArray[11].ToString();
+            txtBotas.Text = tmp.Rows[0].ItemArray[12].ToString();
+            txtGuantes.Text = tmp.Rows[0].ItemArray[13].ToString();
+            txtComedor.Text = tmp.Rows[0].ItemArray[14].ToString();
+            txtPrestamo.Text = tmp.Rows[0].ItemArray[15].ToString();
 
             calculoTotales();
         }
@@ -321,7 +324,9 @@ namespace La_Vista_Nominas
                              ",cuchillo = " + Convert.ToDouble(txtCuchillo.Text) + ",escafandra =" + Convert.ToDouble(txtEscaf.Text) +
                              ",cubrebocas = " + Convert.ToDouble(txtCubreB.Text) + ",bata = " + Convert.ToDouble(txtBata.Text) +
                              ",cofia = " + Convert.ToDouble(txtCofia.Text) + ",mandil = " + Convert.ToDouble(txtMandil.Text) +
-                             ",botas = " + Convert.ToDouble(txtBotas.Text) + " WHERE nomEmpleado = '" + listaEmpleadosDestajo1.SelectedItem.ToString() + "';";
+                             ",botas = " + Convert.ToDouble(txtBotas.Text) + ",guantes = " + Convert.ToDouble(txtGuantes.Text) +
+                             ",comedor = " + Convert.ToDouble(txtComedor.Text) + ",prestamo = " + Convert.ToDouble(txtPrestamo.Text) +
+                             " WHERE nomEmpleado = '" + listaEmpleadosDestajo1.SelectedItem.ToString() + "';";
 
                 sql.SQLstatement(updateQuery, null, dataValues);
 
@@ -356,10 +361,10 @@ namespace La_Vista_Nominas
 
         private void dataOnNominareport()
         {
-            string[] array = { "Cubrebocas", "Escafandra", "Guantes", "Bata", "Botas", "Mandil", "Cuchillo", "Descuento Comedor", "Prestamo Empresa" };
+            string[] array = { "Cuchilllo", "Cofia", "Escafandra", "Mandil", "Cubrebocas", "Botas", "Bata", "Guantes", "Descuento Comedor", "Prestamo Empresa" };
             List<String> discountsList = new List<string>();
             DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
-            DataTable ded = sql.SQLdata("select cubrebocas,escafandra,guantes,bata,botas,cofia,mandil,cuchillo,comedor,prestamo from datosDestajo where nomEmpleado like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
+            DataTable ded = sql.SQLdata("select cuchillo,cofia,escafandra,mandil,cubrebocas,botas,bata,guantes,comedor,prestamo from datosDestajo where nomEmpleado like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
             Classes.Datos_Empleados employeeData = new Classes.Datos_Empleados();
             Classes.Movimientos_Destajo employeeMovs = new Classes.Movimientos_Destajo();
 
@@ -399,7 +404,7 @@ namespace La_Vista_Nominas
                     {
                         if(employeeMovs.desc2 <= 0)
                         {
-                            MessageBox.Show("desc1 está vacío ...");
+                            MessageBox.Show("desc2 está vacío ...");
                             employeeMovs.nom2 = array[w];
                             employeeMovs.desc2 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                         }
@@ -407,12 +412,54 @@ namespace La_Vista_Nominas
                         {
                             if(employeeMovs.desc3 <= 0)
                             {
-                                MessageBox.Show("desc1 está vacío ...");
+                                MessageBox.Show("desc3 está vacío ...");
                                 employeeMovs.nom3 = array[w];
                                 employeeMovs.desc3 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
-                                MessageBox.Show("desc1 está ocupado ...");
+                                if (employeeMovs.desc4 <= 0)
+                            {
+                                MessageBox.Show("desc4 está vacío ...");
+                                employeeMovs.nom4 = array[w];
+                                employeeMovs.desc4 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (employeeMovs.desc5 <= 0)
+                            {
+                                MessageBox.Show("desc5 está vacío ...");
+                                employeeMovs.nom5 = array[w];
+                                employeeMovs.desc5 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (employeeMovs.desc6 <= 0)
+                            {
+                                MessageBox.Show("desc6 está vacío ...");
+                                employeeMovs.nom6 = array[w];
+                                employeeMovs.desc6 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (employeeMovs.desc7 <= 0)
+                            {
+                                MessageBox.Show("desc7 está vacío ...");
+                                employeeMovs.nom7 = array[w];
+                                employeeMovs.desc7 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (employeeMovs.desc8 <= 0)
+                            {
+                                MessageBox.Show("desc8 está vacío ...");
+                                employeeMovs.nom8 = array[w];
+                                employeeMovs.desc8 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (employeeMovs.desc9 <= 0)
+                            {
+                                MessageBox.Show("desc9 está vacío ...");
+                                employeeMovs.nom9 = array[w];
+                                employeeMovs.desc9 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                MessageBox.Show("Lista de deducciones llena ...");
                         }
                     }
                 }
@@ -622,6 +669,11 @@ namespace La_Vista_Nominas
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; //se ajustan las
                                                                                           //columnas al ancho del DataGridview para que no quede espacio en blanco (opcional)
             }
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

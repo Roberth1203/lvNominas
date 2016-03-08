@@ -501,7 +501,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!montoDeducc.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00)</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -521,6 +523,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Line Name="Line21">
@@ -1559,8 +1562,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=Sum(Fields!desc1.Value, "DataSet2")+Sum(Fields!desc2.Value, "DataSet2")+Sum(Fields!desc3.Value, "DataSet2")+Sum(Fields!desc4.Value, "DataSet2")+Sum(Fields!desc5.Value, "DataSet2")+Sum(Fields!desc6.Value, "DataSet2")+Sum(Fields!desc7.Value, "DataSet2")+Sum(Fields!desc8.Value, "DataSet2")+Sum(Fields!desc9.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;-'$' 0.00;'-'</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1580,6 +1585,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Line Name="Line22">
@@ -2602,7 +2608,7 @@
               <TextRun>
                 <Value>=First(Fields!desc1.Value, "DataSet2")</Value>
                 <Style>
-                  <Format>0.00;(0.00)</Format>
+                  <Format>'$' 0.00;('$' 0.00);'(None)'</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -2623,6 +2629,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox50">
@@ -2656,14 +2663,15 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox51">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=Sum(Fields!montoPercep.Value, "DataSet2")-Sum(Fields!montoDeducc.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' #,0.00</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2683,6 +2691,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Line Name="Line29">
@@ -2734,8 +2743,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=Sum(Fields!montoPercep.Value, "DataSet2")-Sum(Fields!montoDeducc.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2755,6 +2766,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Line Name="Line30">
@@ -2777,7 +2789,7 @@
               <TextRun>
                 <Value>=First(Fields!desc2.Value, "DataSet2")</Value>
                 <Style>
-                  <Format>0.00;(0.00)</Format>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -2798,6 +2810,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox68">
@@ -2808,7 +2821,7 @@
               <TextRun>
                 <Value>=First(Fields!desc3.Value, "DataSet2")</Value>
                 <Style>
-                  <Format>0.00;(0.00)</Format>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -2829,6 +2842,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox82">
@@ -2931,7 +2945,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!desc4.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2951,6 +2967,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox85">
@@ -2960,7 +2977,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!desc5.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2980,6 +2999,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox86">
@@ -2989,7 +3009,10 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!desc6.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                  <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3009,6 +3032,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox87">
@@ -3111,7 +3135,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!desc7.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3131,6 +3157,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox91">
@@ -3140,7 +3167,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!desc8.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3160,6 +3189,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox92">
@@ -3169,7 +3199,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!desc9.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3189,16 +3221,16 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox79">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 1</Value>
+                <Value>=First(Fields!nom1.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3224,13 +3256,12 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox80">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 2</Value>
+                <Value>=First(Fields!nom2.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3256,13 +3287,12 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox81">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 3</Value>
+                <Value>=First(Fields!nom3.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3288,14 +3318,15 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox52">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc1.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3315,17 +3346,19 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox93">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc2.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3345,17 +3378,19 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox94">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc3.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3375,16 +3410,16 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox95">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 4</Value>
+                <Value>=First(Fields!nom4.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3410,13 +3445,12 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox96">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 5</Value>
+                <Value>=First(Fields!nom5.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3442,13 +3476,12 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox97">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 6</Value>
+                <Value>=First(Fields!nom6.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3474,14 +3507,15 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox98">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc4.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3501,17 +3535,19 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox99">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc5.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3531,17 +3567,19 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox100">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc6.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3561,16 +3599,16 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox101">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 7</Value>
+                <Value>=First(Fields!nom7.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3596,13 +3634,12 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox102">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 8</Value>
+                <Value>=First(Fields!nom8.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3628,13 +3665,12 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox103">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Descuento 9</Value>
+                <Value>=First(Fields!nom9.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3660,14 +3696,15 @@
         </Style>
       </Textbox>
       <Textbox Name="Textbox104">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc7.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3687,17 +3724,19 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox105">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc8.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3717,17 +3756,19 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox106">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant" />
-                <Style />
+                <Value>=First(Fields!desc9.Value, "DataSet2")</Value>
+                <Style>
+                  <Format>'$' 0.00;('$' 0.00);''</Format>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -3747,6 +3788,7 @@
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
       <Textbox Name="Textbox107">
