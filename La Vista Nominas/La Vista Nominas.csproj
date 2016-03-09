@@ -189,6 +189,7 @@
     </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Reports\rptPruebas.rdlc" />
+    <EmbeddedResource Include="rptHojaDeControl.rdlc" />
     <EmbeddedResource Include="rptTotalesDestajo.rdlc" />
     <None Include="almacenDatos.xsc">
       <DependentUpon>almacenDatos.xsd</DependentUpon>
@@ -272,6 +273,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\notebook91.png" />
     <None Include="Resources\settingsOver1.png" />
     <None Include="Resources\round60.png" />
     <None Include="Resources\round62.png" />

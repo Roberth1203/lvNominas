@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.btnNominaMasiva = new System.Windows.Forms.Button();
             this.btnMostrarRecibo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -39,6 +40,8 @@
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtGuantes = new System.Windows.Forms.TextBox();
             this.txtPrestamo = new System.Windows.Forms.TextBox();
             this.txtComedor = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -149,8 +152,7 @@
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.txtGuantes = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
@@ -233,6 +235,7 @@
             // superTabControlPanel3
             // 
             this.superTabControlPanel3.CanvasColor = System.Drawing.Color.DimGray;
+            this.superTabControlPanel3.Controls.Add(this.btnNominaMasiva);
             this.superTabControlPanel3.Controls.Add(this.btnMostrarRecibo);
             this.superTabControlPanel3.Controls.Add(this.button2);
             this.superTabControlPanel3.Controls.Add(this.tabControl2);
@@ -244,11 +247,25 @@
             this.superTabControlPanel3.TabItem = this.tabNominas;
             this.superTabControlPanel3.Click += new System.EventHandler(this.superTabControlPanel3_Click);
             // 
+            // btnNominaMasiva
+            // 
+            this.btnNominaMasiva.BackColor = System.Drawing.Color.Gray;
+            this.btnNominaMasiva.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.notebook91;
+            this.btnNominaMasiva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNominaMasiva.Enabled = false;
+            this.btnNominaMasiva.Location = new System.Drawing.Point(107, 5);
+            this.btnNominaMasiva.Name = "btnNominaMasiva";
+            this.btnNominaMasiva.Size = new System.Drawing.Size(44, 38);
+            this.btnNominaMasiva.TabIndex = 34;
+            this.btnNominaMasiva.UseVisualStyleBackColor = false;
+            this.btnNominaMasiva.Click += new System.EventHandler(this.btnNominaMasiva_Click);
+            // 
             // btnMostrarRecibo
             // 
-            this.btnMostrarRecibo.BackColor = System.Drawing.Color.White;
+            this.btnMostrarRecibo.BackColor = System.Drawing.Color.DarkGray;
             this.btnMostrarRecibo.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.print42;
             this.btnMostrarRecibo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMostrarRecibo.Enabled = false;
             this.btnMostrarRecibo.Location = new System.Drawing.Point(57, 4);
             this.btnMostrarRecibo.Name = "btnMostrarRecibo";
             this.btnMostrarRecibo.Size = new System.Drawing.Size(44, 39);
@@ -352,6 +369,24 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Deducciones";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(145, 117);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(66, 19);
+            this.label32.TabIndex = 33;
+            this.label32.Text = "Guantes";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
+            // 
+            // txtGuantes
+            // 
+            this.txtGuantes.Location = new System.Drawing.Point(213, 117);
+            this.txtGuantes.Name = "txtGuantes";
+            this.txtGuantes.Size = new System.Drawing.Size(46, 20);
+            this.txtGuantes.TabIndex = 32;
             // 
             // txtPrestamo
             // 
@@ -673,9 +708,9 @@
             this.labelTotalCajas.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalCajas.Location = new System.Drawing.Point(387, 57);
             this.labelTotalCajas.Name = "labelTotalCajas";
-            this.labelTotalCajas.Size = new System.Drawing.Size(43, 29);
+            this.labelTotalCajas.Size = new System.Drawing.Size(28, 29);
             this.labelTotalCajas.TabIndex = 5;
-            this.labelTotalCajas.Text = "$0";
+            this.labelTotalCajas.Text = "0";
             // 
             // txtViernes
             // 
@@ -1551,23 +1586,9 @@
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.Text = "labelItem1";
             // 
-            // txtGuantes
+            // toolTip1
             // 
-            this.txtGuantes.Location = new System.Drawing.Point(213, 117);
-            this.txtGuantes.Name = "txtGuantes";
-            this.txtGuantes.Size = new System.Drawing.Size(46, 20);
-            this.txtGuantes.TabIndex = 32;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(145, 117);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(66, 19);
-            this.label32.TabIndex = 33;
-            this.label32.Text = "Guantes";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
+            this.toolTip1.ToolTipTitle = "Mostrar Vista Previa de Recibo al Momento";
             // 
             // Pantalla_Principal
             // 
@@ -1760,5 +1781,7 @@
         private System.Windows.Forms.Button btnBuscarArchivo;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtGuantes;
+        private System.Windows.Forms.Button btnNominaMasiva;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -27,7 +27,8 @@ namespace La_Vista_Nominas
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", obj));
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", objMovimientos));
 
-
+            this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+            
             this.reportViewer1.RefreshReport();
         }
     }
