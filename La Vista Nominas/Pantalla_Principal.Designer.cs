@@ -117,7 +117,7 @@
             this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveDestajoConfig = new System.Windows.Forms.Button();
             this.btnContract = new System.Windows.Forms.PictureBox();
             this.btnExpand = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -210,10 +210,10 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
             this.superTabControl1.Name = "superTabControl1";
@@ -1139,7 +1139,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnContract);
             this.panel2.Controls.Add(this.btnExpand);
             this.panel2.Controls.Add(this.label23);
@@ -1150,14 +1149,15 @@
             this.panel2.Size = new System.Drawing.Size(749, 512);
             this.panel2.TabIndex = 0;
             // 
-            // button1
+            // btnSaveDestajoConfig
             // 
-            this.button1.Location = new System.Drawing.Point(573, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSaveDestajoConfig.Location = new System.Drawing.Point(181, 115);
+            this.btnSaveDestajoConfig.Name = "btnSaveDestajoConfig";
+            this.btnSaveDestajoConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveDestajoConfig.TabIndex = 17;
+            this.btnSaveDestajoConfig.Text = "Guardar";
+            this.btnSaveDestajoConfig.UseVisualStyleBackColor = true;
+            this.btnSaveDestajoConfig.Click += new System.EventHandler(this.btnSaveDestajoConfig_Click);
             // 
             // btnContract
             // 
@@ -1195,6 +1195,7 @@
             // 
             // grBoxDestajo
             // 
+            this.grBoxDestajo.Controls.Add(this.btnSaveDestajoConfig);
             this.grBoxDestajo.Controls.Add(this.label24);
             this.grBoxDestajo.Controls.Add(this.label29);
             this.grBoxDestajo.Controls.Add(this.txtVacacionesD);
@@ -1237,7 +1238,6 @@
             this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
             this.txtVacacionesD.TabIndex = 13;
-            this.txtVacacionesD.Text = "0.077";
             this.txtVacacionesD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label30
@@ -1256,7 +1256,6 @@
             this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
             this.txtDominicalD.TabIndex = 12;
-            this.txtDominicalD.Text = "0.71";
             this.txtDominicalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label28
@@ -1275,7 +1274,6 @@
             this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
             this.txtAguinaldoD.TabIndex = 8;
-            this.txtAguinaldoD.Text = "0.194";
             this.txtAguinaldoD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtVacacionalD
@@ -1285,7 +1283,6 @@
             this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
             this.txtVacacionalD.TabIndex = 11;
-            this.txtVacacionalD.Text = "0.019";
             this.txtVacacionalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label27
@@ -1304,7 +1301,6 @@
             this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
             this.txtCostoCaja.TabIndex = 10;
-            this.txtCostoCaja.Text = "6.20";
             this.txtCostoCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tabOpciones
@@ -1772,7 +1768,7 @@
         private System.Windows.Forms.PictureBox btnExpand;
         private System.Windows.Forms.GroupBox grBoxDestajo;
         private System.Windows.Forms.PictureBox btnContract;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSaveDestajoConfig;
         private System.Windows.Forms.Button btnListaRaya;
         private System.Windows.Forms.Panel pnlReportForms;
         private System.Windows.Forms.TextBox txtHoja;

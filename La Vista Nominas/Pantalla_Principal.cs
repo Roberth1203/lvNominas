@@ -48,6 +48,7 @@ namespace La_Vista_Nominas
         {
             dt = new DataTable();
             sql = new Utilities();
+            loadSettings();
             cargarRegistros();
             obtenerEmpleados();
             //this.reportViewer1.RefreshReport();
@@ -367,6 +368,9 @@ namespace La_Vista_Nominas
         /* ======================================= Métodos Para Obtener datos para Reportes ======================================= */
         private void showAllPaySheet()
         {
+            string msg = ConfigurationManager.AppSettings.Get("keyCajas");
+            MessageBox.Show("elemento del App.Config: " + msg);
+
             conteoEmpleados.ForEach(delegate (String empleado)
             {
 
@@ -700,10 +704,7 @@ namespace La_Vista_Nominas
             dataOnNominareport();
         }
 
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-            MessageBox.Show("Fuck the Police");
-        }
+        private void groupBox4_Enter(object sender, EventArgs e){}
 
         private void btnExpand_Click(object sender, EventArgs e)
         {
@@ -814,6 +815,20 @@ namespace La_Vista_Nominas
         private void btnNominaMasiva_Click(object sender, EventArgs e)
         {
             showAllPaySheet();
+        }
+
+        private void btnSaveDestajoConfig_Click(object sender, EventArgs e)
+        {
+            ConfigurationManager.AppSettings.Set("keyCajas", txtCostoCaja.Text);
+        }
+
+        private void loadSettings()
+        {
+            txtAguinaldoD.Text = ConfigurationManager.AppSettings.Get("keyAguinaldo");
+            txtVacacionesD.Text = ConfigurationManager.AppSettings.Get("keyVacaciones");
+            txtDominicalD.Text = ConfigurationManager.AppSettings.Get("keySeptimoDia");
+            txtVacacionalD.Text = ConfigurationManager.AppSettings.Get("keyPrimaVacacional");
+            txtCostoCaja.Text = ConfigurationManager.AppSettings.Get("keyCostoCaja");
         }
     }
 }
