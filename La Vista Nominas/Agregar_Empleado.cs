@@ -75,48 +75,57 @@ namespace La_Vista_Nominas
 
             String opcTurno = "", opcLicencia = "";
 
-            if (chkTurnos.Checked == true)
-                opcTurno = "Si";
-            else
-                opcTurno = "No";
-
-            if (chkLicencia.Checked == true)
+            if(txtNombre.Text.Equals("") || txtrfc.Text.Equals("") || txtcurp.Text.Equals(""))
             {
-                opcLicencia = "Si";
-                txtTipoLicencia.Enabled = true;
-                txtClaseLicencia.Enabled = true;
+                MessageBox.Show("Los campos siguientes no pueden ser vacíos ... \n\n Nombre del Empleado. \n Curp del Empleado \n RFC del Empleado \n\n Favor de corregirlos !!!", "La Vista Nominas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                opcLicencia = "No";
-            try
             {
+                if (chkTurnos.Checked == true)
+                    opcTurno = "Si";
+                else
+                    opcTurno = "No";
 
-                string insert = "INSERT INTO PERSONAL (" +
-                "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
-                "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," +
-                "salarionoc, salariobase, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
-                "telCasa, telMovil, telOtro, correo, status, area_laboral)" +
+                if (chkLicencia.Checked == true)
+                {
+                    opcLicencia = "Si";
+                    txtTipoLicencia.Enabled = true;
+                    txtClaseLicencia.Enabled = true;
+                }
+                else
+                    opcLicencia = "No";
+                try
+                {
 
-                "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text + 
-                "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', " + txtZipCode.Text +
-                ", '" + comboSexo.SelectedItem.ToString() + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text + 
-                "', '" + dateIngreso.Text + "', '" + cmbTipoNomina.SelectedItem.ToString() + "', '" + cmbJornada.SelectedItem.ToString() + "', " + opcTurno + 
-                ", '" + cmbPago.SelectedItem.ToString() + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) + 
-                ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToDouble(txtSBC.Text) + ", '" + txtSeguro.Text + 
-                "', " + opcLicencia + ", '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text + 
-                "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text + 
-                "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','ALTA'" + cmbDepto.Text + ");";
+                    string insert = "INSERT INTO PERSONAL (" +
+                    "nombre, rfc, curp, calle, next, nint, colonia, municipio, estado, codpost, sexo," +
+                    "lugnac, nacimiento, ingreso, tiponomina, jornada, rolaturno, forma_pago, cuenta, salariodiurno," +
+                    "salarionoc, salariobase, nss, licencia, tiplic, claselic, ife, beneficiario, parentezco," +
+                    "telCasa, telMovil, telOtro, correo, status, area_laboral)" +
+
+                    "VALUES ('" + txtNombre.Text + "', '" + txtrfc.Text + "', '" + txtcurp.Text + "', '" + txtCalle.Text + "', '" + txtNoExt.Text +
+                    "', '" + txtNoInt.Text + "', '" + txtColonia.Text + "', '" + txtMpio.Text + "', '" + txtEdo.Text + "', '" + txtZipCode.Text +
+                    "', '" + comboSexo.SelectedItem.ToString() + "', '" + txtNacimiento.Text + "', '" + dateNacimiento.Text +
+                    "', '" + dateIngreso.Text + "', '" + cmbTipoNomina.Text + "', '" + cmbJornada.Text + "', '" + opcTurno +
+                    "', '" + cmbPago.Text + "', '" + txtCuenta.Text + "', " + Convert.ToDouble(txtBaseDia.Text) +
+                    ", " + Convert.ToDouble(txtBaseNoche.Text) + ", " + Convert.ToDouble(txtSBC.Text) + ", '" + txtSeguro.Text +
+                    "', '" + opcLicencia + "', '" + txtTipoLicencia.Text + "', '" + txtClaseLicencia.Text + "', '" + txtIFE.Text +
+                    "', '" + txtbeneficiario.Text + "', '" + txtparentesco.Text + "', '" + txttel1.Text + "', '" + txttel2.Text +
+                    "', '" + txttel3.Text + "', '" + txtcorreo.Text + "','ALTA','" + cmbDepto.Text + "');";
 
 
-                sql.SQLstatement(insert, null, dataValues);
-                MessageBox.Show("Empleado Almacenado");
-                guardarImagen();
-                this.Close();
+                    sql.SQLstatement(insert, null, dataValues);
+                    MessageBox.Show("Empleado Almacenado");
+                    guardarImagen();
+                    this.Close();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error SQL: " + error.Message, "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
-            catch (Exception error)
-            {
-                MessageBox.Show("Error SQL: " + error.Message,"La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
 
         private void Agregar_Empleado_Load(object sender, EventArgs e)
@@ -162,6 +171,18 @@ namespace La_Vista_Nominas
         private void onlyLetters(KeyPressEventArgs ex)
         {
             if (!(char.IsLetter(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ex.Handled = true;
+                return;
+            }
+        }
+
+        private void onlyLettersAndNumbers(KeyPressEventArgs ex)
+        {
+            if (char.IsNumber(ex.KeyChar))
+                ex.Handled = false;
+            if (!(char.IsLetter(ex.KeyChar)) && !(char.IsNumber(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
             {
                 MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 ex.Handled = true;
@@ -294,6 +315,36 @@ namespace La_Vista_Nominas
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
             btnCancelar.Size = new System.Drawing.Size(48, 48);
+        }
+
+        private void txtrfc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtrfc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyLettersAndNumbers(e);
+        }
+
+        private void txtcurp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyLettersAndNumbers(e);
+        }
+
+        private void txtMpio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyLettersAndNumbers(e);
+        }
+
+        private void txtbeneficiario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyLettersAndNumbers(e);
+        }
+
+        private void txtparentesco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlyLetters(e);
         }
     }
 }

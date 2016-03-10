@@ -251,6 +251,7 @@
             this.txtrfc.Name = "txtrfc";
             this.txtrfc.Size = new System.Drawing.Size(97, 20);
             this.txtrfc.TabIndex = 15;
+            this.txtrfc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrfc_KeyPress);
             // 
             // txtcurp
             // 
@@ -258,6 +259,7 @@
             this.txtcurp.Name = "txtcurp";
             this.txtcurp.Size = new System.Drawing.Size(137, 20);
             this.txtcurp.TabIndex = 16;
+            this.txtcurp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcurp_KeyPress);
             // 
             // label9
             // 
@@ -397,6 +399,7 @@
             this.txtMpio.Name = "txtMpio";
             this.txtMpio.Size = new System.Drawing.Size(164, 20);
             this.txtMpio.TabIndex = 30;
+            this.txtMpio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMpio_KeyPress);
             // 
             // txtEdo
             // 
@@ -875,6 +878,7 @@
             this.txtbeneficiario.Name = "txtbeneficiario";
             this.txtbeneficiario.Size = new System.Drawing.Size(256, 20);
             this.txtbeneficiario.TabIndex = 75;
+            this.txtbeneficiario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbeneficiario_KeyPress);
             // 
             // txtparentesco
             // 
@@ -882,6 +886,7 @@
             this.txtparentesco.Name = "txtparentesco";
             this.txtparentesco.Size = new System.Drawing.Size(160, 20);
             this.txtparentesco.TabIndex = 76;
+            this.txtparentesco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtparentesco_KeyPress);
             // 
             // txttel1
             // 
