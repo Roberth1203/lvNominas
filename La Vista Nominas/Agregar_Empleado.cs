@@ -124,9 +124,8 @@ namespace La_Vista_Nominas
             int id = sql.nextId("id", "personal", null, dataValues);
             txtNoEmp.Text = id.ToString();
 
-            DataTable dt = sql.SQLdata("SELECT descripcion from cat_departamentos",null,dataValues);
-
-            string currentrow = "";
+            //Carga de catalogo de departamentos
+            DataTable dt = sql.SQLdata("SELECT descripcion from cat_departamentos order by descripcion",null,dataValues);
             List<String> lstPedidos = new List<string>();
             int i = 0;
             foreach (DataRow row in dt.Rows)
@@ -134,8 +133,9 @@ namespace La_Vista_Nominas
                 lstPedidos.Add(dt.Rows[i].ItemArray[0].ToString());
                 i++;
             }
-
             cmbDepto.DataSource = lstPedidos;
+
+            dateNacimiento.Text = "01/01/1960"; //fecha de nacimiento por default
 
         }
 

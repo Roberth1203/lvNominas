@@ -576,7 +576,8 @@
             this.cmbJornada.Items.AddRange(new object[] {
             "Seleccionar ...",
             "DIURNA",
-            "NOCTURNA"});
+            "NOCTURNA",
+            "MIXTA"});
             this.cmbJornada.Location = new System.Drawing.Point(292, 306);
             this.cmbJornada.Name = "cmbJornada";
             this.cmbJornada.Size = new System.Drawing.Size(121, 21);
@@ -630,7 +631,10 @@
             // 
             this.cmbCalculo.FormattingEnabled = true;
             this.cmbCalculo.Items.AddRange(new object[] {
-            "Seleccionar ..."});
+            "Seleccionar ...",
+            "DESTAJO",
+            "HORAS",
+            "SUELDO FIJO"});
             this.cmbCalculo.Location = new System.Drawing.Point(69, 353);
             this.cmbCalculo.Name = "cmbCalculo";
             this.cmbCalculo.Size = new System.Drawing.Size(121, 21);

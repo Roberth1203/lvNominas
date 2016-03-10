@@ -42,6 +42,16 @@ namespace La_Vista_Nominas
             else
                 cargarDatos();
 
+            DataTable dt = util.SQLdata("SELECT descripcion from cat_departamentos order by descripcion", null, dataValues);
+            List<String> lstPedidos = new List<string>();
+            int i = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                lstPedidos.Add(dt.Rows[i].ItemArray[0].ToString());
+                i++;
+            }
+            cmbDepto.DataSource = lstPedidos;
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -125,7 +135,7 @@ namespace La_Vista_Nominas
                                ",salarionoc=" + Convert.ToDouble(txtBaseNoche.Text) + ",salariobase=" + Convert.ToDouble(txtSBC.Text) + ",nss='" + txtSeguro.Text + "',licencia='" + opcLicencia+ 
                                "',tiplic='" + txtTipoLicencia.Text + "',claselic='" + txtClaseLicencia.Text + "',ife='" + txtIFE.Text + "',beneficiario='" + txtbeneficiario.Text +
                                "',parentezco='" + txtparentesco.Text + "',telCasa='" + txttel1.Text + "',telMovil='" + txttel2.Text + "',telOtro='" + txttel3.Text + 
-                               "',correo='" + txtcorreo.Text + "', status='" + cmbStatus.Text + "',area_laboral='" + cmbDepto.Text + "' WHERE id = " + idEmpleado + ";";
+                               "',correo='" + txtcorreo.Text + "', status='" + cmbStatus.Text + "',area_laboral='" + cmbDepto.Text + "',calculo = '" + cmbCalculo.Text + "' WHERE id = " + idEmpleado + ";";
 
 
                 util.SQLstatement(update, null, dataValues);
@@ -219,11 +229,13 @@ namespace La_Vista_Nominas
             txttel2.Text = dt.Rows[0].ItemArray[28].ToString();
 
 
-            DataTable dt2 = util.SQLdata("select telOtro,correo,status,ife from personal where id = " + idEmpleado + ";", null, dataValues);
+            DataTable dt2 = util.SQLdata("select telOtro,correo,status,ife,calculo,area_laboral from personal where id = " + idEmpleado + ";", null, dataValues);
             txttel3.Text = dt2.Rows[0].ItemArray[0].ToString();
             txtcorreo.Text = dt2.Rows[0].ItemArray[1].ToString();
             cmbStatus.Text = dt2.Rows[0].ItemArray[2].ToString();
             txtIFE.Text = dt2.Rows[0].ItemArray[3].ToString();
+            cmbCalculo.Text = dt2.Rows[0].ItemArray[4].ToString();
+            cmbDepto.Text = dt2.Rows[0].ItemArray[5].ToString();
             consultarImagen();
         }
 
@@ -266,7 +278,8 @@ namespace La_Vista_Nominas
                 // Stream usado como buffer
                 System.IO.MemoryStream ms = new System.IO.MemoryStream();
                 // Se guarda la imagen en el buffer
-                imgEmpleado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //imgEmpleado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                imgEmpleado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
                 // Se extraen los bytes del buffer para asignarlos como valor para el
                 // parámetro.
                 cmd.Parameters["@foto"].Value = ms.GetBuffer();

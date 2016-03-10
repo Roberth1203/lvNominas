@@ -31,6 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnContract = new System.Windows.Forms.PictureBox();
+            this.btnExpand = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.grBoxDestajo = new System.Windows.Forms.GroupBox();
+            this.btnSaveDestajoConfig = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtVacacionesD = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtDominicalD = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
+            this.txtVacacionalD = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtCostoCaja = new System.Windows.Forms.TextBox();
+            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.btnNominaMasiva = new System.Windows.Forms.Button();
             this.btnMostrarRecibo = new System.Windows.Forms.Button();
@@ -46,8 +64,6 @@
             this.txtComedor = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtInfonavit = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.labelTotaldesc = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -115,24 +131,6 @@
             this.pnlReportForms = new System.Windows.Forms.Panel();
             this.btnListaRaya = new System.Windows.Forms.Button();
             this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSaveDestajoConfig = new System.Windows.Forms.Button();
-            this.btnContract = new System.Windows.Forms.PictureBox();
-            this.btnExpand = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.grBoxDestajo = new System.Windows.Forms.GroupBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtVacacionesD = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtDominicalD = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
-            this.txtVacacionalD = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtCostoCaja = new System.Windows.Forms.TextBox();
-            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMover = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
@@ -153,8 +151,15 @@
             this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtDescripciones = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
+            this.grBoxDestajo.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabEmpleadosDestajo.SuspendLayout();
@@ -179,11 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
-            this.grBoxDestajo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
@@ -210,10 +210,10 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
             this.superTabControl1.Name = "superTabControl1";
@@ -231,6 +231,191 @@
             this.tabOpciones});
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "tabSecciones";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
+            this.superTabControlPanel2.Controls.Add(this.panel2);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.tabOpciones;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnContract);
+            this.panel2.Controls.Add(this.btnExpand);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.grBoxDestajo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(749, 512);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnContract
+            // 
+            this.btnContract.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContract.Image = global::La_Vista_Nominas.Properties.Resources.round60;
+            this.btnContract.Location = new System.Drawing.Point(680, 6);
+            this.btnContract.Name = "btnContract";
+            this.btnContract.Size = new System.Drawing.Size(19, 19);
+            this.btnContract.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnContract.TabIndex = 16;
+            this.btnContract.TabStop = false;
+            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
+            // 
+            // btnExpand
+            // 
+            this.btnExpand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpand.Image = global::La_Vista_Nominas.Properties.Resources.round62;
+            this.btnExpand.Location = new System.Drawing.Point(680, 6);
+            this.btnExpand.Name = "btnExpand";
+            this.btnExpand.Size = new System.Drawing.Size(19, 19);
+            this.btnExpand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExpand.TabIndex = 14;
+            this.btnExpand.TabStop = false;
+            this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(30, 3);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(648, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Percepciones Destajo ____________________________________________________________" +
+    "_____________________________";
+            // 
+            // grBoxDestajo
+            // 
+            this.grBoxDestajo.Controls.Add(this.btnSaveDestajoConfig);
+            this.grBoxDestajo.Controls.Add(this.label24);
+            this.grBoxDestajo.Controls.Add(this.label29);
+            this.grBoxDestajo.Controls.Add(this.txtVacacionesD);
+            this.grBoxDestajo.Controls.Add(this.label30);
+            this.grBoxDestajo.Controls.Add(this.txtDominicalD);
+            this.grBoxDestajo.Controls.Add(this.label28);
+            this.grBoxDestajo.Controls.Add(this.txtAguinaldoD);
+            this.grBoxDestajo.Controls.Add(this.txtVacacionalD);
+            this.grBoxDestajo.Controls.Add(this.label27);
+            this.grBoxDestajo.Controls.Add(this.txtCostoCaja);
+            this.grBoxDestajo.Location = new System.Drawing.Point(33, 12);
+            this.grBoxDestajo.Name = "grBoxDestajo";
+            this.grBoxDestajo.Size = new System.Drawing.Size(656, 147);
+            this.grBoxDestajo.TabIndex = 15;
+            this.grBoxDestajo.TabStop = false;
+            this.grBoxDestajo.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // btnSaveDestajoConfig
+            // 
+            this.btnSaveDestajoConfig.Location = new System.Drawing.Point(181, 115);
+            this.btnSaveDestajoConfig.Name = "btnSaveDestajoConfig";
+            this.btnSaveDestajoConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveDestajoConfig.TabIndex = 17;
+            this.btnSaveDestajoConfig.Text = "Guardar";
+            this.btnSaveDestajoConfig.UseVisualStyleBackColor = true;
+            this.btnSaveDestajoConfig.Click += new System.EventHandler(this.btnSaveDestajoConfig_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(51, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Aguinaldo";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(39, 68);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(66, 13);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Séptimo Día";
+            // 
+            // txtVacacionesD
+            // 
+            this.txtVacacionesD.Location = new System.Drawing.Point(111, 39);
+            this.txtVacacionesD.Name = "txtVacacionesD";
+            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionesD.TabIndex = 13;
+            this.txtVacacionesD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(42, 42);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 13);
+            this.label30.TabIndex = 7;
+            this.label30.Text = "Vacaciones";
+            // 
+            // txtDominicalD
+            // 
+            this.txtDominicalD.Location = new System.Drawing.Point(111, 65);
+            this.txtDominicalD.Name = "txtDominicalD";
+            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
+            this.txtDominicalD.TabIndex = 12;
+            this.txtDominicalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(16, 94);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(89, 13);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Prima Vacacional";
+            // 
+            // txtAguinaldoD
+            // 
+            this.txtAguinaldoD.Location = new System.Drawing.Point(111, 13);
+            this.txtAguinaldoD.Name = "txtAguinaldoD";
+            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
+            this.txtAguinaldoD.TabIndex = 8;
+            this.txtAguinaldoD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVacacionalD
+            // 
+            this.txtVacacionalD.Location = new System.Drawing.Point(111, 91);
+            this.txtVacacionalD.Name = "txtVacacionalD";
+            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionalD.TabIndex = 11;
+            this.txtVacacionalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(29, 120);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Costo por Caja";
+            // 
+            // txtCostoCaja
+            // 
+            this.txtCostoCaja.Location = new System.Drawing.Point(111, 117);
+            this.txtCostoCaja.Name = "txtCostoCaja";
+            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
+            this.txtCostoCaja.TabIndex = 10;
+            this.txtCostoCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tabOpciones
+            // 
+            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
+            this.tabOpciones.GlobalItem = false;
+            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
+            this.tabOpciones.Name = "tabOpciones";
             // 
             // superTabControlPanel3
             // 
@@ -320,7 +505,7 @@
             this.panelDatosDestajo.Controls.Add(this.listaEmpleadosDestajo1);
             this.panelDatosDestajo.Location = new System.Drawing.Point(1, 0);
             this.panelDatosDestajo.Name = "panelDatosDestajo";
-            this.panelDatosDestajo.Size = new System.Drawing.Size(731, 404);
+            this.panelDatosDestajo.Size = new System.Drawing.Size(731, 435);
             this.panelDatosDestajo.TabIndex = 1;
             // 
             // label3
@@ -337,14 +522,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtDescripciones);
+            this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.txtGuantes);
             this.groupBox3.Controls.Add(this.txtPrestamo);
             this.groupBox3.Controls.Add(this.txtComedor);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.txtInfonavit);
-            this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.labelTotaldesc);
             this.groupBox3.Controls.Add(this.label18);
@@ -363,9 +548,9 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox3.Location = new System.Drawing.Point(211, 176);
+            this.groupBox3.Location = new System.Drawing.Point(211, 155);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(513, 215);
+            this.groupBox3.Size = new System.Drawing.Size(513, 276);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Deducciones";
@@ -390,14 +575,14 @@
             // 
             // txtPrestamo
             // 
-            this.txtPrestamo.Location = new System.Drawing.Point(451, 187);
+            this.txtPrestamo.Location = new System.Drawing.Point(300, 163);
             this.txtPrestamo.Name = "txtPrestamo";
             this.txtPrestamo.Size = new System.Drawing.Size(45, 20);
             this.txtPrestamo.TabIndex = 31;
             // 
             // txtComedor
             // 
-            this.txtComedor.Location = new System.Drawing.Point(269, 187);
+            this.txtComedor.Location = new System.Drawing.Point(118, 163);
             this.txtComedor.Name = "txtComedor";
             this.txtComedor.Size = new System.Drawing.Size(45, 20);
             this.txtComedor.TabIndex = 30;
@@ -406,7 +591,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(333, 185);
+            this.label22.Location = new System.Drawing.Point(182, 161);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(118, 19);
             this.label22.TabIndex = 29;
@@ -416,34 +601,17 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(155, 185);
+            this.label21.Location = new System.Drawing.Point(4, 161);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(117, 19);
             this.label21.TabIndex = 28;
             this.label21.Text = "Desc. Comedor";
             // 
-            // txtInfonavit
-            // 
-            this.txtInfonavit.Location = new System.Drawing.Point(95, 187);
-            this.txtInfonavit.Name = "txtInfonavit";
-            this.txtInfonavit.Size = new System.Drawing.Size(45, 20);
-            this.txtInfonavit.TabIndex = 27;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(21, 185);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 19);
-            this.label20.TabIndex = 26;
-            this.label20.Text = "Infonavit";
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(2, 154);
+            this.label19.Location = new System.Drawing.Point(2, 144);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(495, 14);
             this.label19.TabIndex = 25;
@@ -606,7 +774,7 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox2.Location = new System.Drawing.Point(211, 36);
+            this.groupBox2.Location = new System.Drawing.Point(211, 32);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(513, 120);
             this.groupBox2.TabIndex = 7;
@@ -1125,191 +1293,6 @@
             this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
             this.tabReportes.Name = "tabReportes";
             // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
-            this.superTabControlPanel2.Controls.Add(this.panel2);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.tabOpciones;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnContract);
-            this.panel2.Controls.Add(this.btnExpand);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.grBoxDestajo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(749, 512);
-            this.panel2.TabIndex = 0;
-            // 
-            // btnSaveDestajoConfig
-            // 
-            this.btnSaveDestajoConfig.Location = new System.Drawing.Point(181, 115);
-            this.btnSaveDestajoConfig.Name = "btnSaveDestajoConfig";
-            this.btnSaveDestajoConfig.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveDestajoConfig.TabIndex = 17;
-            this.btnSaveDestajoConfig.Text = "Guardar";
-            this.btnSaveDestajoConfig.UseVisualStyleBackColor = true;
-            this.btnSaveDestajoConfig.Click += new System.EventHandler(this.btnSaveDestajoConfig_Click);
-            // 
-            // btnContract
-            // 
-            this.btnContract.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContract.Image = global::La_Vista_Nominas.Properties.Resources.round60;
-            this.btnContract.Location = new System.Drawing.Point(680, 6);
-            this.btnContract.Name = "btnContract";
-            this.btnContract.Size = new System.Drawing.Size(19, 19);
-            this.btnContract.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnContract.TabIndex = 16;
-            this.btnContract.TabStop = false;
-            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
-            // 
-            // btnExpand
-            // 
-            this.btnExpand.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExpand.Image = global::La_Vista_Nominas.Properties.Resources.round62;
-            this.btnExpand.Location = new System.Drawing.Point(680, 6);
-            this.btnExpand.Name = "btnExpand";
-            this.btnExpand.Size = new System.Drawing.Size(19, 19);
-            this.btnExpand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExpand.TabIndex = 14;
-            this.btnExpand.TabStop = false;
-            this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(30, 3);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(648, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Percepciones Destajo ____________________________________________________________" +
-    "_____________________________";
-            // 
-            // grBoxDestajo
-            // 
-            this.grBoxDestajo.Controls.Add(this.btnSaveDestajoConfig);
-            this.grBoxDestajo.Controls.Add(this.label24);
-            this.grBoxDestajo.Controls.Add(this.label29);
-            this.grBoxDestajo.Controls.Add(this.txtVacacionesD);
-            this.grBoxDestajo.Controls.Add(this.label30);
-            this.grBoxDestajo.Controls.Add(this.txtDominicalD);
-            this.grBoxDestajo.Controls.Add(this.label28);
-            this.grBoxDestajo.Controls.Add(this.txtAguinaldoD);
-            this.grBoxDestajo.Controls.Add(this.txtVacacionalD);
-            this.grBoxDestajo.Controls.Add(this.label27);
-            this.grBoxDestajo.Controls.Add(this.txtCostoCaja);
-            this.grBoxDestajo.Location = new System.Drawing.Point(33, 12);
-            this.grBoxDestajo.Name = "grBoxDestajo";
-            this.grBoxDestajo.Size = new System.Drawing.Size(656, 147);
-            this.grBoxDestajo.TabIndex = 15;
-            this.grBoxDestajo.TabStop = false;
-            this.grBoxDestajo.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(51, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(54, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Aguinaldo";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(39, 68);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(66, 13);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Séptimo Día";
-            // 
-            // txtVacacionesD
-            // 
-            this.txtVacacionesD.Location = new System.Drawing.Point(111, 39);
-            this.txtVacacionesD.Name = "txtVacacionesD";
-            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
-            this.txtVacacionesD.TabIndex = 13;
-            this.txtVacacionesD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(42, 42);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 13);
-            this.label30.TabIndex = 7;
-            this.label30.Text = "Vacaciones";
-            // 
-            // txtDominicalD
-            // 
-            this.txtDominicalD.Location = new System.Drawing.Point(111, 65);
-            this.txtDominicalD.Name = "txtDominicalD";
-            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
-            this.txtDominicalD.TabIndex = 12;
-            this.txtDominicalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(16, 94);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(89, 13);
-            this.label28.TabIndex = 5;
-            this.label28.Text = "Prima Vacacional";
-            // 
-            // txtAguinaldoD
-            // 
-            this.txtAguinaldoD.Location = new System.Drawing.Point(111, 13);
-            this.txtAguinaldoD.Name = "txtAguinaldoD";
-            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
-            this.txtAguinaldoD.TabIndex = 8;
-            this.txtAguinaldoD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtVacacionalD
-            // 
-            this.txtVacacionalD.Location = new System.Drawing.Point(111, 91);
-            this.txtVacacionalD.Name = "txtVacacionalD";
-            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
-            this.txtVacacionalD.TabIndex = 11;
-            this.txtVacacionalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(29, 120);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(76, 13);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Costo por Caja";
-            // 
-            // txtCostoCaja
-            // 
-            this.txtCostoCaja.Location = new System.Drawing.Point(111, 117);
-            this.txtCostoCaja.Name = "txtCostoCaja";
-            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
-            this.txtCostoCaja.TabIndex = 10;
-            this.txtCostoCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tabOpciones
-            // 
-            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
-            this.tabOpciones.GlobalItem = false;
-            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
-            this.tabOpciones.Name = "tabOpciones";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1586,6 +1569,24 @@
             // 
             this.toolTip1.ToolTipTitle = "Mostrar Vista Previa de Recibo al Momento";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(8, 189);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(110, 19);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Obervaciones:";
+            // 
+            // txtDescripciones
+            // 
+            this.txtDescripciones.Location = new System.Drawing.Point(118, 189);
+            this.txtDescripciones.Name = "txtDescripciones";
+            this.txtDescripciones.Size = new System.Drawing.Size(389, 81);
+            this.txtDescripciones.TabIndex = 35;
+            this.txtDescripciones.Text = "";
+            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1608,6 +1609,13 @@
             this.Load += new System.EventHandler(this.Pantalla_Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
+            this.grBoxDestajo.ResumeLayout(false);
+            this.grBoxDestajo.PerformLayout();
             this.superTabControlPanel3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabEmpleadosDestajo.ResumeLayout(false);
@@ -1638,13 +1646,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
-            this.grBoxDestajo.ResumeLayout(false);
-            this.grBoxDestajo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1699,8 +1700,6 @@
         private System.Windows.Forms.TextBox txtComedor;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtInfonavit;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label labelTotaldesc;
         private System.Windows.Forms.Label label18;
@@ -1779,5 +1778,7 @@
         private System.Windows.Forms.TextBox txtGuantes;
         private System.Windows.Forms.Button btnNominaMasiva;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.RichTextBox txtDescripciones;
+        private System.Windows.Forms.Label label20;
     }
 }
