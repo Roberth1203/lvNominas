@@ -660,6 +660,7 @@
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(129, 20);
             this.txtCuenta.TabIndex = 53;
+            this.txtCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuenta_KeyPress);
             // 
             // label27
             // 

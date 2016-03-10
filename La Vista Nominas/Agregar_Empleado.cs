@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Configuration;
 
 namespace La_Vista_Nominas
 {
@@ -17,7 +18,9 @@ namespace La_Vista_Nominas
     {
         Pantalla_Principal main;
         Utilities sql = new Utilities();
-        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
+        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
+        string dataValues = ConfigurationManager.AppSettings.Get("rutaDB");
+
         public Agregar_Empleado()
         {
             InitializeComponent();
@@ -168,7 +171,7 @@ namespace La_Vista_Nominas
             onlyLetters(e);
         }
 
-        private void onlyLetters(KeyPressEventArgs ex)
+        public void onlyLetters(KeyPressEventArgs ex)
         {
             if (!(char.IsLetter(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
             {
@@ -178,17 +181,26 @@ namespace La_Vista_Nominas
             }
         }
 
-        private void onlyLettersAndNumbers(KeyPressEventArgs ex)
+        public void onlyLettersAndNumbers(KeyPressEventArgs ex)
         {
-            if (char.IsNumber(ex.KeyChar))
-                ex.Handled = false;
             if (!(char.IsLetter(ex.KeyChar)) && !(char.IsNumber(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
             {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se permiten símbolos especiales !!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 ex.Handled = true;
                 return;
             }
         }
+
+        public void onlynumbers(KeyPressEventArgs ex)
+        {
+            if (!(char.IsNumber(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
+            {
+                MessageBox.Show("Solo se permiten números !!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ex.Handled = true;
+                return;
+            }
+        }
+
         public void guardarImagen()
         {
             try
@@ -317,11 +329,6 @@ namespace La_Vista_Nominas
             btnCancelar.Size = new System.Drawing.Size(48, 48);
         }
 
-        private void txtrfc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtrfc_KeyPress(object sender, KeyPressEventArgs e)
         {
             onlyLettersAndNumbers(e);
@@ -345,6 +352,11 @@ namespace La_Vista_Nominas
         private void txtparentesco_KeyPress(object sender, KeyPressEventArgs e)
         {
             onlyLetters(e);
+        }
+
+        private void txtCuenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
         }
     }
 }
