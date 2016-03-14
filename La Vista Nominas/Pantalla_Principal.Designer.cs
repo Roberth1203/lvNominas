@@ -31,33 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnContract = new System.Windows.Forms.PictureBox();
-            this.btnExpand = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.grBoxDestajo = new System.Windows.Forms.GroupBox();
-            this.btnSaveDestajoConfig = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtVacacionesD = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtDominicalD = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
-            this.txtVacacionalD = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtCostoCaja = new System.Windows.Forms.TextBox();
-            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.pnlReportForms = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnListaRaya = new System.Windows.Forms.Button();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.btnNominaMasiva = new System.Windows.Forms.Button();
-            this.btnMostrarRecibo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabEmpleadosDestajo = new System.Windows.Forms.TabPage();
             this.panelDatosDestajo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDescripciones = new System.Windows.Forms.RichTextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.txtGuantes = new System.Windows.Forms.TextBox();
             this.txtPrestamo = new System.Windows.Forms.TextBox();
@@ -96,7 +81,6 @@
             this.txtViernes = new System.Windows.Forms.TextBox();
             this.txtLunes = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.listaEmpleadosDestajo1 = new System.Windows.Forms.ListBox();
             this.tabJornadaDia = new System.Windows.Forms.TabPage();
             this.txtHoja = new System.Windows.Forms.TextBox();
@@ -106,37 +90,33 @@
             this.listaEmpleadosDia = new System.Windows.Forms.ListBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabJornadaNoche = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.itemselectedBar = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExportar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDrop = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.pnlReportForms = new System.Windows.Forms.Panel();
-            this.btnListaRaya = new System.Windows.Forms.Button();
-            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.grBoxDestajo = new System.Windows.Forms.GroupBox();
+            this.btnSaveDestajoConfig = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtVacacionesD = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtDominicalD = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtAguinaldoD = new System.Windows.Forms.TextBox();
+            this.txtVacacionalD = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtCostoCaja = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMover = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listButtonImages = new System.Windows.Forms.ImageList(this.components);
             this.dockSite2 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -148,46 +128,67 @@
             this.sideBarPanelItem4 = new DevComponents.DotNetBar.SideBarPanelItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnMover = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnActualizarListas = new System.Windows.Forms.Button();
+            this.btnNominaMasiva = new System.Windows.Forms.Button();
+            this.btnMostrarRecibo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
+            this.itemselectedBar = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnExportar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.PictureBox();
+            this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDrop = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
+            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
+            this.btnContract = new System.Windows.Forms.PictureBox();
+            this.btnExpand = new System.Windows.Forms.PictureBox();
+            this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
             this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtDescripciones = new System.Windows.Forms.RichTextBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
-            this.grBoxDestajo.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
+            this.pnlReportForms.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabEmpleadosDestajo.SuspendLayout();
             this.panelDatosDestajo.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabJornadaDia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabJornadaNoche.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPersonal.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.grBoxDestajo.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExportar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            this.superTabControlPanel1.SuspendLayout();
-            this.pnlReportForms.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -212,9 +213,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -234,194 +235,48 @@
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "tabSecciones";
             // 
-            // superTabControlPanel2
+            // superTabControlPanel1
             // 
-            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
-            this.superTabControlPanel2.Controls.Add(this.panel2);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.tabOpciones;
+            this.superTabControlPanel1.Controls.Add(this.pnlReportForms);
+            this.superTabControlPanel1.Controls.Add(this.btnListaRaya);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(986, 512);
+            this.superTabControlPanel1.TabIndex = 0;
+            this.superTabControlPanel1.TabItem = this.tabReportes;
             // 
-            // panel2
+            // pnlReportForms
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnContract);
-            this.panel2.Controls.Add(this.btnExpand);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.grBoxDestajo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(749, 512);
-            this.panel2.TabIndex = 0;
+            this.pnlReportForms.Controls.Add(this.reportViewer1);
+            this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
+            this.pnlReportForms.Name = "pnlReportForms";
+            this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
+            this.pnlReportForms.TabIndex = 2;
             // 
-            // btnContract
+            // reportViewer1
             // 
-            this.btnContract.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContract.Image = global::La_Vista_Nominas.Properties.Resources.round60;
-            this.btnContract.Location = new System.Drawing.Point(680, 6);
-            this.btnContract.Name = "btnContract";
-            this.btnContract.Size = new System.Drawing.Size(19, 19);
-            this.btnContract.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnContract.TabIndex = 16;
-            this.btnContract.TabStop = false;
-            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(743, 454);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // btnExpand
+            // btnListaRaya
             // 
-            this.btnExpand.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExpand.Image = global::La_Vista_Nominas.Properties.Resources.round62;
-            this.btnExpand.Location = new System.Drawing.Point(680, 6);
-            this.btnExpand.Name = "btnExpand";
-            this.btnExpand.Size = new System.Drawing.Size(19, 19);
-            this.btnExpand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExpand.TabIndex = 14;
-            this.btnExpand.TabStop = false;
-            this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(30, 3);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(648, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Percepciones Destajo ____________________________________________________________" +
-    "_____________________________";
-            // 
-            // grBoxDestajo
-            // 
-            this.grBoxDestajo.Controls.Add(this.btnSaveDestajoConfig);
-            this.grBoxDestajo.Controls.Add(this.label24);
-            this.grBoxDestajo.Controls.Add(this.label29);
-            this.grBoxDestajo.Controls.Add(this.txtVacacionesD);
-            this.grBoxDestajo.Controls.Add(this.label30);
-            this.grBoxDestajo.Controls.Add(this.txtDominicalD);
-            this.grBoxDestajo.Controls.Add(this.label28);
-            this.grBoxDestajo.Controls.Add(this.txtAguinaldoD);
-            this.grBoxDestajo.Controls.Add(this.txtVacacionalD);
-            this.grBoxDestajo.Controls.Add(this.label27);
-            this.grBoxDestajo.Controls.Add(this.txtCostoCaja);
-            this.grBoxDestajo.Location = new System.Drawing.Point(33, 12);
-            this.grBoxDestajo.Name = "grBoxDestajo";
-            this.grBoxDestajo.Size = new System.Drawing.Size(656, 147);
-            this.grBoxDestajo.TabIndex = 15;
-            this.grBoxDestajo.TabStop = false;
-            this.grBoxDestajo.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // btnSaveDestajoConfig
-            // 
-            this.btnSaveDestajoConfig.Location = new System.Drawing.Point(181, 115);
-            this.btnSaveDestajoConfig.Name = "btnSaveDestajoConfig";
-            this.btnSaveDestajoConfig.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveDestajoConfig.TabIndex = 17;
-            this.btnSaveDestajoConfig.Text = "Guardar";
-            this.btnSaveDestajoConfig.UseVisualStyleBackColor = true;
-            this.btnSaveDestajoConfig.Click += new System.EventHandler(this.btnSaveDestajoConfig_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(51, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(54, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Aguinaldo";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(39, 68);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(66, 13);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Séptimo Día";
-            // 
-            // txtVacacionesD
-            // 
-            this.txtVacacionesD.Location = new System.Drawing.Point(111, 39);
-            this.txtVacacionesD.Name = "txtVacacionesD";
-            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
-            this.txtVacacionesD.TabIndex = 13;
-            this.txtVacacionesD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(42, 42);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 13);
-            this.label30.TabIndex = 7;
-            this.label30.Text = "Vacaciones";
-            // 
-            // txtDominicalD
-            // 
-            this.txtDominicalD.Location = new System.Drawing.Point(111, 65);
-            this.txtDominicalD.Name = "txtDominicalD";
-            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
-            this.txtDominicalD.TabIndex = 12;
-            this.txtDominicalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(16, 94);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(89, 13);
-            this.label28.TabIndex = 5;
-            this.label28.Text = "Prima Vacacional";
-            // 
-            // txtAguinaldoD
-            // 
-            this.txtAguinaldoD.Location = new System.Drawing.Point(111, 13);
-            this.txtAguinaldoD.Name = "txtAguinaldoD";
-            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
-            this.txtAguinaldoD.TabIndex = 8;
-            this.txtAguinaldoD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtVacacionalD
-            // 
-            this.txtVacacionalD.Location = new System.Drawing.Point(111, 91);
-            this.txtVacacionalD.Name = "txtVacacionalD";
-            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
-            this.txtVacacionalD.TabIndex = 11;
-            this.txtVacacionalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(29, 120);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(76, 13);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Costo por Caja";
-            // 
-            // txtCostoCaja
-            // 
-            this.txtCostoCaja.Location = new System.Drawing.Point(111, 117);
-            this.txtCostoCaja.Name = "txtCostoCaja";
-            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
-            this.txtCostoCaja.TabIndex = 10;
-            this.txtCostoCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tabOpciones
-            // 
-            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
-            this.tabOpciones.GlobalItem = false;
-            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
-            this.tabOpciones.Name = "tabOpciones";
+            this.btnListaRaya.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnListaRaya.Location = new System.Drawing.Point(3, 9);
+            this.btnListaRaya.Name = "btnListaRaya";
+            this.btnListaRaya.Size = new System.Drawing.Size(88, 29);
+            this.btnListaRaya.TabIndex = 1;
+            this.btnListaRaya.Text = "Lista de Raya";
+            this.btnListaRaya.UseVisualStyleBackColor = true;
+            this.btnListaRaya.Click += new System.EventHandler(this.btnListaRaya_Click);
             // 
             // superTabControlPanel3
             // 
             this.superTabControlPanel3.CanvasColor = System.Drawing.Color.DimGray;
+            this.superTabControlPanel3.Controls.Add(this.btnActualizarListas);
             this.superTabControlPanel3.Controls.Add(this.btnNominaMasiva);
             this.superTabControlPanel3.Controls.Add(this.btnMostrarRecibo);
             this.superTabControlPanel3.Controls.Add(this.button2);
@@ -433,44 +288,6 @@
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.tabNominas;
             this.superTabControlPanel3.Click += new System.EventHandler(this.superTabControlPanel3_Click);
-            // 
-            // btnNominaMasiva
-            // 
-            this.btnNominaMasiva.BackColor = System.Drawing.Color.Gray;
-            this.btnNominaMasiva.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.notebook91;
-            this.btnNominaMasiva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNominaMasiva.Enabled = false;
-            this.btnNominaMasiva.Location = new System.Drawing.Point(107, 5);
-            this.btnNominaMasiva.Name = "btnNominaMasiva";
-            this.btnNominaMasiva.Size = new System.Drawing.Size(44, 38);
-            this.btnNominaMasiva.TabIndex = 34;
-            this.btnNominaMasiva.UseVisualStyleBackColor = false;
-            this.btnNominaMasiva.Click += new System.EventHandler(this.btnNominaMasiva_Click);
-            // 
-            // btnMostrarRecibo
-            // 
-            this.btnMostrarRecibo.BackColor = System.Drawing.Color.DarkGray;
-            this.btnMostrarRecibo.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.print42;
-            this.btnMostrarRecibo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMostrarRecibo.Enabled = false;
-            this.btnMostrarRecibo.Location = new System.Drawing.Point(57, 4);
-            this.btnMostrarRecibo.Name = "btnMostrarRecibo";
-            this.btnMostrarRecibo.Size = new System.Drawing.Size(44, 39);
-            this.btnMostrarRecibo.TabIndex = 33;
-            this.btnMostrarRecibo.UseVisualStyleBackColor = false;
-            this.btnMostrarRecibo.Click += new System.EventHandler(this.btnMostrarRecibo_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.save2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(7, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(44, 40);
-            this.button2.TabIndex = 32;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabControl2
             // 
@@ -556,6 +373,24 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Deducciones";
+            // 
+            // txtDescripciones
+            // 
+            this.txtDescripciones.Location = new System.Drawing.Point(118, 189);
+            this.txtDescripciones.Name = "txtDescripciones";
+            this.txtDescripciones.Size = new System.Drawing.Size(389, 81);
+            this.txtDescripciones.TabIndex = 35;
+            this.txtDescripciones.Text = "";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(8, 189);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(110, 19);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Obervaciones:";
             // 
             // label32
             // 
@@ -907,15 +742,6 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Viernes";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.SeaGreen;
-            this.pictureBox4.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(730, 21);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
             // listaEmpleadosDestajo1
             // 
             this.listaEmpleadosDestajo1.ForeColor = System.Drawing.Color.SeaGreen;
@@ -1011,15 +837,6 @@
             this.label25.TabIndex = 8;
             this.label25.Text = "CAPTURA DE DATOS POR EMPLEADO";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
-            this.pictureBox5.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(735, 21);
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            // 
             // tabJornadaNoche
             // 
             this.tabJornadaNoche.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1045,22 +862,6 @@
             this.label26.TabIndex = 10;
             this.label26.Text = "CAPTURA DE DATOS POR EMPLEADO";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.SeaGreen;
-            this.pictureBox6.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(735, 21);
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            // 
-            // tabNominas
-            // 
-            this.tabNominas.AttachedControl = this.superTabControlPanel3;
-            this.tabNominas.GlobalItem = false;
-            this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
-            this.tabNominas.Name = "tabNominas";
-            // 
             // tabPersonal
             // 
             this.tabPersonal.Controls.Add(this.itemselectedBar);
@@ -1077,60 +878,6 @@
             this.tabPersonal.Size = new System.Drawing.Size(749, 512);
             this.tabPersonal.TabIndex = 1;
             this.tabPersonal.TabItem = this.tabPrincipal;
-            // 
-            // itemselectedBar
-            // 
-            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
-            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
-            this.itemselectedBar.Name = "itemselectedBar";
-            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
-            this.itemselectedBar.TabIndex = 11;
-            this.itemselectedBar.TabStop = false;
-            this.itemselectedBar.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
-            this.btnExportar.Location = new System.Drawing.Point(280, 5);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(51, 50);
-            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExportar.TabIndex = 9;
-            this.btnExportar.TabStop = false;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
-            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // groupBox1
             // 
@@ -1169,16 +916,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Buscar empleado:";
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
-            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
-            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.txtBuscar.TabIndex = 6;
-            this.txtBuscar.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -1208,93 +945,159 @@
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
             // 
-            // MenuItemEditar
+            // superTabControlPanel2
             // 
-            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
-            this.MenuItemEditar.Name = "MenuItemEditar";
-            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemEditar.Text = "Modificar";
+            this.superTabControlPanel2.CanvasColor = System.Drawing.Color.Gainsboro;
+            this.superTabControlPanel2.Controls.Add(this.panel2);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(986, 512);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.tabOpciones;
             // 
-            // MenuItemBaja
+            // panel2
             // 
-            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
-            this.MenuItemBaja.Name = "MenuItemBaja";
-            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemBaja.Text = "Dar de Baja";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnContract);
+            this.panel2.Controls.Add(this.btnExpand);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.grBoxDestajo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(986, 512);
+            this.panel2.TabIndex = 0;
             // 
-            // btnDrop
+            // label23
             // 
-            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
-            this.btnDrop.Location = new System.Drawing.Point(166, 5);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.Size = new System.Drawing.Size(51, 50);
-            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDrop.TabIndex = 4;
-            this.btnDrop.TabStop = false;
-            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
-            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
-            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(30, 3);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(648, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Percepciones Destajo ____________________________________________________________" +
+    "_____________________________";
             // 
-            // btnAdd
+            // grBoxDestajo
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(52, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 50);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
-            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            this.grBoxDestajo.Controls.Add(this.btnSaveDestajoConfig);
+            this.grBoxDestajo.Controls.Add(this.label24);
+            this.grBoxDestajo.Controls.Add(this.label29);
+            this.grBoxDestajo.Controls.Add(this.txtVacacionesD);
+            this.grBoxDestajo.Controls.Add(this.label30);
+            this.grBoxDestajo.Controls.Add(this.txtDominicalD);
+            this.grBoxDestajo.Controls.Add(this.label28);
+            this.grBoxDestajo.Controls.Add(this.txtAguinaldoD);
+            this.grBoxDestajo.Controls.Add(this.txtVacacionalD);
+            this.grBoxDestajo.Controls.Add(this.label27);
+            this.grBoxDestajo.Controls.Add(this.txtCostoCaja);
+            this.grBoxDestajo.Location = new System.Drawing.Point(33, 12);
+            this.grBoxDestajo.Name = "grBoxDestajo";
+            this.grBoxDestajo.Size = new System.Drawing.Size(656, 147);
+            this.grBoxDestajo.TabIndex = 15;
+            this.grBoxDestajo.TabStop = false;
+            this.grBoxDestajo.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // tabPrincipal
+            // btnSaveDestajoConfig
             // 
-            this.tabPrincipal.AttachedControl = this.tabPersonal;
-            this.tabPrincipal.GlobalItem = false;
-            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
-            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
-            this.tabPrincipal.Name = "tabPrincipal";
+            this.btnSaveDestajoConfig.Location = new System.Drawing.Point(181, 115);
+            this.btnSaveDestajoConfig.Name = "btnSaveDestajoConfig";
+            this.btnSaveDestajoConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveDestajoConfig.TabIndex = 17;
+            this.btnSaveDestajoConfig.Text = "Guardar";
+            this.btnSaveDestajoConfig.UseVisualStyleBackColor = true;
+            this.btnSaveDestajoConfig.Click += new System.EventHandler(this.btnSaveDestajoConfig_Click);
             // 
-            // superTabControlPanel1
+            // label24
             // 
-            this.superTabControlPanel1.Controls.Add(this.pnlReportForms);
-            this.superTabControlPanel1.Controls.Add(this.btnListaRaya);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel1.TabIndex = 0;
-            this.superTabControlPanel1.TabItem = this.tabReportes;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(51, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Aguinaldo";
             // 
-            // pnlReportForms
+            // label29
             // 
-            this.pnlReportForms.Controls.Add(this.reportViewer1);
-            this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
-            this.pnlReportForms.Name = "pnlReportForms";
-            this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
-            this.pnlReportForms.TabIndex = 2;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(39, 68);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(66, 13);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Séptimo Día";
             // 
-            // btnListaRaya
+            // txtVacacionesD
             // 
-            this.btnListaRaya.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnListaRaya.Location = new System.Drawing.Point(3, 9);
-            this.btnListaRaya.Name = "btnListaRaya";
-            this.btnListaRaya.Size = new System.Drawing.Size(88, 29);
-            this.btnListaRaya.TabIndex = 1;
-            this.btnListaRaya.Text = "Lista de Raya";
-            this.btnListaRaya.UseVisualStyleBackColor = true;
-            this.btnListaRaya.Click += new System.EventHandler(this.btnListaRaya_Click);
+            this.txtVacacionesD.Location = new System.Drawing.Point(111, 39);
+            this.txtVacacionesD.Name = "txtVacacionesD";
+            this.txtVacacionesD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtVacacionesD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionesD.TabIndex = 13;
+            this.txtVacacionesD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tabReportes
+            // label30
             // 
-            this.tabReportes.AttachedControl = this.superTabControlPanel1;
-            this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
-            this.tabReportes.Name = "tabReportes";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(42, 42);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 13);
+            this.label30.TabIndex = 7;
+            this.label30.Text = "Vacaciones";
+            // 
+            // txtDominicalD
+            // 
+            this.txtDominicalD.Location = new System.Drawing.Point(111, 65);
+            this.txtDominicalD.Name = "txtDominicalD";
+            this.txtDominicalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDominicalD.Size = new System.Drawing.Size(45, 20);
+            this.txtDominicalD.TabIndex = 12;
+            this.txtDominicalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(16, 94);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(89, 13);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Prima Vacacional";
+            // 
+            // txtAguinaldoD
+            // 
+            this.txtAguinaldoD.Location = new System.Drawing.Point(111, 13);
+            this.txtAguinaldoD.Name = "txtAguinaldoD";
+            this.txtAguinaldoD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtAguinaldoD.Size = new System.Drawing.Size(45, 20);
+            this.txtAguinaldoD.TabIndex = 8;
+            this.txtAguinaldoD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVacacionalD
+            // 
+            this.txtVacacionalD.Location = new System.Drawing.Point(111, 91);
+            this.txtVacacionalD.Name = "txtVacacionalD";
+            this.txtVacacionalD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtVacacionalD.Size = new System.Drawing.Size(45, 20);
+            this.txtVacacionalD.TabIndex = 11;
+            this.txtVacacionalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(29, 120);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Costo por Caja";
+            // 
+            // txtCostoCaja
+            // 
+            this.txtCostoCaja.Location = new System.Drawing.Point(111, 117);
+            this.txtCostoCaja.Name = "txtCostoCaja";
+            this.txtCostoCaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtCostoCaja.Size = new System.Drawing.Size(45, 20);
+            this.txtCostoCaja.TabIndex = 10;
+            this.txtCostoCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel1
             // 
@@ -1310,18 +1113,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1003, 37);
             this.panel1.TabIndex = 1;
-            // 
-            // btnMover
-            // 
-            this.btnMover.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMover.BackgroundImage")));
-            this.btnMover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMover.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMover.Location = new System.Drawing.Point(923, 7);
-            this.btnMover.Name = "btnMover";
-            this.btnMover.Size = new System.Drawing.Size(21, 24);
-            this.btnMover.TabIndex = 2;
-            this.btnMover.UseVisualStyleBackColor = false;
             // 
             // btnMinimizar
             // 
@@ -1360,17 +1151,6 @@
             this.label1.Size = new System.Drawing.Size(236, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "La Vista Alimentos S.A. de C.V.";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // listButtonImages
             // 
@@ -1572,31 +1352,265 @@
             // 
             this.toolTip1.ToolTipTitle = "Mostrar Vista Previa de Recibo al Momento";
             // 
-            // label20
+            // btnMover
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(8, 189);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(110, 19);
-            this.label20.TabIndex = 34;
-            this.label20.Text = "Obervaciones:";
+            this.btnMover.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMover.BackgroundImage")));
+            this.btnMover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMover.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMover.Location = new System.Drawing.Point(923, 7);
+            this.btnMover.Name = "btnMover";
+            this.btnMover.Size = new System.Drawing.Size(21, 24);
+            this.btnMover.TabIndex = 2;
+            this.btnMover.UseVisualStyleBackColor = false;
             // 
-            // txtDescripciones
+            // pictureBox1
             // 
-            this.txtDescripciones.Location = new System.Drawing.Point(118, 189);
-            this.txtDescripciones.Name = "txtDescripciones";
-            this.txtDescripciones.Size = new System.Drawing.Size(389, 81);
-            this.txtDescripciones.TabIndex = 35;
-            this.txtDescripciones.Text = "";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // reportViewer1
+            // btnActualizarListas
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(743, 454);
-            this.reportViewer1.TabIndex = 0;
+            this.btnActualizarListas.BackColor = System.Drawing.Color.White;
+            this.btnActualizarListas.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.work7;
+            this.btnActualizarListas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarListas.Location = new System.Drawing.Point(57, 3);
+            this.btnActualizarListas.Name = "btnActualizarListas";
+            this.btnActualizarListas.Size = new System.Drawing.Size(44, 40);
+            this.btnActualizarListas.TabIndex = 35;
+            this.btnActualizarListas.UseVisualStyleBackColor = false;
+            this.btnActualizarListas.Click += new System.EventHandler(this.btnActualizarListas_Click);
+            // 
+            // btnNominaMasiva
+            // 
+            this.btnNominaMasiva.BackColor = System.Drawing.Color.Gray;
+            this.btnNominaMasiva.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.notebook91;
+            this.btnNominaMasiva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNominaMasiva.Enabled = false;
+            this.btnNominaMasiva.Location = new System.Drawing.Point(157, 4);
+            this.btnNominaMasiva.Name = "btnNominaMasiva";
+            this.btnNominaMasiva.Size = new System.Drawing.Size(44, 41);
+            this.btnNominaMasiva.TabIndex = 34;
+            this.btnNominaMasiva.UseVisualStyleBackColor = false;
+            this.btnNominaMasiva.Click += new System.EventHandler(this.btnNominaMasiva_Click);
+            // 
+            // btnMostrarRecibo
+            // 
+            this.btnMostrarRecibo.BackColor = System.Drawing.Color.DarkGray;
+            this.btnMostrarRecibo.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.print42;
+            this.btnMostrarRecibo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMostrarRecibo.Enabled = false;
+            this.btnMostrarRecibo.Location = new System.Drawing.Point(107, 3);
+            this.btnMostrarRecibo.Name = "btnMostrarRecibo";
+            this.btnMostrarRecibo.Size = new System.Drawing.Size(44, 40);
+            this.btnMostrarRecibo.TabIndex = 33;
+            this.btnMostrarRecibo.UseVisualStyleBackColor = false;
+            this.btnMostrarRecibo.Click += new System.EventHandler(this.btnMostrarRecibo_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.save2;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(7, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(44, 40);
+            this.button2.TabIndex = 32;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox4.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(730, 21);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox5.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(735, 21);
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.SeaGreen;
+            this.pictureBox6.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(735, 21);
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // tabNominas
+            // 
+            this.tabNominas.AttachedControl = this.superTabControlPanel3;
+            this.tabNominas.GlobalItem = false;
+            this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
+            this.tabNominas.Name = "tabNominas";
+            // 
+            // itemselectedBar
+            // 
+            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
+            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
+            this.itemselectedBar.Name = "itemselectedBar";
+            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
+            this.itemselectedBar.TabIndex = 11;
+            this.itemselectedBar.TabStop = false;
+            this.itemselectedBar.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
+            this.btnExportar.Location = new System.Drawing.Point(280, 5);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(51, 50);
+            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExportar.TabIndex = 9;
+            this.btnExportar.TabStop = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
+            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
+            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
+            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.TabStop = false;
+            // 
+            // MenuItemEditar
+            // 
+            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
+            this.MenuItemEditar.Name = "MenuItemEditar";
+            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemEditar.Text = "Modificar";
+            // 
+            // MenuItemBaja
+            // 
+            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
+            this.MenuItemBaja.Name = "MenuItemBaja";
+            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemBaja.Text = "Dar de Baja";
+            // 
+            // btnDrop
+            // 
+            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
+            this.btnDrop.Location = new System.Drawing.Point(166, 5);
+            this.btnDrop.Name = "btnDrop";
+            this.btnDrop.Size = new System.Drawing.Size(51, 50);
+            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDrop.TabIndex = 4;
+            this.btnDrop.TabStop = false;
+            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
+            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
+            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(52, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(51, 50);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            // 
+            // tabPrincipal
+            // 
+            this.tabPrincipal.AttachedControl = this.tabPersonal;
+            this.tabPrincipal.GlobalItem = false;
+            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
+            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
+            this.tabPrincipal.Name = "tabPrincipal";
+            // 
+            // tabReportes
+            // 
+            this.tabReportes.AttachedControl = this.superTabControlPanel1;
+            this.tabReportes.GlobalItem = false;
+            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
+            this.tabReportes.Name = "tabReportes";
+            // 
+            // btnContract
+            // 
+            this.btnContract.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContract.Image = global::La_Vista_Nominas.Properties.Resources.round60;
+            this.btnContract.Location = new System.Drawing.Point(680, 6);
+            this.btnContract.Name = "btnContract";
+            this.btnContract.Size = new System.Drawing.Size(19, 19);
+            this.btnContract.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnContract.TabIndex = 16;
+            this.btnContract.TabStop = false;
+            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
+            // 
+            // btnExpand
+            // 
+            this.btnExpand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpand.Image = global::La_Vista_Nominas.Properties.Resources.round62;
+            this.btnExpand.Location = new System.Drawing.Point(680, 6);
+            this.btnExpand.Name = "btnExpand";
+            this.btnExpand.Size = new System.Drawing.Size(19, 19);
+            this.btnExpand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExpand.TabIndex = 14;
+            this.btnExpand.TabStop = false;
+            this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
+            // 
+            // tabOpciones
+            // 
+            this.tabOpciones.AttachedControl = this.superTabControlPanel2;
+            this.tabOpciones.GlobalItem = false;
+            this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
+            this.tabOpciones.Name = "tabOpciones";
             // 
             // Pantalla_Principal
             // 
@@ -1620,13 +1634,8 @@
             this.Load += new System.EventHandler(this.Pantalla_Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
-            this.grBoxDestajo.ResumeLayout(false);
-            this.grBoxDestajo.PerformLayout();
+            this.superTabControlPanel1.ResumeLayout(false);
+            this.pnlReportForms.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabEmpleadosDestajo.ResumeLayout(false);
@@ -1636,31 +1645,36 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabJornadaDia.ResumeLayout(false);
             this.tabJornadaDia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabJornadaNoche.ResumeLayout(false);
             this.tabJornadaNoche.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPersonal.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.grBoxDestajo.ResumeLayout(false);
+            this.grBoxDestajo.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExportar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            this.superTabControlPanel1.ResumeLayout(false);
-            this.pnlReportForms.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -1793,5 +1807,6 @@
         private System.Windows.Forms.RichTextBox txtDescripciones;
         private System.Windows.Forms.Label label20;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button btnActualizarListas;
     }
 }

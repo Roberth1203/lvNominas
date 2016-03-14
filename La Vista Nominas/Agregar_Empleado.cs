@@ -16,7 +16,6 @@ namespace La_Vista_Nominas
 {
     public partial class Agregar_Empleado : Form
     {
-        Pantalla_Principal main;
         Utilities sql = new Utilities();
         string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
         //string dataValues = ConfigurationManager.AppSettings.Get("rutaDB");
@@ -73,8 +72,6 @@ namespace La_Vista_Nominas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            int checkTurno,checkLicencia;
-
             String opcTurno = "", opcLicencia = "";
 
             if(txtNombre.Text.Equals("") || txtrfc.Text.Equals("") || txtcurp.Text.Equals(""))

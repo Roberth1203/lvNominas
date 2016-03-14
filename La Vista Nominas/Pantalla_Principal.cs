@@ -256,8 +256,8 @@ namespace La_Vista_Nominas
 
         private void obtenerEmpleados()
         {
-            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE status = 'ALTA' and area_laboral = 'DESTAJO'", null, dataValues);
-            DataTable empDia = sql.SQLdata("select nombre from personal where status = 'ALTA'", null, dataValues);
+            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'DESTAJO' AND status = 'ALTA' ORDER BY nombre", null, dataValues); //Cargar lista empleados destajo
+            DataTable empDia = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'HORAS' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // carga lista de empleados por horas
 
             List<string> DestajoList = new List<string>();
             List<string> EmployeeList = new List<string>();
@@ -619,17 +619,6 @@ namespace La_Vista_Nominas
             frm.Show();
         }
 
-        private void loadValueOnReport(Double var)
-        {
-            Classes.Movimientos_Destajo fieldContainer = new Classes.Movimientos_Destajo();
-
-            if ( fieldContainer.desc1 > 0.0 )
-                MessageBox.Show("Campo con dato cargado ...");
-            else
-                MessageBox.Show("Campo Desocupado ...");
-
-        }
-
         private void getDataForListaRaya()
         {
             String text = "select id_empleado,nomEmpleado,sum(dia1 + dia2 + dia3 + dia4 + dia5 + dia6) as CAJAS_TOTALES from datosDestajo where nomEmpleado not in ('null') group by id_empleado,nomEmpleado;";
@@ -653,50 +642,6 @@ namespace La_Vista_Nominas
             this.pnlReportForms.Tag = form;
             form.Show();
         }
-
-
-    // Carga los campos solicitados del empleado para la cabecera del reporte de nomina
-       /* private void loadEmployeeData()
-        {
-            DataTable headerData = new DataTable();
-            DataTable periodData = new DataTable();
-            DataTable datos = new DataTable();
-            
-            List<Classes.Movimientos_Destajo> movs = new List<Classes.Movimientos_Destajo>();
-            
-            headerData = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto,id from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
-            //periodData = sql.SQLdata("Select area_laboral,puesto from personal where nombre like '%" + listaEmpleadosDestajo1.SelectedItem.ToString() + "%';", null, dataValues);
-
-            reportViewer1.LocalReport.DataSources.Clear();
-            // utilizo el nombre del dataset asignado al reporte y el nombre de la instancia de clase intermediaria 
-            //reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("datosEmpleado",headerData));
-            //reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("infoPeriodo", periodData));
-            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", headerData));
-            reportViewer1.RefreshReport();
-
-
-            //Instancia de ambos DataSet para reporte de nomina.
-            Classes.Datos_Empleados origin = new Classes.Datos_Empleados();
-            Classes.Movimientos_Destajo originMov = new Classes.Movimientos_Destajo();
-
-            origin.nombre = headerData.Rows[0].ItemArray[0].ToString();
-            origin.nss = headerData.Rows[0].ItemArray[1].ToString();
-            origin.rfc = headerData.Rows[0].ItemArray[2].ToString();
-            origin.curp = headerData.Rows[0].ItemArray[3].ToString();
-            origin.depto = headerData.Rows[0].ItemArray[4].ToString();
-            origin.puesto = headerData.Rows[0].ItemArray[5].ToString();
-            origin.nCajas = Convert.ToInt32(headerData.Rows[0].ItemArray[6].ToString());
-            origin.iniPeriodo = DateTime.Parse(DateTime.Today.ToShortDateString());
-
-            originMov.sueldo = (Convert.ToDouble(labelTotalCajas.Text) * 6.20 );
-            originMov.aguinaldo = Convert.ToDouble(txtAguinaldoD.Text);
-            originMov.vacaciones = Convert.ToDouble(txtVacacionesD.Text);
-            originMov.prDominical = Convert.ToDouble(txtDominicalD.Text);
-            originMov.prVacacional = Convert.ToDouble(txtDominicalD.Text);
-
-            tabReportes.Focus();
-        }
-        */
 
         private void btnMostrarRecibo_Click(object sender, EventArgs e)
         {
@@ -866,5 +811,9 @@ namespace La_Vista_Nominas
             
        }
 
+        private void btnActualizarListas_Click(object sender, EventArgs e)
+        {
+            obtenerEmpleados();
+        }
     }
 }

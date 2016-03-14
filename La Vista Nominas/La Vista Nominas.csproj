@@ -286,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\work7.png" />
     <None Include="Resources\notebook91.png" />
     <None Include="Resources\settingsOver1.png" />
     <None Include="Resources\round60.png" />
