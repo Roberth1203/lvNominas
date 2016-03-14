@@ -52,6 +52,7 @@ namespace La_Vista_Nominas
             cargarRegistros();
             obtenerEmpleados();
             //this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -722,27 +723,15 @@ namespace La_Vista_Nominas
 
         private void btnListaRaya_Click(object sender, EventArgs e)
         {
-            getDataForListaRaya();
-            /*
-            if (this.pnlReportForms.Controls.Count > 0)
-                this.pnlReportForms.Controls.RemoveAt(0);
-
-            Form_Lista_Raya form = new Form_Lista_Raya();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            this.pnlReportForms.Controls.Add(form);
-            this.pnlReportForms.Tag = form;
-            form.Show();
-            */
+            //getDataForListaRaya();
+            generateDataList();
         }
 
-
+        
         // ======================================================== Métodos en seccion jornada diurna
-        private void tabJornadaDia_Click(object sender, EventArgs e)
-        {
-        }
-            private void LLenarGrid(string archivo, string hoja)
+        private void tabJornadaDia_Click(object sender, EventArgs e){}
+
+        private void LLenarGrid(string archivo, string hoja)
         {
             //declaramos las variables         
             OleDbConnection conexion = null;
@@ -830,5 +819,52 @@ namespace La_Vista_Nominas
             txtVacacionalD.Text = ConfigurationManager.AppSettings.Get("keyPrimaVacacional");
             txtCostoCaja.Text = ConfigurationManager.AppSettings.Get("keyCostoCaja");
         }
+
+        //private List<Classes.Resumen_Periodo> FillDgv()
+        private void generateDataList()
+        {
+            String instruccion = "select * from vw_resumen_pagos_periodo where empleado <> 'NULL';";
+            DataTable SQLresult = sql.SQLdata(instruccion, null, dataValues);
+            int indexR = 0;
+            
+            Classes.Parametros_Reporte encabezado = new Classes.Parametros_Reporte();
+
+            encabezado.iniPeriodo = DateTime.Now.AddDays(-6.0);
+            encabezado.finPeriodo = DateTime.Now;
+            
+
+            foreach (DataRow fila in SQLresult.Rows)
+            {
+                //Instancio un objeto de la clase y agrego datos de la fila correspondiente
+                Classes.Resumen_Periodo item = new Classes.Resumen_Periodo();   
+                item.nomEmpleado = SQLresult.Rows[indexR].ItemArray[0].ToString();
+                item.nCajas = Convert.ToInt32(SQLresult.Rows[indexR].ItemArray[1].ToString());
+                item.percepcion = Convert.ToDouble(SQLresult.Rows[indexR].ItemArray[2].ToString());
+                item.deduccion = Convert.ToDouble(SQLresult.Rows[indexR].ItemArray[3].ToString());
+                item.netoPago = Convert.ToDouble(SQLresult.Rows[indexR].ItemArray[4].ToString());
+
+                
+                MessageBox.Show(item.nomEmpleado + ", " + item.nCajas + ", " + item.percepcion + ", " + item.deduccion + ", " + item.netoPago);
+
+                encabezado.detallePagos.Add(item);
+                indexR++;
+                
+            }
+
+            frmReporte_Acumulados new_report = new frmReporte_Acumulados();
+            //new_report.Invoice.Add(item);
+            
+            new_report.Header.Add(encabezado);
+            //
+            //Enviamos el detalle de la Factura, como Detail es una lista e invoide.Details tambien
+            //es un lista del tipo EArticulo bastara con igualarla
+            //
+            new_report.Invoice = encabezado.detallePagos;
+
+            new_report.Show();
+            
+            
+       }
+
     }
 }

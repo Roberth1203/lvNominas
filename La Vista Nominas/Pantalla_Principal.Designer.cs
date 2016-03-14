@@ -153,6 +153,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label20 = new System.Windows.Forms.Label();
             this.txtDescripciones = new System.Windows.Forms.RichTextBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
@@ -184,6 +185,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
+            this.pnlReportForms.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
@@ -210,9 +212,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.tabPersonal);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -1270,6 +1272,7 @@
             // 
             // pnlReportForms
             // 
+            this.pnlReportForms.Controls.Add(this.reportViewer1);
             this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
             this.pnlReportForms.Name = "pnlReportForms";
             this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
@@ -1587,6 +1590,14 @@
             this.txtDescripciones.TabIndex = 35;
             this.txtDescripciones.Text = "";
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(743, 454);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1646,6 +1657,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
+            this.pnlReportForms.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1780,5 +1792,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.RichTextBox txtDescripciones;
         private System.Windows.Forms.Label label20;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

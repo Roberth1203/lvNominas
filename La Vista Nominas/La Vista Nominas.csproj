@@ -122,11 +122,19 @@
     <Compile Include="Classes\Datos_Empleados.cs" />
     <Compile Include="Classes\Datos_Periodo.cs" />
     <Compile Include="Classes\Movimientos_Destajo.cs" />
+    <Compile Include="Classes\Parametros_Reporte.cs" />
+    <Compile Include="Classes\Resumen_Periodo.cs" />
     <Compile Include="Form_Lista_Raya.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Lista_Raya.Designer.cs">
       <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporte_Acumulados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporte_Acumulados.Designer.cs">
+      <DependentUpon>frmReporte_Acumulados.cs</DependentUpon>
     </Compile>
     <Compile Include="IniciarSesion.cs">
       <SubType>Form</SubType>
@@ -164,6 +172,9 @@
     <EmbeddedResource Include="Form_Lista_Raya.resx">
       <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporte_Acumulados.resx">
+      <DependentUpon>frmReporte_Acumulados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +200,7 @@
     </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Reports\rptPruebas.rdlc" />
+    <EmbeddedResource Include="rptAcumuladosPeriodo.rdlc" />
     <EmbeddedResource Include="rptHojaDeControl.rdlc" />
     <EmbeddedResource Include="rptTotalesDestajo.rdlc" />
     <None Include="almacenDatos.xsc">
@@ -208,6 +220,7 @@
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Empleados.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Periodo.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Movimientos_Destajo.datasource" />
+    <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Parametros_Reporte.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

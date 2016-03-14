@@ -18,15 +18,14 @@ namespace La_Vista_Nominas
     {
         Pantalla_Principal main;
         Utilities sql = new Utilities();
-        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
-        string dataValues = ConfigurationManager.AppSettings.Get("rutaDB");
+        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
+        //string dataValues = ConfigurationManager.AppSettings.Get("rutaDB");
 
         public Agregar_Empleado()
         {
             InitializeComponent();
             try
             {
-                string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
                 remoteConnection.Open();
             }
