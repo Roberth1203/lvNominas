@@ -18,6 +18,7 @@ namespace La_Vista_Nominas
 {
     public partial class Pantalla_Principal : Form
     {
+        Classes.Parametros_Reporte class_Parametros = new Classes.Parametros_Reporte();
 
         //Datos a insertar en reporte
         public string nombre { get; set; }
@@ -31,7 +32,8 @@ namespace La_Vista_Nominas
         DataTable dt;
         List<string> conteoEmpleados = new List<string>();
         Utilities sql;
-        string tipoFiltro;
+        public string sentenciaSQL;
+        int indexR = 0;
         //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
         String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public Pantalla_Principal()
@@ -258,10 +260,11 @@ namespace La_Vista_Nominas
         {
             DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'DESTAJO' AND status = 'ALTA' ORDER BY nombre", null, dataValues); //Cargar lista empleados destajo
             DataTable empDia = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'HORAS' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // carga lista de empleados por horas
-
+            DataTable mixtos = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'MIXTO' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // Carga lista de empleados mixta
             List<string> DestajoList = new List<string>();
             List<string> EmployeeList = new List<string>();
-            int i = 0, j = 0;
+            List<string> MixList = new List<string>();
+            int i = 0, j = 0, k  = 0;
 
             foreach (DataRow row in empDia.Rows)
             {
@@ -276,8 +279,15 @@ namespace La_Vista_Nominas
                 j++;
             }
 
+            foreach ( DataRow row in mixtos.Rows)
+            {
+                MixList.Add(mixtos.Rows[k].ItemArray[0].ToString());
+                k++;
+            }
+
             listaEmpleadosDestajo1.DataSource = DestajoList;
             listaEmpleadosDia.DataSource = EmployeeList;
+            listEmpleadoMixto.DataSource = MixList;
         }
 
         private void listaEmpleadosDestajo1_MouseClick(object sender, MouseEventArgs e)
@@ -668,7 +678,6 @@ namespace La_Vista_Nominas
 
         private void btnListaRaya_Click(object sender, EventArgs e)
         {
-            //getDataForListaRaya();
             generateDataList();
         }
 
@@ -770,12 +779,12 @@ namespace La_Vista_Nominas
         {
             String instruccion = "select * from vw_resumen_pagos_periodo where empleado <> 'NULL';";
             DataTable SQLresult = sql.SQLdata(instruccion, null, dataValues);
-            int indexR = 0;
             
-            Classes.Parametros_Reporte encabezado = new Classes.Parametros_Reporte();
 
-            encabezado.iniPeriodo = DateTime.Now.AddDays(-6.0);
-            encabezado.finPeriodo = DateTime.Now;
+            class_Parametros = new Classes.Parametros_Reporte();
+
+            class_Parametros.iniPeriodo = DateTime.Now.AddDays(-6.0);
+            class_Parametros.finPeriodo = DateTime.Now;
             
 
             foreach (DataRow fila in SQLresult.Rows)
@@ -791,7 +800,7 @@ namespace La_Vista_Nominas
                 
                 MessageBox.Show(item.nomEmpleado + ", " + item.nCajas + ", " + item.percepcion + ", " + item.deduccion + ", " + item.netoPago);
 
-                encabezado.detallePagos.Add(item);
+                class_Parametros.detallePagos.Add(item);
                 indexR++;
                 
             }
@@ -799,21 +808,154 @@ namespace La_Vista_Nominas
             frmReporte_Acumulados new_report = new frmReporte_Acumulados();
             //new_report.Invoice.Add(item);
             
-            new_report.Header.Add(encabezado);
+            new_report.Header.Add(class_Parametros);
             //
             //Enviamos el detalle de la Factura, como Detail es una lista e invoide.Details tambien
             //es un lista del tipo EArticulo bastara con igualarla
             //
-            new_report.Invoice = encabezado.detallePagos;
+            new_report.Invoice = class_Parametros.detallePagos;
 
             new_report.Show();
-            
-            
-       }
+        }
+        
+        private string generaScript()
+        {
+            string query, cad = "SELECT id,nombre,area_laboral,puesto,status FROM personal ";
+            string where = "WHERE ", order = "ORDER BY ";
+
+            if (opcTodos.Checked == true)
+            {
+                if (opcClave.Checked == true)
+                    order = order + "id;";
+                else
+                {
+                    if (opcNombre.Checked == true)
+                    {
+                        order = order + "nombre;";
+                    }
+                    else
+                    {
+                        if (opcDepto.Checked == true)
+                        {
+                            order = order + "area_laboral;";
+                        }
+                        else
+                        {
+                            if (opcStatus.Checked == true)
+                            {
+                                order = order + "status;";
+                            }
+                            else
+                            {
+                                order = "";
+                            }
+                        }
+                    }
+                }
+                query = cad + order;
+                return query;
+                //generarCatEmpleados(cad);
+            }
+            else
+            {
+
+                if (opcClave.Checked == true)
+                    order = order + "id;";
+                else
+                {
+                    if (opcNombre.Checked == true)
+                    {
+                        order = order + "nombre;";
+                    }
+                    else
+                    {
+                        if (opcDepto.Checked == true)
+                        {
+                            order = order + "area_laboral;";
+                        }
+                        else
+                        {
+                            if (opcStatus.Checked == true)
+                            {
+                                order = order + "status;";
+                            }
+                            else
+                            {
+                                order = "";
+                            }
+                        }
+                    }
+                }
+                query = cad + "WHERE status = 'ALTA' " + order;
+                return query;
+                //generarCatEmpleados(cad);
+            }
+        }
+        public void generarCatEmpleados(string param)
+        {
+            //string instruccion = "select id,nombre,area_laboral,puesto,status from personal";
+            string instruccion = param;
+            MessageBox.Show(instruccion);
+            DataTable dt = sql.SQLdata(instruccion, null, dataValues);
+            class_Parametros = new Classes.Parametros_Reporte();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                //Instancio un objeto de la clase y agrego datos de la fila correspondiente
+                Classes.cat_Empleados item = new Classes.cat_Empleados();
+                item.clave = Convert.ToInt32(dt.Rows[indexR].ItemArray[0].ToString());
+                item.nombre =dt.Rows[indexR].ItemArray[1].ToString();
+                item.depto = dt.Rows[indexR].ItemArray[2].ToString();
+                item.puesto = dt.Rows[indexR].ItemArray[3].ToString();
+                item.status = dt.Rows[indexR].ItemArray[4].ToString();
+
+                class_Parametros.catEmpleados.Add(item);
+                indexR++;
+
+            }
+
+            frmCatalogoEmpleados new_report = new frmCatalogoEmpleados();
+            //new_report.Invoice.Add(item);
+
+            new_report.Header.Add(class_Parametros);
+            //
+            //Enviamos el detalle de la Factura, como Detail es una lista e invoide.Details tambien
+            //es un lista del tipo EArticulo bastara con igualarla
+            //
+            new_report.detalle_catalogo = class_Parametros.catEmpleados;
+
+            new_report.Show();
+
+        }
+
+        public void recibeParametro(string cad)
+        {
+            MessageBox.Show("Parametro Recibido ... " + cad);
+            generarCatEmpleados(cad);
+        }
+
+        
 
         private void btnActualizarListas_Click(object sender, EventArgs e)
         {
             obtenerEmpleados();
+        }
+
+        private void btnCatEmpleados_Click(object sender, EventArgs e)
+        {
+            pnlReport.Visible = true;
+        }
+
+        private void btnCerrarPanel_Click(object sender, EventArgs e)
+        {
+            pnlReport.Visible = false;
+        }
+
+        private void btnGuardarOpc_Click(object sender, EventArgs e)
+        {
+            string parametro = generaScript();
+            generarCatEmpleados(parametro);
+            pnlReport.Visible = false;
         }
     }
 }

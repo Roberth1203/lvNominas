@@ -10,5 +10,6 @@ namespace La_Vista_Nominas.Classes
         public DateTime iniPeriodo { get; set; }
         public DateTime finPeriodo { get; set; }
         public List<Resumen_Periodo> detallePagos = new List<Resumen_Periodo>();
+        public List<cat_Empleados> catEmpleados = new List<cat_Empleados>();
     }
 }

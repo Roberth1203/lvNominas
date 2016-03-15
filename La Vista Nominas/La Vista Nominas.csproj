@@ -118,6 +118,7 @@
     <Compile Include="Animacion_Inicial.Designer.cs">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\cat_Empleados.cs" />
     <Compile Include="Classes\datosListaRaya.cs" />
     <Compile Include="Classes\Datos_Empleados.cs" />
     <Compile Include="Classes\Datos_Periodo.cs" />
@@ -129,6 +130,18 @@
     </Compile>
     <Compile Include="Form_Lista_Raya.Designer.cs">
       <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogoEmpleados.Designer.cs">
+      <DependentUpon>frmCatalogoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpcCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpcCatalogo.Designer.cs">
+      <DependentUpon>frmOpcCatalogo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReporte_Acumulados.cs">
       <SubType>Form</SubType>
@@ -172,6 +185,12 @@
     <EmbeddedResource Include="Form_Lista_Raya.resx">
       <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoEmpleados.resx">
+      <DependentUpon>frmCatalogoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpcCatalogo.resx">
+      <DependentUpon>frmOpcCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporte_Acumulados.resx">
       <DependentUpon>frmReporte_Acumulados.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +218,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Reports\Catalogo_Empleados.rdlc" />
     <EmbeddedResource Include="Reports\rptPruebas.rdlc" />
     <EmbeddedResource Include="rptAcumuladosPeriodo.rdlc" />
     <EmbeddedResource Include="rptHojaDeControl.rdlc" />
@@ -216,6 +236,7 @@
     </None>
     <None Include="La Vista Nominas_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\Agregar_Empleado.datasource" />
+    <None Include="Properties\DataSources\La_Vista_Nominas.Classes.cat_Empleados1.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.datosListaRaya1.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Empleados.datasource" />
     <None Include="Properties\DataSources\La_Vista_Nominas.Classes.Datos_Periodo.datasource" />
