@@ -31,6 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Principal));
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.btnCatEmpleados = new System.Windows.Forms.Button();
+            this.pnlReportForms = new System.Windows.Forms.Panel();
+            this.pnlReport = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.btnCerrarPanel = new System.Windows.Forms.Button();
+            this.btnGuardarOpc = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.opcStatus = new System.Windows.Forms.RadioButton();
+            this.opcDepto = new System.Windows.Forms.RadioButton();
+            this.opcNombre = new System.Windows.Forms.RadioButton();
+            this.opcClave = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.opcActivos = new System.Windows.Forms.RadioButton();
+            this.opcTodos = new System.Windows.Forms.RadioButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnListaRaya = new System.Windows.Forms.Button();
+            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.itemselectedBar = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -47,12 +66,6 @@
             this.btnDrop = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.btnCatEmpleados = new System.Windows.Forms.Button();
-            this.pnlReportForms = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnListaRaya = new System.Windows.Forms.Button();
-            this.tabReportes = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.btnActualizarListas = new System.Windows.Forms.Button();
             this.btnNominaMasiva = new System.Windows.Forms.Button();
@@ -157,21 +170,14 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pnlReport = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.opcTodos = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.opcActivos = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.opcClave = new System.Windows.Forms.RadioButton();
-            this.opcNombre = new System.Windows.Forms.RadioButton();
-            this.opcDepto = new System.Windows.Forms.RadioButton();
-            this.opcStatus = new System.Windows.Forms.RadioButton();
-            this.btnGuardarOpc = new System.Windows.Forms.Button();
-            this.btnCerrarPanel = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
+            this.pnlReportForms.SuspendLayout();
+            this.pnlReport.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -183,8 +189,6 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            this.superTabControlPanel1.SuspendLayout();
-            this.pnlReportForms.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabEmpleadosDestajo.SuspendLayout();
@@ -206,10 +210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.pnlReport.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -253,6 +253,207 @@
             this.tabOpciones});
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "tabSecciones";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.btnCatEmpleados);
+            this.superTabControlPanel1.Controls.Add(this.pnlReportForms);
+            this.superTabControlPanel1.Controls.Add(this.btnListaRaya);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
+            this.superTabControlPanel1.TabIndex = 0;
+            this.superTabControlPanel1.TabItem = this.tabReportes;
+            // 
+            // btnCatEmpleados
+            // 
+            this.btnCatEmpleados.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCatEmpleados.Location = new System.Drawing.Point(97, 9);
+            this.btnCatEmpleados.Name = "btnCatEmpleados";
+            this.btnCatEmpleados.Size = new System.Drawing.Size(130, 29);
+            this.btnCatEmpleados.TabIndex = 3;
+            this.btnCatEmpleados.Text = "Catálogo de Empleados";
+            this.btnCatEmpleados.UseVisualStyleBackColor = false;
+            this.btnCatEmpleados.Click += new System.EventHandler(this.btnCatEmpleados_Click);
+            // 
+            // pnlReportForms
+            // 
+            this.pnlReportForms.Controls.Add(this.pnlReport);
+            this.pnlReportForms.Controls.Add(this.reportViewer1);
+            this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
+            this.pnlReportForms.Name = "pnlReportForms";
+            this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
+            this.pnlReportForms.TabIndex = 2;
+            // 
+            // pnlReport
+            // 
+            this.pnlReport.Controls.Add(this.label33);
+            this.pnlReport.Controls.Add(this.btnCerrarPanel);
+            this.pnlReport.Controls.Add(this.btnGuardarOpc);
+            this.pnlReport.Controls.Add(this.groupBox5);
+            this.pnlReport.Controls.Add(this.groupBox4);
+            this.pnlReport.Controls.Add(this.pictureBox7);
+            this.pnlReport.Location = new System.Drawing.Point(228, 123);
+            this.pnlReport.Name = "pnlReport";
+            this.pnlReport.Size = new System.Drawing.Size(257, 183);
+            this.pnlReport.TabIndex = 1;
+            this.pnlReport.Visible = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(68, 4);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(108, 13);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Opciones de Reporte";
+            // 
+            // btnCerrarPanel
+            // 
+            this.btnCerrarPanel.Location = new System.Drawing.Point(238, 2);
+            this.btnCerrarPanel.Name = "btnCerrarPanel";
+            this.btnCerrarPanel.Size = new System.Drawing.Size(17, 20);
+            this.btnCerrarPanel.TabIndex = 5;
+            this.btnCerrarPanel.Text = "X";
+            this.btnCerrarPanel.UseVisualStyleBackColor = true;
+            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
+            // 
+            // btnGuardarOpc
+            // 
+            this.btnGuardarOpc.Location = new System.Drawing.Point(173, 144);
+            this.btnGuardarOpc.Name = "btnGuardarOpc";
+            this.btnGuardarOpc.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarOpc.TabIndex = 4;
+            this.btnGuardarOpc.Text = "Aceptar";
+            this.btnGuardarOpc.UseVisualStyleBackColor = true;
+            this.btnGuardarOpc.Click += new System.EventHandler(this.btnGuardarOpc_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.opcStatus);
+            this.groupBox5.Controls.Add(this.opcDepto);
+            this.groupBox5.Controls.Add(this.opcNombre);
+            this.groupBox5.Controls.Add(this.opcClave);
+            this.groupBox5.Location = new System.Drawing.Point(13, 74);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(235, 69);
+            this.groupBox5.TabIndex = 3;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Ordenar por:";
+            // 
+            // opcStatus
+            // 
+            this.opcStatus.AutoSize = true;
+            this.opcStatus.Location = new System.Drawing.Point(126, 44);
+            this.opcStatus.Name = "opcStatus";
+            this.opcStatus.Size = new System.Drawing.Size(55, 17);
+            this.opcStatus.TabIndex = 3;
+            this.opcStatus.Text = "Status";
+            this.opcStatus.UseVisualStyleBackColor = true;
+            // 
+            // opcDepto
+            // 
+            this.opcDepto.AutoSize = true;
+            this.opcDepto.Location = new System.Drawing.Point(10, 44);
+            this.opcDepto.Name = "opcDepto";
+            this.opcDepto.Size = new System.Drawing.Size(92, 17);
+            this.opcDepto.TabIndex = 2;
+            this.opcDepto.Text = "Departamento";
+            this.opcDepto.UseVisualStyleBackColor = true;
+            // 
+            // opcNombre
+            // 
+            this.opcNombre.AutoSize = true;
+            this.opcNombre.Location = new System.Drawing.Point(126, 20);
+            this.opcNombre.Name = "opcNombre";
+            this.opcNombre.Size = new System.Drawing.Size(62, 17);
+            this.opcNombre.TabIndex = 1;
+            this.opcNombre.Text = "Nombre";
+            this.opcNombre.UseVisualStyleBackColor = true;
+            // 
+            // opcClave
+            // 
+            this.opcClave.AutoSize = true;
+            this.opcClave.Checked = true;
+            this.opcClave.Location = new System.Drawing.Point(10, 20);
+            this.opcClave.Name = "opcClave";
+            this.opcClave.Size = new System.Drawing.Size(52, 17);
+            this.opcClave.TabIndex = 0;
+            this.opcClave.TabStop = true;
+            this.opcClave.Text = "Clave";
+            this.opcClave.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.opcActivos);
+            this.groupBox4.Controls.Add(this.opcTodos);
+            this.groupBox4.Location = new System.Drawing.Point(10, 26);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(238, 44);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Mostrar: ";
+            // 
+            // opcActivos
+            // 
+            this.opcActivos.AutoSize = true;
+            this.opcActivos.Location = new System.Drawing.Point(128, 19);
+            this.opcActivos.Name = "opcActivos";
+            this.opcActivos.Size = new System.Drawing.Size(84, 17);
+            this.opcActivos.TabIndex = 2;
+            this.opcActivos.Text = "Solo Activos";
+            this.opcActivos.UseVisualStyleBackColor = true;
+            // 
+            // opcTodos
+            // 
+            this.opcTodos.AutoSize = true;
+            this.opcTodos.Checked = true;
+            this.opcTodos.Location = new System.Drawing.Point(12, 19);
+            this.opcTodos.Name = "opcTodos";
+            this.opcTodos.Size = new System.Drawing.Size(55, 17);
+            this.opcTodos.TabIndex = 1;
+            this.opcTodos.TabStop = true;
+            this.opcTodos.Text = "Todos";
+            this.opcTodos.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox7.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(256, 23);
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(743, 454);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // btnListaRaya
+            // 
+            this.btnListaRaya.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnListaRaya.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnListaRaya.Location = new System.Drawing.Point(3, 9);
+            this.btnListaRaya.Name = "btnListaRaya";
+            this.btnListaRaya.Size = new System.Drawing.Size(88, 29);
+            this.btnListaRaya.TabIndex = 1;
+            this.btnListaRaya.Text = "Lista de Raya";
+            this.btnListaRaya.UseVisualStyleBackColor = false;
+            this.btnListaRaya.Click += new System.EventHandler(this.btnListaRaya_Click);
+            // 
+            // tabReportes
+            // 
+            this.tabReportes.AttachedControl = this.superTabControlPanel1;
+            this.tabReportes.GlobalItem = false;
+            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
+            this.tabReportes.Name = "tabReportes";
             // 
             // tabPersonal
             // 
@@ -451,65 +652,6 @@
             this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
             this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
             this.tabPrincipal.Name = "tabPrincipal";
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.btnCatEmpleados);
-            this.superTabControlPanel1.Controls.Add(this.pnlReportForms);
-            this.superTabControlPanel1.Controls.Add(this.btnListaRaya);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(237, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(749, 512);
-            this.superTabControlPanel1.TabIndex = 0;
-            this.superTabControlPanel1.TabItem = this.tabReportes;
-            // 
-            // btnCatEmpleados
-            // 
-            this.btnCatEmpleados.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCatEmpleados.Location = new System.Drawing.Point(97, 9);
-            this.btnCatEmpleados.Name = "btnCatEmpleados";
-            this.btnCatEmpleados.Size = new System.Drawing.Size(130, 29);
-            this.btnCatEmpleados.TabIndex = 3;
-            this.btnCatEmpleados.Text = "Catálogo de Empleados";
-            this.btnCatEmpleados.UseVisualStyleBackColor = false;
-            this.btnCatEmpleados.Click += new System.EventHandler(this.btnCatEmpleados_Click);
-            // 
-            // pnlReportForms
-            // 
-            this.pnlReportForms.Controls.Add(this.pnlReport);
-            this.pnlReportForms.Controls.Add(this.reportViewer1);
-            this.pnlReportForms.Location = new System.Drawing.Point(3, 55);
-            this.pnlReportForms.Name = "pnlReportForms";
-            this.pnlReportForms.Size = new System.Drawing.Size(743, 454);
-            this.pnlReportForms.TabIndex = 2;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(743, 454);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // btnListaRaya
-            // 
-            this.btnListaRaya.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnListaRaya.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnListaRaya.Location = new System.Drawing.Point(3, 9);
-            this.btnListaRaya.Name = "btnListaRaya";
-            this.btnListaRaya.Size = new System.Drawing.Size(88, 29);
-            this.btnListaRaya.TabIndex = 1;
-            this.btnListaRaya.Text = "Lista de Raya";
-            this.btnListaRaya.UseVisualStyleBackColor = false;
-            this.btnListaRaya.Click += new System.EventHandler(this.btnListaRaya_Click);
-            // 
-            // tabReportes
-            // 
-            this.tabReportes.AttachedControl = this.superTabControlPanel1;
-            this.tabReportes.GlobalItem = false;
-            this.tabReportes.Image = ((System.Drawing.Image)(resources.GetObject("tabReportes.Image")));
-            this.tabReportes.Name = "tabReportes";
             // 
             // superTabControlPanel3
             // 
@@ -1655,150 +1797,6 @@
             // 
             this.toolTip1.ToolTipTitle = "Mostrar Vista Previa de Recibo al Momento";
             // 
-            // pnlReport
-            // 
-            this.pnlReport.Controls.Add(this.label33);
-            this.pnlReport.Controls.Add(this.btnCerrarPanel);
-            this.pnlReport.Controls.Add(this.btnGuardarOpc);
-            this.pnlReport.Controls.Add(this.groupBox5);
-            this.pnlReport.Controls.Add(this.groupBox4);
-            this.pnlReport.Controls.Add(this.pictureBox7);
-            this.pnlReport.Location = new System.Drawing.Point(228, 123);
-            this.pnlReport.Name = "pnlReport";
-            this.pnlReport.Size = new System.Drawing.Size(257, 183);
-            this.pnlReport.TabIndex = 1;
-            this.pnlReport.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox7.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(256, 23);
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
-            // opcTodos
-            // 
-            this.opcTodos.AutoSize = true;
-            this.opcTodos.Location = new System.Drawing.Point(12, 19);
-            this.opcTodos.Name = "opcTodos";
-            this.opcTodos.Size = new System.Drawing.Size(55, 17);
-            this.opcTodos.TabIndex = 1;
-            this.opcTodos.TabStop = true;
-            this.opcTodos.Text = "Todos";
-            this.opcTodos.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.opcActivos);
-            this.groupBox4.Controls.Add(this.opcTodos);
-            this.groupBox4.Location = new System.Drawing.Point(10, 26);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(238, 44);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Mostrar: ";
-            // 
-            // opcActivos
-            // 
-            this.opcActivos.AutoSize = true;
-            this.opcActivos.Location = new System.Drawing.Point(128, 19);
-            this.opcActivos.Name = "opcActivos";
-            this.opcActivos.Size = new System.Drawing.Size(84, 17);
-            this.opcActivos.TabIndex = 2;
-            this.opcActivos.TabStop = true;
-            this.opcActivos.Text = "Solo Activos";
-            this.opcActivos.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.opcStatus);
-            this.groupBox5.Controls.Add(this.opcDepto);
-            this.groupBox5.Controls.Add(this.opcNombre);
-            this.groupBox5.Controls.Add(this.opcClave);
-            this.groupBox5.Location = new System.Drawing.Point(13, 74);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(235, 69);
-            this.groupBox5.TabIndex = 3;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Ordenar por:";
-            // 
-            // opcClave
-            // 
-            this.opcClave.AutoSize = true;
-            this.opcClave.Location = new System.Drawing.Point(10, 20);
-            this.opcClave.Name = "opcClave";
-            this.opcClave.Size = new System.Drawing.Size(52, 17);
-            this.opcClave.TabIndex = 0;
-            this.opcClave.TabStop = true;
-            this.opcClave.Text = "Clave";
-            this.opcClave.UseVisualStyleBackColor = true;
-            // 
-            // opcNombre
-            // 
-            this.opcNombre.AutoSize = true;
-            this.opcNombre.Location = new System.Drawing.Point(126, 20);
-            this.opcNombre.Name = "opcNombre";
-            this.opcNombre.Size = new System.Drawing.Size(62, 17);
-            this.opcNombre.TabIndex = 1;
-            this.opcNombre.TabStop = true;
-            this.opcNombre.Text = "Nombre";
-            this.opcNombre.UseVisualStyleBackColor = true;
-            // 
-            // opcDepto
-            // 
-            this.opcDepto.AutoSize = true;
-            this.opcDepto.Location = new System.Drawing.Point(10, 44);
-            this.opcDepto.Name = "opcDepto";
-            this.opcDepto.Size = new System.Drawing.Size(92, 17);
-            this.opcDepto.TabIndex = 2;
-            this.opcDepto.TabStop = true;
-            this.opcDepto.Text = "Departamento";
-            this.opcDepto.UseVisualStyleBackColor = true;
-            // 
-            // opcStatus
-            // 
-            this.opcStatus.AutoSize = true;
-            this.opcStatus.Location = new System.Drawing.Point(126, 44);
-            this.opcStatus.Name = "opcStatus";
-            this.opcStatus.Size = new System.Drawing.Size(55, 17);
-            this.opcStatus.TabIndex = 3;
-            this.opcStatus.TabStop = true;
-            this.opcStatus.Text = "Status";
-            this.opcStatus.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardarOpc
-            // 
-            this.btnGuardarOpc.Location = new System.Drawing.Point(173, 144);
-            this.btnGuardarOpc.Name = "btnGuardarOpc";
-            this.btnGuardarOpc.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarOpc.TabIndex = 4;
-            this.btnGuardarOpc.Text = "Aceptar";
-            this.btnGuardarOpc.UseVisualStyleBackColor = true;
-            this.btnGuardarOpc.Click += new System.EventHandler(this.btnGuardarOpc_Click);
-            // 
-            // btnCerrarPanel
-            // 
-            this.btnCerrarPanel.Location = new System.Drawing.Point(238, 2);
-            this.btnCerrarPanel.Name = "btnCerrarPanel";
-            this.btnCerrarPanel.Size = new System.Drawing.Size(17, 20);
-            this.btnCerrarPanel.TabIndex = 5;
-            this.btnCerrarPanel.Text = "X";
-            this.btnCerrarPanel.UseVisualStyleBackColor = true;
-            this.btnCerrarPanel.Click += new System.EventHandler(this.btnCerrarPanel_Click);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(68, 4);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(108, 13);
-            this.label33.TabIndex = 6;
-            this.label33.Text = "Opciones de Reporte";
-            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1821,6 +1819,15 @@
             this.Load += new System.EventHandler(this.Pantalla_Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
+            this.superTabControlPanel1.ResumeLayout(false);
+            this.pnlReportForms.ResumeLayout(false);
+            this.pnlReport.ResumeLayout(false);
+            this.pnlReport.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1833,8 +1840,6 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            this.superTabControlPanel1.ResumeLayout(false);
-            this.pnlReportForms.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabEmpleadosDestajo.ResumeLayout(false);
@@ -1864,13 +1869,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.pnlReport.ResumeLayout(false);
-            this.pnlReport.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }

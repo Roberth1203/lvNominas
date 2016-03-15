@@ -822,73 +822,86 @@ namespace La_Vista_Nominas
         {
             string query, cad = "SELECT id,nombre,area_laboral,puesto,status FROM personal ";
             string where = "WHERE ", order = "ORDER BY ";
-
-            if (opcTodos.Checked == true)
+            try
             {
-                if (opcClave.Checked == true)
-                    order = order + "id;";
-                else
+                /*
+                if (opcTodos.Checked == false || opcActivos.Checked == false || opcClave.Checked == false || opcNombre.Checked == false || opcDepto.Checked == false || opcStatus.Checked == false)
                 {
-                    if (opcNombre.Checked == true)
-                    {
-                        order = order + "nombre;";
-                    }
+                    MessageBox.Show("Es necesario selecccionar alguna de las opciones !!", "La Vista Nominas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return null;
+                }
+                */
+                if (opcTodos.Checked == true)
+                {
+                    if (opcClave.Checked == true)
+                        order = order + "id;";
                     else
                     {
-                        if (opcDepto.Checked == true)
+                        if (opcNombre.Checked == true)
                         {
-                            order = order + "area_laboral;";
+                            order = order + "nombre;";
                         }
                         else
                         {
-                            if (opcStatus.Checked == true)
+                            if (opcDepto.Checked == true)
                             {
-                                order = order + "status;";
+                                order = order + "area_laboral;";
                             }
                             else
                             {
-                                order = "";
+                                if (opcStatus.Checked == true)
+                                {
+                                    order = order + "status;";
+                                }
+                                else
+                                {
+                                    order = "";
+                                }
                             }
                         }
                     }
+                    query = cad + order;
+                    return query;
+                    //generarCatEmpleados(cad);
                 }
-                query = cad + order;
-                return query;
-                //generarCatEmpleados(cad);
+                else
+                {
+
+                    if (opcClave.Checked == true)
+                        order = order + "id;";
+                    else
+                    {
+                        if (opcNombre.Checked == true)
+                        {
+                            order = order + "nombre;";
+                        }
+                        else
+                        {
+                            if (opcDepto.Checked == true)
+                            {
+                                order = order + "area_laboral;";
+                            }
+                            else
+                            {
+                                if (opcStatus.Checked == true)
+                                {
+                                    order = order + "status;";
+                                }
+                                else
+                                {
+                                    order = "";
+                                }
+                            }
+                        }
+                    }
+                    query = cad + "WHERE status = 'ALTA' " + order;
+                    return query;
+                    //generarCatEmpleados(cad);
+                }
             }
-            else
+            catch(Exception ee)
             {
-
-                if (opcClave.Checked == true)
-                    order = order + "id;";
-                else
-                {
-                    if (opcNombre.Checked == true)
-                    {
-                        order = order + "nombre;";
-                    }
-                    else
-                    {
-                        if (opcDepto.Checked == true)
-                        {
-                            order = order + "area_laboral;";
-                        }
-                        else
-                        {
-                            if (opcStatus.Checked == true)
-                            {
-                                order = order + "status;";
-                            }
-                            else
-                            {
-                                order = "";
-                            }
-                        }
-                    }
-                }
-                query = cad + "WHERE status = 'ALTA' " + order;
-                return query;
-                //generarCatEmpleados(cad);
+                return (ee.Message);
             }
         }
         public void generarCatEmpleados(string param)
