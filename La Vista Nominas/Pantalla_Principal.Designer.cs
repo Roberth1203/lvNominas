@@ -121,7 +121,7 @@
             this.tabJornadaDia = new System.Windows.Forms.TabPage();
             this.txtHoja = new System.Windows.Forms.TextBox();
             this.txtArchivo = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvHorarios = new System.Windows.Forms.DataGridView();
             this.btnBuscarArchivo = new System.Windows.Forms.Button();
             this.listaEmpleadosDia = new System.Windows.Forms.ListBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -197,7 +197,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabJornadaDia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabJornadaNoche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -232,9 +232,9 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.tabPersonal);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Location = new System.Drawing.Point(3, 41);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -1196,7 +1196,7 @@
             this.tabJornadaDia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabJornadaDia.Controls.Add(this.txtHoja);
             this.tabJornadaDia.Controls.Add(this.txtArchivo);
-            this.tabJornadaDia.Controls.Add(this.dataGridView2);
+            this.tabJornadaDia.Controls.Add(this.dgvHorarios);
             this.tabJornadaDia.Controls.Add(this.btnBuscarArchivo);
             this.tabJornadaDia.Controls.Add(this.listaEmpleadosDia);
             this.tabJornadaDia.Controls.Add(this.label31);
@@ -1226,13 +1226,13 @@
             this.txtArchivo.Size = new System.Drawing.Size(320, 20);
             this.txtArchivo.TabIndex = 14;
             // 
-            // dataGridView2
+            // dgvHorarios
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(220, 46);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(507, 381);
-            this.dataGridView2.TabIndex = 13;
+            this.dgvHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorarios.Location = new System.Drawing.Point(220, 46);
+            this.dgvHorarios.Name = "dgvHorarios";
+            this.dgvHorarios.Size = new System.Drawing.Size(507, 381);
+            this.dgvHorarios.TabIndex = 13;
             // 
             // btnBuscarArchivo
             // 
@@ -1852,7 +1852,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabJornadaDia.ResumeLayout(false);
             this.tabJornadaDia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabJornadaNoche.ResumeLayout(false);
             this.tabJornadaNoche.PerformLayout();
@@ -1990,7 +1990,7 @@
         private System.Windows.Forms.Panel pnlReportForms;
         private System.Windows.Forms.TextBox txtHoja;
         private System.Windows.Forms.TextBox txtArchivo;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvHorarios;
         private System.Windows.Forms.Button btnBuscarArchivo;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtGuantes;
