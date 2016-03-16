@@ -824,13 +824,6 @@ namespace La_Vista_Nominas
             string where = "WHERE ", order = "ORDER BY ";
             try
             {
-                /*
-                if (opcTodos.Checked == false || opcActivos.Checked == false || opcClave.Checked == false || opcNombre.Checked == false || opcDepto.Checked == false || opcStatus.Checked == false)
-                {
-                    MessageBox.Show("Es necesario selecccionar alguna de las opciones !!", "La Vista Nominas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return null;
-                }
-                */
                 if (opcTodos.Checked == true)
                 {
                     if (opcClave.Checked == true)
@@ -924,7 +917,6 @@ namespace La_Vista_Nominas
 
                 class_Parametros.catEmpleados.Add(item);
                 indexR++;
-
             }
 
             frmCatalogoEmpleados new_report = new frmCatalogoEmpleados();
@@ -966,6 +958,7 @@ namespace La_Vista_Nominas
 
         private void btnGuardarOpc_Click(object sender, EventArgs e)
         {
+            indexR = 0;
             string parametro = generaScript();
             generarCatEmpleados(parametro);
             pnlReport.Visible = false;
