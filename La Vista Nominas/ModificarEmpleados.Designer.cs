@@ -918,12 +918,8 @@
             // 
             this.listaImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listaImagenes.ImageStream")));
             this.listaImagenes.TransparentColor = System.Drawing.Color.Transparent;
-            this.listaImagenes.Images.SetKeyName(0, "cancelar.png");
-            this.listaImagenes.Images.SetKeyName(1, "cancelarOver.png");
-            this.listaImagenes.Images.SetKeyName(2, "GuardarNor.png");
-            this.listaImagenes.Images.SetKeyName(3, "GuardarOver.png");
-            this.listaImagenes.Images.SetKeyName(4, "defaultImage.png");
-            this.listaImagenes.Images.SetKeyName(5, "add image.png");
+            this.listaImagenes.Images.SetKeyName(0, "defaultImage.png");
+            this.listaImagenes.Images.SetKeyName(1, "add image.png");
             // 
             // pictureBox2
             // 
@@ -946,6 +942,7 @@
             this.imgEmpleado.TabIndex = 164;
             this.imgEmpleado.TabStop = false;
             this.imgEmpleado.Click += new System.EventHandler(this.imgEmpleado_Click);
+            this.imgEmpleado.MouseLeave += new System.EventHandler(this.imgEmpleado_MouseLeave);
             this.imgEmpleado.MouseHover += new System.EventHandler(this.imgEmpleado_MouseHover);
             // 
             // btnCancelar

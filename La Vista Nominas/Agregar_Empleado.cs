@@ -17,12 +17,15 @@ namespace La_Vista_Nominas
     public partial class Agregar_Empleado : Form
     {
         Utilities sql = new Utilities();
-        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";        
+        String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
+        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        Boolean isEmpty = false;       
         //string dataValues = ConfigurationManager.AppSettings.Get("rutaDB");
 
         public Agregar_Empleado()
         {
             InitializeComponent();
+            /*
             try
             {
                 SqlConnection remoteConnection = new SqlConnection(dataValues);
@@ -32,6 +35,7 @@ namespace La_Vista_Nominas
             {
                 MessageBox.Show("Error SQL: " + e);
             }
+            */
         }
 
         private void btnGuardar_MouseHover(object sender, EventArgs e)
@@ -55,14 +59,21 @@ namespace La_Vista_Nominas
         }
 
         private void imgEmpleado_Click(object sender, EventArgs e)
-        {
+        { 
             try
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    string imagen = openFileDialog1.FileName;
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Archivos de Imagen (*.jpg;*.png)|*.jpg;*.png";
+                dialog.Title = "Seleccione la Imagen";
+                dialog.FileName = string.Empty;
+                
+                if (dialog.ShowDialog() == DialogResult.OK)
+                { 
+                    string imagen = dialog.FileName;
                     imgEmpleado.Image = Image.FromFile(imagen);
                 }
+                isEmpty = true;
+                
             }
             catch (Exception ex)
             {
@@ -93,6 +104,11 @@ namespace La_Vista_Nominas
                 }
                 else
                     opcLicencia = "No";
+                if(comboSexo.SelectedItem.Equals(null))
+                {
+                    MessageBox.Show("Debe sekeccionar un género !!!");
+                    comboSexo.BackColor = Color.Tomato;
+                }
                 try
                 {
 
@@ -217,7 +233,7 @@ namespace La_Vista_Nominas
                 // Stream usado como buffer
                 System.IO.MemoryStream ms = new System.IO.MemoryStream();
                 // Se guarda la imagen en el buffer
-                imgEmpleado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                imgEmpleado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
                 // Se extraen los bytes del buffer para asignarlos como valor para el
                 // parámetro.
                 cmd.Parameters["@foto"].Value = ms.GetBuffer();
@@ -225,12 +241,12 @@ namespace La_Vista_Nominas
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
+                MessageBox.Show("Registro Guardado Correctamente");
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("Registro Guardado Correctamente");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -296,6 +312,8 @@ namespace La_Vista_Nominas
                 byte[] img = (byte[])dr[0] ;
 
                 this.imgEmpleado.Image = Bytes2Image(img);
+
+                isEmpty = true;
             }
             catch (Exception ex)
             {
@@ -305,14 +323,20 @@ namespace La_Vista_Nominas
 
         private void imgEmpleado_MouseHover(object sender, EventArgs e)
         {
-            imgEmpleado.Image = imageList1.Images[6];
-            imgEmpleado.Cursor = Cursors.Hand;
+            if(isEmpty == false)
+            {
+                imgEmpleado.Image = imageList1.Images[6];
+                imgEmpleado.Cursor = Cursors.Hand;
+            }    
         }
 
         private void imgEmpleado_MouseLeave(object sender, EventArgs e)
         {
-            imgEmpleado.Image = imageList1.Images[7];
-            imgEmpleado.Cursor = Cursors.Default;
+            if (isEmpty == false)
+            {
+                imgEmpleado.Image = imageList1.Images[7];
+                imgEmpleado.Cursor = Cursors.Default;
+            }
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)

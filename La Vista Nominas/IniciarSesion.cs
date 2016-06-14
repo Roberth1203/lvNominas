@@ -17,10 +17,11 @@ namespace La_Vista_Nominas
         SqlConnection con = new SqlConnection();
         DataTable dt = new DataTable();
         Pantalla_Principal start;
-        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
-        String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
+        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        //String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public IniciarSesion()
         {
+            MaximizeBox = false;
             InitializeComponent();
         }
 
@@ -29,7 +30,7 @@ namespace La_Vista_Nominas
             //cargaDatos();
             start = new Pantalla_Principal();
             start.Show();
-            this.Close();
+            this.Hide();
         }
 
         public static SqlConnection connectToSQL(string connectionValues)
@@ -154,15 +155,17 @@ namespace La_Vista_Nominas
 
         private void pictureBox4_MouseHover(object sender, EventArgs e)
         {
-            pictureBox4.Size = new System.Drawing.Size(55, 55);
+            pictureBox4.BackColor = Color.Silver;
+            //pictureBox4.Size = new System.Drawing.Size(55, 55);
         }
 
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox4.Size = new System.Drawing.Size(50, 50);
+            pictureBox4.BackColor = Color.Transparent;
+            //pictureBox4.Size = new System.Drawing.Size(50, 50);
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        private void IniciarSesion_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

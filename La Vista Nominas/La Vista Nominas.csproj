@@ -123,10 +123,17 @@
     <Compile Include="Animacion_Inicial.Designer.cs">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cargar_Lista_Asistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargar_Lista_Asistencia.Designer.cs">
+      <DependentUpon>Cargar_Lista_Asistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\cat_Empleados.cs" />
     <Compile Include="Classes\datosListaRaya.cs" />
     <Compile Include="Classes\Datos_Empleados.cs" />
     <Compile Include="Classes\Datos_Periodo.cs" />
+    <Compile Include="excelWorksheet.cs" />
     <Compile Include="Classes\Movimientos_Destajo.cs" />
     <Compile Include="Classes\Parametros_Reporte.cs" />
     <Compile Include="Classes\Resumen_Periodo.cs" />
@@ -186,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Animacion_Inicial.resx">
       <DependentUpon>Animacion_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargar_Lista_Asistencia.resx">
+      <DependentUpon>Cargar_Lista_Asistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Lista_Raya.resx">
       <DependentUpon>Form_Lista_Raya.cs</DependentUpon>
@@ -312,6 +322,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="la vista nominas.ico" />
+    <None Include="Resources\AppSettings.png" />
     <None Include="Resources\work7.png" />
     <None Include="Resources\notebook91.png" />
     <None Include="Resources\settingsOver1.png" />

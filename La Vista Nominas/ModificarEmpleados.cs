@@ -19,6 +19,7 @@ namespace La_Vista_Nominas
         Utilities util;
         public int numeroEmpleado, idEmpleado;
         public string tipo;
+        Boolean empty = false;
         //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
         String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public ModificarEmpleados()
@@ -307,6 +308,9 @@ namespace La_Vista_Nominas
                 DataTable dt = util.SQLdata(cad, null, dataValues);
                 string dato = dt.Rows[0].ItemArray[0].ToString();
 
+                if (dato.Equals("")) //Valido si hay imagen asignada
+                    empty = true;
+
                 SqlDataReader dr;
                 dr = comando.ExecuteReader();
 
@@ -321,17 +325,50 @@ namespace La_Vista_Nominas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Este empleado aún no tiene una imagen asignada !!" + ex.ToString());
+                MessageBox.Show("Este empleado aún no tiene una imagen asignada !!" + ex.Message);
             }
         }
 
         private void imgEmpleado_MouseHover(object sender, EventArgs e)
         {
-            imgEmpleado.Cursor = Cursors.Hand;
+            if(empty == true)
+            {
+                imgEmpleado.Image = listaImagenes.Images[1];
+                imgEmpleado.Cursor = Cursors.Hand;
+            }
+        }
+
+        private void imgEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            if(empty == true)
+            {
+                imgEmpleado.Image = listaImagenes.Images[0];
+                imgEmpleado.Cursor = Cursors.Hand;
+            }
         }
 
         private void imgEmpleado_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Archivos de Imagen (*.jpg;*.png)|*.jpg;*.png";
+                dialog.Title = "Seleccione la Imagen";
+                dialog.FileName = string.Empty;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imagen = dialog.FileName;
+                    imgEmpleado.Image = Image.FromFile(imagen);
+                }
+                empty = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            /*
             try
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -344,6 +381,7 @@ namespace La_Vista_Nominas
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            */
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)

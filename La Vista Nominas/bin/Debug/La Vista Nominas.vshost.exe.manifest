@@ -58,6 +58,11 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Net.Http" version="4.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DevComponents.DotNetBar.SuperGrid.dll" size="1159168">
       <assemblyIdentity name="DevComponents.DotNetBar.SuperGrid" version="11.2.0.1" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -106,14 +111,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1507840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1658368">
       <assemblyIdentity name="La Vista Nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zCftQDBq9P7nSv7+BrG8ejCU9qU=</dsig:DigestValue>
+        <dsig:DigestValue>pzRJMeBcWnORYWlGgYC+0nLgFnI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -165,25 +170,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Net.Http.dll" size="180832">
-      <assemblyIdentity name="System.Net.Http" version="2.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vnPECG7jPdg4oYzUFMTu1U4KLqc=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <file name="La Vista Nominas.exe.config" size="2197">
+  <file name="La Vista Nominas.exe.config" size="2533">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>2uzmj0IasSFQMswhV66h91DVYo4=</dsig:DigestValue>
+      <dsig:DigestValue>sqM0oaoiwlZyjDzAnzBtW++Uy4Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="la vista nominas.ico" size="1150">

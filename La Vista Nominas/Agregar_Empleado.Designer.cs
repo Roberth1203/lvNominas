@@ -419,6 +419,7 @@
             // 
             // comboSexo
             // 
+            this.comboSexo.BackColor = System.Drawing.SystemColors.Window;
             this.comboSexo.FormattingEnabled = true;
             this.comboSexo.Items.AddRange(new object[] {
             "Seleccionar ...",

@@ -22,22 +22,23 @@ namespace La_Vista_Nominas
     {
         Classes.Parametros_Reporte class_Parametros = new Classes.Parametros_Reporte();
 
-        //Datos a insertar en reporte
+        /*Datos a insertar en reporte
         public string nombre { get; set; }
         public string NSS { get; set; }
         public string curp { get; set; }
         public string depto { get; set; }
-
-
+        */
+        
         ModificarEmpleados update;
         public String idCapturado;
+        DataTable dtEmpleados = new DataTable();
         DataTable dt;
         List<string> conteoEmpleados = new List<string>();
         Utilities sql;
         public string sentenciaSQL;
         int indexR = 0;
-        //string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
-        String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
+        string dataValues = "Data Source=lvserver \\" + "sqlexpress;Initial Catalog=nomina;Integrated Security=True";
+        //String dataValues = ConfigurationManager.ConnectionStrings["La_Vista_Nominas.Properties.Settings.nominaConnectionString"].ConnectionString;
         public Pantalla_Principal()
         {
             InitializeComponent();
@@ -45,11 +46,12 @@ namespace La_Vista_Nominas
 
         private void Pantalla_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void Pantalla_Principal_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             dt = new DataTable();
             sql = new Utilities();
             loadSettings();
@@ -83,6 +85,7 @@ namespace La_Vista_Nominas
             btnAdd.Image = listButtonImages.Images[0];
             itemselectedBar.Visible = false;
         }
+
         private void btnDrop_MouseHover(object sender, EventArgs e)
         {
             btnDrop.Location = new Point(166, 0);
@@ -116,17 +119,10 @@ namespace La_Vista_Nominas
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dt = new DataTable();
-            dt = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
-                                       "codpost AS CODIGO_POSTAL,colonia AS COLONIA,municipio AS MUNICIPIO,estado AS ESTADO,nacimiento AS FECHA_NACIMIENTO," +
-                                       "ingreso AS FECHA_INGRESO,area_laboral AS DEPARTAMENTO, puesto AS PUESTO," +
-                                       "sexo AS SEXO,lugnac AS LUGAR_NACIMIENTO,curp AS CURP,rfc AS RFC,ife AS IFE,tiponomina AS NOMINA,jornada AS JORNADA," +
-                                       "rolaturno AS ROLA_TURNO,forma_pago AS TIPO_PAGO,cuenta AS NUM_CUENTA,salariodiurno AS SALARIO_DIA,salarionoc AS SALARIO_NOCHE," +
-                                       "salariobase AS SALARIO_BASE,nss AS NSS,licencia AS LICENCIA,ISNULL(tiplic, 'S/N') AS TIPO,ISNULL(claselic, 'S/N') AS CLASE," +
-                                       "beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO,telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS TEL_OTRO," +
-                                       "correo AS E_MAIL,status AS STATUS,imagen AS IMAGEN FROM personal where nombre like '%" + textBox1.Text + "%'", null, dataValues);
-            dataGridView1.DataSource = dt;
-
+            //Genero un dataview y realizo la busqueda copiando los datos de dtEmpleados
+            DataView dv = dtEmpleados.DefaultView;
+            dv.RowFilter = "NOMBRE like '%" + textBox1.Text + "%'";
+            dataGridView1.DataSource = dv;
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
@@ -152,7 +148,7 @@ namespace La_Vista_Nominas
         public void cargarRegistros()
         {
             //get data
-            DataTable dt = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
+            dtEmpleados = sql.SQLdata("SELECT id AS ID,nombre AS NOMBRE,calle + ' ' + next AS DOMICILIO,ISNULL(nint, 'S/N') AS NUM_INTERIOR," +
                                        "codpost AS CODIGO_POSTAL,colonia AS COLONIA,municipio AS MUNICIPIO,estado AS ESTADO,nacimiento AS FECHA_NACIMIENTO," +
                                        "ingreso AS FECHA_INGRESO,area_laboral AS DEPARTAMENTO, puesto AS PUESTO," +
                                        "sexo AS SEXO,lugnac AS LUGAR_NACIMIENTO,curp AS CURP,rfc AS RFC,ife AS IFE,tiponomina AS NOMINA,jornada AS JORNADA," +
@@ -160,7 +156,7 @@ namespace La_Vista_Nominas
                                        "salariobase AS SALARIO_BASE,nss AS NSS,licencia AS LICENCIA,ISNULL(tiplic, 'S/N') AS TIPO,ISNULL(claselic, 'S/N') AS CLASE," +
                                        "beneficiario AS BENEFICIARIO,parentezco AS PARENTESCO,telCasa AS TEL_CASA,telMovil AS MOVIL,telOtro AS TEL_OTRO," +
                                        "correo AS E_MAIL,status AS STATUS,imagen AS IMAGEN FROM personal;", null, dataValues);
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dtEmpleados;
 
             //define width for each column
             dataGridView1.Columns[0].Width = 40;
@@ -199,7 +195,13 @@ namespace La_Vista_Nominas
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Modulo en desarrollo !!!");
+            int indice = 0;
+            MessageBox.Show("Empleados encontrados en el DataTable dt !!!");
+            foreach ( DataRow file in dtEmpleados.Rows)
+            {
+                MessageBox.Show("Nombre del Empleado: " + dtEmpleados.Rows[indice].ItemArray[1].ToString());
+                indice++;
+            }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -241,14 +243,17 @@ namespace La_Vista_Nominas
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            ModificarEmpleados edit = new ModificarEmpleados();
+            edit.tipo = "cambio";
+            edit.txtNoEmp.Text = idCapturado.ToString();
             //MessageBox.Show("Id: " + idCapturado);
 
             //ModificarEmpleados update = new ModificarEmpleados();
-            update.tipo = "cambio";
+            
             //update.numeroEmpleado = idCapturado;
 
             //update.txtNoEmp.Text = idCapturado.ToString();
-            update.Show();
+            edit.Show();
         }
 
 
@@ -260,9 +265,9 @@ namespace La_Vista_Nominas
 
         private void obtenerEmpleados()
         {
-            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'DESTAJO' AND status = 'ALTA' ORDER BY nombre", null, dataValues); //Cargar lista empleados destajo
-            DataTable empDia = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'HORAS' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // carga lista de empleados por horas
-            DataTable mixtos = sql.SQLdata("SELECT nombre FROM personal WHERE calculo = 'MIXTO' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // Carga lista de empleados mixta
+            DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE calculo like '%DESTAJO%' AND status = 'ALTA' ORDER BY nombre", null, dataValues); //Cargar lista empleados destajo
+            DataTable empDia = sql.SQLdata("SELECT nombre FROM personal WHERE calculo like '%HORAS%' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // carga lista de empleados por horas
+            DataTable mixtos = sql.SQLdata("SELECT nombre FROM personal WHERE calculo like '%MIXTO%' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // Carga lista de empleados mixta
             List<string> DestajoList = new List<string>();
             List<string> EmployeeList = new List<string>();
             List<string> MixList = new List<string>();
@@ -336,7 +341,7 @@ namespace La_Vista_Nominas
 
         }
 
-        private void saveChanges()
+        private void guardarDatos()
         {
             try
             {
@@ -374,7 +379,7 @@ namespace La_Vista_Nominas
         private void button2_Click(object sender, EventArgs e)
         {
             Nomina_Individual showReport = new Nomina_Individual();
-            saveChanges();
+            guardarDatos();
         }
 
 
@@ -667,6 +672,9 @@ namespace La_Vista_Nominas
         private void btnExpand_Click(object sender, EventArgs e)
         {
             grBoxDestajo.Size = new System.Drawing.Size(656, 147);
+            labelHoras.Location = new Point(30,163);
+            btnContract2.Location = new Point(685, 162);
+            btnExpand2.Location = new Point(685, 162);
             btnExpand.Visible = false;
             btnContract.Visible = true;
         }
@@ -674,6 +682,9 @@ namespace La_Vista_Nominas
         private void btnContract_Click(object sender, EventArgs e)
         {
             grBoxDestajo.Size = new System.Drawing.Size(656, 0);
+            labelHoras.Location = new Point(30,23);
+            btnContract2.Location = new Point(685,26);
+            btnExpand2.Location = new Point(685,26);
             btnContract.Visible = false;
             btnExpand.Visible = true;
         }
@@ -730,6 +741,11 @@ namespace La_Vista_Nominas
 
         private void btnBuscarArchivo_Click(object sender, EventArgs e)
         {
+            Cargar_Lista_Asistencia horas = new Cargar_Lista_Asistencia();
+            horas.Show();
+            /*
+            List<string> listaHorarios = new List<string>();
+            indexR = 0;
             //creamos un objeto OpenDialog que es un cuadro de dialogo para buscar archivos
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx"; //le indicamos el tipo de filtro en este caso que busque
@@ -746,6 +762,17 @@ namespace La_Vista_Nominas
                 txtArchivo.Text = dialog.FileName;
                 excelWorksheet.readWoorkSheet(dgvHorarios, txtArchivo.Text);
             }
+            
+            foreach ( DataGridViewRow fila in dgvHorarios.Rows)
+            {
+                if( dgvHorarios.Rows[indexR].Cells["Empleado"].Value != null)
+                {
+                    MessageBox.Show("Empleado " + dgvHorarios.Rows[indexR].Cells["Empleado"].Value + " Horas Laboradas: " + dgvHorarios.Rows[indexR].Cells["Horas Laboradas"].Value);
+                    indexR++;
+                }
+            }
+            indexR = 0;
+            */
         }
 
         private void label32_Click(object sender, EventArgs e)
@@ -765,11 +792,19 @@ namespace La_Vista_Nominas
 
         private void loadSettings()
         {
+            //Opciones Calculo Destajo
             txtAguinaldoD.Text = ConfigurationManager.AppSettings.Get("keyAguinaldo");
             txtVacacionesD.Text = ConfigurationManager.AppSettings.Get("keyVacaciones");
             txtDominicalD.Text = ConfigurationManager.AppSettings.Get("keySeptimoDia");
             txtVacacionalD.Text = ConfigurationManager.AppSettings.Get("keyPrimaVacacional");
             txtCostoCaja.Text = ConfigurationManager.AppSettings.Get("keyCostoCaja");
+
+            //Opciones Calculo Horas
+            txtCostoHora.Text = ConfigurationManager.AppSettings.Get("$hora");
+            txtAguiHrs.Text = ConfigurationManager.AppSettings.Get("keyAgHrs");
+            txtVacHrs.Text = ConfigurationManager.AppSettings.Get("keyVacHrs");
+            txtPrVacHrs.Text = ConfigurationManager.AppSettings.Get("keyPrVHrs");
+            txtSepDiaHrs.Text = ConfigurationManager.AppSettings.Get("keyDomHrs");
         }
 
         //private List<Classes.Resumen_Periodo> FillDgv()
@@ -962,157 +997,45 @@ namespace La_Vista_Nominas
             pnlReport.Visible = false;
         }
 
-        /*
-        ===============================================================================================================================
-                                                    Clases para trabajar con archivos excel
-        ===============================================================================================================================
-        */
-
-        public class excelWorksheet
+        private void btnExpand2_Click(object sender, EventArgs e)
         {
-            public static object missVal = System.Reflection.Missing.Value;
+            btnContract2.Visible = true;
+            btnExpand2.Visible = false;
+        }
 
-            public static excel.Application start()
-            {
-                try
-                {
-                    excel.Application xlApp = new excel.Application();
-                    if (xlApp == null)
-                    {
-                        MessageBox.Show("Necesitas instalar Excel");
-                        return null;
-                    }
-                    return xlApp;
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                    return null;
-                }
-            }
+        private void btnContract2_Click(object sender, EventArgs e)
+        {
+            btnExpand2.Visible = true;
+            btnContract2.Visible = false;
+        }
 
-            public static excel.Workbook createExcel()
-            {
-                excel.Application xlApp = start();
-                try
-                {
-                    excel.Workbook xlWorkBook = xlApp.Workbooks.Add(missVal);
-                    xlApp.Visible = true;
-                    return xlWorkBook;
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                    return null;
-                }
-            }
+        private void btnPrueba_Click(object sender, EventArgs e)
+        {
+            sql.openExcelFile(dgvPruebas);
+        }
 
-            public static void readWoorkSheet(DataGridView dgv, string path)
-            {
-                data.DataTable dt = new data.DataTable();
-                excel.Application xlApp = start();
-                try
-                {
-                    excel.Workbook xlWorkBook = xlApp.Workbooks.Open(path, 0, true, 5, "", "", true, excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-                    excel.Worksheet xlWorkSheet = (excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-                    excel.Range range = xlWorkSheet.UsedRange;
-                    for (int i = 1; i <= range.Columns.Count; i++)
-                        dt.Columns.Add(range.Cells[1, i].Value2);
-                    for (int i = 2; i <= range.Rows.Count; i++)
-                    {
-                        data.DataRow dr = dt.NewRow();
-                        for (int j = 1; j <= range.Columns.Count; j++)
-                            dr[j - 1] = ((range.Cells[i, j] as excel.Range).Value2).ToString();
-                        dt.Rows.Add(dr);
-                    }
-                    dgv.DataSource = dt;
-                    xlWorkBook.Close(false, null, null);
-                    xlApp.Quit();
-                    releaseObject(xlWorkSheet);
-                    releaseObject(xlWorkBook);
-                    releaseObject(xlApp);
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                }
-            }
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            toolTipSave.IsBalloon = true; //Muestra el control como globo de dialogo.
+            toolTipSave.SetToolTip(button2, "Guardar cambios"); //defino el control y agrego el texto a mostrar
+        }
 
-            public static excel.Worksheet createWoorkSheet(data.DataTable dt = null, DataGridView dgv = null)
-            {
-                excel.Workbook xlWorkBook = createExcel();
-                excel.Worksheet xlWorkSheet = new excel.Worksheet();
-                try
-                {
-                    if (xlWorkBook != null)
-                    {
-                        xlWorkSheet = (excel.Worksheet)xlWorkBook.Sheets[1];
-                        fillExcel(xlWorkSheet, dt, dgv);
-                        xlWorkSheet.Activate();
-                        xlWorkBook.Saved = false;
-                    }
-                    return xlWorkSheet;
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                    return null;
-                }
-            }
+        private void btnActualizarListas_MouseHover(object sender, EventArgs e)
+        {
+            toolTipActualizar.IsBalloon = true;
+            toolTipActualizar.SetToolTip(btnActualizarListas,"Actualizar listas de empleados.");
+        }
 
-            public static void fillExcel(excel.Worksheet xlWorkSheet, data.DataTable dt = null, DataGridView dgv = null)
-            {
-                try
-                {
-                    if (dt == null)
-                    {
-                        dt = new data.DataTable();
-                        foreach (DataGridViewColumn column in dgv.Columns)
-                        {
-                            data.DataColumn col = new data.DataColumn(column.Name);
-                            dt.Columns.Add(col);
-                        }
-                        foreach (DataGridViewRow row in dgv.Rows)
-                        {
-                            data.DataRow dr = dt.NewRow();
-                            for (int i = 0; i < dgv.ColumnCount; i++)
-                                dr[i] = row.Cells[i].Value.ToString();
-                            dt.Rows.Add(dr);
-                        }
-                    }
-                    int c = 1;
-                    foreach (data.DataColumn column in dt.Columns)
-                    {
-                        xlWorkSheet.Cells[1, c] = column.ColumnName;
-                        c++;
-                    }
-                    for (int i = 2; i <= dt.Rows.Count; i++)
-                        for (int j = 1; j <= dt.Columns.Count; j++)
-                            xlWorkSheet.Cells[i, j] = dt.Rows[i - 2].ItemArray[j - 1].ToString();
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                }
-            }
+        private void btnMostrarRecibo_MouseHover(object sender, EventArgs e)
+        {
+            toolTipImprime1.IsBalloon = true;
+            toolTipImprime1.SetToolTip(btnMostrarRecibo,"Mostrar recibo de empleado actual.");
+        }
 
-            private static void releaseObject(object obj)
-            {
-                try
-                {
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                    obj = null;
-                }
-                catch (Exception ex)
-                {
-                    obj = null;
-                    MessageBox.Show("Unable to release the Object " + ex.ToString());
-                }
-                finally
-                {
-                    GC.Collect();
-                }
-            }
+        private void btnNominaMasiva_MouseHover(object sender, EventArgs e)
+        {
+            toolTipRecibos.IsBalloon = true;
+            toolTipRecibos.SetToolTip(btnNominaMasiva, "Mostrar recibos de todos los empleados");
         }
     }
 }
