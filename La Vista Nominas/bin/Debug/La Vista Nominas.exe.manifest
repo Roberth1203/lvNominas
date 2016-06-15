@@ -111,14 +111,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1665536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Vista Nominas.exe" size="1667072">
       <assemblyIdentity name="La Vista Nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Ow/eMSfVs5IGkxV0y7/YFDgN8Mo=</dsig:DigestValue>
+        <dsig:DigestValue>tsBJKIq9TS0aU+WDSZPkOy8A6SE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

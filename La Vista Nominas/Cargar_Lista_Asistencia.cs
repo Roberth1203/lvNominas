@@ -220,18 +220,22 @@ namespace La_Vista_Nominas
         {
             try
             {
+                /*
                 int i = 0;
                 foreach (DataGridViewRow file in dgvHorarios.Rows)
                 {
                     MessageBox.Show("Horas laboradas de: " + dgvHorarios.Rows[i].Cells["Empleado"].Value.ToString() + " son: " + dgvHorarios.Rows[i].Cells["Horas Laboradas"].Value.ToString());
                     i++;
                 }
+                */
 
                 //Cargo los datos a la tabla perdep_deduc_emp
-
-                string query = "INSERT INTO percep_deduc_Emp (nomEmpleado,totalHoras)values('" +
+                DateTime date = DateTime.Now;
+                String fecha = date.ToShortDateString();
+                string query = "INSERT INTO percep_deduc_Emp (nomEmpleado,totalHoras,ultimaModificacion)values('" +
                                 dgvHorarios.Rows[0].Cells["Empleado"].Value.ToString() + "'," +
-                                dgvHorarios.Rows[0].Cells["Horas Laboradas"].Value.ToString() + ");";
+                                dgvHorarios.Rows[0].Cells["Horas Laboradas"].Value.ToString() + ",'" +
+                                fecha + "');";
 
                 sql.SQLstatement(query, null, connectionString);
                 MessageBox.Show("Datos Almacenados !!");
