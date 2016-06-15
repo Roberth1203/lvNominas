@@ -211,15 +211,7 @@ namespace La_Vista_Nominas
                 excelWorksheet.readWoorkSheet(dgvHorarios, txtArchivo.Text);
                 dgvHorarios.Columns[indexR].DefaultCellStyle.Format = "hh:mm";
             }
-
-            foreach (DataGridViewRow fila in dgvHorarios.Rows)
-            {
-                if (dgvHorarios.Rows[indexR].Cells["Empleado"].Value != null)
-                {
-                    MessageBox.Show("Empleado " + dgvHorarios.Rows[indexR].Cells["Empleado"].Value + " Horas Laboradas: " + dgvHorarios.Rows[indexR].Cells["Horas Laboradas"].Value);
-                    indexR++;
-                }
-            }
+            
             addHours();
             indexR = 0;
         }

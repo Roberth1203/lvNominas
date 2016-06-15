@@ -185,6 +185,46 @@
             this.toolTipActualizar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipImprime1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipRecibos = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtHrsSemana = new System.Windows.Forms.TextBox();
+            this.txtVac_H = new System.Windows.Forms.TextBox();
+            this.txtAgui_H = new System.Windows.Forms.TextBox();
+            this.txtPrima1_H = new System.Windows.Forms.TextBox();
+            this.txtSepDia_H = new System.Windows.Forms.TextBox();
+            this.txtGratif_H = new System.Windows.Forms.TextBox();
+            this.txtCuchillo_H = new System.Windows.Forms.TextBox();
+            this.txtEscaf_H = new System.Windows.Forms.TextBox();
+            this.txtCubreB_H = new System.Windows.Forms.TextBox();
+            this.txtBata_H = new System.Windows.Forms.TextBox();
+            this.txtCofia_H = new System.Windows.Forms.TextBox();
+            this.txtMandil_H = new System.Windows.Forms.TextBox();
+            this.txtBotas_H = new System.Windows.Forms.TextBox();
+            this.txtGuantes_H = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.selectedBtnBar2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
@@ -226,6 +266,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedBtnBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -249,8 +293,8 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.tabPersonal);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Location = new System.Drawing.Point(0, 0);
             this.superTabControl1.MaximumSize = new System.Drawing.Size(1280, 1280);
@@ -1067,6 +1111,7 @@
             // superTabControlPanel3
             // 
             this.superTabControlPanel3.CanvasColor = System.Drawing.Color.DimGray;
+            this.superTabControlPanel3.Controls.Add(this.selectedBtnBar2);
             this.superTabControlPanel3.Controls.Add(this.btnActualizarListas);
             this.superTabControlPanel3.Controls.Add(this.btnNominaMasiva);
             this.superTabControlPanel3.Controls.Add(this.btnMostrarRecibo);
@@ -1085,12 +1130,13 @@
             this.btnActualizarListas.BackColor = System.Drawing.Color.White;
             this.btnActualizarListas.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.work7;
             this.btnActualizarListas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizarListas.Location = new System.Drawing.Point(57, 3);
+            this.btnActualizarListas.Location = new System.Drawing.Point(7, 8);
             this.btnActualizarListas.Name = "btnActualizarListas";
             this.btnActualizarListas.Size = new System.Drawing.Size(44, 40);
             this.btnActualizarListas.TabIndex = 35;
             this.btnActualizarListas.UseVisualStyleBackColor = false;
             this.btnActualizarListas.Click += new System.EventHandler(this.btnActualizarListas_Click);
+            this.btnActualizarListas.MouseLeave += new System.EventHandler(this.btnActualizarListas_MouseLeave);
             this.btnActualizarListas.MouseHover += new System.EventHandler(this.btnActualizarListas_MouseHover);
             // 
             // btnNominaMasiva
@@ -1099,12 +1145,13 @@
             this.btnNominaMasiva.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.notebook91;
             this.btnNominaMasiva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNominaMasiva.Enabled = false;
-            this.btnNominaMasiva.Location = new System.Drawing.Point(157, 4);
+            this.btnNominaMasiva.Location = new System.Drawing.Point(157, 8);
             this.btnNominaMasiva.Name = "btnNominaMasiva";
             this.btnNominaMasiva.Size = new System.Drawing.Size(44, 41);
             this.btnNominaMasiva.TabIndex = 34;
             this.btnNominaMasiva.UseVisualStyleBackColor = false;
             this.btnNominaMasiva.Click += new System.EventHandler(this.btnNominaMasiva_Click);
+            this.btnNominaMasiva.MouseLeave += new System.EventHandler(this.btnNominaMasiva_MouseLeave);
             this.btnNominaMasiva.MouseHover += new System.EventHandler(this.btnNominaMasiva_MouseHover);
             // 
             // btnMostrarRecibo
@@ -1113,12 +1160,13 @@
             this.btnMostrarRecibo.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.print42;
             this.btnMostrarRecibo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMostrarRecibo.Enabled = false;
-            this.btnMostrarRecibo.Location = new System.Drawing.Point(107, 3);
+            this.btnMostrarRecibo.Location = new System.Drawing.Point(107, 8);
             this.btnMostrarRecibo.Name = "btnMostrarRecibo";
             this.btnMostrarRecibo.Size = new System.Drawing.Size(44, 40);
             this.btnMostrarRecibo.TabIndex = 33;
             this.btnMostrarRecibo.UseVisualStyleBackColor = false;
             this.btnMostrarRecibo.Click += new System.EventHandler(this.btnMostrarRecibo_Click);
+            this.btnMostrarRecibo.MouseLeave += new System.EventHandler(this.btnMostrarRecibo_MouseLeave);
             this.btnMostrarRecibo.MouseHover += new System.EventHandler(this.btnMostrarRecibo_MouseHover);
             // 
             // button2
@@ -1126,12 +1174,13 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.BackgroundImage = global::La_Vista_Nominas.Properties.Resources.save2;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(7, 3);
+            this.button2.Location = new System.Drawing.Point(57, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(44, 40);
             this.button2.TabIndex = 32;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
             // 
             // tabControl2
@@ -1140,10 +1189,10 @@
             this.tabControl2.Controls.Add(this.tabEmpleadosDestajo);
             this.tabControl2.Controls.Add(this.tabJornadaDia);
             this.tabControl2.Controls.Add(this.tabJornadaNoche);
-            this.tabControl2.Location = new System.Drawing.Point(3, 44);
+            this.tabControl2.Location = new System.Drawing.Point(3, 50);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(743, 502);
+            this.tabControl2.Size = new System.Drawing.Size(743, 506);
             this.tabControl2.TabIndex = 3;
             // 
             // tabEmpleadosDestajo
@@ -1609,6 +1658,9 @@
             // tabJornadaDia
             // 
             this.tabJornadaDia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabJornadaDia.Controls.Add(this.groupBox8);
+            this.tabJornadaDia.Controls.Add(this.groupBox7);
+            this.tabJornadaDia.Controls.Add(this.groupBox6);
             this.tabJornadaDia.Controls.Add(this.btnBuscarArchivo);
             this.tabJornadaDia.Controls.Add(this.listaEmpleadosDia);
             this.tabJornadaDia.Controls.Add(this.label31);
@@ -1618,7 +1670,7 @@
             this.tabJornadaDia.Location = new System.Drawing.Point(4, 4);
             this.tabJornadaDia.Name = "tabJornadaDia";
             this.tabJornadaDia.Padding = new System.Windows.Forms.Padding(3);
-            this.tabJornadaDia.Size = new System.Drawing.Size(735, 476);
+            this.tabJornadaDia.Size = new System.Drawing.Size(735, 480);
             this.tabJornadaDia.TabIndex = 1;
             this.tabJornadaDia.Text = "Empleados con Jornada por Horas";
             this.tabJornadaDia.UseVisualStyleBackColor = true;
@@ -1643,6 +1695,7 @@
             this.listaEmpleadosDia.Name = "listaEmpleadosDia";
             this.listaEmpleadosDia.Size = new System.Drawing.Size(208, 420);
             this.listaEmpleadosDia.TabIndex = 11;
+            this.listaEmpleadosDia.Click += new System.EventHandler(this.listaEmpleadosDia_Click);
             // 
             // label31
             // 
@@ -1926,6 +1979,389 @@
             // 
             this.toolTip1.ToolTipTitle = "Mostrar Vista Previa de Recibo al Momento";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txtGratif_H);
+            this.groupBox6.Controls.Add(this.txtSepDia_H);
+            this.groupBox6.Controls.Add(this.txtPrima1_H);
+            this.groupBox6.Controls.Add(this.txtAgui_H);
+            this.groupBox6.Controls.Add(this.txtVac_H);
+            this.groupBox6.Controls.Add(this.txtHrsSemana);
+            this.groupBox6.Controls.Add(this.label44);
+            this.groupBox6.Controls.Add(this.label43);
+            this.groupBox6.Controls.Add(this.label42);
+            this.groupBox6.Controls.Add(this.label52);
+            this.groupBox6.Controls.Add(this.label53);
+            this.groupBox6.Controls.Add(this.label54);
+            this.groupBox6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox6.Location = new System.Drawing.Point(223, 46);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(504, 122);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Percepciones";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtGuantes_H);
+            this.groupBox7.Controls.Add(this.txtBotas_H);
+            this.groupBox7.Controls.Add(this.txtMandil_H);
+            this.groupBox7.Controls.Add(this.txtCofia_H);
+            this.groupBox7.Controls.Add(this.txtBata_H);
+            this.groupBox7.Controls.Add(this.txtCubreB_H);
+            this.groupBox7.Controls.Add(this.txtEscaf_H);
+            this.groupBox7.Controls.Add(this.txtCuchillo_H);
+            this.groupBox7.Controls.Add(this.label48);
+            this.groupBox7.Controls.Add(this.label49);
+            this.groupBox7.Controls.Add(this.label50);
+            this.groupBox7.Controls.Add(this.label51);
+            this.groupBox7.Controls.Add(this.label56);
+            this.groupBox7.Controls.Add(this.label57);
+            this.groupBox7.Controls.Add(this.label58);
+            this.groupBox7.Controls.Add(this.label59);
+            this.groupBox7.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox7.Location = new System.Drawing.Point(224, 174);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(504, 147);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Deducciones";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(44, 80);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(91, 19);
+            this.label56.TabIndex = 20;
+            this.label56.Text = "Cubrebocas";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(96, 109);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(39, 19);
+            this.label57.TabIndex = 19;
+            this.label57.Text = "Bata";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(50, 50);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(85, 19);
+            this.label58.TabIndex = 18;
+            this.label58.Text = "Escafandra";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(70, 23);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(65, 19);
+            this.label59.TabIndex = 17;
+            this.label59.Text = "Cuchillo";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(274, 109);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(66, 19);
+            this.label48.TabIndex = 37;
+            this.label48.Text = "Guantes";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(294, 23);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(45, 19);
+            this.label49.TabIndex = 36;
+            this.label49.Text = "Cofia";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(284, 50);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(55, 19);
+            this.label50.TabIndex = 35;
+            this.label50.Text = "Mandil";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(292, 79);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(47, 19);
+            this.label51.TabIndex = 34;
+            this.label51.Text = "Botas";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(50, 55);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(86, 19);
+            this.label52.TabIndex = 11;
+            this.label52.Text = "Vacaciones";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(55, 87);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(81, 19);
+            this.label53.TabIndex = 12;
+            this.label53.Text = "Aguinaldo";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(9, 26);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(127, 19);
+            this.label54.TabIndex = 10;
+            this.label54.Text = "Horas Laboradas";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(212, 26);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(129, 19);
+            this.label42.TabIndex = 13;
+            this.label42.Text = "Prima Vacacional";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(247, 55);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(93, 19);
+            this.label43.TabIndex = 14;
+            this.label43.Text = "Séptimo día";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(244, 87);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(96, 19);
+            this.label44.TabIndex = 15;
+            this.label44.Text = "Gratificación";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label55);
+            this.groupBox8.Controls.Add(this.richTextBox1);
+            this.groupBox8.Controls.Add(this.textBox4);
+            this.groupBox8.Controls.Add(this.textBox3);
+            this.groupBox8.Controls.Add(this.textBox2);
+            this.groupBox8.Controls.Add(this.label47);
+            this.groupBox8.Controls.Add(this.label46);
+            this.groupBox8.Controls.Add(this.label45);
+            this.groupBox8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox8.Location = new System.Drawing.Point(223, 327);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(503, 133);
+            this.groupBox8.TabIndex = 15;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Otros Descuentos";
+            // 
+            // txtHrsSemana
+            // 
+            this.txtHrsSemana.Location = new System.Drawing.Point(133, 28);
+            this.txtHrsSemana.Name = "txtHrsSemana";
+            this.txtHrsSemana.Size = new System.Drawing.Size(45, 20);
+            this.txtHrsSemana.TabIndex = 16;
+            // 
+            // txtVac_H
+            // 
+            this.txtVac_H.Location = new System.Drawing.Point(133, 57);
+            this.txtVac_H.Name = "txtVac_H";
+            this.txtVac_H.Size = new System.Drawing.Size(45, 20);
+            this.txtVac_H.TabIndex = 17;
+            // 
+            // txtAgui_H
+            // 
+            this.txtAgui_H.Location = new System.Drawing.Point(133, 89);
+            this.txtAgui_H.Name = "txtAgui_H";
+            this.txtAgui_H.Size = new System.Drawing.Size(45, 20);
+            this.txtAgui_H.TabIndex = 18;
+            // 
+            // txtPrima1_H
+            // 
+            this.txtPrima1_H.Location = new System.Drawing.Point(338, 28);
+            this.txtPrima1_H.Name = "txtPrima1_H";
+            this.txtPrima1_H.Size = new System.Drawing.Size(45, 20);
+            this.txtPrima1_H.TabIndex = 19;
+            // 
+            // txtSepDia_H
+            // 
+            this.txtSepDia_H.Location = new System.Drawing.Point(338, 57);
+            this.txtSepDia_H.Name = "txtSepDia_H";
+            this.txtSepDia_H.Size = new System.Drawing.Size(45, 20);
+            this.txtSepDia_H.TabIndex = 20;
+            // 
+            // txtGratif_H
+            // 
+            this.txtGratif_H.Location = new System.Drawing.Point(338, 88);
+            this.txtGratif_H.Name = "txtGratif_H";
+            this.txtGratif_H.Size = new System.Drawing.Size(45, 20);
+            this.txtGratif_H.TabIndex = 21;
+            // 
+            // txtCuchillo_H
+            // 
+            this.txtCuchillo_H.Location = new System.Drawing.Point(132, 25);
+            this.txtCuchillo_H.Name = "txtCuchillo_H";
+            this.txtCuchillo_H.Size = new System.Drawing.Size(45, 20);
+            this.txtCuchillo_H.TabIndex = 38;
+            // 
+            // txtEscaf_H
+            // 
+            this.txtEscaf_H.Location = new System.Drawing.Point(132, 52);
+            this.txtEscaf_H.Name = "txtEscaf_H";
+            this.txtEscaf_H.Size = new System.Drawing.Size(45, 20);
+            this.txtEscaf_H.TabIndex = 39;
+            // 
+            // txtCubreB_H
+            // 
+            this.txtCubreB_H.Location = new System.Drawing.Point(132, 82);
+            this.txtCubreB_H.Name = "txtCubreB_H";
+            this.txtCubreB_H.Size = new System.Drawing.Size(45, 20);
+            this.txtCubreB_H.TabIndex = 40;
+            // 
+            // txtBata_H
+            // 
+            this.txtBata_H.Location = new System.Drawing.Point(132, 111);
+            this.txtBata_H.Name = "txtBata_H";
+            this.txtBata_H.Size = new System.Drawing.Size(45, 20);
+            this.txtBata_H.TabIndex = 41;
+            // 
+            // txtCofia_H
+            // 
+            this.txtCofia_H.Location = new System.Drawing.Point(337, 25);
+            this.txtCofia_H.Name = "txtCofia_H";
+            this.txtCofia_H.Size = new System.Drawing.Size(45, 20);
+            this.txtCofia_H.TabIndex = 42;
+            // 
+            // txtMandil_H
+            // 
+            this.txtMandil_H.Location = new System.Drawing.Point(337, 52);
+            this.txtMandil_H.Name = "txtMandil_H";
+            this.txtMandil_H.Size = new System.Drawing.Size(45, 20);
+            this.txtMandil_H.TabIndex = 43;
+            // 
+            // txtBotas_H
+            // 
+            this.txtBotas_H.Location = new System.Drawing.Point(337, 82);
+            this.txtBotas_H.Name = "txtBotas_H";
+            this.txtBotas_H.Size = new System.Drawing.Size(45, 20);
+            this.txtBotas_H.TabIndex = 44;
+            // 
+            // txtGuantes_H
+            // 
+            this.txtGuantes_H.Location = new System.Drawing.Point(337, 111);
+            this.txtGuantes_H.Name = "txtGuantes_H";
+            this.txtGuantes_H.Size = new System.Drawing.Size(45, 20);
+            this.txtGuantes_H.TabIndex = 45;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(23, 85);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(113, 19);
+            this.label45.TabIndex = 11;
+            this.label45.Text = "Desc. Empresa";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(19, 16);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(117, 19);
+            this.label46.TabIndex = 12;
+            this.label46.Text = "Desc. Comedor";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(64, 50);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(72, 19);
+            this.label47.TabIndex = 13;
+            this.label47.Text = "Infonavit";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(133, 18);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(45, 20);
+            this.textBox2.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(133, 87);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(45, 20);
+            this.textBox3.TabIndex = 15;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(133, 52);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(45, 20);
+            this.textBox4.TabIndex = 16;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(212, 38);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(275, 81);
+            this.richTextBox1.TabIndex = 17;
+            this.richTextBox1.Text = "";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(208, 16);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(90, 19);
+            this.label55.TabIndex = 46;
+            this.label55.Text = "Descripción";
+            // 
+            // selectedBtnBar2
+            // 
+            this.selectedBtnBar2.BackColor = System.Drawing.Color.SeaGreen;
+            this.selectedBtnBar2.Location = new System.Drawing.Point(7, 43);
+            this.selectedBtnBar2.Name = "selectedBtnBar2";
+            this.selectedBtnBar2.Size = new System.Drawing.Size(44, 5);
+            this.selectedBtnBar2.TabIndex = 36;
+            this.selectedBtnBar2.TabStop = false;
+            this.selectedBtnBar2.Visible = false;
+            // 
             // Pantalla_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1999,6 +2435,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedBtnBar2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2160,5 +2603,45 @@
         private System.Windows.Forms.ToolTip toolTipActualizar;
         private System.Windows.Forms.ToolTip toolTipImprime1;
         private System.Windows.Forms.ToolTip toolTipRecibos;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox txtGuantes_H;
+        private System.Windows.Forms.TextBox txtBotas_H;
+        private System.Windows.Forms.TextBox txtMandil_H;
+        private System.Windows.Forms.TextBox txtCofia_H;
+        private System.Windows.Forms.TextBox txtBata_H;
+        private System.Windows.Forms.TextBox txtCubreB_H;
+        private System.Windows.Forms.TextBox txtEscaf_H;
+        private System.Windows.Forms.TextBox txtCuchillo_H;
+        private System.Windows.Forms.TextBox txtGratif_H;
+        private System.Windows.Forms.TextBox txtSepDia_H;
+        private System.Windows.Forms.TextBox txtPrima1_H;
+        private System.Windows.Forms.TextBox txtAgui_H;
+        private System.Windows.Forms.TextBox txtVac_H;
+        private System.Windows.Forms.TextBox txtHrsSemana;
+        private System.Windows.Forms.PictureBox selectedBtnBar2;
     }
 }

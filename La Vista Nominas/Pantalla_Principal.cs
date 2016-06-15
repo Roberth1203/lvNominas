@@ -265,6 +265,7 @@ namespace La_Vista_Nominas
 
         private void obtenerEmpleados()
         {
+            //Cargo las listas de empleados en la pestaña nóminas
             DataTable datos1 = sql.SQLdata("SELECT nombre FROM personal WHERE calculo like '%DESTAJO%' AND status = 'ALTA' ORDER BY nombre", null, dataValues); //Cargar lista empleados destajo
             DataTable empDia = sql.SQLdata("SELECT nombre FROM personal WHERE calculo like '%HORAS%' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // carga lista de empleados por horas
             DataTable mixtos = sql.SQLdata("SELECT nombre FROM personal WHERE calculo like '%MIXTO%' AND status = 'ALTA' ORDER BY nombre", null, dataValues); // Carga lista de empleados mixta
@@ -386,8 +387,8 @@ namespace La_Vista_Nominas
         /* ======================================= Métodos Para Obtener datos para Reportes ======================================= */
         private void showAllPaySheet()
         {
-            string msg = ConfigurationManager.AppSettings.Get("keyCajas");
-            MessageBox.Show("elemento del App.Config: " + msg);
+            //string msg = ConfigurationManager.AppSettings.Get("keyCajas");
+            //MessageBox.Show("elemento del App.Config: " + msg);
 
             conteoEmpleados.ForEach(delegate (String empleado)
             {
@@ -397,7 +398,7 @@ namespace La_Vista_Nominas
                 DataTable dt = sql.SQLdata("Select nombre,nss,rfc,curp,area_laboral,puesto from personal where nombre like '%" + empleado + "%';", null, dataValues);
                 DataTable caj = sql.SQLdata("select sum(dia1+dia2+dia3+dia4+dia5+dia6) from datosDestajo where nomEmpleado like '%" + empleado + "%'",null,dataValues);
 
-                MessageBox.Show(caj.Rows[0].ItemArray[0].ToString());
+                //MessageBox.Show(caj.Rows[0].ItemArray[0].ToString());
                 DataTable ded = sql.SQLdata("select cuchillo,cofia,escafandra,mandil,cubrebocas,botas,bata,guantes,comedor,prestamo from datosDestajo where nomEmpleado like '%" + empleado + "%';", null, dataValues);
                 Classes.Datos_Empleados employeeData = new Classes.Datos_Empleados();
                 Classes.Movimientos_Destajo employeeMovs = new Classes.Movimientos_Destajo();
@@ -553,7 +554,7 @@ namespace La_Vista_Nominas
                 {
                     if (employeeMovs.desc1 <= 0)
                     {
-                        MessageBox.Show("desc1 está vacío ...");
+                        //MessageBox.Show("desc1 está vacío ...");
                         employeeMovs.nom1 = array[w];
                         employeeMovs.desc1 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                     }
@@ -561,7 +562,7 @@ namespace La_Vista_Nominas
                     {
                         if(employeeMovs.desc2 <= 0)
                         {
-                            MessageBox.Show("desc2 está vacío ...");
+                            //MessageBox.Show("desc2 está vacío ...");
                             employeeMovs.nom2 = array[w];
                             employeeMovs.desc2 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                         }
@@ -569,49 +570,49 @@ namespace La_Vista_Nominas
                         {
                             if(employeeMovs.desc3 <= 0)
                             {
-                                MessageBox.Show("desc3 está vacío ...");
+                                //MessageBox.Show("desc3 está vacío ...");
                                 employeeMovs.nom3 = array[w];
                                 employeeMovs.desc3 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
                                 if (employeeMovs.desc4 <= 0)
                             {
-                                MessageBox.Show("desc4 está vacío ...");
+                                //MessageBox.Show("desc4 está vacío ...");
                                 employeeMovs.nom4 = array[w];
                                 employeeMovs.desc4 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
                                 if (employeeMovs.desc5 <= 0)
                             {
-                                MessageBox.Show("desc5 está vacío ...");
+                                //MessageBox.Show("desc5 está vacío ...");
                                 employeeMovs.nom5 = array[w];
                                 employeeMovs.desc5 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
                                 if (employeeMovs.desc6 <= 0)
                             {
-                                MessageBox.Show("desc6 está vacío ...");
+                                //MessageBox.Show("desc6 está vacío ...");
                                 employeeMovs.nom6 = array[w];
                                 employeeMovs.desc6 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
                                 if (employeeMovs.desc7 <= 0)
                             {
-                                MessageBox.Show("desc7 está vacío ...");
+                                //MessageBox.Show("desc7 está vacío ...");
                                 employeeMovs.nom7 = array[w];
                                 employeeMovs.desc7 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
                                 if (employeeMovs.desc8 <= 0)
                             {
-                                MessageBox.Show("desc8 está vacío ...");
+                                //MessageBox.Show("desc8 está vacío ...");
                                 employeeMovs.nom8 = array[w];
                                 employeeMovs.desc8 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
                             else
                                 if (employeeMovs.desc9 <= 0)
                             {
-                                MessageBox.Show("desc9 está vacío ...");
+                                //MessageBox.Show("desc9 está vacío ...");
                                 employeeMovs.nom9 = array[w];
                                 employeeMovs.desc9 = Convert.ToDouble(ded.Rows[0].ItemArray[w].ToString());
                             }
@@ -625,7 +626,7 @@ namespace La_Vista_Nominas
 
             employeeMovs.montoDeducc = (employeeMovs.desc1 + employeeMovs.desc2 + employeeMovs.desc3 + employeeMovs.desc4 + employeeMovs.desc5 + employeeMovs.desc6 + employeeMovs.desc7 + employeeMovs.desc8 + employeeMovs.desc9);
 
-            MessageBox.Show("Numero de elementos en lista: " + discountsList.Count());
+            //MessageBox.Show("Numero de elementos en lista: " + discountsList.Count());
             //employeeMovs.nom1 = discountsList[0];
 
             //Hago una instancia del formulario Nomina_Individual y agrego los miembros de las clases a las list del nuevo form.
@@ -1016,26 +1017,77 @@ namespace La_Vista_Nominas
 
         private void button2_MouseHover(object sender, EventArgs e)
         {
+            selectedBtnBar2.Location = new Point(57, 41);
+            selectedBtnBar2.Visible = true;
+            button2.Location = new Point(57, 5);
             toolTipSave.IsBalloon = true; //Muestra el control como globo de dialogo.
             toolTipSave.SetToolTip(button2, "Guardar cambios"); //defino el control y agrego el texto a mostrar
         }
 
         private void btnActualizarListas_MouseHover(object sender, EventArgs e)
         {
+            selectedBtnBar2.Location = new Point(7,41);
+            selectedBtnBar2.Visible = true;
+            btnActualizarListas.Location = new Point(7, 5);
+            //itemselectedBar.Location = new Point(52, 52);
+            //itemselectedBar.Visible = true;
+
             toolTipActualizar.IsBalloon = true;
             toolTipActualizar.SetToolTip(btnActualizarListas,"Actualizar listas de empleados.");
         }
 
         private void btnMostrarRecibo_MouseHover(object sender, EventArgs e)
         {
+            selectedBtnBar2.Location = new Point(107,41);
+            selectedBtnBar2.Visible = true;
+            btnMostrarRecibo.Location = new Point(107, 5);
             toolTipImprime1.IsBalloon = true;
             toolTipImprime1.SetToolTip(btnMostrarRecibo,"Mostrar recibo de empleado actual.");
         }
 
         private void btnNominaMasiva_MouseHover(object sender, EventArgs e)
         {
+            selectedBtnBar2.Location = new Point(157, 41);
+            selectedBtnBar2.Visible = true;
+            btnNominaMasiva.Location = new Point(157, 5);
             toolTipRecibos.IsBalloon = true;
             toolTipRecibos.SetToolTip(btnNominaMasiva, "Mostrar recibos de todos los empleados");
+        }
+
+        private void listaEmpleadosDia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String employee = listaEmpleadosDia.SelectedItem.ToString();
+            MessageBox.Show(employee);
+        }
+
+        private void listaEmpleadosDia_Click(object sender, EventArgs e)
+        {
+            String employee = listaEmpleadosDia.SelectedItem.ToString();
+            MessageBox.Show(employee);
+        }
+
+        private void btnActualizarListas_MouseLeave(object sender, EventArgs e)
+        {
+            selectedBtnBar2.Visible = false;
+            btnActualizarListas.Location = new Point(7, 8);
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            selectedBtnBar2.Visible = false;
+            button2.Location = new Point(57, 8);
+        }
+
+        private void btnMostrarRecibo_MouseLeave(object sender, EventArgs e)
+        {
+            selectedBtnBar2.Visible = false;
+            btnMostrarRecibo.Location = new Point(107, 8);
+        }
+
+        private void btnNominaMasiva_MouseLeave(object sender, EventArgs e)
+        {
+            selectedBtnBar2.Visible = false;
+            btnNominaMasiva.Location = new Point(157, 8);
         }
     }
 }
