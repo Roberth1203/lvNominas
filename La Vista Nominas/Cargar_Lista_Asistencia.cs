@@ -78,13 +78,24 @@ namespace La_Vista_Nominas
                     excel.Workbook xlWorkBook = xlApp.Workbooks.Open(path, 0, true, 5, "", "", true, excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
                     excel.Worksheet xlWorkSheet = (excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
                     excel.Range range = xlWorkSheet.UsedRange;
+
+                    //Conteo de columnas en la hoja del archivo Excel
                     for (int i = 1; i <= range.Columns.Count; i++)
                         dt.Columns.Add(range.Cells[1, i].Value2);
+
+                    // Recorrido de celdas previo a la insercion de la fila en dgvHorarios
                     for (int i = 2; i <= range.Rows.Count; i++)
                     {
                         data.DataRow dr = dt.NewRow();
+                        //int indexRow = 0;
                         for (int j = 1; j <= range.Columns.Count; j++)
+                        {
                             dr[j - 1] = ((range.Cells[i, j] as excel.Range).Value2).ToString();
+                            //MessageBox.Show(dr.ItemArray[indexRow].ToString());
+                            //indexRow++;
+                        }
+                        int count = i - 1;
+                        MessageBox.Show("Fila No. " + count);
                         dt.Rows.Add(dr);
                     }
                     dgv.DataSource = dt;
@@ -196,9 +207,9 @@ namespace La_Vista_Nominas
             indexR = 0;
             //creamos un objeto OpenDialog que es un cuadro de dialogo para buscar archivos
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx"; //le indicamos el tipo de filtro en este caso que busque
-                                                                             //solo los archivos excel
-
+            //dialog.Filter = "Archivos de Excel (*.xls;*.xlsx)|*.xls;*.xlsx"; //le indicamos el tipo de filtro en este caso que busque
+            //dialog.Filter = "Todos los archivos (*.*)|*.*;";                                                               //solo los archivos excel
+            dialog.Filter = "Archivo Excel (*.xls;*.xlsx) |*.xls|Todos los archivos (*.*)|*.*";
             dialog.Title = "Seleccione el archivo de Excel";//le damos un titulo a la ventana
 
             dialog.FileName = string.Empty;//inicializamos con vacio el nombre del archivo
@@ -209,9 +220,9 @@ namespace La_Vista_Nominas
                 //el nombre del archivo sera asignado al textbox
                 txtArchivo.Text = dialog.FileName;
                 excelWorksheet.readWoorkSheet(dgvHorarios, txtArchivo.Text);
-                dgvHorarios.Columns[0].Width = 200;
-                dgvHorarios.Columns[1].Width = 80;
-                dgvHorarios.Columns[indexR].DefaultCellStyle.Format = "hh:mm";
+                //dgvHorarios.Columns[0].Width = 200;
+                //dgvHorarios.Columns[1].Width = 80;
+                //dgvHorarios.Columns[indexR].DefaultCellStyle.Format = "hh:mm";
             }
             
             addHours();
