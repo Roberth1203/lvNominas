@@ -1102,7 +1102,7 @@ namespace La_Vista_Nominas
                 MessageBox.Show("El empleado aún no ha sido modificado !!");
                 lblFechaModificacion.Text = "01/01/2000";
                 txtHrsSemana.Text = "";
-            }
+            }   
         }
 
         private void btnActualizarListas_MouseLeave(object sender, EventArgs e)

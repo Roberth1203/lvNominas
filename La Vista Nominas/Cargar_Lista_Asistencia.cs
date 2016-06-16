@@ -209,6 +209,8 @@ namespace La_Vista_Nominas
                 //el nombre del archivo sera asignado al textbox
                 txtArchivo.Text = dialog.FileName;
                 excelWorksheet.readWoorkSheet(dgvHorarios, txtArchivo.Text);
+                dgvHorarios.Columns[0].Width = 200;
+                dgvHorarios.Columns[1].Width = 80;
                 dgvHorarios.Columns[indexR].DefaultCellStyle.Format = "hh:mm";
             }
             

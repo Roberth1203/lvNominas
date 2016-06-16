@@ -45,6 +45,7 @@
             this.dgvHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHorarios.Location = new System.Drawing.Point(6, 35);
             this.dgvHorarios.Name = "dgvHorarios";
+            this.dgvHorarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHorarios.Size = new System.Drawing.Size(458, 299);
             this.dgvHorarios.TabIndex = 0;
             // 
