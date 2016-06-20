@@ -196,7 +196,8 @@ namespace La_Vista_Nominas
         private void btnExportar_Click(object sender, EventArgs e)
         {
             SaveFileDialog fichero = new SaveFileDialog();
-            fichero.Filter = "Excel (*.xls)|*.xls";
+            fichero.Title = "Guardar como ...";
+            fichero.Filter = "Archivo Excel (*.xls;*.xlsx) |*.xls|Todos los archivos (*.*)|*.*";
             if (fichero.ShowDialog() == DialogResult.OK)
             {
                 Microsoft.Office.Interop.Excel.Application aplicacion;
@@ -219,6 +220,8 @@ namespace La_Vista_Nominas
                 libros_trabajo.Close(true);
                 aplicacion.Quit();
             }
+
+            MessageBox.Show("Archivo exportado exitosamente !!", "La Vista Nominas dice:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     
 
