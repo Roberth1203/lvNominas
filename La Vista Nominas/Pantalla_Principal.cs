@@ -195,14 +195,32 @@ namespace La_Vista_Nominas
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            int indice = 0;
-            MessageBox.Show("Empleados encontrados en el DataTable dt !!!");
-            foreach ( DataRow file in dtEmpleados.Rows)
+            SaveFileDialog fichero = new SaveFileDialog();
+            fichero.Filter = "Excel (*.xls)|*.xls";
+            if (fichero.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Nombre del Empleado: " + dtEmpleados.Rows[indice].ItemArray[1].ToString());
-                indice++;
+                Microsoft.Office.Interop.Excel.Application aplicacion;
+                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                libros_trabajo = aplicacion.Workbooks.Add();
+                hoja_trabajo =
+                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+                //Recorremos el DataGridView rellenando la hoja de trabajo
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    {
+                        hoja_trabajo.Cells[i + 1, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                libros_trabajo.SaveAs(fichero.FileName,
+                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                libros_trabajo.Close(true);
+                aplicacion.Quit();
             }
         }
+    
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -370,12 +388,33 @@ namespace La_Vista_Nominas
             }
             else if (tabJornadaDia.Focus())
             {
-                MessageBox.Show("Evento de guardado en desarrollo");
+                try
+                {
+                    DateTime f = DateTime.Now;
+                    String fechaModificacion = f.ToShortDateString();
+
+                    String updQuery = "UPDATE percep_deduc_Emp SET totalHoras= " + Convert.ToDouble(txtHrsSemana.Text) +
+                            ",per_Vac=" + Convert.ToDouble(txtVac_H.Text) + ",per_SepDia=" + Convert.ToDouble(txtSepDia_H.Text) + ",per_Vacacional=" + Convert.ToDouble(txtPrima1_H.Text) + 
+                            ",dedCubreB=" + txtCubreB_H.Text + ",ded_Escaf=" + Convert.ToDouble(txtEscaf_H.Text) + "ded_Guantes=" + Convert.ToDouble(txtGuantes_H.Text) + ",ded_Bata=" + Convert.ToDouble(txtBata_H.Text) + ",ded_Botas=" + Convert.ToDouble(txtBotas_H.Text) + ",ded_Mandil=" + Convert.ToDouble(txtMandil_H.Text) + ",ded_Cuchillo=" + Convert.ToDouble(txtCuchillo_H.Text) + ",desc_Comedor=" + Convert.ToDouble(txtComedor_H.Text) + ",desc_Prestamo=" + Convert.ToDouble(txtDedEmpresa_H.Text) +
+                            ",nomEmpleado='" + listaEmpleadosDia.SelectedItem.ToString() + "',ultimaModificacion='" + fechaModificacion + "';";
+                    
+                }
+                catch(Exception bug)
+                {
+                    MessageBox.Show(bug.Message);
+                }
             }
             else if (tabJornadaMixta.Focus())
             {
                 MessageBox.Show("Evento de guardado en desarrollo");
             }
+        }
+
+        private Double calcularPrestaciones(Double sueldoPromedio)
+        {
+            Double prestacion=0;
+
+            return prestacion;
         }
 
         private void calculoTotales()
@@ -391,7 +430,14 @@ namespace La_Vista_Nominas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            guardarDatos();
+            if (listaEmpleadosDestajo1.Focus())
+            {
+                guardarDatos();
+            }
+            else if (listaEmpleadosDia.Focus())
+            {
+
+            }
         }
 
 
@@ -682,7 +728,7 @@ namespace La_Vista_Nominas
             }
             else if (tabJornadaDia.Focus())
             {
-                MessageBox.Show("Evento en desarrollo");
+                
             }
             else if (tabJornadaMixta.Focus())
             {
