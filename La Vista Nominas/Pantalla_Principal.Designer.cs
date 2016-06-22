@@ -114,6 +114,10 @@
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtPagoPromedio_H = new System.Windows.Forms.TextBox();
+            this.txtPagoPorHora_H = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.txtGratif_H = new System.Windows.Forms.TextBox();
             this.txtSepDia_H = new System.Windows.Forms.TextBox();
             this.txtPrima1_H = new System.Windows.Forms.TextBox();
@@ -136,6 +140,22 @@
             this.label26 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabNominas = new DevComponents.DotNetBar.SuperTabItem();
+            this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.itemselectedBar = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnExportar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDrop = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPrueba = new System.Windows.Forms.Button();
@@ -174,22 +194,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.txtCostoCaja = new System.Windows.Forms.TextBox();
             this.tabOpciones = new DevComponents.DotNetBar.SuperTabItem();
-            this.tabPersonal = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.itemselectedBar = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExportar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuItemBaja = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDrop = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.tabPrincipal = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.btnCatEmpleados = new System.Windows.Forms.Button();
             this.pnlReportForms = new System.Windows.Forms.Panel();
@@ -244,15 +248,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabJornadaMixta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.superTabControlPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPruebas)).BeginInit();
-            this.grBoxHoras.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
-            this.grBoxDestajo.SuspendLayout();
             this.tabPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -264,6 +259,15 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            this.superTabControlPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPruebas)).BeginInit();
+            this.grBoxHoras.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).BeginInit();
+            this.grBoxDestajo.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
             this.pnlReportForms.SuspendLayout();
             this.pnlReport.SuspendLayout();
@@ -1168,6 +1172,10 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.txtPagoPromedio_H);
+            this.groupBox6.Controls.Add(this.txtPagoPorHora_H);
+            this.groupBox6.Controls.Add(this.label62);
+            this.groupBox6.Controls.Add(this.label61);
             this.groupBox6.Controls.Add(this.txtGratif_H);
             this.groupBox6.Controls.Add(this.txtSepDia_H);
             this.groupBox6.Controls.Add(this.txtPrima1_H);
@@ -1188,44 +1196,78 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Percepciones";
             // 
+            // txtPagoPromedio_H
+            // 
+            this.txtPagoPromedio_H.Location = new System.Drawing.Point(124, 78);
+            this.txtPagoPromedio_H.Name = "txtPagoPromedio_H";
+            this.txtPagoPromedio_H.Size = new System.Drawing.Size(45, 20);
+            this.txtPagoPromedio_H.TabIndex = 25;
+            // 
+            // txtPagoPorHora_H
+            // 
+            this.txtPagoPorHora_H.Location = new System.Drawing.Point(124, 47);
+            this.txtPagoPorHora_H.Name = "txtPagoPorHora_H";
+            this.txtPagoPorHora_H.Size = new System.Drawing.Size(45, 20);
+            this.txtPagoPorHora_H.TabIndex = 24;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(35, 76);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(91, 19);
+            this.label62.TabIndex = 23;
+            this.label62.Text = "Prom. x día";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(3, 48);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(123, 19);
+            this.label61.TabIndex = 22;
+            this.label61.Text = "Sueldo por hora";
+            // 
             // txtGratif_H
             // 
-            this.txtGratif_H.Location = new System.Drawing.Point(338, 78);
+            this.txtGratif_H.Location = new System.Drawing.Point(453, 47);
             this.txtGratif_H.Name = "txtGratif_H";
             this.txtGratif_H.Size = new System.Drawing.Size(45, 20);
             this.txtGratif_H.TabIndex = 21;
             // 
             // txtSepDia_H
             // 
-            this.txtSepDia_H.Location = new System.Drawing.Point(338, 47);
+            this.txtSepDia_H.Location = new System.Drawing.Point(277, 78);
             this.txtSepDia_H.Name = "txtSepDia_H";
             this.txtSepDia_H.Size = new System.Drawing.Size(45, 20);
             this.txtSepDia_H.TabIndex = 20;
             // 
             // txtPrima1_H
             // 
-            this.txtPrima1_H.Location = new System.Drawing.Point(338, 18);
+            this.txtPrima1_H.Location = new System.Drawing.Point(453, 18);
             this.txtPrima1_H.Name = "txtPrima1_H";
             this.txtPrima1_H.Size = new System.Drawing.Size(45, 20);
             this.txtPrima1_H.TabIndex = 19;
             // 
             // txtAgui_H
             // 
-            this.txtAgui_H.Location = new System.Drawing.Point(133, 79);
+            this.txtAgui_H.Location = new System.Drawing.Point(276, 47);
             this.txtAgui_H.Name = "txtAgui_H";
             this.txtAgui_H.Size = new System.Drawing.Size(45, 20);
             this.txtAgui_H.TabIndex = 18;
             // 
             // txtVac_H
             // 
-            this.txtVac_H.Location = new System.Drawing.Point(133, 47);
+            this.txtVac_H.Location = new System.Drawing.Point(276, 18);
             this.txtVac_H.Name = "txtVac_H";
             this.txtVac_H.Size = new System.Drawing.Size(45, 20);
             this.txtVac_H.TabIndex = 17;
             // 
             // txtHrsSemana
             // 
-            this.txtHrsSemana.Location = new System.Drawing.Point(133, 18);
+            this.txtHrsSemana.Location = new System.Drawing.Point(124, 18);
             this.txtHrsSemana.Name = "txtHrsSemana";
             this.txtHrsSemana.Size = new System.Drawing.Size(45, 20);
             this.txtHrsSemana.TabIndex = 16;
@@ -1234,7 +1276,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(244, 77);
+            this.label44.Location = new System.Drawing.Point(359, 46);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(96, 19);
             this.label44.TabIndex = 15;
@@ -1244,7 +1286,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(247, 45);
+            this.label43.Location = new System.Drawing.Point(186, 76);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(93, 19);
             this.label43.TabIndex = 14;
@@ -1254,7 +1296,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(212, 16);
+            this.label42.Location = new System.Drawing.Point(327, 16);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(129, 19);
             this.label42.TabIndex = 13;
@@ -1264,7 +1306,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(50, 45);
+            this.label52.Location = new System.Drawing.Point(193, 16);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(86, 19);
             this.label52.TabIndex = 11;
@@ -1274,7 +1316,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(55, 77);
+            this.label53.Location = new System.Drawing.Point(198, 45);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(81, 19);
             this.label53.TabIndex = 12;
@@ -1284,7 +1326,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(9, 16);
+            this.label54.Location = new System.Drawing.Point(0, 16);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(127, 19);
             this.label54.TabIndex = 10;
@@ -1309,7 +1351,7 @@
             this.listaEmpleadosDia.Name = "listaEmpleadosDia";
             this.listaEmpleadosDia.Size = new System.Drawing.Size(208, 420);
             this.listaEmpleadosDia.TabIndex = 11;
-            this.listaEmpleadosDia.Click += new System.EventHandler(this.listaEmpleadosDia_Click);
+            this.listaEmpleadosDia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listaEmpleadosDia_MouseClick);
             this.listaEmpleadosDia.SelectedIndexChanged += new System.EventHandler(this.listaEmpleadosDia_SelectedIndexChanged_1);
             // 
             // label31
@@ -1393,6 +1435,204 @@
             this.tabNominas.GlobalItem = false;
             this.tabNominas.Image = ((System.Drawing.Image)(resources.GetObject("tabNominas.Image")));
             this.tabNominas.Name = "tabNominas";
+            // 
+            // tabPersonal
+            // 
+            this.tabPersonal.Controls.Add(this.itemselectedBar);
+            this.tabPersonal.Controls.Add(this.pictureBox3);
+            this.tabPersonal.Controls.Add(this.btnExportar);
+            this.tabPersonal.Controls.Add(this.pictureBox2);
+            this.tabPersonal.Controls.Add(this.groupBox1);
+            this.tabPersonal.Controls.Add(this.dataGridView1);
+            this.tabPersonal.Controls.Add(this.btnDrop);
+            this.tabPersonal.Controls.Add(this.btnAdd);
+            this.tabPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPersonal.Location = new System.Drawing.Point(237, 0);
+            this.tabPersonal.Name = "tabPersonal";
+            this.tabPersonal.Size = new System.Drawing.Size(752, 559);
+            this.tabPersonal.TabIndex = 1;
+            this.tabPersonal.TabItem = this.tabPrincipal;
+            // 
+            // itemselectedBar
+            // 
+            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
+            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
+            this.itemselectedBar.Name = "itemselectedBar";
+            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
+            this.itemselectedBar.TabIndex = 11;
+            this.itemselectedBar.TabStop = false;
+            this.itemselectedBar.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
+            this.btnExportar.Location = new System.Drawing.Point(280, 5);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(51, 50);
+            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExportar.TabIndex = 9;
+            this.btnExportar.TabStop = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
+            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.groupBox1.Location = new System.Drawing.Point(418, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(302, 50);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.textBox1.Location = new System.Drawing.Point(147, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 13);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Buscar empleado:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
+            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
+            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 61);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(746, 495);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemEditar,
+            this.MenuItemBaja});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
+            // 
+            // MenuItemEditar
+            // 
+            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
+            this.MenuItemEditar.Name = "MenuItemEditar";
+            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemEditar.Text = "Modificar";
+            // 
+            // MenuItemBaja
+            // 
+            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
+            this.MenuItemBaja.Name = "MenuItemBaja";
+            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
+            this.MenuItemBaja.Text = "Dar de Baja";
+            // 
+            // btnDrop
+            // 
+            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
+            this.btnDrop.Location = new System.Drawing.Point(166, 5);
+            this.btnDrop.Name = "btnDrop";
+            this.btnDrop.Size = new System.Drawing.Size(51, 50);
+            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDrop.TabIndex = 4;
+            this.btnDrop.TabStop = false;
+            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
+            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
+            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(52, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(51, 50);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
+            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
+            // 
+            // tabPrincipal
+            // 
+            this.tabPrincipal.AttachedControl = this.tabPersonal;
+            this.tabPrincipal.GlobalItem = false;
+            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
+            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
+            this.tabPrincipal.Name = "tabPrincipal";
             // 
             // superTabControlPanel2
             // 
@@ -1788,204 +2028,6 @@
             this.tabOpciones.GlobalItem = false;
             this.tabOpciones.Image = ((System.Drawing.Image)(resources.GetObject("tabOpciones.Image")));
             this.tabOpciones.Name = "tabOpciones";
-            // 
-            // tabPersonal
-            // 
-            this.tabPersonal.Controls.Add(this.itemselectedBar);
-            this.tabPersonal.Controls.Add(this.pictureBox3);
-            this.tabPersonal.Controls.Add(this.btnExportar);
-            this.tabPersonal.Controls.Add(this.pictureBox2);
-            this.tabPersonal.Controls.Add(this.groupBox1);
-            this.tabPersonal.Controls.Add(this.dataGridView1);
-            this.tabPersonal.Controls.Add(this.btnDrop);
-            this.tabPersonal.Controls.Add(this.btnAdd);
-            this.tabPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPersonal.Location = new System.Drawing.Point(237, 0);
-            this.tabPersonal.Name = "tabPersonal";
-            this.tabPersonal.Size = new System.Drawing.Size(752, 559);
-            this.tabPersonal.TabIndex = 1;
-            this.tabPersonal.TabItem = this.tabPrincipal;
-            // 
-            // itemselectedBar
-            // 
-            this.itemselectedBar.BackColor = System.Drawing.Color.SteelBlue;
-            this.itemselectedBar.Location = new System.Drawing.Point(280, 52);
-            this.itemselectedBar.Name = "itemselectedBar";
-            this.itemselectedBar.Size = new System.Drawing.Size(51, 5);
-            this.itemselectedBar.TabIndex = 11;
-            this.itemselectedBar.TabStop = false;
-            this.itemselectedBar.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(109, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
-            this.btnExportar.Location = new System.Drawing.Point(280, 5);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(51, 50);
-            this.btnExportar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExportar.TabIndex = 9;
-            this.btnExportar.TabStop = false;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            this.btnExportar.MouseLeave += new System.EventHandler(this.btnExportar_MouseLeave);
-            this.btnExportar.MouseHover += new System.EventHandler(this.btnExportar_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtBuscar);
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox1.Location = new System.Drawing.Point(418, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 50);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.textBox1.Location = new System.Drawing.Point(147, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 13);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Buscar empleado:";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Image = ((System.Drawing.Image)(resources.GetObject("txtBuscar.Image")));
-            this.txtBuscar.Location = new System.Drawing.Point(132, 16);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(169, 25);
-            this.txtBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.txtBuscar.TabIndex = 6;
-            this.txtBuscar.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(746, 495);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemEditar,
-            this.MenuItemBaja});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
-            // 
-            // MenuItemEditar
-            // 
-            this.MenuItemEditar.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemEditar.Image")));
-            this.MenuItemEditar.Name = "MenuItemEditar";
-            this.MenuItemEditar.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemEditar.Text = "Modificar";
-            // 
-            // MenuItemBaja
-            // 
-            this.MenuItemBaja.Image = ((System.Drawing.Image)(resources.GetObject("MenuItemBaja.Image")));
-            this.MenuItemBaja.Name = "MenuItemBaja";
-            this.MenuItemBaja.Size = new System.Drawing.Size(133, 22);
-            this.MenuItemBaja.Text = "Dar de Baja";
-            // 
-            // btnDrop
-            // 
-            this.btnDrop.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDrop.Image = ((System.Drawing.Image)(resources.GetObject("btnDrop.Image")));
-            this.btnDrop.Location = new System.Drawing.Point(166, 5);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.Size = new System.Drawing.Size(51, 50);
-            this.btnDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDrop.TabIndex = 4;
-            this.btnDrop.TabStop = false;
-            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
-            this.btnDrop.MouseLeave += new System.EventHandler(this.btnDrop_MouseLeave);
-            this.btnDrop.MouseHover += new System.EventHandler(this.btnDrop_MouseHover);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(52, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(51, 50);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseLeave += new System.EventHandler(this.btnAdd_MouseLeave);
-            this.btnAdd.MouseHover += new System.EventHandler(this.btnAdd_MouseHover);
-            // 
-            // tabPrincipal
-            // 
-            this.tabPrincipal.AttachedControl = this.tabPersonal;
-            this.tabPrincipal.GlobalItem = false;
-            this.tabPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("tabPrincipal.Image")));
-            this.tabPrincipal.ImageAlignment = DevComponents.DotNetBar.ImageAlignment.MiddleLeft;
-            this.tabPrincipal.Name = "tabPrincipal";
             // 
             // superTabControlPanel1
             // 
@@ -2433,18 +2475,6 @@
             this.tabJornadaMixta.ResumeLayout(false);
             this.tabJornadaMixta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPruebas)).EndInit();
-            this.grBoxHoras.ResumeLayout(false);
-            this.grBoxHoras.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnContract2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
-            this.grBoxDestajo.ResumeLayout(false);
-            this.grBoxDestajo.PerformLayout();
             this.tabPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemselectedBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -2457,6 +2487,18 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPruebas)).EndInit();
+            this.grBoxHoras.ResumeLayout(false);
+            this.grBoxHoras.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContract2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExpand)).EndInit();
+            this.grBoxDestajo.ResumeLayout(false);
+            this.grBoxDestajo.PerformLayout();
             this.superTabControlPanel1.ResumeLayout(false);
             this.pnlReportForms.ResumeLayout(false);
             this.pnlReport.ResumeLayout(false);
@@ -2671,5 +2713,9 @@
         private System.Windows.Forms.PictureBox selectedBtnBar2;
         private System.Windows.Forms.Label lblFechaModificacion;
         private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TextBox txtPagoPromedio_H;
+        private System.Windows.Forms.TextBox txtPagoPorHora_H;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label61;
     }
 }

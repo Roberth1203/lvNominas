@@ -224,7 +224,7 @@ namespace La_Vista_Nominas
             MessageBox.Show("Archivo exportado exitosamente !!", "La Vista Nominas dice:", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     
-
+        
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ModificarEmpleados obj = new ModificarEmpleados();
@@ -1130,30 +1130,6 @@ namespace La_Vista_Nominas
             //doSomething;
         }
 
-        private void listaEmpleadosDia_Click(object sender, EventArgs e)
-        {
-            button2.Enabled = true;
-            button2.BackColor = Color.White;
-            btnMostrarRecibo.Enabled = true;
-            btnMostrarRecibo.BackColor = Color.White;
-            btnNominaMasiva.Enabled = true;
-            btnNominaMasiva.BackColor = Color.White;
-            try
-            {
-                String instruccion = "Select totalHoras, ultimaModificacion from percep_deduc_Emp where nomEmpleado like '%" + listaEmpleadosDia.SelectedItem.ToString() + "%';";
-                DataTable dt = sql.SQLdata(instruccion, null, dataValues);
-
-                txtHrsSemana.Text = dt.Rows[0].ItemArray[0].ToString();
-                lblFechaModificacion.Text = dt.Rows[0].ItemArray[1].ToString().Substring(0,10);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("El empleado aún no ha sido modificado !!");
-                lblFechaModificacion.Text = "01/01/2000";
-                txtHrsSemana.Text = "";
-            }   
-        }
-
         private void btnActualizarListas_MouseLeave(object sender, EventArgs e)
         {
             selectedBtnBar2.Visible = false;
@@ -1181,6 +1157,33 @@ namespace La_Vista_Nominas
         private void listaEmpleadosDia_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void listaEmpleadosDia_MouseClick(object sender, MouseEventArgs e)
+        {
+            button2.Enabled = true;
+            button2.BackColor = Color.White;
+            btnMostrarRecibo.Enabled = true;
+            btnMostrarRecibo.BackColor = Color.White;
+            btnNominaMasiva.Enabled = true;
+            btnNominaMasiva.BackColor = Color.White;
+
+            String employee = listaEmpleadosDia.SelectedItem.ToString();
+            DateTime systemDate = DateTime.Now();
+            String defaultDate = systemDate.ToShortDateString(); 
+            try
+            {
+                String instruccion = "select totalHoras, ultimaModificacion,nomEmpleado from percep_deduc_Emp where nomEmpleado like '%" + employee + "%';";
+                DataTable dataTableHoras = sql.SQLdata(instruccion, null, dataValues);
+                txtHrsSemana.Text = dataTableHoras.Rows[0].ItemArray[0].ToString();
+                lblFechaModificacion.Text = dataTableHoras.Rows[0].ItemArray[1].ToString().Substring(0, 10);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Empleado no encontrado, verifique si el nombre está correctamente escrito !!!");
+                txtHrsSemana.Text = "";
+                lblFechaModificacion.Text = defaultDate;
+            }
         }
     }
 }
