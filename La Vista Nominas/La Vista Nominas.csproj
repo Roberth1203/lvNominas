@@ -133,6 +133,7 @@
     <Compile Include="Classes\datosListaRaya.cs" />
     <Compile Include="Classes\Datos_Empleados.cs" />
     <Compile Include="Classes\Datos_Periodo.cs" />
+    <Compile Include="employeeClasses\datosEmpleadosHoras.cs" />
     <Compile Include="excelWorksheet.cs" />
     <Compile Include="Classes\Movimientos_Destajo.cs" />
     <Compile Include="Classes\Parametros_Reporte.cs" />
@@ -172,6 +173,12 @@
     </Compile>
     <Compile Include="ModificarEmpleados.Designer.cs">
       <DependentUpon>ModificarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nominaHoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nominaHoras.Designer.cs">
+      <DependentUpon>nominaHoras.cs</DependentUpon>
     </Compile>
     <Compile Include="Nomina_Individual.cs">
       <SubType>Form</SubType>
@@ -216,6 +223,9 @@
     <EmbeddedResource Include="ModificarEmpleados.resx">
       <DependentUpon>ModificarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="nominaHoras.resx">
+      <DependentUpon>nominaHoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nomina_Individual.resx">
       <DependentUpon>Nomina_Individual.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +247,7 @@
     <EmbeddedResource Include="Reports\rptPruebas.rdlc" />
     <EmbeddedResource Include="rptAcumuladosPeriodo.rdlc" />
     <EmbeddedResource Include="rptHojaDeControl.rdlc" />
+    <EmbeddedResource Include="rptNominaHoras.rdlc" />
     <EmbeddedResource Include="rptTotalesDestajo.rdlc" />
     <None Include="almacenDatos.xsc">
       <DependentUpon>almacenDatos.xsd</DependentUpon>
