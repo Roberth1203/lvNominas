@@ -977,6 +977,7 @@
             this.txtComedor_H.Name = "txtComedor_H";
             this.txtComedor_H.Size = new System.Drawing.Size(45, 20);
             this.txtComedor_H.TabIndex = 14;
+            this.txtComedor_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtComedor_H_KeyPress);
             // 
             // label47
             // 
@@ -1198,10 +1199,12 @@
             // 
             // txtPagoPromedio_H
             // 
+            this.txtPagoPromedio_H.Enabled = false;
             this.txtPagoPromedio_H.Location = new System.Drawing.Point(124, 78);
             this.txtPagoPromedio_H.Name = "txtPagoPromedio_H";
             this.txtPagoPromedio_H.Size = new System.Drawing.Size(45, 20);
             this.txtPagoPromedio_H.TabIndex = 25;
+            this.txtPagoPromedio_H.TextChanged += new System.EventHandler(this.txtPagoPromedio_H_TextChanged);
             // 
             // txtPagoPorHora_H
             // 
@@ -1209,6 +1212,8 @@
             this.txtPagoPorHora_H.Name = "txtPagoPorHora_H";
             this.txtPagoPorHora_H.Size = new System.Drawing.Size(45, 20);
             this.txtPagoPorHora_H.TabIndex = 24;
+            this.txtPagoPorHora_H.TextChanged += new System.EventHandler(this.txtPagoPromedio_H_TextChanged);
+            this.txtPagoPorHora_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPagoPorHora_H_KeyPress);
             // 
             // label62
             // 
@@ -1236,6 +1241,7 @@
             this.txtGratif_H.Name = "txtGratif_H";
             this.txtGratif_H.Size = new System.Drawing.Size(45, 20);
             this.txtGratif_H.TabIndex = 21;
+            this.txtGratif_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGratif_H_KeyPress);
             // 
             // txtSepDia_H
             // 
@@ -1243,6 +1249,7 @@
             this.txtSepDia_H.Name = "txtSepDia_H";
             this.txtSepDia_H.Size = new System.Drawing.Size(45, 20);
             this.txtSepDia_H.TabIndex = 20;
+            this.txtSepDia_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSepDia_H_KeyPress);
             // 
             // txtPrima1_H
             // 
@@ -1250,6 +1257,7 @@
             this.txtPrima1_H.Name = "txtPrima1_H";
             this.txtPrima1_H.Size = new System.Drawing.Size(45, 20);
             this.txtPrima1_H.TabIndex = 19;
+            this.txtPrima1_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrima1_H_KeyPress);
             // 
             // txtAgui_H
             // 
@@ -1257,6 +1265,7 @@
             this.txtAgui_H.Name = "txtAgui_H";
             this.txtAgui_H.Size = new System.Drawing.Size(45, 20);
             this.txtAgui_H.TabIndex = 18;
+            this.txtAgui_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgui_H_KeyPress);
             // 
             // txtVac_H
             // 
@@ -1264,6 +1273,7 @@
             this.txtVac_H.Name = "txtVac_H";
             this.txtVac_H.Size = new System.Drawing.Size(45, 20);
             this.txtVac_H.TabIndex = 17;
+            this.txtVac_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVac_H_KeyPress);
             // 
             // txtHrsSemana
             // 
@@ -1271,6 +1281,7 @@
             this.txtHrsSemana.Name = "txtHrsSemana";
             this.txtHrsSemana.Size = new System.Drawing.Size(45, 20);
             this.txtHrsSemana.TabIndex = 16;
+            this.txtHrsSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHrsSemana_KeyPress);
             // 
             // label44
             // 

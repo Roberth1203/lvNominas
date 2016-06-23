@@ -54,6 +54,7 @@ namespace La_Vista_Nominas
             MaximizeBox = false;
             dt = new DataTable();
             sql = new Utilities();
+            sql.SQLstatement("UPDATE percep SET percep.pagoHora = employees.salariodiurno FROM percep_deduc_Emp percep INNER JOIN personal employees ON(employees.nombre = percep.nomEmpleado);",null,dataValues);
             loadSettings();
             cargarRegistros();
             obtenerEmpleados();
@@ -396,7 +397,7 @@ namespace La_Vista_Nominas
                     DateTime f = DateTime.Now;
                     String fechaModificacion = f.ToShortDateString();
 
-                    String updQuery = "UPDATE percep_deduc_Emp SET totalHoras= " + Convert.ToDouble(txtHrsSemana.Text) +
+                    String updQuery = "UPDATE percep_deduc_Emp SET totalHoras= " + Convert.ToDouble(txtHrsSemana.Text) + ", pagoHora = " + Convert.ToDouble(txtPagoPorHora_H.Text) + ",pagoPromedio = " + Convert.ToDouble(txtPagoPromedio_H.Text) +
                             ",per_Vac=" + Convert.ToDouble(txtVac_H.Text) + ",per_SepDia=" + Convert.ToDouble(txtSepDia_H.Text) + ",per_Vacacional=" + Convert.ToDouble(txtPrima1_H.Text) + 
                             ",dedCubreB=" + txtCubreB_H.Text + ",ded_Escaf=" + Convert.ToDouble(txtEscaf_H.Text) + "ded_Guantes=" + Convert.ToDouble(txtGuantes_H.Text) + ",ded_Bata=" + Convert.ToDouble(txtBata_H.Text) + ",ded_Botas=" + Convert.ToDouble(txtBotas_H.Text) + ",ded_Mandil=" + Convert.ToDouble(txtMandil_H.Text) + ",ded_Cuchillo=" + Convert.ToDouble(txtCuchillo_H.Text) + ",desc_Comedor=" + Convert.ToDouble(txtComedor_H.Text) + ",desc_Prestamo=" + Convert.ToDouble(txtDedEmpresa_H.Text) +
                             ",nomEmpleado='" + listaEmpleadosDia.SelectedItem.ToString() + "',ultimaModificacion='" + fechaModificacion + "';";
@@ -1169,13 +1170,16 @@ namespace La_Vista_Nominas
             btnNominaMasiva.BackColor = Color.White;
 
             String employee = listaEmpleadosDia.SelectedItem.ToString();
-            DateTime systemDate = DateTime.Now();
-            String defaultDate = systemDate.ToShortDateString(); 
+            DateTime systemDate = DateTime.Now;
+            String defaultDate = systemDate.ToShortDateString();
             try
             {
-                String instruccion = "select totalHoras, ultimaModificacion,nomEmpleado from percep_deduc_Emp where nomEmpleado like '%" + employee + "%';";
+                String instruccion = "select totalHoras,ultimaModificacion,nomEmpleado,pagoHora from percep_deduc_Emp where nomEmpleado like '%" + employee + "%';";
                 DataTable dataTableHoras = sql.SQLdata(instruccion, null, dataValues);
                 txtHrsSemana.Text = dataTableHoras.Rows[0].ItemArray[0].ToString();
+                txtPagoPorHora_H.Text = dataTableHoras.Rows[0].ItemArray[3].ToString();
+                Double pagoHora = Convert.ToDouble(txtPagoPorHora_H.Text);
+                txtPagoPromedio_H.Text = Convert.ToString(pagoHora * 8.0);
                 lblFechaModificacion.Text = dataTableHoras.Rows[0].ItemArray[1].ToString().Substring(0, 10);
             }
             catch (Exception)
@@ -1184,6 +1188,97 @@ namespace La_Vista_Nominas
                 txtHrsSemana.Text = "";
                 lblFechaModificacion.Text = defaultDate;
             }
+        }
+
+        private void txtPagoPromedio_H_TextChanged(object sender, EventArgs e)
+        {
+            
+            if(txtPagoPorHora_H.Text.Equals(""))
+            {
+                txtPagoPorHora_H.BackColor = Color.LightCoral;
+                txtPagoPromedio_H.Text = Convert.ToString(0 * 8);
+            }
+            else
+            {
+                Double x = Convert.ToDouble(txtPagoPorHora_H.Text);
+                txtPagoPromedio_H.Text = Convert.ToString(x * 8);
+            }
+        }
+
+        public void onlynumbers(KeyPressEventArgs ex)
+        {
+            /*
+            if (!(char.IsNumber(ex.KeyChar)) && (ex.KeyChar != (char)Keys.Back) && (ex.KeyChar != (char)Keys.Space))
+            {
+                MessageBox.Show("Solo se permiten números !!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ex.Handled = true;
+                return;
+            }
+            */
+
+            if (ex.KeyChar >= 48 && ex.KeyChar <= 57)
+
+            {
+                ex.Handled = false;
+            }
+            else if (ex.KeyChar == 8)
+
+            {
+                ex.Handled = false;
+            }
+            else if (ex.KeyChar == 13)
+            {
+                ex.Handled = false;
+            }
+            else if (ex.KeyChar == 46)
+            {
+                ex.Handled = false;
+            }
+            else
+            {
+                MessageBox.Show("Solo se Aceptan Numeros", "Mensaje del Sistema");
+                ex.Handled = true;
+            }
+        }
+
+        private void txtPagoPorHora_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtHrsSemana_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtVac_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtAgui_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtSepDia_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtPrima1_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtGratif_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtComedor_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
         }
     }
 }

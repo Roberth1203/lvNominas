@@ -239,9 +239,15 @@ namespace La_Vista_Nominas
                 MessageBox.Show("Insertare " + horas + " horas a " + employee);
                  //Cargo los datos a la tabla perdep_deduc_emp
                 DateTime date = DateTime.Now;
-                string query = "UPDATE percep_deduc_Emp SET totalHoras = " + horas + " WHERE nomEmpleado like '%" + employee + "%';";
 
+                //Cargo informacion adicional del empleado (id y tipo de calculo)
+                String initialQuery = "select P.id,P.calculo from personal P  inner join percep_deduc_Emp E on ( E.nomEmpleado = P.nombre ) where E.nomEmpleado like '%" + employee + "%';";
+                DataTable datosEmpleado = sql.SQLdata(initialQuery, null, dataValues);
+
+                String query = "UPDATE percep_deduc_Emp SET idEmpleado = " + datosEmpleado.Rows[0].ItemArray[0].ToString() + ", tipoCalculo = '" + datosEmpleado.Rows[0].ItemArray[1].ToString() + "',totalHoras = " + horas + " WHERE nomEmpleado like '%" + employee + "%';";
+                
                 sql.SQLstatement(query, null, connectionString);
+                //sql.SQLstatement("exec sp_actualiza_percep_deduc_Emp()", null, connectionString);
                 MessageBox.Show("Datos Almacenados !!");
                 indRow++;
             }
