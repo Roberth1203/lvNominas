@@ -364,24 +364,10 @@ namespace La_Vista_Nominas
                 empty = false;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            /*
-            try
-            {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    string imagen = openFileDialog1.FileName;
-                    imgEmpleado.Image = Image.FromFile(imagen);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido", "La Vista Alimentos S.A. de C.V.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            */
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)

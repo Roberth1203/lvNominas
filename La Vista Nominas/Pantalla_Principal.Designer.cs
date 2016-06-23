@@ -963,6 +963,7 @@
             this.txtInfonavit_H.Name = "txtInfonavit_H";
             this.txtInfonavit_H.Size = new System.Drawing.Size(45, 20);
             this.txtInfonavit_H.TabIndex = 16;
+            this.txtInfonavit_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInfonavit_H_KeyPress);
             // 
             // txtDedEmpresa_H
             // 
@@ -970,6 +971,7 @@
             this.txtDedEmpresa_H.Name = "txtDedEmpresa_H";
             this.txtDedEmpresa_H.Size = new System.Drawing.Size(45, 20);
             this.txtDedEmpresa_H.TabIndex = 15;
+            this.txtDedEmpresa_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDedEmpresa_H_KeyPress);
             // 
             // txtComedor_H
             // 
@@ -1041,6 +1043,7 @@
             this.txtGuantes_H.Name = "txtGuantes_H";
             this.txtGuantes_H.Size = new System.Drawing.Size(45, 20);
             this.txtGuantes_H.TabIndex = 45;
+            this.txtGuantes_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGuantes_H_KeyPress);
             // 
             // txtBotas_H
             // 
@@ -1048,6 +1051,7 @@
             this.txtBotas_H.Name = "txtBotas_H";
             this.txtBotas_H.Size = new System.Drawing.Size(45, 20);
             this.txtBotas_H.TabIndex = 44;
+            this.txtBotas_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBotas_H_KeyPress);
             // 
             // txtMandil_H
             // 
@@ -1055,6 +1059,7 @@
             this.txtMandil_H.Name = "txtMandil_H";
             this.txtMandil_H.Size = new System.Drawing.Size(45, 20);
             this.txtMandil_H.TabIndex = 43;
+            this.txtMandil_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMandil_H_KeyPress);
             // 
             // txtCofia_H
             // 
@@ -1062,6 +1067,7 @@
             this.txtCofia_H.Name = "txtCofia_H";
             this.txtCofia_H.Size = new System.Drawing.Size(45, 20);
             this.txtCofia_H.TabIndex = 42;
+            this.txtCofia_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCofia_H_KeyPress);
             // 
             // txtBata_H
             // 
@@ -1069,6 +1075,7 @@
             this.txtBata_H.Name = "txtBata_H";
             this.txtBata_H.Size = new System.Drawing.Size(45, 20);
             this.txtBata_H.TabIndex = 41;
+            this.txtBata_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBata_H_KeyPress);
             // 
             // txtCubreB_H
             // 
@@ -1076,6 +1083,7 @@
             this.txtCubreB_H.Name = "txtCubreB_H";
             this.txtCubreB_H.Size = new System.Drawing.Size(45, 20);
             this.txtCubreB_H.TabIndex = 40;
+            this.txtCubreB_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCubreB_H_KeyPress);
             // 
             // txtEscaf_H
             // 
@@ -1083,6 +1091,7 @@
             this.txtEscaf_H.Name = "txtEscaf_H";
             this.txtEscaf_H.Size = new System.Drawing.Size(45, 20);
             this.txtEscaf_H.TabIndex = 39;
+            this.txtEscaf_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEscaf_H_KeyPress);
             // 
             // txtCuchillo_H
             // 

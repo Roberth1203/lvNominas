@@ -75,7 +75,7 @@ namespace La_Vista_Nominas
                 isEmpty = true;
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido","La Vista Alimentos S.A. de C.V.",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }

@@ -401,7 +401,7 @@ namespace La_Vista_Nominas
                             ",per_Vac=" + Convert.ToDouble(txtVac_H.Text) + ",per_SepDia=" + Convert.ToDouble(txtSepDia_H.Text) + ",per_Vacacional=" + Convert.ToDouble(txtPrima1_H.Text) + 
                             ",dedCubreB=" + txtCubreB_H.Text + ",ded_Escaf=" + Convert.ToDouble(txtEscaf_H.Text) + "ded_Guantes=" + Convert.ToDouble(txtGuantes_H.Text) + ",ded_Bata=" + Convert.ToDouble(txtBata_H.Text) + ",ded_Botas=" + Convert.ToDouble(txtBotas_H.Text) + ",ded_Mandil=" + Convert.ToDouble(txtMandil_H.Text) + ",ded_Cuchillo=" + Convert.ToDouble(txtCuchillo_H.Text) + ",desc_Comedor=" + Convert.ToDouble(txtComedor_H.Text) + ",desc_Prestamo=" + Convert.ToDouble(txtDedEmpresa_H.Text) +
                             ",nomEmpleado='" + listaEmpleadosDia.SelectedItem.ToString() + "',ultimaModificacion='" + fechaModificacion + "';";
-                    
+                    MessageBox.Show("Datos Guardados !!");
                 }
                 catch(Exception bug)
                 {
@@ -434,14 +434,7 @@ namespace La_Vista_Nominas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (listaEmpleadosDestajo1.Focus())
-            {
-                guardarDatos();
-            }
-            else if (listaEmpleadosDia.Focus())
-            {
-
-            }
+            guardarDatos();
         }
 
 
@@ -1174,13 +1167,23 @@ namespace La_Vista_Nominas
             String defaultDate = systemDate.ToShortDateString();
             try
             {
-                String instruccion = "select totalHoras,ultimaModificacion,nomEmpleado,pagoHora from percep_deduc_Emp where nomEmpleado like '%" + employee + "%';";
+                String instruccion = "select totalHoras,ultimaModificacion,nomEmpleado,pagoHora,ded_CubreB,ded_Escaf,ded_Guantes,ded_Bata,ded_Botas,ded_Mandil,ded_Cuchillo from percep_deduc_Emp where nomEmpleado like '%" + employee + "%';";
                 DataTable dataTableHoras = sql.SQLdata(instruccion, null, dataValues);
                 txtHrsSemana.Text = dataTableHoras.Rows[0].ItemArray[0].ToString();
                 txtPagoPorHora_H.Text = dataTableHoras.Rows[0].ItemArray[3].ToString();
                 Double pagoHora = Convert.ToDouble(txtPagoPorHora_H.Text);
                 txtPagoPromedio_H.Text = Convert.ToString(pagoHora * 8.0);
                 lblFechaModificacion.Text = dataTableHoras.Rows[0].ItemArray[1].ToString().Substring(0, 10);
+
+                txtCubreB_H.Text = dataTableHoras.Rows[0].ItemArray[4].ToString();
+                txtEscaf_H.Text = dataTableHoras.Rows[0].ItemArray[5].ToString();
+                txtGuantes_H.Text = dataTableHoras.Rows[0].ItemArray[6].ToString();
+                txtBata_H.Text = dataTableHoras.Rows[0].ItemArray[7].ToString();
+                txtBotas_H.Text = dataTableHoras.Rows[0].ItemArray[8].ToString();
+                txtMandil_H.Text = dataTableHoras.Rows[0].ItemArray[9].ToString();
+                txtCuchillo_H.Text = dataTableHoras.Rows[0].ItemArray[10].ToString();
+
+
             }
             catch (Exception)
             {
@@ -1192,16 +1195,24 @@ namespace La_Vista_Nominas
 
         private void txtPagoPromedio_H_TextChanged(object sender, EventArgs e)
         {
-            
+            Double percepcion = 0;
             if(txtPagoPorHora_H.Text.Equals(""))
             {
                 txtPagoPorHora_H.BackColor = Color.LightCoral;
                 txtPagoPromedio_H.Text = Convert.ToString(0 * 8);
+                percepcion = Convert.ToDouble(txtPagoPromedio_H.Text);
+                calculoPercepciones(percepcion, "Aguinaldo");
+                calculoPercepciones(percepcion, "Vacaciones");
+                calculoPercepciones(percepcion, "Prima Vacacional");
             }
             else
             {
                 Double x = Convert.ToDouble(txtPagoPorHora_H.Text);
                 txtPagoPromedio_H.Text = Convert.ToString(x * 8);
+                percepcion = Convert.ToDouble(txtPagoPromedio_H.Text);
+                calculoPercepciones(percepcion, "Aguinaldo");
+                calculoPercepciones(percepcion, "Vacaciones");
+                calculoPercepciones(percepcion, "Prima Vacacional");
             }
         }
 
@@ -1279,6 +1290,72 @@ namespace La_Vista_Nominas
         private void txtComedor_H_KeyPress(object sender, KeyPressEventArgs e)
         {
             onlynumbers(e);
+        }
+
+        private void txtCofia_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtEscaf_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtMandil_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtCubreB_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtBotas_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtBata_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtGuantes_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtInfonavit_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private void txtDedEmpresa_H_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            onlynumbers(e);
+        }
+
+        private  void calculoPercepciones(Double sueldoPromedio, String concepto)
+        {
+            Double percepcionCalculada = 0;
+            //Calculo Aguinaldo
+            if (concepto.Equals("Aguinaldo"))
+            {
+                percepcionCalculada = ((15 * sueldoPromedio) / 365);
+                txtAgui_H.Text = Convert.ToString(percepcionCalculada);
+            }
+            else if (concepto.Equals("Vacaciones"))
+            {
+                percepcionCalculada = (sueldoPromedio * 6) / 365;
+                txtVac_H.Text = Convert.ToString(percepcionCalculada);
+            }
+            else if (concepto.Equals("Prima Vacacional"))
+            {
+                percepcionCalculada = ((sueldoPromedio * 6) / 365) * .25;
+                txtPrima1_H.Text = Convert.ToString(percepcionCalculada);
+            }
         }
     }
 }
