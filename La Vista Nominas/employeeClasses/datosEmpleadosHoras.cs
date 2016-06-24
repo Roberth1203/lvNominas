@@ -7,6 +7,17 @@ namespace La_Vista_Nominas.employeeClasses
 {
     class datosEmpleadosHoras
     {
+        public String nssEmp { get; set; }
+        public String rfcEmp { get; set; }
+        public String curpEmp { get; set; }
+        public String dptoEmp { get; set; }
+        public String puestoEmp { get; set; }
+        public DateTime periodoIni { get; set; }
+        public DateTime periodoFin { get; set; }
+        public Int32 diasLabores { get; set; }
+        public Double totalPer { get; set; }
+        public Double totalDed { get; set; }
+
         public Double idEmp { get; set; }
         public String nomEmp { get; set; }
         public Double perAguinaldo { get; set; }

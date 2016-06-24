@@ -691,6 +691,15 @@ namespace La_Vista_Nominas
             frm.Show();
         }
 
+        private void cargarValoresNominaHoras()
+        {
+            employeeClasses.datosEmpleadosHoras datosEmpleado = new employeeClasses.datosEmpleadosHoras();
+
+            datosEmpleado.idEmp;
+            datosEmpleado.nomEmp = listaEmpleadosDia.SelectedItem.ToString();
+            datosEmpleado.
+        }
+
         private void getDataForListaRaya()
         {
             String text = "select id_empleado,nomEmpleado,sum(dia1 + dia2 + dia3 + dia4 + dia5 + dia6) as CAJAS_TOTALES from datosDestajo where nomEmpleado not in ('null') group by id_empleado,nomEmpleado;";
