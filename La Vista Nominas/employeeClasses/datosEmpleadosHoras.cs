@@ -28,17 +28,28 @@ namespace La_Vista_Nominas.employeeClasses
         public Double perGratificacion { get; set; }
 
         public Double dedCuchillo { get; set; }
+        public String nomDesc1 { get; set; }
         public Double dedCofia { get; set; }
+        public String nomDesc2 { get; set; }
         public Double dedEscafandra { get; set; }
+        public String nomDesc3 { get; set; }
         public Double dedMandil { get; set; }
+        public String nomDesc4 { get; set; }
         public Double dedCubreB { get; set; }
+        public String nomDesc5 { get; set; }
         public Double dedBotas { get; set; }
+        public String nomDesc6 { get; set; }
         public Double dedBata { get; set; }
+        public String nomDesc7 { get; set; }
         public Double dedGuantes {get; set; }
+        public String nomDesc8 { get; set; }
 
         public Double desComedor { get; set; }
+        public String nomDesc9 { get; set; }
         public Double desEmpresa { get; set; }
+        public String nomDesc10 { get; set; }
         public Double desInfonavit { get; set; }
-        
+        public String nomDesc11 { get; set; }
+
     }
 }
