@@ -11,6 +11,8 @@ namespace La_Vista_Nominas
 {
     public partial class nominaHoras : Form
     {
+        public List<employeeClasses.datosEmpleadosHoras> datosReporte = new List<employeeClasses.datosEmpleadosHoras>();
+
         public nominaHoras()
         {
             InitializeComponent();

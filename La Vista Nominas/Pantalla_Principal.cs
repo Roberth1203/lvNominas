@@ -693,11 +693,131 @@ namespace La_Vista_Nominas
 
         private void cargarValoresNominaHoras()
         {
+            string[] array = { "Cuchilllo", "Cofia", "Escafandra", "Mandil", "Cubrebocas", "Botas", "Bata", "Guantes", "Infonavit", "Descuento Comedor", "Prestamo Empresa" };
+            String sentenciaSQL = "select P.id,P.nombre," +
+                                    "case when P.nss = 'NSS' then 'NO ASIGNADO' else P.nss end," +
+                                    "case when P.rfc = 'RFC' then 'NO ASIGNADO' else P.rfc end," +
+                                    "case when P.curp = 'CURP' then 'NO ASIGNADO' else P.curp end " +
+                                    "from personal P inner join percep_deduc_Emp E on (E.idEmpleado = P.id) where E.nomEmpleado LIKE '%" + listaEmpleadosDia.SelectedItem.ToString() + "%';";
+            String sentenciaSQL2 = "select ISNULL(E.ded_Cuchillo,0),ISNULL(E.dedCofia,0),ISNULL(E.ded_Escaf,0),ISNULL(E.ded_Mandil,0),ISNULL(E.ded_CubreB,0),ISNULL(E.ded_Botas,0),ISNULL(E.ded_Bata, 0),ISNULL(E.ded_Guantes, 0),ISNULL(E.infonavit, 0),ISNULL(E.desc_Comedor, 0),ISNULL(E.desc_Prestamo, 0) from percep_deduc_Emp E where E.nomEmpleado like '%" + listaEmpleadosDia.SelectedItem.ToString() + "%';";
+
+            DataTable infoRecibo = sql.SQLdata(sentenciaSQL,null,dataValues);
+            DataTable descRecibo = sql.SQLdata(sentenciaSQL2, null, dataValues);
             employeeClasses.datosEmpleadosHoras datosEmpleado = new employeeClasses.datosEmpleadosHoras();
 
-            datosEmpleado.idEmp;
-            datosEmpleado.nomEmp = listaEmpleadosDia.SelectedItem.ToString();
-            datosEmpleado.
+
+            //Datos generales
+            datosEmpleado.idEmp = Convert.ToInt32(infoRecibo.Rows[0].ItemArray[0].ToString());
+            datosEmpleado.nomEmp = infoRecibo.Rows[0].ItemArray[1].ToString();
+            datosEmpleado.nssEmp = infoRecibo.Rows[0].ItemArray[2].ToString();
+            datosEmpleado.rfcEmp = infoRecibo.Rows[0].ItemArray[3].ToString();
+            datosEmpleado.curpEmp = infoRecibo.Rows[0].ItemArray[4].ToString();
+            // Percepciones
+            datosEmpleado.sueldo = Convert.ToDouble(txtPagoPorHora_H.Text) * Convert.ToDouble(txtHrsSemana.Text);
+            datosEmpleado.perAguinaldo = Convert.ToDouble(txtAgui_H.Text);
+            datosEmpleado.perVacaciones = Convert.ToDouble(txtVac_H.Text);
+            datosEmpleado.perPrimaVac = Convert.ToDouble(txtPrima1_H.Text);
+            datosEmpleado.perDomingo = Convert.ToDouble(txtSepDiaHrs.Text);
+            datosEmpleado.perGratificacion = Convert.ToDouble(txtGratif_H.Text);
+
+
+            //Deducciones
+            int w = 0;
+            foreach (DataColumn col in descRecibo.Columns)
+            {
+                if (Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString()) > 0)
+                {
+                    if (datosEmpleado.ded1 <= 0)
+                    {
+                        //MessageBox.Show("desc1 está vacío ...");
+                        datosEmpleado.nomDesc1 = array[w];
+                        datosEmpleado.ded1 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                    }
+                    else
+                    {
+                        if (datosEmpleado.ded2 <= 0)
+                        {
+                            //MessageBox.Show("desc2 está vacío ...");
+                            datosEmpleado.nomDesc2 = array[w];
+                            datosEmpleado.ded2 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                        }
+                        else
+                        {
+                            if (datosEmpleado.ded3 <= 0)
+                            {
+                                //MessageBox.Show("desc3 está vacío ...");
+                                datosEmpleado.nomDesc3 = array[w];
+                                datosEmpleado.ded3 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded4 <= 0)
+                            {
+                                //MessageBox.Show("desc4 está vacío ...");
+                                datosEmpleado.nomDesc4 = array[w];
+                                datosEmpleado.ded4 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded5 <= 0)
+                            {
+                                //MessageBox.Show("desc5 está vacío ...");
+                                datosEmpleado.nomDesc5 = array[w];
+                                datosEmpleado.ded5 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded6 <= 0)
+                            {
+                                //MessageBox.Show("desc6 está vacío ...");
+                                datosEmpleado.nomDesc6 = array[w];
+                                datosEmpleado.ded6 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded7 <= 0)
+                            {
+                                //MessageBox.Show("desc7 está vacío ...");
+                                datosEmpleado.nomDesc7 = array[w];
+                                datosEmpleado.ded7 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded8 <= 0)
+                            {
+                                //MessageBox.Show("desc8 está vacío ...");
+                                datosEmpleado.nomDesc8 = array[w];
+                                datosEmpleado.ded8 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded9 <= 0)
+                            {
+                                //MessageBox.Show("desc9 está vacío ...");
+                                datosEmpleado.nomDesc9 = array[w];
+                                datosEmpleado.ded9 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                if (datosEmpleado.ded10 <= 0)
+                            {
+                                //MessageBox.Show("desc9 está vacío ...");
+                                datosEmpleado.nomDesc10 = array[w];
+                                datosEmpleado.ded10 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                    if (datosEmpleado.ded11 <= 0)
+                            {
+                                //MessageBox.Show("desc9 está vacío ...");
+                                datosEmpleado.nomDesc11 = array[w];
+                                datosEmpleado.ded11 = Convert.ToDouble(descRecibo.Rows[0].ItemArray[w].ToString());
+                            }
+                            else
+                                MessageBox.Show("Lista de deducciones llena ...");
+                        }
+                    }
+                }
+                w++;
+            }
+
+            nominaHoras frm = new nominaHoras();
+            frm.obj.Add(employeeData);
+            frm.objMovimientos.Add(employeeMovs);
+
+            frm.Show();
         }
 
         private void getDataForListaRaya()
@@ -734,7 +854,7 @@ namespace La_Vista_Nominas
             }
             else if (tabJornadaDia.Focus())
             {
-                
+                cargarValoresNominaHoras();   
             }
             else if (tabJornadaMixta.Focus())
             {

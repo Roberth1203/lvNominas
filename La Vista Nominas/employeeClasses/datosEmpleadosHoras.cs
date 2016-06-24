@@ -5,7 +5,7 @@ using System.Text;
 
 namespace La_Vista_Nominas.employeeClasses
 {
-    class datosEmpleadosHoras
+    public class datosEmpleadosHoras
     {
         public String nssEmp { get; set; }
         public String rfcEmp { get; set; }
@@ -27,28 +27,28 @@ namespace La_Vista_Nominas.employeeClasses
         public Double sueldo { get; set; }
         public Double perGratificacion { get; set; }
 
-        public Double dedCuchillo { get; set; }
+        public Double ded1 { get; set; }
         public String nomDesc1 { get; set; }
-        public Double dedCofia { get; set; }
+        public Double ded2 { get; set; }
         public String nomDesc2 { get; set; }
-        public Double dedEscafandra { get; set; }
+        public Double ded3 { get; set; }
         public String nomDesc3 { get; set; }
-        public Double dedMandil { get; set; }
+        public Double ded4 { get; set; }
         public String nomDesc4 { get; set; }
-        public Double dedCubreB { get; set; }
+        public Double ded5 { get; set; }
         public String nomDesc5 { get; set; }
-        public Double dedBotas { get; set; }
+        public Double ded6 { get; set; }
         public String nomDesc6 { get; set; }
-        public Double dedBata { get; set; }
+        public Double ded7 { get; set; }
         public String nomDesc7 { get; set; }
-        public Double dedGuantes {get; set; }
+        public Double ded8 {get; set; }
         public String nomDesc8 { get; set; }
 
-        public Double desComedor { get; set; }
+        public Double ded9 { get; set; }
         public String nomDesc9 { get; set; }
-        public Double desEmpresa { get; set; }
+        public Double ded10 { get; set; }
         public String nomDesc10 { get; set; }
-        public Double desInfonavit { get; set; }
+        public Double ded11 { get; set; }
         public String nomDesc11 { get; set; }
 
     }
